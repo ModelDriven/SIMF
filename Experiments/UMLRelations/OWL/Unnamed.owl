@@ -1,0 +1,107 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://example.com/ontology/Unnamed>
+
+
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/description>
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <http://example.com/ontology/Unnamed#>
+
+    Annotations: 
+        rdfs:label ""@en
+    
+    Domain: 
+        <http://example.com/ontology/Unnamed#B>
+    
+    Range: 
+        <http://example.com/ontology/Unnamed#A>
+    
+    InverseOf: 
+        <http://example.com/ontology/Unnamed#b2>
+    
+    
+ObjectProperty: <http://example.com/ontology/Unnamed#b>
+
+    Annotations: 
+        rdfs:label "b"@en,
+        <http://purl.org/dc/terms/description> "this is my b end"@en
+    
+    Domain: 
+        <http://example.com/ontology/Unnamed#A>
+    
+    Range: 
+        <http://example.com/ontology/Unnamed#B>
+    
+    InverseOf: 
+        <http://example.com/ontology/Unnamed#a>
+    
+    
+ObjectProperty: <http://example.com/ontology/Unnamed#b2>
+
+    Annotations: 
+        rdfs:label "b2"@en
+    
+    SubPropertyOf: 
+        <http://example.com/ontology/Unnamed#b>
+    
+    Domain: 
+        <http://example.com/ontology/Unnamed#A>
+    
+    Range: 
+        <http://example.com/ontology/Unnamed#B>
+    
+    InverseOf: 
+        <http://example.com/ontology/Unnamed#>
+    
+    
+ObjectProperty: <http://example.com/ontology/Unnamed#a>
+
+    Annotations: 
+        rdfs:label "a"@en
+    
+    Domain: 
+        <http://example.com/ontology/Unnamed#B>
+    
+    Range: 
+        <http://example.com/ontology/Unnamed#A>
+    
+    InverseOf: 
+        <http://example.com/ontology/Unnamed#b>
+    
+    
+Class: <http://example.com/ontology/Unnamed#B>
+
+    Annotations: 
+        rdfs:label "B"@en
+    
+    
+Class: <http://example.com/ontology/Unnamed#A>
+
+    Annotations: 
+        <http://purl.org/dc/terms/description> "this is my A"@en,
+        rdfs:label "A"@en
+    
+    SubClassOf: 
+        (<http://example.com/ontology/Unnamed#b2> min 1 <http://example.com/ontology/Unnamed#B>)
+         and (<http://example.com/ontology/Unnamed#b2> max 1 <http://example.com/ontology/Unnamed#B>)
+    
+    
+Class: <http://example.com/ontology/Unnamed#>
+
+    Annotations: 
+        rdfs:label ""@en
+    
+    

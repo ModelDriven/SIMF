@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/" >
+    <!ENTITY vtw-cpt "http://www.omg.org/spec/VTW/Concepts/" >
+]>
+
+<rdf:RDF xmlns="http://www.omg.org/spec/VTW/Concepts/"
+     xml:base="http://www.omg.org/spec/VTW/Concepts/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:vtw-cpt="http://www.omg.org/spec/VTW/Concepts/">
+
+
+    <owl:Ontology rdf:about="http://www.omg.org/spec/VTW/Concepts/">
+        <rdfs:label>Vocabulary for Terminology Work (VTW) Concepts Ontology</rdfs:label>
+
+
+    <!-- Specification Level Metadata for the VTW Concepts Ontology -->
+
+        <sm:specificationTitle rdf:datatype="&xsd;string">Vocabulary for Terminology Work (VTW) Specification</sm:specificationTitle>
+        <sm:specificationAbbreviation rdf:datatype="&xsd;string">VTW</sm:specificationAbbreviation>
+        <sm:specificationURL rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/VTW/</sm:specificationURL>
+        <sm:specificationAbstract rdf:datatype="&xsd;string">The purpose of the VTW specification, based on ISO 1087, is to provide a systemic description of the concepts in the field of terminology and to clarify the use of the terms in this field. The ISO 1087-1 standard establishes a basic vocabulary for the theory and application of terminology work.  This ontology provides a formal, logically consistent representation for ISO 1087-1.</sm:specificationAbstract>
+
+        <sm:directSource>ISO 1087-1:2000 Terminology work - Vocabulary - Part 1: Theory and application, First edition, 2000-10-15</sm:directSource>
+        <sm:relatedSpecification>ISO 1087-2:2000 Terminology work - Vocabulary - Part 2: Computer applications, First edition, 2000-03-01</sm:relatedSpecification>
+        <sm:relatedSpecification>ISO 704:2009 Terminology work - Principles and methods, Second edition, 2000-11-15</sm:relatedSpecification>
+        <sm:relatedSpecification>International Information Centre for Terminology (InfoTerm), see http://www.infoterm.info/</sm:relatedSpecification>
+        <sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
+
+
+    <!-- Specification Version Metadata for the VTW Concepts Ontology -->
+
+        <sm:thisVersion rdf:datatype="&xsd;string">RFC</sm:thisVersion>
+        <sm:publicationDate rdf:datatype="&xsd;dateTime">2014-05-19T18:00:00</sm:publicationDate>
+        <sm:specificationVersionURL rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/VTW/RFC/</sm:specificationVersionURL>
+        <sm:specificationVersionStatus rdf:datatype="&xsd;string">Request For Comments (RFC)</sm:specificationVersionStatus>
+        <skos:historyNote rdf:datatype="&xsd;string">Revisions to this ontology will be managed per the process outlined in the Policies and Procedures for OMG standards, with the intent to maintain backwards compatibility to the degree possible.
+  
+The RDF/XML serialized OWL corresponding to the ODM/OWL model has been checked for syntactic errors and logical consistency with Protege 4 (http://protege.stanford.edu/), HermiT 1.3.6 (http://www.hermit-reasoner.com/) and Pellet 2.2 (http://clarkparsia.com/pellet/).</skos:historyNote>
+        <sm:addressForComments rdf:datatype="&xsd;anyURI">http://www.omg.org/issues/</sm:addressForComments>
+
+
+    <!-- Curation and Rights Metadata for the VTW Concepts Ontology -->
+
+        <sm:copyright rdf:datatype="&xsd;string">Copyright (c) 2014, Object Management Group, Inc.
+Copyright (c) 2014, Adaptive, Inc.
+Copyright (c) 2014, Mayo Clinic
+Copyright (c) 2014, Institute for Defense Analyses
+Copyright (c) 2014, Thematix Partners LLC
+Copyright (c) 2014, Unisys
+Copyright (c) 2014, Visumpoint LLC</sm:copyright>
+        <sm:submitter rdf:datatype="&xsd;string">Adaptive, Inc.</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Institute for Defense Analyses</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Mayo Clinic</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Thematix Partners LLC</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Unisys</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Visumpoint LLC</sm:submitter>
+        <dct:license rdf:datatype="&xsd;string">The MIT License:  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</dct:license>
+        <dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/mit-license.php</dct:license>
+        <sm:responsibleTaskForce rdf:datatype="&xsd;anyURI">http://adtf.omg.org/</sm:responsibleTaskForce>
+
+
+    <!-- Ontology/File-Level Metadata for the VTW Concepts Ontology -->
+
+        <sm:filename rdf:datatype="&xsd;string">VTW Concepts Ontology</sm:filename>
+        <sm:fileAbbreviation rdf:datatype="&xsd;string">vtw-cpt</sm:fileAbbreviation>
+        <owl:versionIRI rdf:resource="http://www.omg.org/spec/VTW/20140501/Concepts/"/>
+        <sm:fileAbstract rdf:datatype="&xsd;string">The Concepts ontology represents the subset of the ISO 1087-1 reference vocabulary used in a number of other ISO standards, including but not limited to ISO 11179 (Metadata Registries), 19763 (Model Registries), 639 (Language Codes), and 3166 (Country Codes), and is designed to evolve as the standard is revised.  The current version covers all of the terms defined in ISO 1087-1:2000 (English only).
+
+The VTW ontology consists of two primary components:
+- Core concepts, concept relations, terms and abbreviations, and concept systems (this ontology)
+- Terminologies and terminological dictionaries</sm:fileAbstract>
+        <sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+        <sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/ODM/</sm:contentLanguage>
+        <sm:isNormative rdf:datatype="&xsd;boolean">true</sm:isNormative>
+
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;causes">
+        <rdfs:label>causes</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">the relationship between an event (the cause) and a second event (the effect), where the second event is understood as a consequence of the first; also, the relationship between a set of factors (causes) and a phenomenon (the effect)</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;characterizes">
+        <rdfs:label>characterizes</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">describes the character or quality of</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;classifies">
+        <rdfs:label>classifies</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">arranges in classes; assigns to a category</skos:definition>
+        <sm:directSource>Merriam-Webster Dictionary</sm:directSource>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;constitutes">
+        <rdfs:label>constitutes</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">to be the elements or parts of; compose; to amount to; equal</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">http://www.thefreedictionary.com/constitutes</sm:directSource>
+    </owl:ObjectProperty>
+
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;consistsOf">
+        <rdfs:label>consists of</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">to be composed (of); be formed (of)</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">http://www.thefreedictionary.com/consist</sm:directSource>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;defines">
+        <rdfs:label>defines</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">determines or identifies the essential qualities or meaning of, discovers and sets forth the meaning of, fixes or marks the limits of, demarcates</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;represents"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;definesThroughExtension">
+        <rdfs:label>defines through extension</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">determines or identifies the essential qualities or meaning of a concept through extension</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;defines"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;depicts">
+        <rdfs:label>depicts</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">represents by, illustrates, describes, paints a picture of</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;designates">
+        <rdfs:label>designates</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">denotes, calls by a distinctive title, term, or expression</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;represents"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;extends">
+        <rdfs:label>extends</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity defined through extension to the entity that it extends</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;has">
+        <rdfs:label>has</rdfs:label>
+        <sm:usageNote rdf:datatype="&xsd;string">Any expression of the form &quot;has x&quot; can be defined through an OWL restriction on the &quot;has&quot; property, which is provided primarily as a struturing element. Certain explicitly defined properties that are prefixed by &quot;has&quot; are included to support inverse definitions. Note that these are not defined as subproperties of &quot;has&quot;, which could introduce ambiguity or inference errors in light of the inverse axioms.  Others which are designed to improve readability but have no inverse are modeled as subproperties of &quot;has&quot;.</sm:usageNote>
+        <skos:definition rdf:datatype="&xsd;string">indicates that someone (or something) possesses something, as a characteristic, attribute, feature, capability, and so forth</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasAcceptabilityRating">
+        <rdfs:label>has acceptability rating</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates a term to an acceptability rating</skos:definition>
+        <rdfs:range rdf:resource="&vtw-cpt;TermAcceptabilityRating"/>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasAntonym">
+        <rdfs:label>has antonym</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">specifies that an entity has an antonym relationship with another entity, i.e., one is the complementary or gradable opposite of the other</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasCharacteristic">
+        <rdfs:label>has characteristic</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">specifies that an entity has a particular characteristic</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;characterizes"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasCharacteristicType">
+        <rdfs:label>has characteristic type</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">indicates the classification scheme for a characteristic</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasContext">
+        <rdfs:label>has context</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">provides context for a particular concept, term, or definition usage</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasDefinition">
+        <rdfs:label>has definition</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">specifies that an entity has a particular definition</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;defines"/>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;hasRepresentation"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasDelimitingCharacteristic">
+        <rdfs:label>has delimiting characteristic</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an intensional definition to one of its delimiting characteristics</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;hasCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasDesignation">
+        <rdfs:label>has designation</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates a concept to a designation</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;designates"/>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;hasRepresentation"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasEquivalentDesignation">
+        <rdfs:label>has equivalent designation</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates two equivalent designations to one another, for example, synonymous terms in a particular context, or translations to another language</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasExtension">
+        <rdfs:label>has extension</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates a concept to its extension</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;extends"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasIntension">
+        <rdfs:label>has intension</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates a concept to its intention</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasMember">
+        <rdfs:label>has member</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to its members</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;memberOf"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasPart">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>has part </rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to another entity that is a part of it</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasRepresentation">
+        <rdfs:label>has representation</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to another entity that provides a representation for it</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;represents"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasSuperordinateConcept">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>has superordinate concept</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to a superordinate entity</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;hasSynonym">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label>has synonym</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates a designation to another designation that is synonymous for the same concept in a particular context</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;isCausedBy">
+        <rdfs:label>is caused by</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">is the relationship between an event (the effect) and a second event (the cause), where the first event is understood as a consequence of the second; also, the relationship between a set of factors (causes) and a phenomenon (the effect)</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;causes"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;isClassifiedBy">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label>is classified by</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">indicates the category or classifier used to classify an entity</skos:definition>
+    </owl:ObjectProperty>
+
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;isDepictionOf">
+        <rdfs:label>is depiction of</rdfs:label>
+        <owl:inverseOf rdf:resource="&vtw-cpt;depicts"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;isHomonymFor">
+        <rdfs:label>is a homonym for</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates a designation to another concept that has a designation with common spelling and pronunciation but different meaning</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;designates"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;isManagedBy">
+        <rdfs:label>is managed by</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to another entity that it is managed by</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;isPartOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>is a part of</rdfs:label>
+        <owl:inverseOf rdf:resource="&vtw-cpt;hasPart"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;isPolysemeFor">
+        <rdfs:label>is polyseme for</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;designates"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;isUsedBy">
+        <rdfs:label>is used by</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to another entity that it is used by</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;manages">
+        <rdfs:label>manages</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to another entity that it manages</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;isManagedBy"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;memberOf">
+        <rdfs:label>member of </rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to another entity that it is a member of</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;represents">
+        <rdfs:label>represents</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to another entity that it represents</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-cpt;uses">
+        <rdfs:label>uses</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to another entity that it uses</skos:definition>
+        <owl:inverseOf rdf:resource="&vtw-cpt;isUsedBy"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="&vtw-cpt;AbbreviatedForm">
+        <rdfs:label>abbreviated form</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Term"/>
+        <skos:scopeNote rdf:datatype="&xsd;string">Good writing practice dictates that both the full form of a term and the abbreviated form be indicated the first time a potentially unfamiliar abbreviated form is used in a text. In general, an abbreviated form should be easy to pronounce.</skos:scopeNote>
+        <skos:example rdf:datatype="&xsd;string">In English, the types of abbreviated forms are: short forms, clipped terms, abbreviations,  initialisms, and acronyms.</skos:example>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the standard but referenced in ISO 704: excessive length makes some terms difficult to use. Shortening the word or words designating a concept can create new abbreviated forms. The original long term is called the full or expanded form.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Abbreviation">
+        <rdfs:label>abbreviation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;AbbreviatedForm"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.9</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">designation (3.4.1) formed by omitting words or letters from a longer form and designating the same concept (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Acronym">
+        <rdfs:label>acronym</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Abbreviation"/>
+        <skos:example rdf:datatype="&xsd;string">Examples of acronyms are: laser, DOS, GATT, UNESCO, UNICEF</skos:example>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.10</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">abbreviation (3.4.9) made up of the initial letters of the components of the full form of the designation (3.4.1) or from syllables of the full form and pronounced syllabically</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;AdmittedTerm">
+        <rdfs:label>admitted term</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasAcceptabilityRating"/>
+                <owl:hasValue rdf:resource="&vtw-cpt;admitted"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RatedTerm"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.16</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) rated according to the scale of the term acceptability rating (3.4.14) as a synonym for a preferred term (3.4.15)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Antonym">
+        <rdfs:label>antonym</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.20</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">The terms (3.4.3) in the relation of antonymy are called antonyms.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Antonymy">
+        <rdfs:label>antonymy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RelationBetweenDesignations"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.20</sm:directSource>
+        <skos:example rdf:datatype="&xsd;string">The relation of antonymy exists, for example, between encoding and decoding, positive and negative.</skos:example>
+        <skos:definition rdf:datatype="&xsd;string">relation between two terms (3.4.3) in a given language representing opposite concepts (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Appellation">
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;designates"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;IndividualConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.2</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">verbal designation (3.4.1) of an individual concept (3.2.2)</skos:definition>
+        <skos:altLabel>name</skos:altLabel>
+        <skos:prefLabel>appellation</skos:prefLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;AssociativeRelation">
+        <owl:disjointWith rdf:resource="&vtw-cpt;HierarchicalRelation"/>
+        <skos:example rdf:datatype="&xsd;string">An associative relation exists between the concepts (3.2.1) education and teaching, baking and oven.</skos:example>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.23</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">relation between two concepts (3.2.1) having a nonhierarchical thematic connection by virtue of experience</skos:definition>
+        <skos:altLabel>pragmatic relation</skos:altLabel>
+        <skos:prefLabel>associative relation</skos:prefLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Blend">
+        <rdfs:label>blend</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Term"/>
+        <skos:example rdf:datatype="&xsd;string">Examples of blends are: smog (smoke plus fog), infotainment (information plus entertainment</skos:example>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.13</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) formed by clipping and combining two separate terms (3.4.3)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;BorrowedTerm">
+        <rdfs:label>borrowed term</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Term"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.6</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) taken from another language or from another subject field (3.1.2)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;CausalRelation">
+        <rdfs:label>causal relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;AssociativeRelation"/>
+        <skos:example rdf:datatype="&xsd;string">A causal relation exists between the concepts (3.2.1) action and reaction, nuclear explosion and fall-out.</skos:example>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.26</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">associative relation (3.2.23) involving cause and its effect</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Characteristic">
+        <rdfs:label>characteristic</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;characterizes"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasCharacteristicType"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;TypeOfCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:scopeNote rdf:datatype="&xsd;string">Characteristics are used for describing concepts (3.2.1).</skos:scopeNote>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.4</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">abstraction of a property of an object (3.1.1) or of a set of objects</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ClippedTerm">
+        <rdfs:label>clipped term</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Abbreviation"/>
+        <skos:example rdf:datatype="&xsd;string">Examples of clipped terms are: vet (veterinarian), flu (influenza).</skos:example>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.12</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">abbreviation (3.4.9) formed by truncating a part of a simple term (3.4.4)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ComplexTerm">
+        <rdfs:label>complex term</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Term"/>
+        <skos:example rdf:datatype="&xsd;string">Examples of complex terms are: bookmaker, know-how, fault recognition circuit.</skos:example>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.5</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) containing two or more roots</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ComprehensiveConcept">
+        <rdfs:label>comprehensive concept</rdfs:label>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.17</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">concept (3.2.1) in a partitive relation (3.2.22) viewed as the whole</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Concept">
+        <rdfs:label>concept</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&vtw-cpt;GeneralConcept"/>
+                    <rdf:Description rdf:about="&vtw-cpt;IndividualConcept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasExtension"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&vtw-cpt;extends"/>
+                        <owl:onClass rdf:resource="&vtw-cpt;Concept"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasDefinition"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Definition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasIntension"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Intension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:note rdf:datatype="&xsd;string">Concepts are not necessarily bound to particular languages.  They are, however, influenced by the social or cultural background which often leads to different categorizations.</skos:note>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.1</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">unit of knowledge created by a unique combination of characteristics</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ConceptDiagram">
+        <rdfs:label>concept diagram</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Diagram"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;depicts"/>
+                <owl:onClass rdf:resource="&vtw-cpt;ConceptSystem"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.12</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">graphic representation of a concept system (3.2.11)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ConceptField">
+        <rdfs:label>concept field</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;consistsOf"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:note rdf:datatype="&xsd;string">Concept fields may be used as a starting point for establishing concept systems (3.2.11).</skos:note>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.10</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">unstructured set of thematically related concepts (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ConceptSystem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;consistsOf"/>
+                <owl:onClass rdf:resource="&vtw-cpt;Concept"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;consistsOf"/>
+                <owl:onClass rdf:resource="&vtw-cpt;Relation"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.11</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">set of concepts (3.2.1) structured according to the relations among them</skos:definition>
+        <skos:prefLabel>concept system</skos:prefLabel>
+        <skos:altLabel>system of concepts</skos:altLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Context">
+        <rdfs:label>context</rdfs:label>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.10</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">text which illustrates a concept (3.2.1) or the use of a designation (3.4.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;CoordinateConcept">
+        <rdfs:label>coordinate concept</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;SubordinateConcept"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.19</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">subordinate concept (3.2.14) having the same nearest superordinate concept (3.2.13) and same criterion of subdivision as some other concept (3.2.1) in a given concept system (3.2.11)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Definition">
+        <rdfs:label>definition</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;defines"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.3.1</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">representation of a concept (3.2.1) by a descriptive statement which serves to differentiate it from related concepts</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;DelimitingCharacteristic">
+        <rdfs:label>delimiting characteristic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;EssentialCharacteristic"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.7</sm:directSource>
+        <skos:example rdf:datatype="&xsd;string">The delimiting characteristic support for the back may be used for distinguishing the concepts (3.2.1) stool and chair.</skos:example>
+        <skos:definition rdf:datatype="&xsd;string">essential characteristic (3.2.6) used for distinguishing a concept (3.2.1) from related concepts</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;DeprecatedTerm">
+        <rdfs:label>deprecated term</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasAcceptabilityRating"/>
+                <owl:hasValue rdf:resource="&vtw-cpt;deprecated"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RatedTerm"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.17</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) rated according to the scale of the term acceptability rating (3.4.14) as undesired</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Designation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;designates"/>
+                <owl:onClass rdf:resource="&vtw-cpt;Concept"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.1</dct:source>
+        <skos:note rdf:datatype="&xsd;string">In terminology work (3.6.1) three types of designations are distinguished: symbols, appellations (3.4.2) and terms (3.4.3).</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">representation of a concept (3.2.1) by a sign which denotes it</skos:definition>
+        <skos:prefLabel>designation</skos:prefLabel>
+        <skos:altLabel>designator</skos:altLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Diagram">
+        <rdfs:label>diagram</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;depicts"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">A diagram is a two-dimensional geometric, symbolic representation of information according to some visualization technique. Sometimes, the technique uses a three-dimensional visualization which is then projected onto the two-dimensional surface. The term, graph, is sometimes used as a synonym for diagram.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Equivalence">
+        <rdfs:label>equivalence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RelationBetweenDesignations"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.21</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">relation between designations (3.4.1) in different languages representing the same concept (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;EssentialCharacteristic">
+        <rdfs:label>essential characteristic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Characteristic"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.6</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">characteristic (3.2.4) which is indispensable to understanding a concept (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Extension">
+        <rdfs:label>extension</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;extends"/>
+                <owl:onClass rdf:resource="&vtw-cpt;Concept"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasMember"/>
+                <owl:onClass rdf:resource="&vtw-cpt;Object"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.8</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">totality of objects (3.1.1) to which a concept (3.2.1) corresponds</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ExtensionalDefinition">
+        <rdfs:label>extensional definition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Definition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;definesThroughExtension"/>
+                <owl:onClass rdf:resource="&vtw-cpt;Concept"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:example rdf:datatype="&xsd;string">Family 18 in the Periodic Table
+helium, neon, argon, crypton, xenon and radon</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.3.3</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">description of a concept (3.2.1) by enumerating all of its subordinate concepts (3.2.14) under one criterion of subdivison</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">noble gas
+helium, neon, argon, crypton, xenon or radon</skos:example>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;GeneralConcept">
+        <rdfs:label>general concept</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasDesignation"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Term"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&vtw-cpt;IndividualConcept"/>
+        <skos:example rdf:datatype="&xsd;string">Examples of general concepts are planet, tower</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.3</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">concept (3.2.1) which corresponds to two or more objects (3.1.1) which form a group by reason of common properties</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;GenericConcept">
+        <rdfs:label>generic concept</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.15</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">concept (3.2.1) in a generic relation (3.2.21) having the narrower intension (3.2.9)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;GenericRelation">
+        <owl:disjointWith rdf:resource="&vtw-cpt;PartitiveRelation"/>
+        <skos:example rdf:datatype="&xsd;string">A generic relation exists between the concepts (3.2.1) word and pronoun, vehicle and car, person and child.</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.21</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">relation between two concepts (3.2.1) where the intension (3.2.9) of one of the concepts includes that of the other concept and at least one additional delimiting characteristic (3.2.7)</skos:definition>
+        <skos:prefLabel>generic relation</skos:prefLabel>
+        <skos:altLabel>genus-species relation</skos:altLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;HierarchicalRelation">
+        <rdfs:label>hierarchical relation</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.20</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">relation between two concepts (3.2.1) which may be either a generic relation (3.2.21) or a partitive relation (3.2.22)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Homonym">
+        <rdfs:label>homonym</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;isHomonymFor"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.25</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">The designations (3.4.1) in the relation of homonymy are called homonyms.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Homonymy">
+        <rdfs:label>homonymy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RelationBetweenDesignationsAndConcepts"/>
+        <skos:example rdf:datatype="&xsd;string">An example of homonymy is: bark - (1) sound made by a dog, (2) outside covering of the stem of woody plants, (3) sailing vessel</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.25</dct:source>
+        <skos:note rdf:datatype="&xsd;string">The designations (3.4.1) in the relation of homonymy are called homonyms.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">relation between designations (3.4.1) and concepts (3.2.1) in a given language in which one designation represents two or more unrelated concepts.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;IndividualConcept">
+        <rdfs:label>individual concept</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasDesignation"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Appellation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:example rdf:datatype="&xsd;string">Examples of individual concepts are Saturn, the Eiffel Tower.</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.2</dct:source>
+        <skos:note rdf:datatype="&xsd;string">Individual concepts are usually represented by appellations.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">concept which corresponds to only one object</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Initialism">
+        <rdfs:label>initialism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Abbreviation"/>
+        <skos:example rdf:datatype="&xsd;string">Examples of initialisms are: UN, ASTM, IEC, US, EU, DNA</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.11</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">abbreviation (3.4.9) made up of the initial letters of the components of the full form of the designation (3.4.1) or from syllables of the full form and pronounced letter by letter</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Intension">
+        <rdfs:label>intension</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.9</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">set of characteristics (3.2.4) which makes up the concept (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;IntensionalDefinition">
+        <rdfs:label>intensional definition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Definition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasDelimitingCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;DelimitingCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.3.2</dct:source>
+        <skos:example rdf:datatype="&xsd;string">The following is an example of an intensional definition for the concept (3.2.1) incandescent lamp
+
+incandescent lamp
+electric lamp in which a filament is heated by an electric current in such a way that it emits light.</skos:example>
+        <skos:definition rdf:datatype="&xsd;string">definition (3.3.1) which describes the intension (3.2.9) of a concept (3.2.1) by stating the superordinate concept (3.2.13) and the delimiting characteristics (3.2.7)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Mononym">
+        <rdfs:label>mononym</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasDesignation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.22</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">The designations (3.4.1) in the relation of mononymy are called mononyms.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Mononymy">
+        <rdfs:label>mononymy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RelationBetweenDesignationsAndConcepts"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.22</dct:source>
+        <skos:note rdf:datatype="&xsd;string">The designations (3.4.1) in the relation of mononymy are called mononyms.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">relation between designations (3.4.1) and concepts (3.2.1) in a given language in which one concept has only one designation</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Monoseme">
+        <rdfs:label>monoseme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;designates"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.23</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">The designations (3.4.1) in the relation of monosemy are called monosemes.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Monosemy">
+        <rdfs:label>monosemy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RelationBetweenDesignationsAndConcepts"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.23</dct:source>
+        <skos:note rdf:datatype="&xsd;string">The designations (3.4.1) in the relation of monosemy are called monosemes.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">relation between designations (3.4.1) and concepts (3.2.1) in a given language in which one designation only relates to one concept</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Neoterm">
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Term"/>
+        <skos:scopeNote rdf:datatype="&xsd;string">Although neoterms sometimes rename established concepts (3.2.1), they usually name new concepts.</skos:scopeNote>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.7</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">new term (3.4.3) coined for a given concept (3.2.1)</skos:definition>
+        <skos:prefLabel>neoterm</skos:prefLabel>
+        <skos:altLabel>neologism</skos:altLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Object">
+        <rdfs:label>object</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;memberOf"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Extension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.1.1</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">anything perceivable or conceivable</skos:definition>
+        <skos:note rdf:datatype="&xsd;string">objects may be material (e.g. an engine, a sheet of paper, a diamond), immaterial (e.g. conversion ratio, a project plan) or imagined (e.g. a unicorn).</skos:note>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ObsoleteTerm">
+        <rdfs:label>obsolete term</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasAcceptabilityRating"/>
+                <owl:hasValue rdf:resource="&vtw-cpt;obsolete"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RatedTerm"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.18</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) which is no longer in common use</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;PartitiveConcept">
+        <rdfs:label>partitive concept</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.18</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">concept (3.2.1) in a partitive relation (3.2.22) viewed as one of the parts making up the whole</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;PartitiveRelation">
+        <skos:example rdf:datatype="&xsd;string">A partitive relation exists between the concepts (3.2.1) week and day, molecule and atom.</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.22</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">relation between two concepts (3.2.1) where one of the concepts constitutes the whole and the other concept a part of that whole</skos:definition>
+        <skos:altLabel>part-whole relation</skos:altLabel>
+        <skos:prefLabel>partitive relation</skos:prefLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Polyseme">
+        <rdfs:label>polyseme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;isPolysemeFor"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.24</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">The designations (3.4.1) in the relation of polysemy are called polysemes.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Polysemy">
+        <rdfs:label>polysemy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RelationBetweenDesignationsAndConcepts"/>
+        <skos:example rdf:datatype="&xsd;string">An example of polysemy is: bridge - (1) structure to carry traffic over a gap, (2) part of a string instrument, (3) dental plate</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.24</dct:source>
+        <skos:note rdf:datatype="&xsd;string">The designations (3.4.1) in the relation of polysemy are called polysemes.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">relation between designations (3.4.1) and concepts (3.2.1) in a given language in which one designation represents two or more concepts sharing certain characteristics (3.2.4)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;PreferredTerm">
+        <rdfs:label>preferred term</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasAcceptabilityRating"/>
+                <owl:hasValue rdf:resource="&vtw-cpt;preferred"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RatedTerm"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.15</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) rated according to the scale of the term acceptability rating (3.4.14) as the primary term for a given concept (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;RatedTerm">
+        <rdfs:label>rated term</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Term"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasAcceptabilityRating"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly represented in the standard, this class represents the set of terms that have acceptability ratings.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Relation">
+        <rdfs:label>relation</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the standard, this relation class is used as a collection mechanism for all relation classes.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;RelationBetweenDesignations">
+        <rdfs:label>relation between designations</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Relation"/>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the standard, this class is used as a collection mechanism for relations between designations.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;RelationBetweenDesignationsAndConcepts">
+        <rdfs:label>relation between designations and concepts</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Relation"/>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the standard, this class is used as a collection mechanism for relations between designations and concepts.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;SequentialRelation">
+        <rdfs:label>sequential relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;AssociativeRelation"/>
+        <skos:example rdf:datatype="&xsd;string">A sequential relation exists between the concepts (3.2.1) production and consumption, etc.</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.24</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">associative relation (3.2.23) based on spatial or temporal proximity</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;ShortForm">
+        <rdfs:label>short form</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;AbbreviatedForm"/>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly represented in the standard but referenced in ISO 704, a very long complex term or appellation can be reduced. The short form uses fewer words to designate the same concept.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;SimpleTerm">
+        <rdfs:label>simple term</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Term"/>
+        <skos:example rdf:datatype="&xsd;string">Examples of simple terms are: sound, light.</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.4</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) containing only one root</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;SpecialLanguage">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;isUsedBy"/>
+                <owl:onClass rdf:resource="&vtw-cpt;SubjectField"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.1.3</dct:source>
+        <skos:scopeNote rdf:datatype="&xsd;string">The specific linguistic means of expression always includes subject-specific terminology and phraseology and also may cover stylistic or syntactic features.</skos:scopeNote>
+        <skos:definition rdf:datatype="&xsd;string">language used in a subject field and characterized by the use of specific linguistic means of expression</skos:definition>
+        <skos:altLabel>LSP</skos:altLabel>
+        <skos:altLabel>language for special purposes</skos:altLabel>
+        <skos:prefLabel>special language</skos:prefLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;SpecificConcept">
+        <rdfs:label>specific concept</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.16</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">concept (3.2.1) in a generic relation (3.2.21) having the broader intension (3.2.9)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;SubjectField">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;uses"/>
+                <owl:onClass rdf:resource="&vtw-cpt;SpecialLanguage"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.1.2</dct:source>
+        <skos:scopeNote rdf:datatype="&xsd;string">The borderlines of a subject field are defined from a purpose-related point of view</skos:scopeNote>
+        <skos:definition rdf:datatype="&xsd;string">subject field, domain, or field of special knowledge</skos:definition>
+        <skos:altLabel>domain</skos:altLabel>
+        <skos:prefLabel>subject field</skos:prefLabel>
+        <skos:altLabel>field of special knowledge</skos:altLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;SubordinateConcept">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&vtw-cpt;PartitiveConcept"/>
+                    <rdf:Description rdf:about="&vtw-cpt;SpecificConcept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Concept"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.14</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">concept (3.2.1) which is either a specific concept (3.2.16) or a partitive concept (3.2.18)</skos:definition>
+        <skos:prefLabel>subordinate concept</skos:prefLabel>
+        <skos:altLabel>narrower concept</skos:altLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;SuperordinateConcept">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&vtw-cpt;ComprehensiveConcept"/>
+                    <rdf:Description rdf:about="&vtw-cpt;GenericConcept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Concept"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.13</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">concept (3.2.1) which is either a generic concept (3.2.15) or a comprehensive concept (3.2.17)</skos:definition>
+        <skos:prefLabel>superordinate concept</skos:prefLabel>
+        <skos:altLabel>broader concept</skos:altLabel>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Symbol">
+        <rdfs:label>symbol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the standard but referenced in ISO 704, designations (terms, appellations or symbols) designate or represent a concept, or are attributed to a concept.  From section 7.5, ISO 704, symbols are an important aid to international communication because their visual representation of concepts functions independently of any given language. They can communicate information directly under difficult circumstances (e.g., traffic signs).
+
+Iconic symbols should bear some visual resemblance to the concept they represent. Generally their meaning should be directly apparent without explanation. In some cases, however, the visual resemblance of the symbol is less pronounced or completely lost. Its meaning may be no longer directly recognizable and may be supported only by general agreement.
+
+Terms using the letters of the alphabet as iconic symbols to communicate the shape of the letter itself rather than its sound shall not be considered a symbol.
+
+Characters that replace words or parts of words, such as mathematical symbols or currency symbols, are considered symbols.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Synonym">
+        <rdfs:label>synonym</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.19</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">Terms (3.4.3) which are interchangeable in all contexts (3.6.10) are called synonyms; if they are interchangeable only in some contexts, they are called quasi-synonyms.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Synonymy">
+        <rdfs:label>synonymy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;RelationBetweenDesignations"/>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.19</dct:source>
+        <skos:scopeNote rdf:datatype="&xsd;string">Terms (3.4.3) which are interchangeable in all contexts (3.6.10) are called synonyms; if they are interchangeable only in some contexts, they are called quasisynonyms.</skos:scopeNote>
+        <skos:note rdf:datatype="&xsd;string">The relation of synonymy exists, for example, between deuterium and heavy hydrogen.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">relation between or among terms (3.4.3) in a given language representing the same concept (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;TemporalRelation">
+        <rdfs:label>temporal relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;SequentialRelation"/>
+        <skos:example rdf:datatype="&xsd;string">A temporal relation exists between the concepts (3.2.1) spring and summer, autumn and winter.</skos:example>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.25</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">sequential relation (3.2.24) involving events in time</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;Term">
+        <rdfs:label>term</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Designation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;designates"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;GeneralConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:note rdf:datatype="&xsd;string">A term may contain symbols and can have variants, e.g. different forms of spelling.</skos:note>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.3</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">verbal designation (3.4.1) of a general concept (3.2.3) in a specific subject field (3.1.2)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;TermAcceptabilityRating">
+        <rdfs:label>term acceptability rating</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.14</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">rating established from a predetermined scale and used to evaluate a term (3.4.3)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-cpt;TypeOfCharacteristic">
+        <rdfs:label>type of characteristic</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;classifies"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.2.5</dct:source>
+        <skos:example rdf:datatype="&xsd;string">The type of characteristics colour embraces characteristics (3.2.4) being red, blue, green, etc. The type of characteristics material embraces characteristics made of wood, metal, etc.</skos:example>
+        <skos:definition rdf:datatype="&xsd;string">category of characteristics (3.2.4) which serves as the criterion of subdivision when establishing concept systems (3.2.11)</skos:definition>
+    </owl:Class>    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Thing rdf:about="&vtw-cpt;admitted">
+        <rdf:type rdf:resource="&vtw-cpt;TermAcceptabilityRating"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label>admitted</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraphs 3.4.14, 3.4.16</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) rated according to the scale of the term acceptability rating (3.4.14) as a synonym for a preferred term (3.4.15)</skos:definition>
+    </owl:Thing>
+    
+
+    <owl:Thing rdf:about="&vtw-cpt;deprecated">
+        <rdf:type rdf:resource="&vtw-cpt;TermAcceptabilityRating"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label>deprecated</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraphs 3.4.14, 3.4.17</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) rated according to the scale of the term acceptability rating (3.4.14) as undesired</skos:definition>
+    </owl:Thing>
+    
+
+    <owl:Thing rdf:about="&vtw-cpt;obsolete">
+        <rdf:type rdf:resource="&vtw-cpt;TermAcceptabilityRating"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label>obsolete</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraphs 3.4.14, 3.4.18</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) which is no longer in common use</skos:definition>
+    </owl:Thing>
+    
+
+    <owl:Thing rdf:about="&vtw-cpt;preferred">
+        <rdf:type rdf:resource="&vtw-cpt;TermAcceptabilityRating"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label>preferred</rdfs:label>
+        <dct:source rdf:datatype="&xsd;string">ISO 1087-1, paragraphs 3.4.14, 3.4.15</dct:source>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) rated according to the scale of the term acceptability rating (3.4.14) as the primary term for a given concept (3.2.1)</skos:definition>
+    </owl:Thing>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;HierarchicalRelation"/>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&vtw-cpt;GenericRelation"/>
+            <rdf:Description rdf:about="&vtw-cpt;PartitiveRelation"/>
+        </owl:unionOf>
+    </owl:Class>
+
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="&vtw-cpt;Relation"/>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&vtw-cpt;AssociativeRelation"/>
+            <rdf:Description rdf:about="&vtw-cpt;HierarchicalRelation"/>
+        </owl:unionOf>
+    </owl:Class>
+
+</rdf:RDF>

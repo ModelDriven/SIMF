@@ -1,0 +1,107 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://modeldriven.com/ontology/test>
+
+
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/description>
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <http://modeldriven.com/ontology/test#>
+
+    Annotations: 
+        rdfs:label ""@en
+    
+    Domain: 
+        <http://modeldriven.com/ontology/test#B>
+    
+    Range: 
+        <http://modeldriven.com/ontology/test#A>
+    
+    InverseOf: 
+        <http://modeldriven.com/ontology/test#b2>
+    
+    
+ObjectProperty: <http://modeldriven.com/ontology/test#b2>
+
+    Annotations: 
+        rdfs:label "b2"@en
+    
+    SubPropertyOf: 
+        <http://modeldriven.com/ontology/test#b>
+    
+    Domain: 
+        <http://modeldriven.com/ontology/test#A>
+    
+    Range: 
+        <http://modeldriven.com/ontology/test#B>
+    
+    InverseOf: 
+        <http://modeldriven.com/ontology/test#>
+    
+    
+ObjectProperty: <http://modeldriven.com/ontology/test#b>
+
+    Annotations: 
+        rdfs:label "b"@en,
+        <http://purl.org/dc/terms/description> "this is my b end"@en
+    
+    Domain: 
+        <http://modeldriven.com/ontology/test#A>
+    
+    Range: 
+        <http://modeldriven.com/ontology/test#B>
+    
+    InverseOf: 
+        <http://modeldriven.com/ontology/test#a>
+    
+    
+ObjectProperty: <http://modeldriven.com/ontology/test#a>
+
+    Annotations: 
+        rdfs:label "a"@en
+    
+    Domain: 
+        <http://modeldriven.com/ontology/test#B>
+    
+    Range: 
+        <http://modeldriven.com/ontology/test#A>
+    
+    InverseOf: 
+        <http://modeldriven.com/ontology/test#b>
+    
+    
+Class: <http://modeldriven.com/ontology/test#B>
+
+    Annotations: 
+        rdfs:label "B"@en
+    
+    
+Class: <http://modeldriven.com/ontology/test#A>
+
+    Annotations: 
+        <http://purl.org/dc/terms/description> "this is my A"@en,
+        rdfs:label "A"@en
+    
+    EquivalentTo: 
+        (<http://modeldriven.com/ontology/test#b2> min 1 <http://modeldriven.com/ontology/test#B>)
+         and (<http://modeldriven.com/ontology/test#b2> max 1 <http://modeldriven.com/ontology/test#B>)
+    
+    
+Class: <http://modeldriven.com/ontology/test#>
+
+    Annotations: 
+        rdfs:label ""@en
+    
+    

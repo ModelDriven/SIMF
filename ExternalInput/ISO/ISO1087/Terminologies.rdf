@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/" >
+    <!ENTITY vtw-cpt "http://www.omg.org/spec/VTW/Concepts/" >
+    <!ENTITY vtw-tmy "http://www.omg.org/spec/VTW/Terminologies/" >
+]>
+
+<rdf:RDF xmlns="http://www.omg.org/spec/VTW/Terminologies/"
+     xml:base="http://www.omg.org/spec/VTW/Terminologies/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:vtw-cpt="http://www.omg.org/spec/VTW/Concepts/"
+xmlns:vtw-tmy="http://www.omg.org/spec/VTW/Terminologies/">
+
+    <owl:Ontology rdf:about="http://www.omg.org/spec/VTW/Terminologies/">
+        <rdfs:label>Vocabulary for Terminology Work (VTW) Terminologies Ontology</rdfs:label>
+
+    <!-- Specification Level Metadata for the VTW Terminologies Ontology -->
+
+        <sm:specificationTitle rdf:datatype="&xsd;string">Vocabulary for Terminology Work (VTW) Specification</sm:specificationTitle>
+        <sm:specificationAbbreviation rdf:datatype="&xsd;string">VTW</sm:specificationAbbreviation>
+        <sm:specificationURL rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/VTW/</sm:specificationURL>
+        <sm:specificationAbstract rdf:datatype="&xsd;string">The purpose of the VTW specification, based on ISO 1087, is to provide a systemic description of the concepts in the field of terminology and to clarify the use of the terms in this field. The ISO 1087-1 standard establishes a basic vocabulary for the theory and application of terminology work.  This ontology provides a formal, logically consistent representation for ISO 1087-1.</sm:specificationAbstract>
+
+        <sm:directSource>ISO 1087-1:2000 Terminology work - Vocabulary - Part 1: Theory and application, First edition, 2000-10-15</sm:directSource>
+        <sm:relatedSpecification>ISO 1087-2:2000 Terminology work - Vocabulary - Part 2: Computer applications, First edition, 2000-03-01</sm:relatedSpecification>
+        <sm:relatedSpecification>ISO 704:2009 Terminology work - Principles and methods, Second edition, 2000-11-15</sm:relatedSpecification>
+        <sm:relatedSpecification>International Information Centre for Terminology (InfoTerm), see http://www.infoterm.info/</sm:relatedSpecification>
+        <sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
+
+
+    <!-- Specification Version Metadata for the VTW Terminologies Ontology -->
+
+        <sm:thisVersion rdf:datatype="&xsd;string">RFC</sm:thisVersion>
+        <sm:publicationDate rdf:datatype="&xsd;dateTime">2014-05-19T18:00:00</sm:publicationDate>
+        <sm:specificationVersionURL rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/VTW/RFC/</sm:specificationVersionURL>
+        <sm:specificationVersionStatus rdf:datatype="&xsd;string">Request For Comments (RFC)</sm:specificationVersionStatus>
+        <skos:historyNote rdf:datatype="&xsd;string">Revisions to this ontology will be managed per the process outlined in the Policies and Procedures for OMG standards, with the intent to maintain backwards compatibility to the degree possible.
+  
+The RDF/XML serialized OWL corresponding to the ODM/OWL model has been checked for syntactic errors and logical consistency with Protege 4 (http://protege.stanford.edu/), HermiT 1.3.6 (http://www.hermit-reasoner.com/) and Pellet 2.2 (http://clarkparsia.com/pellet/).</skos:historyNote>
+        <sm:addressForComments rdf:datatype="&xsd;anyURI">http://www.omg.org/issues/</sm:addressForComments>
+
+
+    <!-- Curation and Rights Metadata for the VTW Terminologies Ontology -->
+
+        <sm:copyright rdf:datatype="&xsd;string">Copyright (c) 2014, Object Management Group, Inc.
+Copyright (c) 2014, Adaptive, Inc.
+Copyright (c) 2014, Mayo Clinic
+Copyright (c) 2014, Institute for Defense Analyses
+Copyright (c) 2014, Thematix Partners LLC
+Copyright (c) 2014, Unisys
+Copyright (c) 2014, Visumpoint LLC</sm:copyright>
+        <sm:submitter rdf:datatype="&xsd;string">Adaptive, Inc.</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Institute for Defense Analyses</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Mayo Clinic</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Thematix Partners LLC</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Unisys</sm:submitter>
+        <sm:submitter rdf:datatype="&xsd;string">Visumpoint LLC</sm:submitter>
+        <dct:license rdf:datatype="&xsd;string">The MIT License:  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</dct:license>
+        <dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/mit-license.php</dct:license>
+        <sm:responsibleTaskForce rdf:datatype="&xsd;anyURI">http://adtf.omg.org/</sm:responsibleTaskForce>
+
+
+    <!-- Ontology/File-Level Metadata for the VTW Terminologies Ontology -->
+
+        <sm:filename rdf:datatype="&xsd;string">VTW Terminologies Ontology</sm:filename>
+        <sm:fileAbbreviation rdf:datatype="&xsd;string">vtw-tmy</sm:fileAbbreviation>
+        <owl:versionIRI rdf:resource="http://www.omg.org/spec/VTW/20140501/Terminologies/"/>
+        <sm:fileAbstract rdf:datatype="&xsd;string">The Terminologies ontology represents the subset of the ISO 1087-1 reference vocabulary used specifically for the development of terminological dictionaries, concordances, and other controlled vocabularies, and is designed to evolve as the standard is revised.  The current version covers all of the relevant terms defined in ISO 1087-1:2000 (English only).
+
+The VTW ontology consists of two primary components:
+- Core concepts, concept relations, terms and abbreviations, and concept systems 
+- Terminologies and terminological dictionaries (this module)</sm:fileAbstract>
+        <sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+        <sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/ODM/</sm:contentLanguage>
+        <sm:isNormative rdf:datatype="&xsd;boolean">true</sm:isNormative>
+        <sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/VTW/Concepts/</sm:dependsOn>
+
+        <owl:imports rdf:resource="http://www.omg.org/spec/VTW/Concepts/"/>
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;excerpts">
+        <rdfs:label>excerpts</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">selects for quoting (from a passage), extracts</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;hasEntryTerm">
+        <rdfs:label>has term</rdfs:label>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.4</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">The entry term usually corresponds to the preferred term (3.4.15)</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">term (3.4.3) which heads a terminological entry (3.8.2)</skos:definition>
+        <rdfs:range rdf:resource="&vtw-cpt;Term"/>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+        <rdfs:domain rdf:resource="&vtw-tmy;TerminologicalEntry"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;hasMacrostructure">
+        <rdfs:label>has macrostructure</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+        <rdfs:range rdf:resource="&vtw-tmy;Macrostructure"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;hasMicrostructure">
+        <rdfs:label>has microstructure</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&vtw-cpt;has"/>
+        <rdfs:range rdf:resource="&vtw-tmy;Microstructure"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;identifies">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>identifies</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an identifier to the entity that it identifies</skos:definition>
+        <rdfs:domain rdf:resource="&vtw-tmy;Identifier"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;includes">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>includes</rdfs:label>
+    </owl:ObjectProperty>
+
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;informs">
+        <rdfs:label>informs</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">gives character or essence to, communicates knowledge to</skos:definition>
+        <rdfs:range rdf:resource="&vtw-tmy;TerminologyScience"/>
+        <rdfs:domain rdf:resource="&vtw-tmy;TerminologyWork"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;isIdentifiedBy">
+        <rdfs:label>is identified by</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to an identifier or key that identifies it</skos:definition>
+        <rdfs:range rdf:resource="&vtw-tmy;Identifier"/>
+        <owl:inverseOf rdf:resource="&vtw-tmy;identifies"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;produces">
+        <rdfs:label>produces</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">causes to have existence, to happen, bring about, gives being, form, or shape to, makes, especially manufactures</skos:definition>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;reflects">
+        <rdfs:label>reflects</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">makes manifest or apparent, shows</skos:definition>
+        <rdfs:range rdf:resource="&vtw-tmy;Corpus"/>
+        <rdfs:domain rdf:resource="&vtw-tmy;DesignationSet"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="&vtw-tmy;studies">
+        <rdfs:label>studies</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">application of the mental faculties to the acquisition of knowledge 
+- such application in a particular field or to a specific subject 
+- careful or extended consideration 
+- a careful examination or analysis of a phenomenon, development, or question</skos:definition>
+        <rdfs:domain rdf:resource="&vtw-tmy;TerminologyScience"/>
+        <rdfs:range rdf:resource="&vtw-tmy;TerminologyWork"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:DatatypeProperty rdf:about="&vtw-tmy;hasTextRepresentation">
+        <rdfs:label>has text representation</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">provides a text value for an identifier or other term</skos:definition>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="&vtw-tmy;AlphabeticalArrangement">
+        <rdfs:label>alphabetical arrangement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Macrostructure"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.11</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">alphabetical order
+macrostructure (3.7.7) in which the terminological entries (3.8.2) are ordered according to the letters of the alphabet which make up the entry terms (3.8.4)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Arrangement">
+        <rdfs:label>arrangement</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the ISO standard, specifies arrangement of entities in terminological collections or products</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;BaseList">
+        <rdfs:label>base list</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;DesignationSet"/>
+        <skos:note rdf:datatype="&xsd;string">A base list is usually subject to further terminology work (3.6.1).</skos:note>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.11</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">list of designations (3.4.1) resulting from term identification (3.6.8)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Collection">
+        <rdfs:label>collection</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;hasMacrostructure"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;Macrostructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:example rdf:datatype="&xsd;string"> a collection of artifacts, books, periodicals, artwork, terms, or other objects in a that form the core basis for a vocabulary, exhibit, library etc.</skos:example>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the ISO standard, a collection or archive</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;ConceptHarmonization">
+        <rdfs:label>concept harmonization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;HarmonizationActivity"/>
+        <skos:note rdf:datatype="&xsd;string">Concept harmonization is an integral part of standardization</skos:note>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.5</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">activity for reducing or eliminating minor differences between two or more concepts (3.2.1) which are already closely related to each other (ISO 860:1996)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Corpus">
+        <rdfs:label>corpus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Collection"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.9</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">a large, structured collection of language data, texts or other documents and artifacts brought together for analysis</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;CountryIdentifier">
+        <rdfs:label>country identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Identifier"/>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologicalData"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.9</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">information in a terminological entry (3.8.2) which indicates the name of a geographical region where the designation (3.4.1) is used</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;DesignationSet">
+        <rdfs:label>designation set</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Collection"/>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologyProduct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;consistsOf"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Designation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the ISO standard, represents a set of designations.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Glossary">
+        <rdfs:label>glossary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologicalDictionary"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.3</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">In English common language usage, glossary can refer to a unilingual list of designations (3.4.1) and definitions (3.3.1) in a particular subject field (3.1.2).</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">terminological dictionary (3.7.1) which contains a list of designations (3.4.1) from a subject field (3.1.2), together with equivalents in one or more languages</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;GrammaticalLabel">
+        <rdfs:label>grammatical label</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologicalData"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.6</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">information in a terminological entry (3.8.2) which indicates the grammatical features of a term (3.4.3)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;HarmonizationActivity">
+        <rdfs:label>harmonization activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologyWork"/>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the standard, represents various kinds of harmonization.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Identifier">
+        <rdfs:label>identifier</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;hasTextRepresentation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">An identifier is a name that identifies (that is, labels the identity of) either a unique object or a unique class of objects, where the object or class may be an idea, physical (countable) object (or class thereof), or physical (noncountable) substance (or class thereof). The abbreviation ID often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification). An identifier may be a word, number, letter, symbol, or any combination of those.</skos:definition>
+        <sm:directSource>http://en.wikipedia.org/wiki/Identifier</sm:directSource>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;LanguageIdentifier">
+        <rdfs:label>language identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Identifier"/>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologicalData"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.8</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">information in a terminological entry (3.8.2) which indicates the name of a language</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Macrostructure">
+        <rdfs:label>macrostructure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Arrangement"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.7</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">arrangement of entries in a collection</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Microstructure">
+        <rdfs:label>microstructure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Arrangement"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.8</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">arrangement of data in each entry of a collection</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;MixedArrangement">
+        <rdfs:label>mixed arrangement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Macrostructure"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.12</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">mixed order
+macrostructure (3.7.7) in which the terminological entries (3.8.2) appear in alphabetical order within systematically or thematically arranged sections</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Nomenclature">
+        <rdfs:label>nomenclature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Terminology"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.5.3</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">Nomenclatures have been elaborated in various fields, such as biology, medicine, physics and chemistry</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">terminology (3.5.1) structured systematically according to pre-established naming rules</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Note">
+        <rdfs:label>note</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologicalData"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.5</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">statement which provides further information on any part of a terminological entry (3.8.2)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;SourceIdentification">
+        <rdfs:label>source identification or provenance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologicalData"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.10</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">information in a terminological entry (3.8.2) which indicates the source documenting the terminological data (3.8.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;SubjectLabel">
+        <rdfs:label>subject label</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologicalData"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.7</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">information in a terminological entry (3.8.2) which indicates the subject field (3.1.2)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;SystematicArrangement">
+        <rdfs:label>systematic arrangement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Macrostructure"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.9</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">systematic order
+macrostructure (3.7.7) in which the terminological entries (3.8.2) appear in an order reflecting the underlying concept system (3.2.11)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TermBank">
+        <rdfs:label>term bank</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;manages"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;TerminologicalDatabase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.4</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">terminological data bank
+data bank (see ISO 1087-2:2000, 6.7) containing terminological data (3.8.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TermExcerption">
+        <rdfs:label>term excerption</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologyWork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;includes"/>
+                <owl:onClass rdf:resource="&vtw-tmy;TermIdentification"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;reflects"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;Corpus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.7</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">Term excerption involves identifying concepts (3.2.1) and their designations (3.4.1) and noting any relevant information about a concept such as definitions (3.3.1), contexts (3.6.10) and usage labels.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">part of terminology work (3.6.1) which involves extracting terminological data (3.8.1) by searching through a corpus (3.6.9)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TermHarmonization">
+        <rdfs:label>term harmonization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;HarmonizationActivity"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.6</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">activity leading to the designation of one concept (3.2.1) in different languages by terms (3.4.3) which reflect the same or similar characteristics (3.2.4) or have the same or slightly different forms (ISO 860:1996)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TermIdentification">
+        <rdfs:label>term identification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologyWork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;reflects"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;Corpus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;produces"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;BaseList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.8</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">part of term excerption (3.6.7) involving recognition and selection of designations (3.4.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Terminography">
+        <rdfs:label>terminography</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologyWork"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.2</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">Terminological data (3.8.1) may be presented in the form of term banks (3.7.4), glossaries (3.7.3), thesauri or other publications.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">part of terminology work (3.6.1) concerned with the recording and presentation of terminological data (3.8.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologicalConcordance">
+        <rdfs:label>terminological concordance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;DesignationSet"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasContext"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Context"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.6</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">ordered list of terms (3.4.3) extracted from a corpus (3.6.9) together with a context (3.6.10) and a source reference</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologicalData">
+        <rdfs:label>terminological data</rdfs:label>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.1</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">The more common terminological data include entry term (3.8.4), definition (3.3.1), note (3.8.5), grammatical label (3.8.6), subject label (3.8.7), language identifier (3.8.8), country identifier (3.8.9) and source identifier (3.8.10).</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">data related to concepts (3.2.1) or their designations (3.4.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologicalDatabase">
+        <rdfs:label>terminological database</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;isManagedBy"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;TermBank"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;consistsOf"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;TerminologicalData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.5</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">database (see ISO 1087-2:2000) containing terminological data</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologicalDictionary">
+        <rdfs:label>terminological dictionary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;hasMacrostructure"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;Macrostructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;consistsOf"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;TerminologicalEntry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.1</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">collection of terminological entries (3.8.2) presenting information related to concepts (3.2.1) or designations (3.4.1) from one or more specific subject fields (3.1.2)
+</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologicalEntry">
+        <rdfs:label>terminological entry</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;has"/>
+                <owl:onClass rdf:resource="&vtw-tmy;SubjectLabel"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;isIdentifiedBy"/>
+                <owl:onClass rdf:resource="&vtw-tmy;CountryIdentifier"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasDefinition"/>
+                <owl:someValuesFrom rdf:resource="&vtw-cpt;Definition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;has"/>
+                <owl:onClass rdf:resource="&vtw-tmy;SourceIdentification"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;has"/>
+                <owl:onClass rdf:resource="&vtw-tmy;GrammaticalLabel"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;hasEntryTerm"/>
+                <owl:onClass rdf:resource="&vtw-cpt;Term"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasCharacteristic"/>
+                <owl:onClass rdf:resource="&vtw-tmy;TerminologicalFormat"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;isIdentifiedBy"/>
+                <owl:onClass rdf:resource="&vtw-tmy;LanguageIdentifier"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;hasMicrostructure"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;Microstructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;consistsOf"/>
+                <owl:onClass rdf:resource="&vtw-tmy;TerminologicalData"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;has"/>
+                <owl:onClass rdf:resource="&vtw-tmy;Note"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:note rdf:datatype="&xsd;string">Adapted from ISO 1087-2:2000.</skos:note>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.2</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">part of a terminological data collection (ISO 1087-2:2000, 2.21) which contains the terminological data (3.8.1) related to one concept (3.2.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologicalFormat">
+        <rdfs:label>terminological format</rdfs:label>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.8.3</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">format of a terminological entry (3.8.2)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Terminologization">
+        <rdfs:label>terminologization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologyProcess"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-tmy;produces"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Term"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.4.8</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">process by which a general language word or expression is transformed into a term (3.4.3)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Terminology">
+        <rdfs:label>terminology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;DesignationSet"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;uses"/>
+                <owl:allValuesFrom rdf:resource="&vtw-tmy;SpecialLanguage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.5.1</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">terminology 1
+set of designations (3.4.1) belonging to one special language (3.1.3)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologyPlanning">
+        <rdfs:label>terminology planning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologyWork"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.4</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">Terminology planning involves all aspects of terminology work (3.6.1) and has among other objectives the objective of achieving vocabulary control through such normative documents as thesauri and terminology standards.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">activities aimed at developing, improving, implementing and disseminating the terminology (3.5.1) of a subject field (3.1.2)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologyProcess">
+        <rdfs:label>terminology process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Process"/>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the ISO standard, a process specific to terminology work</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologyProcessing">
+        <rdfs:label>terminology processing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Terminography"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.3</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">part of terminography (3.6.2) concerned with computer aspects of database creation, maintenance and extraction of terminology (3.5.1) from texts</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologyProduct">
+        <rdfs:label>terminology product</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">Not explicitly defined in the ISO standard, represents a product created through various aspects of terminology work.</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologyScience">
+        <rdfs:label>terminology science</rdfs:label>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.5.2</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">terminology 2
+science studying the structure, formation, development, usage and management of terminologies (3.5.1) in various subject fields (3.1.2)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;TerminologyWork">
+        <rdfs:label>terminology work</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vtw-cpt;hasContext"/>
+                <owl:allValuesFrom rdf:resource="&vtw-cpt;Context"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.6.1</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">work concerned with the systematic collection, description, processing and presentation of concepts (3.2.1) and their designations (3.4.1)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;ThematicArrangement">
+        <rdfs:label>thematic arrangement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;Macrostructure"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.10</sm:directSource>
+        <skos:definition rdf:datatype="&xsd;string">thematic order
+macrostructure (3.7.7) in which the terminological entries (3.8.2) are arranged in thematic sections</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Vocabulary">
+        <rdfs:label>vocabulary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;TerminologicalDictionary"/>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 1087-1, paragraph 3.7.2</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">The vocabulary may be monolingual, bilingual or multilingual.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">terminological dictionary (3.7.1) which contains designations (3.4.1) and definitions (3.3.1) from one or more specific subject fields (3.1.2)</skos:definition>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;Process">
+        <rdfs:label>process</rdfs:label>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&vtw-tmy;SpecialLanguage">
+        <owl:equivalentClass rdf:resource="&vtw-cpt;SpecialLanguage"/>
+        <rdfs:subClassOf rdf:resource="&vtw-tmy;DesignationSet"/>
+    </owl:Class>
+    
+</rdf:RDF>
