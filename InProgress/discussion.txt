@@ -1,0 +1,6 @@
+questions
+CCM representation in MM
+CBC profile cross CCM Profile
+Strategy - FIBO, OMG Process / ODM 
+- Content - libraries\
+Workplan
