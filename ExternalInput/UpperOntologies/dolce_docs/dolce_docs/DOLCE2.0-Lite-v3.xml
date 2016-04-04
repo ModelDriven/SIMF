@@ -1,0 +1,1835 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tells xmlns="http://dl.kr.org/dig/lang">
+    <clearKB/>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Economic-Process"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Economic-Process"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Phenomenon"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Phenomenon"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Phenomenon"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Accomplishment"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Activity"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Activity"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Accomplishment"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Place"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Place"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Social-Object"/>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICALLY-DEPENDS-ON"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Place"/>
+            </some>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Country"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Country"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Political-Geographic-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organization"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organization"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Legally-Constructed-Person"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Atom"/>
+    <equalc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Atom"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART"/>
+                <not>
+                    <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+                </not>
+            </all>
+        </and>
+    </equalc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Date"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Date"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Fact"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Fact"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Agent"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Agent"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Social-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPEND-ON-SPATIAL-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Region"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Region"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Region"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Commerce"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Commerce"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Transaction"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Feature"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Social-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Social-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Socially-Constructed-Person"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Socially-Constructed-Person"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Agent"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Society"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Society"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Social-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Amount-Of-Matter"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Amount-Of-Matter"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Relevant-Part"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Relevant-Part"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Feature"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAPPENS-AT"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+            </all>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </some>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Location"/>
+            </some>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Quality"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Location"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Location"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Quality"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Stative"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Stative"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Social-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Social-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Event"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Event"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Group"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Group"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Society"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quale"/>
+    <equalc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quale"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART"/>
+                <not>
+                    <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+                </not>
+            </all>
+        </and>
+    </equalc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#State"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#State"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Stative"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporary-Atom"/>
+    <equalc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporary-Atom"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Atom"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PROPER-PART"/>
+                <not>
+                    <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+                </not>
+            </all>
+        </and>
+    </equalc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Accomplishment"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Accomplishment"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Event"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Set"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Set"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Particular"/>
+    <equalc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Particular"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+        </and>
+    </equalc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Spatial-Location"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Spatial-Location"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Natural-Person"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Natural-Person"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Geographical-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Geographical-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Place"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Device"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Device"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Achievement"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Achievement"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Event"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+        <and>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONCEPTUAL-RELATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Feature"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Legally-Constructed-Person"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Legally-Constructed-Person"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Socially-Constructed-Person"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-DEPEND-ON-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+            </all>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+            </some>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Shape-Quality"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Shape-Quality"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Transaction"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Transaction"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Activity"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Feature"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Feature"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Volume"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Volume"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Socially-Constructed-Person"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Unit"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Unit"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Agent"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Place"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Place"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON-SPATIAL-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICALLY-DEPENDS-ON"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DESCRIPTIVE-DEPEND-ON-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Quality"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Quality"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Quality"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Quality"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+            </all>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+            </some>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Process"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Process"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Phenomenon"/>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object"/>
+            </some>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Quality"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Quality"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Quality"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </all>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </some>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organism"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organism"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-PRESENT-AT"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+            </all>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+            </some>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Process"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Process"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Stative"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Unitary-Collection"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Unitary-Collection"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Political-Geographic-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Political-Geographic-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Place"/>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICALLY-DEPENDS-ON"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Geographical-Object"/>
+            </some>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Spatio-Temporal-Region"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Spatio-Temporal-Region"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Mental-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Mental-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <not>
+                    <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Spatial-Location"/>
+                </not>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PROPER-PART"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PROPER-PART-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PRESENT-AT"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPEND-ON-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DESCRIPTIVELY-DEPENDS-ON"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Color-Quality"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Color-Quality"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-PRESENCE-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-Q-PRESENCE-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-HAPPENING-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Information-Object"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Information-Object"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Social-Object"/>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICALLY-DEPENDS-ON"/>
+                <or>
+                    <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+                    <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+                    <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+                    <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+                </or>
+            </some>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Arbitrary-Sum"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Arbitrary-Sum"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+        </and>
+    </impliesc>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALE"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quale"/>
+            </all>
+            <some>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            </some>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+            </all>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+            </all>
+        </and>
+    </impliesc>
+    <defconcept name="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <defconcept name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+        <and>
+            <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+        </and>
+    </impliesc>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#NAME-OF"/>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-Q-PRESENCE-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-Q-PRESENCE-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-PRESENT-AT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-COMPONENT"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-COMPONENT"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-COMPONENT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-COMPONENT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION-OF"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION-OF"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ABSTRACT-LOCATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Feature"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#NAME"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#NAME"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXTRINSIC-RELATION"/>
+    </impliesr>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#NAME"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#NAME-OF"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#NAME"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#NAME"/>
+        <catom name="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <transitive>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+    </transitive>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONCEPTUAL-RELATION"/>
+    </impliesr>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DURATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DURATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DURATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DESCRIPTIVE-DEPEND-ON-OF"/>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#COMPONENT"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#COMPONENT"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#COMPONENT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#COMPONENT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DURATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DURATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DURATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DURATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PROPER-PART"/>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART"/>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#COMPONENT-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#COMPONENT-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#COMPONENT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SPATIAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALITY"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPEND-ON-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPEND-ON-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#QUALE-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#QUALE-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALE"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-LOCATION-OF"/>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON-SPATIAL-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON-SPATIAL-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON-SPATIAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON-SPATIAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALE"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALE"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALE"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-QUALE"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quale"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TOTAL-PARTICIPANT-IN"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TOTAL-PARTICIPANT-IN"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TOTAL-PARTICIPANT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IDENTIFIER-OF"/>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PART"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PRESENT-AT"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PRESENT-AT"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PRESENT-AT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PRESENT-AT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DESCRIPTIVELY-DEPENDS-ON"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DESCRIPTIVELY-DEPENDS-ON"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DESCRIPTIVELY-DEPENDS-ON"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DESCRIPTIVELY-DEPENDS-ON"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-HAPPENING-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-HAPPENING-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAPPENS-AT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPEND-ON-SPATIAL-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPEND-ON-SPATIAL-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON-SPATIAL-LOCATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <transitive>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART"/>
+    </transitive>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXTRINSIC-RELATION"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXTRINSIC-RELATION"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXTRINSIC-RELATION"/>
+        </inverse>
+    </equalr>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXTRINSIC-RELATION"/>
+        <catom name="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-DEPEND-ON-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICAL-DEPEND-ON-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICALLY-DEPENDS-ON"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONCEPTUAL-RELATION"/>
+    </impliesr>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PROPER-PART"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-PRESENCE-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TIME-OF-PRESENCE-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PRESENT-AT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PROPER-PART-OF"/>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-ATOMIC-PART-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-ATOMIC-PART-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-ATOMIC-PART"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT-IN"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT-IN"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-COMPONENT-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-COMPONENT-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-COMPONENT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-TOTAL-PARTICIPANT-IN"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-TOTAL-PARTICIPANT-IN"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-TOTAL-PARTICIPANT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#E-TEMPORAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-TOTAL-PARTICIPANT"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-TOTAL-PARTICIPANT"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-TOTAL-PARTICIPANT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-TOTAL-PARTICIPANT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTANT-PARTICIPANT"/>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTANT-PARTICIPANT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTANT-PARTICIPANT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IDENTIFIER"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IDENTIFIER"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXTRINSIC-RELATION"/>
+    </impliesr>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IDENTIFIER"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IDENTIFIER-OF"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IDENTIFIER"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IDENTIFIER"/>
+        <catom name="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#INHERENT-IN"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#OVERLAPS"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#OVERLAPS"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    </impliesr>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#OVERLAPS"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#OVERLAPS"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#OVERLAPS"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#OVERLAPS"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#GENERIC-LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#EXACT-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TOTAL-PARTICIPANT"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TOTAL-PARTICIPANT"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PARTICIPANT"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TOTAL-PARTICIPANT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TOTAL-PARTICIPANT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEMBER-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEMBER-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-MEMBER"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTES"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTES"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAPPENS-AT"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAPPENS-AT"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAPPENS-AT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAPPENS-AT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-PART"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-MEMBER"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-MEMBER"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTITUTED-BY"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-MEMBER"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HAS-MEMBER"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-PRESENT-AT"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-PRESENT-AT"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-PRESENT-AT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-PRESENT-AT"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-ATOMIC-PART"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-ATOMIC-PART"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-ATOMIC-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-ATOMIC-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#HOST"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONCEPTUAL-RELATION"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONCEPTUAL-RELATION"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONCEPTUAL-RELATION"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONCEPTUAL-RELATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONCEPTUAL-RELATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICALLY-DEPENDS-ON"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#PHYSICALLY-DEPENDS-ON"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#DEPENDS-ON"/>
+    </impliesr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTANT-PARTICIPANT-IN"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTANT-PARTICIPANT-IN"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#CONSTANT-PARTICIPANT"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#P-SPATIAL-LOCATION"/>
+        </inverse>
+    </equalr>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SIBLING-PART"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SIBLING-PART"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#MEDIATED-RELATION"/>
+    </impliesr>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SIBLING-PART"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SIBLING-PART"/>
+        </inverse>
+    </equalr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SIBLING-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#SIBLING-PART"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#IMMEDIATE-RELATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION"/>
+    <impliesr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION"/>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#LOCATION"/>
+    </impliesr>
+    <domain>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </domain>
+    <range>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORAL-LOCATION"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+    </range>
+    <defrole name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION-OF"/>
+    <equalr>
+        <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION-OF"/>
+        <inverse>
+            <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Q-LOCATION"/>
+        </inverse>
+    </equalr>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quale"/>
+        <or>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#QUALE-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+            </all>
+        </or>
+    </impliesc>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Atom"/>
+        <or>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#ATOMIC-PART-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            </all>
+        </or>
+    </impliesc>
+    <impliesc>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporary-Atom"/>
+        <or>
+            <all>
+                <ratom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#TEMPORARY-ATOMIC-PART-OF"/>
+                <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Entity"/>
+            </all>
+        </or>
+    </impliesc>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Endurant"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Perdurant"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Quality"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Arbitrary-Sum"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Arbitrary-Sum"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Mental-Object"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Object"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Amount-Of-Matter"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Feature"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Amount-Of-Matter"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Feature"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Quality"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Quality"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Quality"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Quality"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Quality"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Region"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract-Region"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Physical-Endurant"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+    </disjoint>
+    <disjoint>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Social-Object"/>
+        <catom name="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Social-Object"/>
+    </disjoint>
+</tells>
