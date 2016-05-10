@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#"
+     xml:base="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <owl:Ontology rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#addressOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#addressOf">
+        <rdfs:range rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PhysicalLocation"/>
+        <rdfs:domain rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PostalAddress"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#designatedLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#designatedLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#designatedLocation">
+        <rdfs:domain rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#Address"/>
+        <rdfs:range rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#Address -->
+
+    <owl:Class rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#Address"/>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#Location -->
+
+    <owl:Class rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#Location"/>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PhysicalLocation -->
+
+    <owl:Class rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PhysicalLocation">
+        <rdfs:subClassOf rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PostalAddress -->
+
+    <owl:Class rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PostalAddress">
+        <rdfs:subClassOf rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#Address"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#addressOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PhysicalLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#addressOf"/>
+                <owl:onClass rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PhysicalLocation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#designatedLocation"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#PhysicalLocation"/>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#addr1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#addr1">
+        <designatedLocation rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#loc1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#loc1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#loc1"/>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#phyLoc2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#phyLoc2"/>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#phyLoc3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#phyLoc3"/>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#postalAddr2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#postalAddr2">
+        <addressOf rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#phyLoc2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#postalAddr3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#postalAddr3">
+        <designatedLocation rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#loc1"/>
+        <addressOf rdf:resource="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#phyLoc3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#loc1"/>
+            <rdf:Description rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#phyLoc2"/>
+            <rdf:Description rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#phyLoc3"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#addr1"/>
+            <rdf:Description rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#postalAddr2"/>
+            <rdf:Description rdf:about="http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-150#postalAddr3"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
