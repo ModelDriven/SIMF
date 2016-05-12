@@ -101,10 +101,24 @@
     
 
 
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-153#a1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-153;a1"/>
+    
+
+
     <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-153#b1 -->
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-153;b1">
         <hasA rdf:resource="&untitled-ontology-153;c1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.nomagic.com/jlogan/ontologies/2016/4/untitled-ontology-153#b2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-153;b2">
+        <hasA rdf:resource="&untitled-ontology-153;a1"/>
     </owl:NamedIndividual>
     
 
