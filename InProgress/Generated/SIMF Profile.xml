@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001"
+         xmlns:SIMF_Rules_Profile="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile.xmi"
+         xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+         xmlns:StandardProfile="http://www.omg.org/spec/UML/20131001/StandardProfile">
+   <xmi:documentation xmi:type="xmi:Documentation">
+      <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
+      <xmi:exporterVersion>18.2</xmi:exporterVersion>
+   </xmi:documentation>
+   <xmi:documentation xmi:type="xmi:Documentation">
+      <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
+      <xmi:exporterVersion>18.2</xmi:exporterVersion>
+   </xmi:documentation>
+   <uml:Model xmi:type="uml:Model" xmi:id="_18_0_1_8bf027c_1411745340055_911952_5224"
+              name="SIMF Profile">
+      <packagedElement xmi:type="uml:Profile" xmi:id="_18_0_1_8bf027c_1408661861698_946768_5587"
+                       name="SIMF Concept Modeling Profile"
+                       URI="http://www.omg.org/spec/SIMF/20160501/SIMF-conceptual-profile.xmi">
+         <metamodelReference xmi:idref="_18_0_1_8bf027c_1408661861699_857659_5588"/>
+         <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463765878500_425868_4567"
+                       xmi:uuid="b67eb6b3-8741-4f20-afb3-50fd9e5bc563"
+                       body="The conceptual modeling profile defines the conceptual modeling capabilities of SIMF in UML.">
+            <annotatedElement xmi:idref="_18_0_1_8bf027c_1408661861698_946768_5587"/>
+         </ownedComment>
+         <packageImport xmi:type="uml:PackageImport" xmi:id="_18_0_1_8bf027c_1408661861699_857659_5588"
+                        xmi:uuid="eba0e9b6-e438-4a05-901a-13981cafc8bc">
+            <importedPackage href="http://www.omg.org/spec/UML/20131001/UML.xmi#_0"/>
+         </packageImport>
+         <packageImport xmi:type="uml:PackageImport"
+                        xmi:id="_17_0_5_1_7b3022e_1396472031292_392832_3369"
+                        xmi:uuid="7939872f-02f4-499d-a7e7-1c5ff1a14404">
+            <importedPackage href="http://www.omg.org/spec/UML/20131001/UML.xmi#_0"/>
+         </packageImport>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_1_8bf027c_1408661908824_320374_5622"
+                          xmi:uuid="4300dbf6-8380-4ec8-8706-01866a1441e0"
+                          name="Resource">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422546632138_823005_4338"
+                          xmi:uuid="1679f25e-8847-478a-b81d-7e07b2b305b2"
+                          body="A &lt;&lt;Resource&gt;&gt; is anything that can be referenced by an IRI in a model, ontology or vocabulary.">
+               <annotatedElement xmi:idref="_18_0_1_8bf027c_1408661908824_320374_5622"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_8bf027c_1422542645920_899661_4258"
+                            xmi:uuid="0dada8d1-cd9d-42d7-aba9-052c6acd3702"
+                            name="id"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462642803132_270306_4602"
+                             xmi:uuid="ea8579a5-4bb9-4d46-867d-e94cbd60f7a8"
+                             body="Unique identifier for any resource. &#xA;When defined for a Package, id is equivalent to UML:URI - setting one will set the other.The format must comply with as defined in [RFC3987].">
+                  <annotatedElement xmi:idref="_18_0_2_8bf027c_1422542645920_899661_4258"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1462643008348_875858_4614"
+                            xmi:uuid="63570c70-357d-42b3-a759-dc3927fcfd0b"
+                            name="base_NamedElement"
+                            visibility="private"
+                            association="_18_2_62501eb_1462643008348_359360_4613">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#NamedElement"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_1_8bf027c_1408662750370_15319_5669"
+                          xmi:uuid="85bb3042-25f0-403a-8605-bcab3d2ae801"
+                          name="Anything">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422547096438_791538_4342"
+                          xmi:uuid="1ec59518-a7c6-46d3-9804-01aa23782cbb"
+                          body="&lt;&lt;Anything&gt;&gt; defines a class that represents anything and is equivalent to all other classes of anything in any other model or logic.  The defined class is equivalent to SIMF:Anything, OWL:Thing and other &#34;top level&#34; classes.&#xA;Because of this equivalence, every class in every model virtually inherits from anything, just as all OWL classes virtually inherit from owl:Thing.&#xA;&lt;&lt;Anything&gt;&gt; classes may be used as a classifier to define &#34;global properties&#34;.">
+               <annotatedElement xmi:idref="_18_0_1_8bf027c_1408662750370_15319_5669"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_3_3bc0198_1433368465218_102240_4263"
+                            xmi:uuid="fb6a9ddb-41e8-4bec-b1da-afd6b90fc1f2"
+                            name="base_Class"
+                            visibility="private"
+                            association="_18_0_3_3bc0198_1433368465217_427733_4262">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_1_8bf027c_1408732702938_45332_4392"
+                          xmi:uuid="241ec66f-297b-4a79-a1f0-0d3608f47490"
+                          name="Synonym">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463761057434_321434_4527"
+                          xmi:uuid="268355af-3c39-406f-be8f-5c17a14cb782"
+                          body="Synonym defines an alternate name for the annotated elements of the comment. The alternate name is the body of the comment.&#xA;The alternate name will not be the &#34;preferred name&#34; of the element.">
+               <annotatedElement xmi:idref="_18_0_1_8bf027c_1408732702938_45332_4392"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1461867020857_980710_4872"
+                            xmi:uuid="959684a9-2c4c-4195-9a5a-521bed28af65"
+                            name="base_Comment"
+                            visibility="private"
+                            association="_18_2_62501eb_1461867020857_518867_4871">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Comment"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_1_8bf027c_1409322510396_866557_6932"
+                          xmi:uuid="18737087-ff26-4d10-a6b2-dc07b1ad9ff0"
+                          name="Union">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463761977741_225852_4541"
+                          xmi:uuid="01b14c81-4d07-4043-8cd3-c71da48efacf"
+                          body="A &lt;&lt;Union&gt;&gt; is a class that has an extent (set of instances) which is the complete union of the extents of all types that specialize the Union (Subclasses). Specializing types shall include subtypes and types that realize the union.&#xA;&#xA;Note: Realizations are included to support unions across external models. UML generalization can not be used across external models due to the ownership of generalization.&#xA;&#xA;[MathWorld] Given two sets A and B, the union is the set that contains elements or objects that belong to either A or to B or to both.  We write A È B">
+               <annotatedElement xmi:idref="_18_0_1_8bf027c_1409322510396_866557_6932"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1462468558169_190108_4490"
+                            xmi:uuid="c676aa6a-497b-4e72-9d03-ba171faeea7a"
+                            name="base_Classifier"
+                            visibility="private"
+                            association="_18_2_62501eb_1462468558168_662242_4489">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_8bf027c_1418002266669_632692_4244"
+                          xmi:uuid="eafde224-8e85-47db-95ec-1753b212dd20"
+                          name="Concept Package">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422546680726_622490_4340"
+                          xmi:uuid="c1fa4a55-0d54-4654-8fd2-5e34ff7f70c8"
+                          body="A model of a real or possible world. Instances of elements in a concept model are &#34;real wold&#34; things, not data about those things.">
+               <annotatedElement xmi:idref="_18_0_2_8bf027c_1418002266669_632692_4244"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization"
+                            xmi:id="_18_0_2_8bf027c_1418002289506_139803_4277"
+                            xmi:uuid="4ecda647-02a0-4d6e-8684-0c7319ea0ced"
+                            general="_18_0_2_8bf027c_1422543641601_11667_4282"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_8bf027c_1418002284961_482974_4246"
+                            xmi:uuid="7e305628-2d0d-4bc6-8727-f3d637b7f3c4"
+                            name="base_Package"
+                            visibility="private"
+                            association="_18_0_2_8bf027c_1418002284961_657901_4245">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Package"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_2_8bf027c_1418002284961_657901_4245"
+                          xmi:uuid="1f2bcf64-f5cb-4dc5-b140-33970d39e7a2">
+            <memberEnd xmi:idref="_18_0_2_8bf027c_1418002284961_482974_4246"/>
+            <memberEnd xmi:idref="_18_0_2_8bf027c_1418002284962_152902_4247"/>
+            <navigableOwnedEnd xmi:idref="_18_0_2_8bf027c_1418002284962_152902_4247"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_2_8bf027c_1418002284962_152902_4247"
+                      xmi:uuid="c2fde994-70d7-411a-8fbc-0724ad957e63"
+                      name="extension_"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_2_8bf027c_1418002266669_632692_4244"
+                      association="_18_0_2_8bf027c_1418002284961_657901_4245">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_18_0_2_8bf027c_1418002284962_490210_4248"
+                           xmi:uuid="3cdd3f35-ee9c-43ee-b41c-9be4854c5db1"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_8bf027c_1418002310175_447385_4283"
+                          xmi:uuid="f8e4b5a9-9226-4767-88ed-7b0b8d13e889"
+                          name="Logical Package">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422546698126_907542_4341"
+                          xmi:uuid="06e4e0ac-7035-40eb-9b43-c4f5adc3a10b"
+                          body="A model for some purpose independent of technical implementation. A logical package may contain information or data models as well as other logical viewpoints.">
+               <annotatedElement xmi:idref="_18_0_2_8bf027c_1418002310175_447385_4283"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization"
+                            xmi:id="_18_0_2_8bf027c_1418002310177_566033_4284"
+                            xmi:uuid="b6c76417-1df4-4134-9e62-f8b2d7113005"
+                            general="_18_0_2_8bf027c_1422543641601_11667_4282"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_8bf027c_1418002310186_109846_4296"
+                            xmi:uuid="53752d85-de30-4070-85ee-2bb8f7ade741"
+                            name="base_Package"
+                            visibility="private"
+                            association="_18_0_2_8bf027c_1418002310186_933930_4295">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Package"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_2_8bf027c_1418002310186_933930_4295"
+                          xmi:uuid="822fc862-32ca-45ab-906c-e33655f8f83d">
+            <memberEnd xmi:idref="_18_0_2_8bf027c_1418002310186_109846_4296"/>
+            <memberEnd xmi:idref="_18_0_2_8bf027c_1418002310186_252493_4297"/>
+            <navigableOwnedEnd xmi:idref="_18_0_2_8bf027c_1418002310186_252493_4297"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_2_8bf027c_1418002310186_252493_4297"
+                      xmi:uuid="f6d500bf-ef8f-41c8-b6c3-3a30467964a4"
+                      name="extension_ConceptModel"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_2_8bf027c_1418002310175_447385_4283"
+                      association="_18_0_2_8bf027c_1418002310186_933930_4295">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_2_8bf027c_1418002310186_24545_4298"
+                           xmi:uuid="8ea228a2-4541-4788-a675-04493b01a94c"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_8bf027c_1422543641601_11667_4282"
+                          xmi:uuid="8e5856bf-98ab-47b5-9bd3-136c8c3301b5"
+                          name="Package">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422546663560_557888_4339"
+                          xmi:uuid="3b71df06-1e6b-431c-b333-b0668ee09871"
+                          body="&lt;&lt;Package&gt;&gt; is a kind of Resource that contains other resources and may have a namespace prefix (like the &#34;dc&#34; in &#34;dc:title&#34;).">
+               <annotatedElement xmi:idref="_18_0_2_8bf027c_1422543641601_11667_4282"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization"
+                            xmi:id="_18_0_2_8bf027c_1422543713338_559016_4320"
+                            xmi:uuid="53a2f884-b156-4f57-916c-02d591340b8d"
+                            general="_18_0_1_8bf027c_1408661908824_320374_5622"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_8bf027c_1422543695789_626614_4314"
+                            xmi:uuid="d8483e0b-d3eb-4b4b-a93f-a03aaa9567c1"
+                            name="base_Package"
+                            visibility="private"
+                            association="_18_0_2_8bf027c_1422543695789_412048_4313">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Package"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_1_8bf027c_1410291663142_556199_4654"
+                            xmi:uuid="bf3c886c-e733-4e83-8773-e50ce2d96727"
+                            name="namespace prefix"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463759590164_235174_4515"
+                             xmi:uuid="c32424b7-74aa-4438-8bdd-1e9a19a5e402"
+                             body="&lt;namespace prefix&gt; is a hint as to an appropriate abbreviation for a package that may be used in some technology mappings, such as XML. The prefix should be short and contain only letters and numbers and must start with a letter. e.g.,  &#34;dc&#34; in &#34;dc:title&#34;.">
+                  <annotatedElement xmi:idref="_18_0_1_8bf027c_1410291663142_556199_4654"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_2_8bf027c_1422543695789_412048_4313"
+                          xmi:uuid="85190387-9390-4ed4-b71c-617059b94010">
+            <memberEnd xmi:idref="_18_0_2_8bf027c_1422543695789_626614_4314"/>
+            <memberEnd xmi:idref="_18_0_2_8bf027c_1422543695789_484007_4315"/>
+            <navigableOwnedEnd xmi:idref="_18_0_2_8bf027c_1422543695789_484007_4315"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_2_8bf027c_1422543695789_484007_4315"
+                      xmi:uuid="602118c5-a6d5-455e-bf25-08e8cd264654"
+                      name="extension_Model"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_2_8bf027c_1422543641601_11667_4282"
+                      association="_18_0_2_8bf027c_1422543695789_412048_4313">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_18_0_2_8bf027c_1422543695789_744396_4316"
+                           xmi:uuid="6f4faa98-d9e5-40cf-8949-47f98369bb04"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_3_3bc0198_1433368465217_427733_4262"
+                          xmi:uuid="92b0fa44-cb0f-4b6f-8cf1-371ae25ba46a">
+            <memberEnd xmi:idref="_18_0_3_3bc0198_1433368465218_102240_4263"/>
+            <memberEnd xmi:idref="_18_0_3_3bc0198_1433368465219_697814_4264"/>
+            <navigableOwnedEnd xmi:idref="_18_0_3_3bc0198_1433368465219_697814_4264"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_3_3bc0198_1433368465219_697814_4264"
+                      xmi:uuid="0a88fa28-4564-4317-ab57-f56df3ed6859"
+                      name="extension_PropertyHolder"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_1_8bf027c_1408662750370_15319_5669"
+                      association="_18_0_3_3bc0198_1433368465217_427733_4262">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_18_0_3_3bc0198_1433368465219_407517_4265"
+                           xmi:uuid="56f04994-7b11-43ea-a9b2-a873fe569461"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_2_8d40284_1446013773240_239852_4488"
+                          xmi:uuid="4a74744e-ef34-4d53-a085-5b1bfea21203"
+                          name="Annotation Property">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462642018541_551263_4553"
+                          xmi:uuid="10ee188b-2536-4470-85ad-7c0618e08d24"
+                          body="&lt;&lt;Annotation Property&gt;&gt; defines a property representing metadata rather than a property representing information about the subject domain.">
+               <annotatedElement xmi:idref="_18_2_8d40284_1446013773240_239852_4488"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_2_8d40284_1446013805908_939759_4494"
+                            xmi:uuid="4de29621-c74f-4a96-b036-da42c0ed1646"
+                            general="_18_0_1_8bf027c_1408661908824_320374_5622"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_8d40284_1446013805933_455744_4501"
+                            xmi:uuid="3f3f5d81-6879-4b4e-9205-2a216410645c"
+                            name="base_Property"
+                            visibility="private"
+                            association="_18_2_8d40284_1446013805933_983739_4500">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_2_8d40284_1446013805933_983739_4500"
+                          xmi:uuid="6ebe5383-f2a9-48ee-9fde-68273ce03cb4">
+            <memberEnd xmi:idref="_18_2_8d40284_1446013805933_455744_4501"/>
+            <memberEnd xmi:idref="_18_2_8d40284_1446013805934_685233_4502"/>
+            <navigableOwnedEnd xmi:idref="_18_2_8d40284_1446013805934_685233_4502"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_2_8d40284_1446013805934_685233_4502"
+                      xmi:uuid="683303d0-14b1-4831-a3a5-f1cddcbbbe9e"
+                      name="extension_Annotation Property"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_2_8d40284_1446013773240_239852_4488"
+                      association="_18_2_8d40284_1446013805933_983739_4500">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_8d40284_1446013805934_686461_4503"
+                           xmi:uuid="be810743-4cff-45dd-98be-626afda83740"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_4_8d40284_1446637691832_812562_4282"
+                          xmi:uuid="3be039c9-07e0-4f1f-80ef-fe51949f80e3"
+                          name="Annotation">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462642039312_43473_4600"
+                          xmi:uuid="738fc039-a521-43ef-8401-adb95f18fe18"
+                          body="An &lt;&lt;Annotation&gt;&gt; comment provides a textual value for the annotated elements of the comment where the body of the comment is the annotation property value.">
+               <annotatedElement xmi:idref="_18_0_4_8d40284_1446637691832_812562_4282"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1446637851399_224264_4289"
+                            xmi:uuid="a1afa4f9-113b-4fe5-bcd6-f92f94aa6428"
+                            name="base_Comment"
+                            visibility="private"
+                            association="_18_0_4_8d40284_1446637851399_350218_4288">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Comment"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1446637901611_333092_4293"
+                            xmi:uuid="620e9b2b-07ad-4ead-bfa4-a51c09f9bc81"
+                            name="value for"
+                            visibility="public"
+                            type="_18_2_8d40284_1446013773240_239852_4488"
+                            association="_18_0_3_8bf027c_1446767727410_433864_4444">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462642064222_730124_4601"
+                             xmi:uuid="49e343ab-aacf-4e9d-a0f1-1ff39578ebfa"
+                             body="&lt;value for&gt; is the property for which the &lt;&lt;Annotation&gt;&gt; is providing a value.&#xA;">
+                  <annotatedElement xmi:idref="_18_0_4_8d40284_1446637901611_333092_4293"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_4_8d40284_1446637851399_350218_4288"
+                          xmi:uuid="5197a7d8-3dd2-468f-9013-6c13439cd151">
+            <memberEnd xmi:idref="_18_0_4_8d40284_1446637851399_224264_4289"/>
+            <memberEnd xmi:idref="_18_0_4_8d40284_1446637851399_52665_4290"/>
+            <navigableOwnedEnd xmi:idref="_18_0_4_8d40284_1446637851399_52665_4290"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_4_8d40284_1446637851399_52665_4290"
+                      xmi:uuid="89bc0d8e-c161-4c65-a2a5-04f2035d6933"
+                      name="extension_Annotation"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_4_8d40284_1446637691832_812562_4282"
+                      association="_18_0_4_8d40284_1446637851399_350218_4288">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_4_8d40284_1446637851399_14017_4291"
+                           xmi:uuid="ba824f19-165a-40bf-88c3-708a5ee6816c"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Association" xmi:id="_18_0_3_8bf027c_1446767727410_433864_4444"
+                          xmi:uuid="1e0af0d6-2627-4916-9d7d-e4d03a8b40ed">
+            <memberEnd xmi:idref="_18_0_3_8bf027c_1446767727411_845628_4445"/>
+            <memberEnd xmi:idref="_18_0_4_8d40284_1446637901611_333092_4293"/>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_18_0_3_8bf027c_1446767727411_845628_4445"
+                      xmi:uuid="b059b863-62b6-4527-a941-4c848684b3d6"
+                      visibility="private"
+                      type="_18_0_4_8d40284_1446637691832_812562_4282"
+                      association="_18_0_3_8bf027c_1446767727410_433864_4444"/>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_4_8d40284_1452103255914_355054_4282"
+                          xmi:uuid="4852621d-61a6-4ce2-9c5b-ba5b9c04a300"
+                          name="Disjoint With">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463764429154_206008_4551"
+                          xmi:uuid="c9f8a5b5-69a4-47c6-bba6-73895af04ade"
+                          body="&lt;&lt;Disjoint With&gt;&gt; is an assertion that the &lt;source&gt; and &lt;target&gt; of the dependency do not and may not denote any of the same set of entities.&#xA;When applied to a classifier every element of the classifier's extent (set of instances) is included in the set of disjoint things.&#xA;">
+               <annotatedElement xmi:idref="_18_0_4_8d40284_1452103255914_355054_4282"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1452103410981_101548_4289"
+                            xmi:uuid="874b19c9-eec4-4e9f-b084-2645d59d2609"
+                            name="base_Dependency"
+                            visibility="private"
+                            association="_18_0_4_8d40284_1452103410981_251066_4288">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_4_8d40284_1452103410981_251066_4288"
+                          xmi:uuid="46cd0bc8-2f75-4ebb-b8e0-2c407c9cba5e">
+            <memberEnd xmi:idref="_18_0_4_8d40284_1452103410981_101548_4289"/>
+            <memberEnd xmi:idref="_18_0_4_8d40284_1452103410981_654266_4290"/>
+            <navigableOwnedEnd xmi:idref="_18_0_4_8d40284_1452103410981_654266_4290"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_4_8d40284_1452103410981_654266_4290"
+                      xmi:uuid="54cc025c-32e0-4124-a611-ffeab7aeb52f"
+                      name="extension_Disjoint with"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_4_8d40284_1452103255914_355054_4282"
+                      association="_18_0_4_8d40284_1452103410981_251066_4288">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_18_0_4_8d40284_1452103410981_117383_4291"
+                           xmi:uuid="66b8d3e5-c17f-465e-9c94-e91d109b0b5f"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_4_8d40284_1459972500203_691763_4288"
+                          xmi:uuid="e059b1bb-a7d0-4c78-8c82-90ebb838887f"
+                          name="Equivalent Class">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463763728952_301799_4550"
+                          xmi:uuid="70b88d24-a097-40a8-a13f-c3db772ea19b"
+                          body="A &lt;&lt;Equivalent Class&gt;&gt; generalization is an assertion that two classes have the same extents (set of instances). Unlike ontological languages it is not assumed that the two elements are consistent as statements from different context may or may not agree.">
+               <annotatedElement xmi:idref="_18_0_4_8d40284_1459972500203_691763_4288"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1460034093697_967638_4290"
+                            xmi:uuid="8c856b66-9342-4570-a156-c0a3993e0195"
+                            name="base_Generalization"
+                            visibility="private"
+                            association="_18_0_4_8d40284_1460034093696_645019_4289">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Generalization"/>
+            </ownedAttribute>
+            <icon xmi:type="uml:Image" xmi:id="_18_0_5_3bc0198_1461255130570_534998_4286"
+                  xmi:uuid="d2a96d01-6017-4221-9e01-8a1b45e5f9a9"
+                  content="ac ed 0 5 7a 0 0 4 0 0 0 0 2 0 0 0 3d 44 3a 5c 53 50 35 20 62 75 67 5c 45 71 75 69 76 61 6c 65 6e 74 20 43 6c 61 73 73 65 73 5c 49 63 6f 6e 20 46 69 6e 61 6c 5c 65 71 75 69 76 61 6c 65 6e 74 5f 63 6c 61 73 73 2e 73 76 67 0 0 b 2f 3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 22 31 2e 30 22 20 65 6e 63 6f 64 69 6e 67 3d 22 55 54 46 2d 38 22 20 73 74 61 6e 64 61 6c 6f 6e 65 3d 22 6e 6f 22 3f 3e a 3c 21 2d 2d 20 47 65 6e 65 72 61 74 6f 72 3a 20 41 64 6f 62 65 20 49 6c 6c 75 73 74 72 61 74 6f 72 20 31 36 2e 30 2e 30 2c 20 53 56 47 20 45 78 70 6f 72 74 20 50 6c 75 67 2d 49 6e 20 2e 20 53 56 47 20 56 65 72 73 69 6f 6e 3a 20 36 2e 30 30 20 42 75 69 6c 64 20 30 29 20 20 2d 2d 3e a a 3c 73 76 67 a 20 20 20 78 6d 6c 6e 73 3a 64 63 3d 22 68 74 74 70 3a 2f 2f 70 75 72 6c 2e 6f 72 67 2f 64 63 2f 65 6c 65 6d 65 6e 74 73 2f 31 2e 31 2f 22 a 20 20 20 78 6d 6c 6e 73 3a 63 63 3d 22 68 74 74 70 3a 2f 2f 63 72 65 61 74 69 76 65 63 6f 6d 6d 6f 6e 73 2e 6f 72 67 2f 6e 73 23 22 a 20 20 20 78 6d 6c 6e 73 3a 72 64 66 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 31 39 39 39 2f 30 32 2f 32 32 2d 72 64 66 2d 73 79 6e 74 61 78 2d 6e 73 23 22 a 20 20 20 78 6d 6c 6e 73 3a 73 76 67 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 32 30 30 30 2f 73 76 67 22 a 20 20 20 78 6d 6c 6e 73 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 32 30 30 30 2f 73 76 67 22 a 20 20 20 78 6d 6c 6e 73 3a 73 6f 64 69 70 6f 64 69 3d 22 68 74 74 70 3a 2f 2f 73 6f 64 69 70 6f 64 69 2e 73 6f 75 72 63 65 66 6f 72 67 65 2e 6e 65 74 2f 44 54 44 2f 73 6f 64 69 70 6f 64 69 2d 30 2e 64 74 64 22 a 20 20 20 78 6d 6c 6e 73 3a 69 6e 6b 73 63 61 70 65 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 69 6e 6b 73 63 61 70 65 2e 6f 72 67 2f 6e 61 6d 65 73 70 61 63 65 73 2f 69 6e 6b 73 63 61 70 65 22 a 20 20 20 76 65 72 73 69 6f 6e 3d 22 31 2e 31 22 a 20 20 20 78 3d 22 30 70 78 22 a 20 20 20 79 3d 22 30 70 78 22 a 20 20 20 77 69 64 74 68 3d 22 32 34 70 78 22 a 20 20 20 68 65 69 67 68 74 3d 22 32 34 70 78 22 a 20 20 20 76 69 65 77 42 6f 78 3d 22 30 20 30 20 32 34 20 32 34 22 a 20 20 20 65 6e 61 62 6c 65 2d 62 61 63 6b 67 72 6f 75 6e 64 3d 22 6e 65 77 20 30 20 30 20 32 34 20 32 34 22 a 20 20 20 78 6d 6c 3a 73 70 61 63 65 3d 22 70 72 65 73 65 72 76 65 22 a 20 20 20 69 64 3d 22 73 76 67 32 22 a 20 20 20 69 6e 6b 73 63 61 70 65 3a 76 65 72 73 69 6f 6e 3d 22 30 2e 39 31 20 72 31 33 37 32 35 22 a 20 20 20 73 6f 64 69 70 6f 64 69 3a 64 6f 63 6e 61 6d 65 3d 22 65 71 75 69 76 61 6c 65 6e 74 5f 63 6c 61 73 73 2e 73 76 67 22 3e 3c 6d 65 74 61 64 61 74 61 a 20 20 20 20 20 69 64 3d 22 6d 65 74 61 64 61 74 61 39 34 22 3e 3c 72 64 66 3a 52 44 46 3e 3c 63 63 3a 57 6f 72 6b a 20 20 20 20 20 20 20 20 20 72 64 66 3a 61 62 6f 75 74 3d 22 22 3e 3c 64 63 3a 66 6f 72 6d 61 74 3e 69 6d 61 67 65 2f 73 76 67 2b 78 6d 6c 3c 2f 64 63 3a 66 6f 72 6d 61 74 3e 3c 64 63 3a 74 79 70 65 a 20 20 20 20 20 20 20 20 20 20 20 72 64 66 3a 72 65 73 6f 75 72 63 65 3d 22 68 74 74 70 3a 2f 2f 70 75 72 6c 2e 6f 72 67 2f 64 63 2f 64 63 6d 69 74 79 70 65 2f 53 74 69 6c 6c 49 6d 61 67 65 22 20 2f 3e 7a 0 0 4 0 3c 64 63 3a 74 69 74 6c 65 3e 3c 2f 64 63 3a 74 69 74 6c 65 3e 3c 2f 63 63 3a 57 6f 72 6b 3e 3c 2f 72 64 66 3a 52 44 46 3e 3c 2f 6d 65 74 61 64 61 74 61 3e 3c 64 65 66 73 a 20 20 20 20 20 69 64 3d 22 64 65 66 73 39 32 22 3e 3c 6c 69 6e 65 61 72 47 72 61 64 69 65 6e 74 a 20 20 20 20 20 20 20 79 32 3d 22 31 39 2e 35 22 a 20 20 20 20 20 20 20 78 32 3d 22 39 22 a 20 20 20 20 20 20 20 79 31 3d 22 31 39 2e 35 22 a 20 20 20 20 20 20 20 78 31 3d 22 32 22 a 20 20 20 20 20 20 20 67 72 61 64 69 65 6e 74 55 6e 69 74 73 3d 22 75 73 65 72 53 70 61 63 65 4f 6e 55 73 65 22 a 20 20 20 20 20 20 20 69 64 3d 22 53 56 47 49 44 5f 31 5f 22 3e 3c 73 74 6f 70 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 73 74 6f 70 33 37 22 a 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 73 74 6f 70 2d 63 6f 6c 6f 72 3a 23 46 41 46 41 46 41 22 a 20 20 20 20 20 20 20 20 20 6f 66 66 73 65 74 3d 22 30 22 20 2f 3e 3c 73 74 6f 70 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 73 74 6f 70 33 39 22 a 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 73 74 6f 70 2d 63 6f 6c 6f 72 3a 23 46 35 46 35 46 35 22 a 20 20 20 20 20 20 20 20 20 6f 66 66 73 65 74 3d 22 31 22 20 2f 3e 3c 2f 6c 69 6e 65 61 72 47 72 61 64 69 65 6e 74 3e 3c 2f 64 65 66 73 3e 3c 73 6f 64 69 70 6f 64 69 3a 6e 61 6d 65 64 76 69 65 77 a 20 20 20 20 20 70 61 67 65 63 6f 6c 6f 72 3d 22 23 66 66 66 66 66 66 22 a 20 20 20 20 20 62 6f 72 64 65 72 63 6f 6c 6f 72 3d 22 23 36 36 36 36 36 36 22 a 20 20 20 20 20 62 6f 72 64 65 72 6f 70 61 63 69 74 79 3d 22 31 22 a 20 20 20 20 20 6f 62 6a 65 63 74 74 6f 6c 65 72 61 6e 63 65 3d 22 31 30 22 a 20 20 20 20 20 67 72 69 64 74 6f 6c 65 72 61 6e 63 65 3d 22 31 30 22 a 20 20 20 20 20 67 75 69 64 65 74 6f 6c 65 72 61 6e 63 65 3d 22 31 30 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 70 61 67 65 6f 70 61 63 69 74 79 3d 22 30 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 70 61 67 65 73 68 61 64 6f 77 3d 22 32 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 77 69 64 74 68 3d 22 31 39 32 30 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 68 65 69 67 68 74 3d 22 31 30 35 38 22 a 20 20 20 20 20 69 64 3d 22 6e 61 6d 65 64 76 69 65 77 39 30 22 a 20 20 20 20 20 73 68 6f 77 67 72 69 64 3d 22 66 61 6c 73 65 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 7a 6f 6f 6d 3d 22 32 32 2e 36 32 37 34 31 37 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 63 78 3d 22 31 38 2e 39 32 30 32 33 34 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 63 79 3d 22 31 33 2e 38 38 37 38 30 32 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 78 3d 22 31 39 31 32 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 79 3d 22 2d 38 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 6d 61 78 69 6d 69 7a 65 64 3d 22 31 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 63 75 72 72 65 6e 74 2d 6c 61 79 65 72 3d 22 73 76 67 32 22 20 2f 3e 3c 67 a 20 20 20 20 20 69 64 3d 22 67 34 36 33 35 22 3e 3c 67 a 20 20 20 20 20 20 20 74 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 2d 31 2e 30 38 39 2c 30 2c 30 7a 0 0 3 8c 2c 2d 31 2e 30 38 39 2c 32 35 2e 30 37 31 36 35 36 2c 32 34 2e 38 33 34 36 35 32 29 22 a 20 20 20 20 20 20 20 69 64 3d 22 67 34 35 37 37 22 3e 3c 67 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 67 33 37 34 31 22 a 20 20 20 20 20 20 20 20 20 74 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 31 2e 31 34 37 36 32 39 32 2c 30 2c 30 2c 31 2e 30 38 38 33 37 39 34 2c 2d 32 2e 32 30 38 36 35 30 34 2c 2d 30 2e 30 36 37 32 30 36 29 22 3e 3c 70 6f 6c 79 67 6f 6e a 20 20 20 20 20 20 20 20 20 20 20 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3d 22 31 30 22 a 20 20 20 20 20 20 20 20 20 20 20 70 6f 69 6e 74 73 3d 22 31 34 2c 32 2e 35 20 32 30 2e 35 2c 32 2e 35 20 32 30 2e 35 2c 39 20 22 a 20 20 20 20 20 20 20 20 20 20 20 69 64 3d 22 70 6f 6c 79 67 6f 6e 34 35 22 a 20 20 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 6e 6f 6e 65 3b 73 74 72 6f 6b 65 3a 23 33 66 35 31 62 35 3b 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3a 31 30 22 20 2f 3e 3c 2f 67 3e 3c 67 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 67 33 37 34 31 2d 32 22 a 20 20 20 20 20 20 20 20 20 74 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 2d 31 2e 31 34 37 36 32 39 32 2c 30 2c 30 2c 2d 31 2e 30 38 38 33 37 39 34 2c 32 36 2e 32 35 34 34 36 32 2c 32 34 2e 30 35 35 33 35 37 29 22 3e 3c 70 6f 6c 79 67 6f 6e a 20 20 20 20 20 20 20 20 20 20 20 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3d 22 31 30 22 a 20 20 20 20 20 20 20 20 20 20 20 70 6f 69 6e 74 73 3d 22 31 34 2c 32 2e 35 20 32 30 2e 35 2c 32 2e 35 20 32 30 2e 35 2c 39 20 22 a 20 20 20 20 20 20 20 20 20 20 20 69 64 3d 22 70 6f 6c 79 67 6f 6e 34 35 2d 38 22 a 20 20 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 6e 6f 6e 65 3b 73 74 72 6f 6b 65 3a 23 33 66 35 31 62 35 3b 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3a 31 30 22 20 2f 3e 3c 2f 67 3e 3c 72 65 63 74 a 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 23 33 66 35 31 62 35 3b 66 69 6c 6c 2d 6f 70 61 63 69 74 79 3a 31 22 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 72 65 63 74 34 35 37 35 22 a 20 20 20 20 20 20 20 20 20 77 69 64 74 68 3d 22 31 35 2e 32 35 33 36 31 39 22 a 20 20 20 20 20 20 20 20 20 68 65 69 67 68 74 3d 22 31 2e 37 35 30 30 38 39 34 22 a 20 20 20 20 20 20 20 20 20 78 3d 22 2d 37 2e 35 37 30 33 31 30 31 22 a 20 20 20 20 20 20 20 20 20 79 3d 22 2d 31 37 2e 36 39 37 31 36 38 22 a 20 20 20 20 20 20 20 20 20 74 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 2d 30 2e 37 30 37 31 30 36 37 38 2c 30 2e 37 30 37 31 30 36 37 38 2c 2d 30 2e 37 30 37 31 30 36 37 38 2c 2d 30 2e 37 30 37 31 30 36 37 38 2c 30 2c 30 29 22 20 2f 3e 3c 2f 67 3e 3c 2f 67 3e 3c 2f 73 76 67 3e 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 4 "
+                  format="custom_created.mdico"/>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_4_8d40284_1459972776251_126885_4413"
+                          xmi:uuid="c3bf8890-c68b-439e-97f9-739865ae977c"
+                          name="Equivalent Property">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462641365930_343679_4496"
+                          xmi:uuid="7350c93a-a6b8-4dc5-b97e-c520cf4b41b3"
+                          body="&lt;&lt;Equivalent Property&gt;&gt; is a declaration that a property is equivalent to others using either &#34;equivalent to&#34; or &#34;chain&#34;. Equivalent Property is a shortcut for other ways to define property equivalence.&#xA;Either &#34;equivalent to&#34; or &#34;chain&#34; must have a value.">
+               <annotatedElement xmi:idref="_18_0_4_8d40284_1459972776251_126885_4413"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1460048438318_218984_4363"
+                            xmi:uuid="3352589e-0209-42f4-91f4-3bbea567af3d"
+                            name="equivalent to"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462641418395_102052_4497"
+                             xmi:uuid="477ee5c2-4f3b-48e2-a520-d8e551422d92"
+                             body="&lt;equivalent to&gt; defines a set of properties that the stereotyped property is equivalent to. Note that equivalence can also be declared with a &lt;&lt;Equivalent With&gt;&gt; dependency.">
+                  <annotatedElement xmi:idref="_18_0_4_8d40284_1460048438318_218984_4363"/>
+               </ownedComment>
+               <lowerValue xmi:type="uml:LiteralUnlimitedNatural"
+                           xmi:id="_18_2_62501eb_1462641287954_985307_4493"
+                           xmi:uuid="78b4bb6b-9b6d-4022-b288-49e5de228b3a"/>
+               <upperValue xmi:type="uml:LiteralUnlimitedNatural"
+                           xmi:id="_18_0_4_8d40284_1460048486605_296248_4370"
+                           xmi:uuid="5df5005e-f56e-4724-a623-8e8e99cbaaae"
+                           value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1461867151832_494551_4968"
+                            xmi:uuid="805153db-4d62-478a-ae29-7607b2d12bbb"
+                            name="base_Property"
+                            visibility="private"
+                            association="_18_2_62501eb_1461867151832_154573_4967">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1460047309650_344393_4292"
+                            xmi:uuid="e7733780-c7eb-4677-8a59-cc0a949c1f16"
+                            name="chain"
+                            visibility="public"
+                            isOrdered="true">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462641525784_404247_4498"
+                             xmi:uuid="4bb80837-e200-486f-bd3e-ea7dd4f8fe40"
+                             body="&lt;chain&gt; define ordered set of properties that express a traversal path which is equivalent to the stereotyped property, also known as a &#34;property chain&#34;.&#xA;&#xA;Due to potential &#34;missing information&#34; in creating a chain, a chain may or may not be able to be determined from asserting the chained property. Such a determination is defined in the mapping rules for that property in a particular context.&#xA;&#xA;Note that a chain may also be defined with mapping rules.">
+                  <annotatedElement xmi:idref="_18_0_4_8d40284_1460047309650_344393_4292"/>
+               </ownedComment>
+               <lowerValue xmi:type="uml:LiteralUnlimitedNatural"
+                           xmi:id="_18_2_62501eb_1462641283985_459114_4492"
+                           xmi:uuid="54b235e4-ce4f-4ed9-9074-7269d8613218"/>
+               <upperValue xmi:type="uml:LiteralUnlimitedNatural"
+                           xmi:id="_18_0_4_8d40284_1460048255984_161775_4321"
+                           xmi:uuid="9cde6290-edf3-4521-a8af-166efb02bfeb"
+                           value="*"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_4_8d40284_1460034093696_645019_4289"
+                          xmi:uuid="c59210a6-1dfe-43e6-a229-1dad545fa8a4">
+            <memberEnd xmi:idref="_18_0_4_8d40284_1460034093697_967638_4290"/>
+            <memberEnd xmi:idref="_18_0_4_8d40284_1460034093697_407384_4291"/>
+            <navigableOwnedEnd xmi:idref="_18_0_4_8d40284_1460034093697_407384_4291"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_4_8d40284_1460034093697_407384_4291"
+                      xmi:uuid="347d7b80-4f58-4c97-a570-e7bbdf46f01e"
+                      name="extension_Equivalent Class"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_4_8d40284_1459972500203_691763_4288"
+                      association="_18_0_4_8d40284_1460034093696_645019_4289">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_18_0_4_8d40284_1460034093698_669164_4292"
+                           xmi:uuid="dac2eaac-dd55-431b-9f5d-c1538c61ea0e"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1430922181294_980938_8853"
+                          xmi:uuid="7332008a-0002-4642-b3f3-037559c66163">
+            <memberEnd xmi:idref="_18_1_3ba019e_1430922181294_93029_8854"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1430922181294_647816_8855"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1430922181294_647816_8855"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1430922181294_647816_8855"
+                      xmi:uuid="d1b8f172-724e-469b-90ee-c8f295ee7e43"
+                      name="extension_Unit"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_2_3ba019e_1422225413006_529440_5597"
+                      association="_18_1_3ba019e_1430922181294_980938_8853">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1430922181294_40278_8856"
+                           xmi:uuid="55ef35ef-bd59-4861-ac6e-012e1c6eeb9f"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1446213823899_269602_6496"
+                          xmi:uuid="077fe250-be53-4fa8-ad3c-32383ede9ebd"
+                          name="Enumerates">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463764838671_980109_4553"
+                          xmi:uuid="d93ba8f4-b5aa-417f-bee3-7a6a8dc74614"
+                          body="An &lt;&lt;Enumerates&gt;&gt; dependency asserts that the set of instance specifications or classifiers in a package is the complete set of instances of the &lt;source&gt; type. &#xA;&lt;&lt;Enumerates&gt;&gt; is the general form of specifying an Enumeration. Enumerations may also be specified as a UML Enumeration - but UML Enumerations are limited to data types. &lt;&lt;Enumerates&gt;&gt; may enumerate any type.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1446213823899_269602_6496"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446213853441_871009_6523"
+                            xmi:uuid="b743f217-6ce7-428d-97d3-74cb12a37b84"
+                            name="base_Dependency"
+                            visibility="private"
+                            association="_18_1_3ba019e_1446213853441_259100_6522">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1446213853441_259100_6522"
+                          xmi:uuid="224d13e1-6d69-4c4c-aacd-1afc60ae1a29">
+            <memberEnd xmi:idref="_18_1_3ba019e_1446213853441_871009_6523"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1446213853441_790959_6524"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1446213853441_790959_6524"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1446213853441_790959_6524"
+                      xmi:uuid="ecfca9cc-7c73-4699-be0c-6db5856c35ec"
+                      name="extension_Enumerates"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1446213823899_269602_6496"
+                      association="_18_1_3ba019e_1446213853441_259100_6522">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1446213853441_955955_6525"
+                           xmi:uuid="b3c2dd7c-6090-441c-979e-9b89b024aff8"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_3ba019e_1421784986476_882971_5389"
+                          xmi:uuid="37ff4cf1-559a-4baa-9b33-80afc8844105"
+                          name="Is In Context">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446044827144_643146_7934"
+                          xmi:uuid="e483ceea-a05d-41fa-9b23-df68183f4cd4"
+                          body="&lt;&lt;Is in context&gt;&gt; is an assertion that the &lt;source&gt; of the dependency is in the context of the &lt;target&gt; of the dependency. All assertions and rules defined in the target context apply to the source and everything in the context of the source (in context is transitive). Packages, classes, situations and instances are typical context. Note that &lt;&lt;Is In Context&gt;&gt; is the default interpretation of a dependency, if no stereotype is specified it will be interpreted as &lt;&lt;Is In Context&gt;&gt;.">
+               <annotatedElement xmi:idref="_18_0_2_3ba019e_1421784986476_882971_5389"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446209504083_766693_6120"
+                            xmi:uuid="f3c767d6-233c-4ad7-9ca5-a8a5db9cf4a2"
+                            name="base_Dependency"
+                            visibility="private"
+                            association="_18_1_3ba019e_1446209504082_847945_6119">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1446209504082_847945_6119"
+                          xmi:uuid="fa8c1b53-ea89-44e3-b6ad-bba6ed803ac6">
+            <memberEnd xmi:idref="_18_1_3ba019e_1446209504083_766693_6120"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1446209504084_20462_6121"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1446209504084_20462_6121"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1446209504084_20462_6121"
+                      xmi:uuid="1574a04a-611a-4936-910a-fae8ead5ae0c"
+                      name="extension_Is in context"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_2_3ba019e_1421784986476_882971_5389"
+                      association="_18_1_3ba019e_1446209504082_847945_6119">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1446209504084_869438_6122"
+                           xmi:uuid="0078e658-945b-43a5-a8c5-d58e5ed5b5e0"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_17_0_5_1_7b3022e_1400520003056_394147_5943"
+                          xmi:uuid="c0f5b83c-b102-4be1-8ea0-5a3d9a3b5174">
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1400520003056_58639_5944"/>
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1400520003057_865190_5945"/>
+            <navigableOwnedEnd xmi:idref="_17_0_5_1_7b3022e_1400520003057_865190_5945"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd"
+                      xmi:id="_17_0_5_1_7b3022e_1400520003057_865190_5945"
+                      xmi:uuid="979b2e0e-f87c-4951-974e-d6581e2ed2a0"
+                      name="extension_"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1400519996298_378531_5942"
+                      association="_17_0_5_1_7b3022e_1400520003056_394147_5943">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_17_0_5_1_7b3022e_1400520003057_676254_5946"
+                           xmi:uuid="7ee333bf-5ace-4a1a-aac0-2c19df192173"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_3ba019e_1421782981734_29113_5226"
+                          xmi:uuid="256d373a-2a20-42de-85ac-37ae19fceb06"
+                          name="Role">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446055879612_807762_6366"
+                          xmi:uuid="90dfe583-e672-463c-b7ff-aba433cd2d20"
+                          body="A &lt;&lt;Role&gt;&gt; is a classification of an entity based on that entities behavior, participation in a situation or capabilities. A &lt;&lt;Role&gt;&gt; &lt;&lt;Classifies&gt;&gt; the types that may play that role. e.g., &#34;Teacher&#34;.&#xA;A role is a &#34;non rigid sortal&#34;, a type that may change over the lifetime of an entity. ">
+               <annotatedElement xmi:idref="_18_0_2_3ba019e_1421782981734_29113_5226"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_3ba019e_1421783015039_964443_5252"
+                            xmi:uuid="a7f47476-bbfa-4633-a2d0-58e41d76dabc"
+                            name="base_Class"
+                            visibility="private"
+                            association="_18_0_2_3ba019e_1421783015039_981051_5251">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Class"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_2_3ba019e_1421783015039_981051_5251"
+                          xmi:uuid="454ef890-714e-4a21-97b7-ddbaa0afc103">
+            <memberEnd xmi:idref="_18_0_2_3ba019e_1421783015039_964443_5252"/>
+            <memberEnd xmi:idref="_18_0_2_3ba019e_1421783015040_749027_5253"/>
+            <navigableOwnedEnd xmi:idref="_18_0_2_3ba019e_1421783015040_749027_5253"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_2_3ba019e_1421783015040_749027_5253"
+                      xmi:uuid="43091362-3052-46f7-9532-b6fde3ab7591"
+                      name="extension_Role"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_2_3ba019e_1421782981734_29113_5226"
+                      association="_18_0_2_3ba019e_1421783015039_981051_5251">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_2_3ba019e_1421783015040_33742_5254"
+                           xmi:uuid="581300a0-9c28-4a0f-95f3-a1c371492662"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1400519996298_378531_5942"
+                          xmi:uuid="ccba8d5d-4331-49f9-86c8-b6e318a9e489"
+                          name="Classifies">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_3ba019e_1423854221831_439438_8349"
+                          xmi:uuid="b7c40116-705a-4cae-a0b2-9a20df5464eb"
+                          body="A classification defined by a &lt;&lt;Classifies&gt;&gt; generalization or realization is a &#34;mix in&#34; or &#34;non rigid&#34; classification of an entity beyond any fundamental entity type. &#xA;An instance must be typed by the classifies supertype for it to also be classified as the classifies subtype. A classification may be contextual, such as within a relation,  situation and/or timeframe. Instances may have any number of types and classifications may change over time.&#xA;&#xA;Classification is used in defining what a &lt;&lt;Role&gt;&gt; may be a role of and for phases, what a &lt;&lt;Phase&gt;&gt; is a phase of.&#xA;&#xA;Classifications may be added to or removed from an individual over time and in different context. ">
+               <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1400519996298_378531_5942"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1400520003056_58639_5944"
+                            xmi:uuid="6817eed4-db6c-4b41-ba5a-ae2076080d9d"
+                            name="base_Dependency"
+                            visibility="private"
+                            association="_17_0_5_1_7b3022e_1400520003056_394147_5943">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1400679376520_623189_4591"
+                            xmi:uuid="95efa1c0-2804-4333-8508-913cc039c467"
+                            name="base_Generalization"
+                            visibility="private"
+                            association="_17_0_5_1_7b3022e_1400679376520_757980_4590">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Generalization"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_17_0_5_1_7b3022e_1400679376520_757980_4590"
+                          xmi:uuid="91e553c4-143b-4dca-9369-217207d3d3e2">
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1400679376520_623189_4591"/>
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1400679376520_800988_4592"/>
+            <navigableOwnedEnd xmi:idref="_17_0_5_1_7b3022e_1400679376520_800988_4592"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd"
+                      xmi:id="_17_0_5_1_7b3022e_1400679376520_800988_4592"
+                      xmi:uuid="a78c705a-cd66-4881-9fbe-2f2052c605c2"
+                      name="extension_RoleOf"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1400519996298_378531_5942"
+                      association="_17_0_5_1_7b3022e_1400679376520_757980_4590">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_17_0_5_1_7b3022e_1400679376520_586444_4593"
+                           xmi:uuid="5c869a89-5cb6-44c4-9718-eef7378b53d4"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_3ba019e_1421783049347_18052_5256"
+                          xmi:uuid="af8df78a-16b2-442d-ae97-b8c7a70df2be"
+                          name="Phase">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463761592760_196937_4540"
+                          xmi:uuid="7549d451-c84d-4af0-96ae-56267ff5c6b2"
+                          body="A &lt;&lt;Phase&gt;&gt; (a.k.a. &#34;State&#34;) is a classification of an entity based on change of that entity over time. A &lt;&lt;Phase&gt;&gt; &lt;&lt;Classifies&gt;&gt; the types that may have that phase. e.g., &#34;Teenager&#34;.&#xA;A phase is a &#34;non rigid sortal&#34;, a type that may change over the lifetime of an entity.">
+               <annotatedElement xmi:idref="_18_0_2_3ba019e_1421783049347_18052_5256"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_3ba019e_1421783074534_366928_5282"
+                            xmi:uuid="d5b41906-04a4-4d07-8605-71acb9b425d5"
+                            name="base_Class"
+                            visibility="private"
+                            association="_18_0_2_3ba019e_1421783074534_401440_5281">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Class"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_2_3ba019e_1421783074534_401440_5281"
+                          xmi:uuid="f35162da-12db-4be4-9b50-93661b1a21c9">
+            <memberEnd xmi:idref="_18_0_2_3ba019e_1421783074534_366928_5282"/>
+            <memberEnd xmi:idref="_18_0_2_3ba019e_1421783074535_242456_5283"/>
+            <navigableOwnedEnd xmi:idref="_18_0_2_3ba019e_1421783074535_242456_5283"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_2_3ba019e_1421783074535_242456_5283"
+                      xmi:uuid="4a0edcad-505c-4af5-b672-9196fcc957c5"
+                      name="extension_Phase"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_2_3ba019e_1421783049347_18052_5256"
+                      association="_18_0_2_3ba019e_1421783074534_401440_5281">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_18_0_2_3ba019e_1421783074535_570241_5284"
+                           xmi:uuid="d8aacdcd-7867-4f1f-8e31-7a4eb86f211b"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1430917928596_64302_5962"
+                          xmi:uuid="47f404a1-c281-4f6d-9b47-a3c9bfb2ce72"
+                          name="Value Type">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446054126634_529893_6359"
+                          xmi:uuid="6d48743f-3302-4cda-8eda-a3e002fa8c0e"
+                          body="A &lt;&lt;Value Type&gt;&gt; is a type representing an atomic unit of information without independent identity. Values include numbers, strings and enumerations. In some cases values may have internal structure.&#xA;&#xA;Quantity kinds and units are also values. Values may stereotype any classifier. UML Data types, including primitives and enumerations, are implicitly values.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1430917928596_64302_5962"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1430917952517_487535_5989"
+                            xmi:uuid="56d79c27-4ea2-4201-b340-24c845805f9d"
+                            name="base_Classifier"
+                            visibility="private"
+                            association="_18_1_3ba019e_1430917952517_842057_5988">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1430917952517_842057_5988"
+                          xmi:uuid="b280a964-34fc-4d9d-a94a-97355b0d149b">
+            <memberEnd xmi:idref="_18_1_3ba019e_1430917952517_487535_5989"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1430917952517_534508_5990"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1430917952517_534508_5990"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1430917952517_534508_5990"
+                      xmi:uuid="7a3a1331-5813-4b80-92c5-54914896e8a5"
+                      name="extension_Value"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1430917928596_64302_5962"
+                      association="_18_1_3ba019e_1430917952517_842057_5988">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1430917952517_580655_5991"
+                           xmi:uuid="e0ba0237-62f3-4aa4-bf11-91abdf4c2d89"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1402609485539_18277_6621"
+                          xmi:uuid="287b0a76-5e93-4f77-9e33-578bbc8c42e7"
+                          name="Intersection">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_5_1_7b3022e_1402609583192_583605_6637"
+                          xmi:uuid="f4b2a242-aa37-4e55-90e0-259e9c0f1627"
+                          body="An &lt;&lt;Intersection&gt;&gt; is a class that has an extent (set of instances) which is the complete intersection of the extents of all supertypes. Intersection is a stronger statement than a subtype as a subtype may not be a complete intersection. If an instance has all supertypes the  intersection type will be inferred.&#xA;For intersection, SIMF considers generalization and realization equivalent. This is due to ownership and legacy considerations in UML. Generalization is the preferred representation.&#xA;Note: Realizations are included to support unions across external models. UML generalization can not be used across external models due to the ownership of generalization.&#xA;">
+               <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1402609485539_18277_6621"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1402609510332_812433_6633"
+                            xmi:uuid="610e2f0a-b6c4-4cda-b6b1-dc7dae0d458f"
+                            name="base_Classifier"
+                            visibility="private"
+                            association="_17_0_5_1_7b3022e_1402609510332_854862_6632">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_17_0_5_1_7b3022e_1402609510332_854862_6632"
+                          xmi:uuid="e5c294d3-a510-43ea-9e57-4cf81cf92070">
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1402609510332_812433_6633"/>
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1402609510332_27096_6634"/>
+            <navigableOwnedEnd xmi:idref="_17_0_5_1_7b3022e_1402609510332_27096_6634"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_17_0_5_1_7b3022e_1402609510332_27096_6634"
+                      xmi:uuid="d4072ea6-2537-4824-b859-f56092b83c9a"
+                      name="extension_Intersection"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1402609485539_18277_6621"
+                      association="_17_0_5_1_7b3022e_1402609510332_854862_6632">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_17_0_5_1_7b3022e_1402609510333_757635_6635"
+                           xmi:uuid="a091f7f6-ef55-4346-b572-3d33d6ed4521"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1430922154660_808767_8827"
+                          xmi:uuid="a0213a7f-a0c7-40e8-858a-d0bacfe765b0"
+                          name="Base Unit Type">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1430922417329_328350_8875"
+                          xmi:uuid="a95cbc12-5759-47be-8f7c-707cceb351b3"
+                          body="One unit type of a quantity kind may be marked as the &lt;&lt;Base Unit&gt;&gt; within a model. The base unit provides the basis for conversions between units of the same quantity kind. The base unit always has a ratio of one and an offset of zero.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1430922154660_808767_8827"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1430922188486_948221_8860"
+                            xmi:uuid="3ea32553-02dc-4032-b7a8-414d6abfb250"
+                            general="_18_0_2_3ba019e_1422225413006_529440_5597"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1430922188497_202863_8862"
+                            xmi:uuid="e3e2543b-077b-4e4a-b763-99567a6f5df9"
+                            name="base_Classifier"
+                            visibility="private"
+                            association="_18_1_3ba019e_1430922188497_847449_8861">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1430922188497_847449_8861"
+                          xmi:uuid="0179f833-5024-46eb-8746-021cd2030633">
+            <memberEnd xmi:idref="_18_1_3ba019e_1430922188497_202863_8862"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1430922188497_459032_8863"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1430922188497_459032_8863"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1430922188497_459032_8863"
+                      xmi:uuid="598ecb3e-dfd4-4e03-9429-1eb58d78825a"
+                      name="extension_Base Type"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1430922154660_808767_8827"
+                      association="_18_1_3ba019e_1430922188497_847449_8861">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1430922188498_543159_8864"
+                           xmi:uuid="8c86da32-4e99-4f17-955f-8a4d111265ee"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1446213190781_848994_6406"
+                          xmi:uuid="592f6a2e-5fe9-4383-ae6e-5a13ac8a34ab">
+            <memberEnd xmi:idref="_18_1_3ba019e_1446213190781_665330_6407"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1446213190781_829824_6408"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1446213190781_829824_6408"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1446213190781_829824_6408"
+                      xmi:uuid="d4d81702-413c-487b-8aa4-8d0c27a839ce"
+                      name="extension_Has Value"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1398542543959_173370_5399"
+                      association="_18_1_3ba019e_1446213190781_848994_6406">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1446213190781_756720_6409"
+                           xmi:uuid="f19787b8-c2c6-48e5-aa37-5c23eccba9fa"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_3ba019e_1422225413006_529440_5597"
+                          xmi:uuid="fe346f9a-c668-45a9-879e-c40da412cda3"
+                          name="Unit Type">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1430922374287_439761_8874"
+                          xmi:uuid="24febec6-bd61-4c8c-acad-5b75d3e5a789"
+                          body="A &lt;&lt;Unit Type&gt;&gt; is a type of a quantity value referencing a specific unit. A Unit Type a required type of a property representing a quantity. &#xA;&#xA;[JCGM 200:2008] A Unit is a real scalar quantity, defined and adopted by convention, with which any other quantity of the same quantity kind can be compared to express the ratio of the two quantities as a number. e.g. Degrees Centigrade, Miles.&#xA;&#xA;Each unit type represents refinement of a quantity kind using generalization and is thus substitutable for that quantity kind. Typically quantity kinds are used in conceptual models and unit types in physical or logical models.&#xA;&#xA;Unit types may only subtype quantity kinds and numbers.&#xA;&#xA;Note that unit types are not units, but the type of quantity values expressed in a common unit as defined in [JCGM 200:2008].&#xA;&#xA;Each instance of a unit type shares a common unit (as defined by standards) with a reference defined by &#34;external reference&#34; and &#34;external term&#34;.&#xA;">
+               <annotatedElement xmi:idref="_18_0_2_3ba019e_1422225413006_529440_5597"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1446211531807_478562_6213"
+                            xmi:uuid="6216d1e3-fd46-4ea6-aefa-46d23320fc5e"
+                            general="_18_1_3ba019e_1430917928596_64302_5962"/>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_2_62501eb_1463077241681_309388_4616"
+                            xmi:uuid="95bbb098-349f-406a-b82b-303016299878"
+                            general="_18_1_3ba019e_1446209589384_166177_6139"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1430922181294_93029_8854"
+                            xmi:uuid="775adfde-7cd7-4243-b332-a428764843ea"
+                            name="base_Classifier"
+                            visibility="private"
+                            association="_18_1_3ba019e_1430922181294_980938_8853">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1430935210163_329660_9245"
+                            xmi:uuid="589fe248-5ea5-4966-9c31-72b8174d2139"
+                            name="ratio"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Real"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446595216764_562635_4424"
+                             xmi:uuid="289e2505-9857-428f-9277-fb5802c823f7"
+                             body="&lt;ration&gt; is the multiplier by which to multiply the unit to convert to the base unit as defined within the same model.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1430935210163_329660_9245"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1431033405505_222113_12514"
+                            xmi:uuid="dc38269d-5af2-410b-953c-c7fca97f3049"
+                            name="offset"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Real"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446595251553_661147_4426"
+                             xmi:uuid="59abf932-1a4a-4bb7-86c2-f96b25e041f8"
+                             body="&lt;offset&gt; is the difference between zero in the unit and zero in the base unit after the ratio is applied to the base unit as defined within the same model.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1431033405505_222113_12514"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1431033526801_652230_12516"
+                            xmi:uuid="43289e32-63c6-458e-8fde-417e23840fa0"
+                            name="symbol"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446595313571_231705_4428"
+                             xmi:uuid="296d36af-5f9e-41bc-88f6-b00f627fe5e9"
+                             body="&lt;symbol&gt; is the accepted symbol for a unit. e.g. &#34;g&#34; for &#34;Gram&#34;.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1431033526801_652230_12516"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1446209589387_736278_6140"
+                          xmi:uuid="5f8f8217-72a0-47c7-bb59-0f8b01854492">
+            <memberEnd xmi:idref="_18_1_3ba019e_1446209589387_117054_6141"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1446209589388_211670_6142"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1446209589388_211670_6142"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1446209589388_211670_6142"
+                      xmi:uuid="d9bc61ac-74cd-4f71-94d0-210ba3a02613"
+                      name="extension_unnamed1"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1446209589384_166177_6139"
+                      association="_18_1_3ba019e_1446209589387_736278_6140">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1446209589388_703828_6143"
+                           xmi:uuid="5e9bccc6-b6f1-4de2-a5cf-0a8ef2cc1010"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1398808809623_851045_5550"
+                          xmi:uuid="10d4457f-c5cf-42a5-9f8b-f00fe67e801f"
+                          name="Quantity Kind">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1430922842810_784227_8903"
+                          xmi:uuid="68875024-a4e0-467d-a903-8767f99d013e"
+                          body="&lt;&lt;Quantity Kind&gt;&gt; is an aspect common to mutually comparable quantities represented by one or more units. Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature.[ JCGM 200:2008]. &#xA;&#xA;Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature. SIMF takes a wider view of quantity kinds to include conversions that may be contextual and time dependent - such as currencies.">
+               <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1398808809623_851045_5550"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1446211498078_84019_6210"
+                            xmi:uuid="585f6181-b526-4bba-b1d2-5469870724fa"
+                            general="_18_1_3ba019e_1430917928596_64302_5962"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1398808833449_288565_5575"
+                            xmi:uuid="dd6a0495-093c-4e07-a8d5-8895f865d27a"
+                            name="base_Classifier"
+                            visibility="private"
+                            association="_17_0_5_1_7b3022e_1398808833449_873415_5574">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_17_0_5_1_7b3022e_1398808833449_873415_5574"
+                          xmi:uuid="e6777e2c-935c-45b7-97fb-de810ed82760">
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1398808833449_288565_5575"/>
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1398808833449_523644_5576"/>
+            <navigableOwnedEnd xmi:idref="_17_0_5_1_7b3022e_1398808833449_523644_5576"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd"
+                      xmi:id="_17_0_5_1_7b3022e_1398808833449_523644_5576"
+                      xmi:uuid="ced30d4f-a613-4e9f-b6b9-760302443973"
+                      name="extension_Quantity Kind"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1398808809623_851045_5550"
+                      association="_17_0_5_1_7b3022e_1398808833449_873415_5574">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_17_0_5_1_7b3022e_1398808833449_8704_5577"
+                           xmi:uuid="56944fa7-2bc6-4e69-a78e-c8fdc86033fb"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1396472339386_216144_3544"
+                          xmi:uuid="b08cbf89-919e-4f2a-8084-62fc05002443"
+                          name="Equivalent With">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_3ba019e_1423855802525_123939_8562"
+                          xmi:uuid="f7bcba77-ac81-4911-80bf-1796e0692077"
+                          body="&lt;&lt;Equivalent With&gt;&gt; is an assertion that two model elements represent the same thing or set of things. Unlike ontological languages it is not assumed that the two elements are consistent as statements from different context may or may not agree.">
+               <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1396472339386_216144_3544"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1396472339388_335343_3546"
+                            xmi:uuid="9e0b5a3d-b39b-45d3-b3b7-2abaa0572359"
+                            name="base_Element"
+                            visibility="private"
+                            association="_17_0_5_1_7b3022e_1396472339388_518515_3545">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_17_0_5_1_7b3022e_1396472339388_518515_3545"
+                          xmi:uuid="6ba7c8d8-4d6e-41df-a980-d4f8600c3ea8">
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1396472339388_335343_3546"/>
+            <memberEnd xmi:idref="_17_0_5_1_7b3022e_1396472339388_897582_3547"/>
+            <navigableOwnedEnd xmi:idref="_17_0_5_1_7b3022e_1396472339388_897582_3547"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd"
+                      xmi:id="_17_0_5_1_7b3022e_1396472339388_897582_3547"
+                      xmi:uuid="755e865e-db69-4c77-a0a7-c9fcac5cfa2b"
+                      name="extension_unnamed1"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1396472339386_216144_3544"
+                      association="_17_0_5_1_7b3022e_1396472339388_518515_3545">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_17_0_5_1_7b3022e_1396472339388_59991_3548"
+                           xmi:uuid="fa9f321e-1e55-4638-b3ec-9e8bf37c4f9d"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1446209589384_166177_6139"
+                          xmi:uuid="6af7e284-acec-4590-a407-0d6603f5e288"
+                          name="External Reference">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446209770802_55609_6150"
+                          xmi:uuid="34653a5d-855e-4259-8f09-320378f85039"
+                          body="&lt;&lt;ExternalReference&gt;&gt; provides traceability to the source of a &#34;fact&#34; in a model based on some external information resource. This references helps to facilitate provenance. Reference is a statement about the model data and has no semantic implication. Source reference may impact the trust in a statement but the evaluation of trust is outside of this specification. &#xA;External reference is combined with the owned comment(s) to create SIMF descriptions as defined in the SIMF meta model..">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1446209589384_166177_6139"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446209589387_117054_6141"
+                            xmi:uuid="b6c014bb-aa64-4fc2-a670-82a68e1c82a5"
+                            name="base_Element"
+                            visibility="private"
+                            association="_18_1_3ba019e_1446209589387_736278_6140">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Element"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446209690300_82908_6146"
+                            xmi:uuid="90e34fe8-b4de-4b5e-b991-5bbad786c4d0"
+                            name="external reference"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446209836573_628249_6177"
+                             xmi:uuid="f3ede90a-23d0-4d5d-bfa0-00f644cc9d87"
+                             body="Specifies the location URL of the resource. The format must comply with as defined in [RFC3987].">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1446209690300_82908_6146"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446209722516_962141_6147"
+                            xmi:uuid="8e543cda-6e40-4938-b77e-e02248a59103"
+                            name="external term"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446209848894_69539_6178"
+                             xmi:uuid="90312b83-785f-42b7-be28-97817957e8ca"
+                             body="Specifies the external term or location of the information in the source. The form of expression of the term or term path is dependent on the referenced technology.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1446209722516_962141_6147"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1398542543959_173370_5399"
+                          xmi:uuid="638dc88f-7e05-43be-8dc0-b79948ba1ee4"
+                          name="Has Value">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446055741105_535697_6364"
+                          xmi:uuid="738cbde4-2f61-4176-a3bb-56cadd1ea807"
+                          body="A &lt;&lt;Has Value&gt;&gt; dependency asserts a &lt;target&gt; instance specification defines acceptable values for a &lt;source&gt; type.&#xA;&#xA;Each slot of the instance specification is a value for the corresponding property. Each link to the value specification is a value for a corresponding relationship.&#xA;&#xA;Where there is more than one &lt;&lt;Has Value&gt;&gt; for the same type, if any one restriction for the same value is satisfied, the restriction is satisfied.&#xA;&#xA;&lt;&lt;Has Value&gt;&gt; Corresponds to &#34;has value&#34; in OWL. &#xA;">
+               <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1398542543959_173370_5399"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446213190781_665330_6407"
+                            xmi:uuid="43770a7b-dd3d-4149-a436-4663d04a6060"
+                            name="base_Dependency"
+                            visibility="private"
+                            association="_18_1_3ba019e_1446213190781_848994_6406">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_2_62501eb_1461867020857_518867_4871"
+                          xmi:uuid="32138862-5c44-4b10-8f2f-9e9d17e427a4">
+            <memberEnd xmi:idref="_18_2_62501eb_1461867020857_980710_4872"/>
+            <memberEnd xmi:idref="_18_2_62501eb_1461867020857_81901_4873"/>
+            <navigableOwnedEnd xmi:idref="_18_2_62501eb_1461867020857_81901_4873"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_2_62501eb_1461867020857_81901_4873"
+                      xmi:uuid="2d27b692-b12b-4bf9-adcd-76545da2b74f"
+                      name="extension_Synonym"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_1_8bf027c_1408732702938_45332_4392"
+                      association="_18_2_62501eb_1461867020857_518867_4871">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1461867020857_400064_4874"
+                           xmi:uuid="1420f571-4f53-40f9-b2a4-9ca325fe1209"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_2_62501eb_1461867151832_154573_4967"
+                          xmi:uuid="ced60945-7d1a-4d08-8b71-2b8286d83464">
+            <memberEnd xmi:idref="_18_2_62501eb_1461867151832_494551_4968"/>
+            <memberEnd xmi:idref="_18_2_62501eb_1461867151832_180837_4969"/>
+            <navigableOwnedEnd xmi:idref="_18_2_62501eb_1461867151832_180837_4969"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_2_62501eb_1461867151832_180837_4969"
+                      xmi:uuid="c6ea51ab-fd79-471f-8552-72242990b930"
+                      name="extension_Subproperty Chain"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_4_8d40284_1459972776251_126885_4413"
+                      association="_18_2_62501eb_1461867151832_154573_4967">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1461867151832_862751_4970"
+                           xmi:uuid="aa990e66-ac65-47b2-9080-16f6d4b38d09"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_2_62501eb_1462468558168_662242_4489"
+                          xmi:uuid="86615cb2-4ef9-40a2-bcb9-023392c22291">
+            <memberEnd xmi:idref="_18_2_62501eb_1462468558169_190108_4490"/>
+            <memberEnd xmi:idref="_18_2_62501eb_1462468558169_401977_4491"/>
+            <navigableOwnedEnd xmi:idref="_18_2_62501eb_1462468558169_401977_4491"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_2_62501eb_1462468558169_401977_4491"
+                      xmi:uuid="55d32356-cfca-4c7c-9528-9e5c61a6df43"
+                      name="extension_Union"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_1_8bf027c_1409322510396_866557_6932"
+                      association="_18_2_62501eb_1462468558168_662242_4489">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1462468558169_457205_4492"
+                           xmi:uuid="8671ffe7-0ad3-4883-aa73-ae0fb2c9ee67"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_2_62501eb_1462643008348_359360_4613"
+                          xmi:uuid="db054b1a-968a-4a5a-95db-f51c98a39659">
+            <memberEnd xmi:idref="_18_2_62501eb_1462643008348_875858_4614"/>
+            <memberEnd xmi:idref="_18_2_62501eb_1462643008349_381509_4615"/>
+            <navigableOwnedEnd xmi:idref="_18_2_62501eb_1462643008349_381509_4615"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_2_62501eb_1462643008349_381509_4615"
+                      xmi:uuid="d96eed41-9f6a-4f25-b03d-18e2fdddffa0"
+                      name="extension_Resource"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_1_8bf027c_1408661908824_320374_5622"
+                      association="_18_2_62501eb_1462643008348_359360_4613">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1462643008349_775660_4616"
+                           xmi:uuid="1d1a2fec-fe75-4067-9d27-81938379fe86"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_2_62501eb_1463077095321_210189_4567"
+                          xmi:uuid="7ce49850-f9d3-45c4-a2f5-593c2c3d3c13"
+                          name="Sufficient">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463760727519_496889_4525"
+                          xmi:uuid="eb79dc25-f3c4-4ce4-bdca-aaddcf024a2f"
+                          body="&lt;&lt;Sufficient&gt;&gt; defines one of the set of sufficient conditions that will infer type of an instance based on existence of a property value for that instance.">
+               <annotatedElement xmi:idref="_18_2_62501eb_1463077095321_210189_4567"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463077114778_761056_4595"
+                            xmi:uuid="b4d1dc53-b229-4dfc-8753-369d03f522bf"
+                            name="base_Property"
+                            visibility="private"
+                            association="_18_2_62501eb_1463077114778_252297_4594">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_2_62501eb_1463077114778_252297_4594"
+                          xmi:uuid="9f3d0f26-e676-4a8f-b429-257b7a8aa778">
+            <memberEnd xmi:idref="_18_2_62501eb_1463077114778_761056_4595"/>
+            <memberEnd xmi:idref="_18_2_62501eb_1463077114778_868647_4596"/>
+            <navigableOwnedEnd xmi:idref="_18_2_62501eb_1463077114778_868647_4596"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_2_62501eb_1463077114778_868647_4596"
+                      xmi:uuid="9b7dabc3-0942-4548-8a68-a1263072dba0"
+                      name="extension_Sufficent"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_2_62501eb_1463077095321_210189_4567"
+                      association="_18_2_62501eb_1463077114778_252297_4594">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1463077114778_334973_4597"
+                           xmi:uuid="ae267344-2075-40ad-942f-9f9313b4acf5"/>
+            </ownedEnd>
+         </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Profile" xmi:id="_17_0_5_1_7b3022e_1396472296683_836894_3505"
+                       name="SIMF Rules Profile"
+                       URI="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile.xmi">
+         <metamodelReference xmi:idref="_17_0_5_1_7b3022e_1396472296684_908081_3506"/>
+         <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_3ba019e_1424205699372_605128_9336"
+                       xmi:uuid="164bc4a2-8c3b-4141-b203-a785925e3c3c"
+                       body="The SIMF rules profile defines the way to model rules and mapping within and between data sources via a conceptual model.">
+            <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1396472296683_836894_3505"/>
+         </ownedComment>
+         <packageImport xmi:type="uml:PackageImport"
+                        xmi:id="_17_0_5_1_7b3022e_1396472296684_908081_3506"
+                        xmi:uuid="06992609-3962-4ed2-a9a3-fc3303022f73">
+            <importedPackage href="http://www.omg.org/spec/UML/20131001/UML.xmi#_0"/>
+         </packageImport>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_3ba019e_1421972955751_558794_7719"
+                          xmi:uuid="806531fc-dfff-4bf7-9147-bd02034b00c4"
+                          name="Rule Model">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446076760355_416172_6386"
+                          xmi:uuid="08b697a6-1387-4cf8-ad3f-b6e75c723904"
+                          body="A &lt;&lt;Rule Model&gt;&gt; defines a package as containing rule specifications and asserts those rules to be true.">
+               <annotatedElement xmi:idref="_18_0_2_3ba019e_1421972955751_558794_7719"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_2_62501eb_1463079789238_462034_4710"
+                            xmi:uuid="2776d497-7ebc-4d94-819f-2fc33b20a6e2"
+                            general="_18_0_2_8bf027c_1422543641601_11667_4282"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_3ba019e_1421972971700_655661_7745"
+                            xmi:uuid="3fcaa76f-e519-4460-be77-a587d1860ec2"
+                            name="base_Package"
+                            visibility="private"
+                            association="_18_0_2_3ba019e_1421972971700_826984_7744">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Package"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_2_3ba019e_1421972971700_826984_7744"
+                          xmi:uuid="cc239144-4561-428c-b7fa-bcefc6c788cf">
+            <memberEnd xmi:idref="_18_0_2_3ba019e_1421972971700_655661_7745"/>
+            <memberEnd xmi:idref="_18_0_2_3ba019e_1421972971700_857322_7746"/>
+            <navigableOwnedEnd xmi:idref="_18_0_2_3ba019e_1421972971700_857322_7746"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_2_3ba019e_1421972971700_857322_7746"
+                      xmi:uuid="3c5da9d9-d3b4-40d3-99bf-6ec04a9d93a9"
+                      name="extension_Physical"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_0_2_3ba019e_1421972955751_558794_7719"
+                      association="_18_0_2_3ba019e_1421972971700_826984_7744">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                           xmi:id="_18_0_2_3ba019e_1421972971700_516947_7747"
+                           xmi:uuid="74f43085-af72-4dc0-b46d-f40a3eaa7074"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429802003479_393526_5924"
+                          xmi:uuid="473b9b88-9278-4223-86fb-48d67791a29d"
+                          name="Facade">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1429811382472_13363_6705"
+                          xmi:uuid="199654ce-f588-45b3-bb4e-4f604cd22d7d"
+                          body="&lt;&lt;Facade&gt;&gt; defines a classifier as being a view of (facade of) one or more other classifiers. Facades usually define additional properties that match some external view of a conceptual model element. &#xA;&#xA;A facade will &#34;represent&#34; the classifier for which it is a facade. A Facade will use one of two methods to relate the facade properties to the conceptual Model:&#xA;•&#x9;A  &lt;&lt;Rule&gt;&gt; using the facade.&#xA;•&#x9;Applying the &lt;&lt;computation&gt;&gt; stereotype and Subclassing “Representation Computation”&#xA;">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1429802003479_393526_5924"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1429804401206_638459_5982"
+                            xmi:uuid="5abfca41-798c-49d1-a172-f0692cbb27a4"
+                            name="base_Classifier"
+                            visibility="private"
+                            association="_18_1_3ba019e_1429804401206_622249_5981">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429804401206_622249_5981"
+                          xmi:uuid="1dc07245-821d-41a5-9ddc-7f54afd27547">
+            <memberEnd xmi:idref="_18_1_3ba019e_1429804401206_638459_5982"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1429804401206_995277_5983"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1429804401206_995277_5983"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429804401206_995277_5983"
+                      xmi:uuid="40b0cd56-1a96-4731-aea8-3cffc15a9cf9"
+                      name="extension_Facade"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1429802003479_393526_5924"
+                      association="_18_1_3ba019e_1429804401206_622249_5981">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429804401206_849874_5984"
+                           xmi:uuid="b0c9dbb0-a88f-4138-bcf4-6c8bec72847e"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429805060443_439082_6120"
+                          xmi:uuid="ba2a5bb2-5329-4bdf-9bdc-82cef701833f"
+                          name="Match">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1429811803857_452277_6718"
+                          xmi:uuid="e84d4996-e26a-421f-b374-70ed688070b5"
+                          body="Match specifies an element in a structure that must match a model element for the pattern to match. The match is the starting point for the pattern from which all paths are computed.&#xA;&lt;&lt;Match&gt; is a shortcut for &lt;&lt;Pattern Element&gt;&gt; strength=Match">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1429805060443_439082_6120"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1429805353252_875420_6172"
+                            xmi:uuid="bee205cd-d3be-44f6-bcdd-e7e537a95813"
+                            general="_18_1_3ba019e_1429802403178_78376_5995"/>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429912332378_451201_6056"
+                          xmi:uuid="77c14313-a7ba-4b50-85c1-a39c6020d56c"
+                          name="Mapping Rule">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1430773645769_414370_5947"
+                          xmi:uuid="d7c0c14a-b0ae-439f-800e-f180817e76e4"
+                          body="&lt;&lt;Mapping Rule&gt;&gt; defines a pattern structure described by a structured classifier that shows how both &#34;sides&#34; of a representation (conceptual and logical) are related. Each &#34;side&#34; must match, including any traversals through  structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. &#xA;The pattern is described using structured classifier properties and connectors.&#xA;The mapping engine ensures that the patterns match, bidirectionally.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1429912332378_451201_6056"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1446048567177_235994_6297"
+                            xmi:uuid="ff745220-9c89-4106-a1fd-e792ee112eca"
+                            general="_17_0_5_1_7b3022e_1396901284851_33562_15649"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446048562137_257905_6291"
+                            xmi:uuid="b0c96875-cb83-4d4f-8ff1-2bfd53e5bc77"
+                            name="base_StructuredClassifier"
+                            visibility="private"
+                            association="_18_1_3ba019e_1446048562137_669514_6290">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#StructuredClassifier"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1444162977738_2181_4296"
+                          xmi:uuid="17e81cbd-eb81-494b-a4b6-d3df9a54f0dc"
+                          name="Subset of">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1444405680407_281469_4288"
+                          xmi:uuid="7fd7832d-46b3-48d7-b2e5-5aba86128e8c"
+                          body="In a pattern or mapping rule, &lt;Subset of&gt; defines a pattern property that represents a subset of another property. The subset may be constrained by a more specific type, expressions, values or required cardinalities.&#xA;Subset stereotypes the end of a connector that is the superset.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1444162977738_2181_4296"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1445279782465_146656_27283"
+                            xmi:uuid="2d5c17e4-fbf5-4b31-b62e-e468847132b1"
+                            name="base_ConnectorEnd"
+                            visibility="private"
+                            association="_18_1_3ba019e_1445279782465_956985_27282">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ConnectorEnd"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1445380488226_15474_31881"
+                            xmi:uuid="d1c3ce8d-e26b-49ac-bf3e-f7175609a01b"
+                            name="default"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1445380587963_119880_31888"
+                             xmi:uuid="30715c7a-15c2-422a-94b1-f504142cf166"
+                             body="True if the subset should be populated only if no other subsets have been populated.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1445380488226_15474_31881"/>
+               </ownedComment>
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1445380526326_583988_31882"
+                           xmi:uuid="0146ff85-9926-438a-aea3-f5e776865a83"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1444933575323_62010_4405"
+                          xmi:uuid="a7a6925e-bc60-44b6-ab5a-2ea63765fdf6"
+                          name="Map">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1445956065079_365944_34707"
+                          xmi:uuid="7fd12f94-fb56-4a75-9434-0782dba22cbd"
+                          body="&lt;&lt;Map&gt;&gt; defines an equality rule between two properties in a &lt;&lt;Rule&gt;&gt; - they must represent the same information, perhaps using different representations.&#xA;Maps should be drawn &lt;from&gt; the representation &lt;to&gt; the more conceptual. &#xA;&lt;&lt;Map&gt;&gt; may be used between models, as is common for a &lt;&lt;Mapping Rule&gt;&gt; or within one model to equate different representations for the same thing (e.g., property paths).">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1444933575323_62010_4405"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1444933595738_283936_4433"
+                            xmi:uuid="9547c401-9ca8-4719-ae24-bd63c35e4827"
+                            name="base_Connector"
+                            visibility="private"
+                            association="_18_1_3ba019e_1444933595738_898448_4432">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Connector"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1445278152735_373625_27856"
+                            xmi:uuid="dae328d9-e126-41c6-abab-145d738e6e27"
+                            name="type"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1445278152736_247898_27857"
+                             xmi:uuid="b0dda34e-6d28-42f7-b046-794f21c8e48a"
+                             body="&lt;type&gt; is a restriction on the type of a property or relation that a map represents. One &#34;side&#34; of the map connector must have this type.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1445278152735_373625_27856"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1444933646099_651267_4452"
+                            xmi:uuid="76a68e04-a02d-4361-8bd2-d4f17d235b44"
+                            name="condition"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ValueSpecification"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1444933646100_796486_4453"
+                             xmi:uuid="2147d939-905a-47b0-9495-75f97d73fbc3"
+                             body="&lt;condition&gt; is an expression that must be true for the map rule to hold.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1444933646099_651267_4452"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446407950537_703832_28327"
+                            xmi:uuid="f64c8467-458f-430a-a57d-0156cc710bd1"
+                            name="default"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463075730780_289954_4499"
+                             xmi:uuid="e8877266-b10f-4075-996b-6a2c3fc69b7c"
+                             body="&lt;default&gt; is true if the map should be enforced only if no other maps apply.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1446407950537_703832_28327"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463250442091_27829_4522"
+                            xmi:uuid="88809437-a788-4653-a222-1cf40fcc089b"
+                            name="coerce"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463250486418_296851_4525"
+                             xmi:uuid="5a348206-4718-44a2-a450-1f1296c38b99"
+                             body="Where &lt;coerce&gt; has a value of TRUE  a map rule will be evaluated even if the &lt;from&gt; is not type compatible with the &lt;to&gt; type.&#xA;Where &lt;coerce&gt; is FALSE or unstated a map rule will be evaluated only if the &lt;from&gt; is type compatible with the &lt;to&gt; type.&#xA;Type compatible shall be defined as one of: Being the same type, &lt;from&gt; being a subtype of &lt;to&gt; (as defined by a type generalization rule), &lt;from&gt; being a representation of &lt;to&gt; (as defined by a representation rule).&#xA;Representation rules applied to a supertype apply to a subtype.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463250442091_27829_4522"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1444933595738_898448_4432"
+                          xmi:uuid="c37310c2-6bb6-4822-a298-a30343bfeca0">
+            <memberEnd xmi:idref="_18_1_3ba019e_1444933595738_283936_4433"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1444933595738_4591_4434"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1444933595738_4591_4434"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1444933595738_4591_4434"
+                      xmi:uuid="86eb209f-4389-4cbf-9790-08fad2236cdb"
+                      name="extension_Map"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1444933575323_62010_4405"
+                      association="_18_1_3ba019e_1444933595738_898448_4432">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1444933595738_110845_4435"
+                           xmi:uuid="6a1b208a-6c53-487e-ad74-5761ff2e7e55"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1445279782465_956985_27282"
+                          xmi:uuid="5d5fceb1-9570-4105-a94e-45893eeb048c">
+            <memberEnd xmi:idref="_18_1_3ba019e_1445279782465_146656_27283"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1445279782469_784960_27284"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1445279782469_784960_27284"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1445279782469_784960_27284"
+                      xmi:uuid="a9515b73-e39e-457d-8601-139a10511a17"
+                      name="extension_Subset of"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1444162977738_2181_4296"
+                      association="_18_1_3ba019e_1445279782465_956985_27282">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1445279782470_464062_27285"
+                           xmi:uuid="503c3a61-efad-4c2c-a173-a3c7ceee81c7"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1446048562137_669514_6290"
+                          xmi:uuid="281a9309-21b9-497a-8bed-86dc1f1a99d3">
+            <memberEnd xmi:idref="_18_1_3ba019e_1446048562137_257905_6291"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1446048562137_714557_6292"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1446048562137_714557_6292"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1446048562137_714557_6292"
+                      xmi:uuid="58b2a524-9e71-447b-9e2a-af923c4b6114"
+                      name="extension_Representation Rule"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1429912332378_451201_6056"
+                      association="_18_1_3ba019e_1446048562137_669514_6290">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1446048562137_120554_6293"
+                           xmi:uuid="5a1fafa0-eb1d-446d-bfa7-d34e659a1bb0"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429802403178_78376_5995"
+                          xmi:uuid="d3e3e3f6-371b-4347-8c8d-464f9a795a94"
+                          name="Pattern Element">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1429811478049_236941_6706"
+                          xmi:uuid="2df01315-5214-404d-a956-9f813f91d66f"
+                          body="&lt;&lt;Pattern element&gt;&gt; further defines a connector, connector end or property within a pattern based on the tag values.&#xA;Note that the UML default value may be used to set the initial value of a pattern element.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1429802403178_78376_5995"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446408334362_255479_28355"
+                            xmi:uuid="e4210eee-5712-4918-a418-50d85a609741"
+                            name="type"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463759883600_408696_4520"
+                             xmi:uuid="c8e91fdc-2e35-49e1-b2da-c3fc929e956f"
+                             body="&lt;type&gt; is a restriction on the type of a property or relation that a pattern element represents. ">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1446408334362_255479_28355"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1429802658522_568924_6001"
+                            xmi:uuid="e650433d-bf06-4008-b56b-42115874d8a0"
+                            name="condition"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ValueSpecification"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1429811547704_968208_6707"
+                             xmi:uuid="15ff486a-644d-4f5a-9034-d90a338e463b"
+                             body="&lt;condition&gt; states a condition that must be true within the scope of the pattern element. This can be used for pattern matching, setting values or restriction of paths.">
+                  <annotatedElement xmi:idref="_18_1_3ba019e_1429802658522_568924_6001"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1429804243512_238939_5937"
+                            xmi:uuid="7d305ddc-fee1-4eec-bc32-d503029d8244"
+                            name="base_Connector"
+                            visibility="private"
+                            association="_18_1_3ba019e_1429804243511_780317_5936">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Connector"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1429804439466_479136_6027"
+                            xmi:uuid="3a4056b0-828a-4a5b-b54b-112ebe63071b"
+                            name="base_Property"
+                            visibility="private"
+                            association="_18_1_3ba019e_1429804439466_542191_6026">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446408288383_276006_28351"
+                            xmi:uuid="3381dac4-5554-4a8d-b87d-1e6e81ce5894"
+                            name="base_ConnectorEnd"
+                            visibility="private"
+                            association="_18_1_3ba019e_1446408288383_521120_28350">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ConnectorEnd"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463076314957_535947_4554"
+                            xmi:uuid="19f72432-9816-471f-b4a3-dab19a4cad60"
+                            name="quantifier"
+                            visibility="public"
+                            type="_18_2_62501eb_1463076239466_215062_4509">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463076348285_318474_4556"
+                             xmi:uuid="a4eb19ca-c221-458a-a343-97e9b669b679"
+                             body="A property that defines a quantification  within a pattern. The quantifier defines the set of things that will populate the pattern property for all instances of the pattern.&#xA;&#xA;Quantifiers operate over the type of a pattern element and define a set or subset that corresponds to the extend of the pattern elements type.&#xA;&#xA;e.g. for all people p: People is the context and P is the quantified property.  In SIMF the quantified property would typically be named &lt;quantifier&gt; &lt;type&gt;.  So the above quantified property would be named &#34;all people&#34;.  The quantified property will be asserted to have the quantified type.&#xA;">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463076314957_535947_4554"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463151303729_360002_4527"
+                            xmi:uuid="5b9b24b8-b577-4263-a5a5-3fbbbd799a34"
+                            name="strength"
+                            visibility="public"
+                            type="_18_2_62501eb_1463151287512_147658_4495">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463178850992_919589_4516"
+                             xmi:uuid="4cb762d2-3622-4565-a7ed-18acac6fbd14"
+                             body="&lt;strength&gt; defines the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463151303729_360002_4527"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463153141332_12928_4534"
+                            xmi:uuid="b7ed24a5-f689-48b9-8724-5e3767a3424c"
+                            name="explicit"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463153269734_64506_4538"
+                             xmi:uuid="d0e91f2e-e50a-448a-bc5d-fe25ac8cae76"
+                             body="If &lt;explicit&gt; is true, the pattern element must be explicitly asserted as the indicted type, not derived or inferred from a supertype or super property.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463153141332_12928_4534"/>
+               </ownedComment>
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1463153185307_504996_4536"
+                           xmi:uuid="e5ce158d-eef1-46b3-a967-ad82c2b7bcc8"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463178769055_428343_4510"
+                            xmi:uuid="863a2320-5d6b-45f8-a5a4-7b06c1e0c3ef"
+                            name="computation"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ValueSpecification"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463178963249_948414_4518"
+                             xmi:uuid="b6c5fe16-f9de-4907-9735-d030017965e1"
+                             body="&lt;computation&gt; computes a value for the pattern element based on the expression.&#xA;Where computation is used inverse mapping is not specified - any inverse mapping is implementation specific.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463178769055_428343_4510"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429804243511_780317_5936"
+                          xmi:uuid="1c64d941-9d0e-4378-87c5-b44205873c0e">
+            <memberEnd xmi:idref="_18_1_3ba019e_1429804243512_238939_5937"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1429804243512_665616_5938"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1429804243512_665616_5938"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429804243512_665616_5938"
+                      xmi:uuid="6f37068b-1f58-472f-aa00-b7ed2e6c2b4d"
+                      name="extension_Filter"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1429802403178_78376_5995"
+                      association="_18_1_3ba019e_1429804243511_780317_5936">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429804243512_286286_5939"
+                           xmi:uuid="89df52c8-84db-4a32-abf6-fb77732c759c"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429804439466_542191_6026"
+                          xmi:uuid="bf454ff9-591d-4091-bcea-6fe081b9d26f">
+            <memberEnd xmi:idref="_18_1_3ba019e_1429804439466_479136_6027"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1429804439467_288734_6028"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1429804439467_288734_6028"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429804439467_288734_6028"
+                      xmi:uuid="7fcad433-6a1b-428b-9100-ba8bb397e84c"
+                      name="extension_Filter"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1429802403178_78376_5995"
+                      association="_18_1_3ba019e_1429804439466_542191_6026">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429804439467_759743_6029"
+                           xmi:uuid="b5cd572d-e0e8-4e35-aa6f-aee32ae328bd"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1446408288383_521120_28350"
+                          xmi:uuid="2199b708-cb36-4e8a-aecb-d251da4fa1b2">
+            <memberEnd xmi:idref="_18_1_3ba019e_1446408288383_276006_28351"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1446408288384_938969_28352"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1446408288384_938969_28352"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1446408288384_938969_28352"
+                      xmi:uuid="4bf9fbfa-d912-4504-bea7-77aa6080fb73"
+                      name="extension_Filter"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_1_3ba019e_1429802403178_78376_5995"
+                      association="_18_1_3ba019e_1446408288383_521120_28350">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1446408288385_589831_28353"
+                           xmi:uuid="d09a68a0-44f0-4283-bcf0-633f20f344a0"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1447077515186_446046_4304"
+                          xmi:uuid="520cfa85-4042-41f5-949b-d657c024a9f4">
+            <memberEnd xmi:idref="_18_1_3ba019e_1447077515187_543964_4305"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1447077515188_509912_4306"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1447077515188_509912_4306"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1447077515188_509912_4306"
+                      xmi:uuid="8f1f0135-bb6f-4aa9-b8de-9755f0addfdf"
+                      name="extension_Rule"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1396901284851_33562_15649"
+                      association="_18_1_3ba019e_1447077515186_446046_4304">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1447077515188_153468_4307"
+                           xmi:uuid="9fd5441e-00ea-4616-b956-d175e4f6a4f0"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1396472323930_159560_3538"
+                          xmi:uuid="32a6dba5-d8d7-437f-8d69-8120cd7c9fa4"
+                          name="Represents">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_5_1_3ba019e_1408827202332_21689_8334"
+                          xmi:uuid="b4b51e59-eedf-42eb-962c-224245fec4b8"
+                          body="&lt;&lt;Represents&gt;&gt; is an assertion that the source type or feature provides a more concrete way to represent the target type or feature. Represents may be used within conceptual models or from a physical model to a conceptual model.&#xA;•&#x9;A representation that is a dependency or realization makes no assumption that the types are substitutable.&#xA;•&#x9;A representation that is a generalization is substitutable for what it represents.&#xA;">
+               <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1396472323930_159560_3538"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_3ba019e_1408467691770_916405_7117"
+                            xmi:uuid="9aa52192-e040-45ff-abb6-b0e589eee906"
+                            name="condition"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ValueSpecification"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_3ba019e_1423854380196_879600_8355"
+                             xmi:uuid="35546cc9-ceff-4fc3-ad76-3abf3c272d27"
+                             body="&lt;condition&gt; is an expression that must be true for the source to represent the target.">
+                  <annotatedElement xmi:idref="_17_0_5_1_3ba019e_1408467691770_916405_7117"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1429804585858_561227_6105"
+                            xmi:uuid="e16266dc-85fc-4286-9a6b-1e6d6b6d6925"
+                            name="base_Generalization"
+                            visibility="private"
+                            association="_18_1_3ba019e_1429804585858_999875_6104">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Generalization"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1429917090355_908311_6109"
+                            xmi:uuid="ed554c53-b1ad-4d87-8977-c6857952f6fc"
+                            name="base_Dependency"
+                            visibility="private"
+                            association="_18_1_3ba019e_1429917090354_787999_6108">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463105209714_569467_4500"
+                            xmi:uuid="08e76955-ec55-43a3-89c1-0a7e14bc2688"
+                            name="map-all"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463105277857_684991_4503"
+                             xmi:uuid="c6ff9d0a-4db9-4086-9dcb-8f3fa8b5d16b"
+                             body="&lt;map-all&gt; implies a direct mapping between instances of the types in both directions.&#xA;&lt;map all&gt; is equivalent to a mapping with a rule mapping properties of each type but is lower precedence than other mappings - if types have a more specific map it will apply first.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463105209714_569467_4500"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429804585858_999875_6104"
+                          xmi:uuid="3a6389fb-6f86-446d-ade0-1ede7f1a0954">
+            <memberEnd xmi:idref="_18_1_3ba019e_1429804585858_561227_6105"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1429804585858_930994_6106"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1429804585858_930994_6106"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429804585858_930994_6106"
+                      xmi:uuid="05690528-11ad-4192-a6bb-7ac23f7d75c3"
+                      name="extension_Represents"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1396472323930_159560_3538"
+                      association="_18_1_3ba019e_1429804585858_999875_6104">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429804585859_864896_6107"
+                           xmi:uuid="1ab235a6-e786-45c1-b039-0eec7fd5f54d"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429917090354_787999_6108"
+                          xmi:uuid="08d51de1-dad3-4051-82ed-4bd95e00458b">
+            <memberEnd xmi:idref="_18_1_3ba019e_1429917090355_908311_6109"/>
+            <memberEnd xmi:idref="_18_1_3ba019e_1429917090355_756648_6110"/>
+            <navigableOwnedEnd xmi:idref="_18_1_3ba019e_1429917090355_756648_6110"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429917090355_756648_6110"
+                      xmi:uuid="09f6b8d0-bf2e-4997-9f59-356c896b5e2d"
+                      name="extension_Represents"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_17_0_5_1_7b3022e_1396472323930_159560_3538"
+                      association="_18_1_3ba019e_1429917090354_787999_6108">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429917090355_584185_6111"
+                           xmi:uuid="bded18d1-16f1-48e2-93c7-391cc9a2c2fc"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1396901284851_33562_15649"
+                          xmi:uuid="cc1d0670-e03e-495b-a289-c72d68ca0417"
+                          name="Rule">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446053408371_417343_6316"
+                          xmi:uuid="71c27b04-15f2-4984-a40c-9f1bb10ea48e"
+                          body="&lt;&lt;Rule&gt;&gt; defines a pattern that must hold true for the context of the rule.&#xA;The pattern is described using structured classifier properties and connectors.&#xA;A  rule is a pattern structure described by a structured classifier that shows how elements are related. Each mapped element must match, including any traversals through  structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. The mapping engine ensures that the patterns match, bidirectionally.">
+               <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1396901284851_33562_15649"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1447077515187_543964_4305"
+                            xmi:uuid="bee70ecf-ef42-4de1-97ff-e56c6bfffdd4"
+                            name="base_StructuredClassifier"
+                            visibility="private"
+                            association="_18_1_3ba019e_1447077515186_446046_4304">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#StructuredClassifier"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463079572820_408130_4683"
+                            xmi:uuid="79b94d51-ed7f-4b46-8a37-fab6e31864f7"
+                            name="holds within"
+                            visibility="public">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Namespace"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463079699851_455306_4685"
+                             xmi:uuid="748b5f61-0a5c-4056-973e-67c21c8cc15f"
+                             body="&lt;holds within&gt; is the context in which a rule is asserted (required to be true). Anything contextualized by the context is subject to the proposition.&#xA;If not stated the rule is asserted by its owner.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463079572820_408130_4683"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Enumeration" xmi:id="_18_2_62501eb_1463076239466_215062_4509"
+                          xmi:uuid="48bc3243-7f0a-41bf-8005-05a0aa20214c"
+                          name="Quantifier">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463076239467_792527_4516"
+                          xmi:uuid="e3d42071-4586-4b25-accb-7758ca9869fc"
+                          body="The set of quantifiers for pattern variables. Quantifiers operate over the type of a pattern element and define a set or subset that corresponds to the extend of the pattern elements type.">
+               <annotatedElement xmi:idref="_18_2_62501eb_1463076239466_215062_4509"/>
+            </ownedComment>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463076239466_450184_4510"
+                          xmi:uuid="2f63c499-f21a-476f-8dc9-52d732544a5b"
+                          name="None">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463076239467_163659_4517"
+                             xmi:uuid="849f1136-cdbd-47c7-87db-e430a95fd5b0"
+                             body="A quantifier where no instance of the type may fill the role. E.g. &#34;there may not exist&#34;.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463076239466_450184_4510"/>
+               </ownedComment>
+            </ownedLiteral>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463076239466_182466_4511"
+                          xmi:uuid="f009159b-7d10-4281-b480-d2ea626e4834"
+                          name="There Exists">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463076239467_991106_4518"
+                             xmi:uuid="309fc74a-0f62-45a9-aaf8-a37710d2d569"
+                             body="The existential quantifier - at least one element must exist.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463076239466_182466_4511"/>
+               </ownedComment>
+            </ownedLiteral>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463076239466_412966_4512"
+                          xmi:uuid="15595a51-06a0-45be-bb30-5bd990ad0f01"
+                          name="Exactly One">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463076239467_798543_4519"
+                             xmi:uuid="c6ffbd1f-f5d8-40ab-b27a-c055bbd16392"
+                             body="The existential quantifier limited to exactly one of a potentially larger set">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463076239466_412966_4512"/>
+               </ownedComment>
+            </ownedLiteral>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463597914925_145736_4553"
+                          xmi:uuid="3a8d381a-8655-445b-9441-eea79a452ab4"
+                          name="Some">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463598016284_533768_4555"
+                             xmi:uuid="cfef7706-4d1d-4219-bd5f-7065ac9b7a96"
+                             body="A stratified existential quantifier for a common values - example: &lt;Some&gt; people like computers.&#xA;For logics that do not support &#34;some&#34;, some may be interpreted as &#34;There Exists&#34;.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463597914925_145736_4553"/>
+               </ownedComment>
+            </ownedLiteral>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463076239466_487784_4513"
+                          xmi:uuid="3f3c75b9-e9c8-4579-b259-77c0bbdd7ce9"
+                          name="Most">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463076239467_671368_4520"
+                             xmi:uuid="8582fa2b-c7a8-4cdb-bfeb-c30a4a2087b2"
+                             body="A stratified existential quantifier with a default for a &#34;typical&#34; value - example: &lt;Most&gt; people have 2 arms.&#xA;For logics that do not support &#34;most&#34;, most may be interpreted as &#34;There Exists&#34;.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463076239466_487784_4513"/>
+               </ownedComment>
+            </ownedLiteral>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463076239467_3880_4514"
+                          xmi:uuid="b388888b-fa99-4d70-99ae-7a793accd488"
+                          name="All">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463076239467_191920_4521"
+                             xmi:uuid="6a4eb8b2-478e-4d4d-982e-372d48929bb9"
+                             body="The universal quantifier - the quantified property is a stand-in for all elements of the extent of the quantified type">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463076239467_3880_4514"/>
+               </ownedComment>
+            </ownedLiteral>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Enumeration" xmi:id="_18_2_62501eb_1463151287512_147658_4495"
+                          xmi:uuid="11b5ba9f-82a4-46a2-a66f-ab15e3943427"
+                          name="Pattern Element Strength">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463760522784_676200_4521"
+                          xmi:uuid="86fac035-5929-4e12-a350-f7ac7705528e"
+                          body="Pattern Element Strength defines a set of options for the mapping behavior of a pattern element.">
+               <annotatedElement xmi:idref="_18_2_62501eb_1463151287512_147658_4495"/>
+            </ownedComment>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463151287513_462140_4496"
+                          xmi:uuid="9646de70-7429-4691-8560-4b3afe8dede6"
+                          name="Match">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463151287514_166005_4500"
+                             xmi:uuid="ce8e932f-c24e-4828-a715-1a7cbf4b9d18"
+                             body="Match is used in query and mapping patterns, all elements of the classified type that match the pattern are selected as instances of the pattern.&#xA;Match may be considered a qualified &#34;All&#34;. Match does not assert the existence of something, it determines the existence of a pattern match such that other assertions may be made.&#xA;Relationships between properties with &lt;quantifier&gt;=Match must hold between the matched properties for the pattern to match.&#xA;">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463151287513_462140_4496"/>
+               </ownedComment>
+            </ownedLiteral>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463151287514_521576_4497"
+                          xmi:uuid="8281bb59-94e6-44da-917a-fce99494dfee"
+                          name="Assert">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463151287514_833812_4501"
+                             xmi:uuid="bc26f3b1-fb2f-44ce-ade2-ea145c9a5a4e"
+                             body="The element will be asserted as required for a valid pattern. Assert is the default.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463151287514_521576_4497"/>
+               </ownedComment>
+            </ownedLiteral>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463151287514_104853_4498"
+                          xmi:uuid="8eabd593-14bf-4ea5-8609-59906d9bebda"
+                          name="Default">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463151287514_780152_4502"
+                             xmi:uuid="9a818fbe-4efb-4638-86f1-604697c6f70a"
+                             body="The element will be asserted only if no other values are asserted within the pattern or as pre-existing assertions.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463151287514_104853_4498"/>
+               </ownedComment>
+            </ownedLiteral>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                          xmi:id="_18_2_62501eb_1463151287514_528415_4499"
+                          xmi:uuid="9fa482b7-0372-4a39-8f5c-7482f04bbfad"
+                          name="Exists">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463151287514_15371_4503"
+                             xmi:uuid="00e77ab0-206d-47eb-8ced-bef0c5f256c7"
+                             body="Existing element that will be used to compute other values but does not otherwise impact the pattern.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463151287514_528415_4499"/>
+               </ownedComment>
+            </ownedLiteral>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_2_62501eb_1463585721984_884948_4489"
+                          xmi:uuid="d3302be1-8913-4fde-acbc-2ebcd47373f1"
+                          name="Subsumes">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463585846941_741675_4537"
+                          xmi:uuid="5a92da30-e8b8-441a-8baf-a762f7bd51ab"
+                          body="&lt;&lt;Subsumes&gt;&gt; is a dependency between rules. When a rule subsumes another the subsumed rule will not apply (fire). if the &lt;subsumed by&gt; rules applies (fires).&#xA;Where rules are also patterns, a rule may specialize another which will subsume the specialized rule as well as include the generalized rule parts as parts of the specialized rule.">
+               <annotatedElement xmi:idref="_18_2_62501eb_1463585721984_884948_4489"/>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463585771426_684727_4517"
+                            xmi:uuid="5c8647c8-5048-4ca5-b0ea-4cff210d6a6b"
+                            name="base_Dependency"
+                            visibility="private"
+                            association="_18_2_62501eb_1463585771426_113196_4516">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Extension" xmi:id="_18_2_62501eb_1463585771426_113196_4516"
+                          xmi:uuid="c1c425b2-0dbe-4fe3-a4e4-1498debd0189">
+            <memberEnd xmi:idref="_18_2_62501eb_1463585771426_684727_4517"/>
+            <memberEnd xmi:idref="_18_2_62501eb_1463585771427_714707_4518"/>
+            <navigableOwnedEnd xmi:idref="_18_2_62501eb_1463585771427_714707_4518"/>
+            <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_2_62501eb_1463585771427_714707_4518"
+                      xmi:uuid="73a9aad4-e8cb-4201-a755-0a9fb821126d"
+                      name="extension_Subsumes"
+                      visibility="private"
+                      aggregation="composite"
+                      type="_18_2_62501eb_1463585721984_884948_4489"
+                      association="_18_2_62501eb_1463585771426_113196_4516">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1463585771427_211531_4519"
+                           xmi:uuid="df858bb1-db3e-432d-bec5-6452f7b65673"/>
+            </ownedEnd>
+         </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_18_1_3ba019e_1431543059748_655570_16747"
+                       name="SIMF Computation Rules"
+                       URI="http://www.omg.org/spec/SIMF/20160501/SIMF-computation-rules.xmi">
+         <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446076459220_753742_6375"
+                       xmi:uuid="2b658f82-5bdb-407e-92dc-b3c347e98b79"
+                       body="Computation rules define mappings that are implemented via external methods. As such the implementation is defined by implementations, not the specification.">
+            <annotatedElement xmi:idref="_18_1_3ba019e_1431543059748_655570_16747"/>
+         </ownedComment>
+         <packagedElement xmi:type="uml:Class" xmi:id="_18_1_3ba019e_1431543088979_753673_16748"
+                          xmi:uuid="1b2ba1da-2de5-49a0-a3a4-abe303f40d90"
+                          name="MapID">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1431543253903_14324_16796"
+                          xmi:uuid="4a2f0530-0235-463f-afcf-a001c05675ba"
+                          body="&lt;&lt;MapID&gt;&gt; is a rule where the source is an ID and the target is a class, maps an instance of the ID to an instance of the class.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1431543088979_753673_16748"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1431544428958_719011_16850"
+                            xmi:uuid="67477f5f-429f-4ac6-9f37-a1762ce307fd"
+                            general="_18_1_3ba019e_1429802111601_842589_5968"/>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267819398_266940_4837"
+                            xmi:uuid="ab18d662-2f76-4ed3-a390-374dcbdcbdc1"
+                            name="id"
+                            visibility="public"
+                            aggregation="composite">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1431544517906_329838_16857"
+                             xmi:uuid="f8a81d7b-c395-4b51-8cda-18f051d7c670"
+                             body="The source type (ID)">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463267819398_266940_4837"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267819413_369844_4838"
+                            xmi:uuid="66bfca31-2b6e-4694-8af8-4b9028b1b2af"
+                            name="identified"
+                            visibility="public"
+                            aggregation="composite">
+               <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1431544529006_54335_16858"
+                             xmi:uuid="eb62fa29-4b0e-41f1-be89-d659524d1082"
+                             body="The identified type (Identified by ID)">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463267819413_369844_4838"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Class" xmi:id="_18_1_3ba019e_1429802111601_842589_5968"
+                          xmi:uuid="da8d3a0b-b174-4845-8398-32219b48ea2e"
+                          name="Rule Computation"
+                          isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1429811603406_897029_6709"
+                          xmi:uuid="0ba3475e-7c58-4830-b0a9-6e11913f987e"
+                          body="&lt;&lt;Rule Computation&gt;&gt; is an abstract supertype for a facade that includes external implementation. The implementation is outside of this specification.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1429802111601_842589_5968"/>
+            </ownedComment>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Class" xmi:id="_18_1_3ba019e_1443825538731_383581_26914"
+                          xmi:uuid="468ff9d3-fbc2-4cac-8185-4ed29fe461e6"
+                          name="ExistsRule">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1444162579082_254289_26353"
+                          xmi:uuid="8a1e3eef-9824-48db-9e2f-f2ef5e970a4b"
+                          body="&lt;&lt;Exists Rule&gt; is a rule to map the existence of an &lt;element&gt; to a boolean.&#xA;&lt;exists&gt; is true iff &lt;element&gt; is not null.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1443825538731_383581_26914"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1443825685388_406955_27009"
+                            xmi:uuid="60a35244-6f5f-4689-ba04-2240da3080ce"
+                            general="_18_1_3ba019e_1429802111601_842589_5968"/>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267612401_237450_4778"
+                            xmi:uuid="933147d5-2a7e-4836-8663-18e41a0d4c93"
+                            name="exists"
+                            visibility="public"
+                            aggregation="composite">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463765564028_704432_4565"
+                             xmi:uuid="c86df37a-d620-4386-bacc-5fc1eab67ece"
+                             body="Boolean that will be true if &lt;element&gt; is not null.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463267612401_237450_4778"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267620289_914408_4779"
+                            xmi:uuid="264883a9-7e54-4a4f-9172-99814f6124f1"
+                            name="element"
+                            visibility="public"
+                            aggregation="composite">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463765619948_195136_4566"
+                             xmi:uuid="29c0476b-21f0-4647-9fc1-7864c40269b1"
+                             body="If &lt;element&gt; in not null, &lt;exists&gt; will be true.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463267620289_914408_4779"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Class" xmi:id="_18_1_3ba019e_1446994950750_930471_7277"
+                          xmi:uuid="d1c8f97b-afdf-4986-b1a0-cfea1b571ed5"
+                          name="Summarize">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446995201482_381106_7318"
+                          xmi:uuid="c28982ee-129a-4cd6-9545-1af13d1b369a"
+                          body="&lt;&lt;Summarize&gt;&gt; is a rule that  produces a natural language description of an element. Summarize may not be bi-directional and is expected to have information loss.&#xA;&lt;summary&gt; is a summary of &lt;element&gt;. &#xA;Content of summary is implementation specific.">
+               <annotatedElement xmi:idref="_18_1_3ba019e_1446994950750_930471_7277"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1446994966262_541275_7301"
+                            xmi:uuid="441c5055-002f-4cd4-a464-d118cf5d6f99"
+                            general="_18_1_3ba019e_1429802111601_842589_5968"/>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267852486_606733_4863"
+                            xmi:uuid="88eae994-822d-4894-a5fc-096a950a229b"
+                            name="summary"
+                            visibility="public"
+                            aggregation="composite">
+               <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446995207389_523270_7319"
+                             xmi:uuid="4f25a8c8-1a26-4b62-8891-953b96402cf5"
+                             body="The element summary">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463267852486_606733_4863"/>
+               </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267852501_857529_4864"
+                            xmi:uuid="a6e0ec2e-fa47-4010-8683-e25ac03d90ce"
+                            name="element"
+                            visibility="public"
+                            aggregation="composite">
+               <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446995217122_271361_7320"
+                             xmi:uuid="18911572-c1d8-42d7-a915-49fb824069ea"
+                             body="The summarized element.">
+                  <annotatedElement xmi:idref="_18_2_62501eb_1463267852501_857529_4864"/>
+               </ownedComment>
+            </ownedAttribute>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Class" xmi:id="_18_2_62501eb_1463265497056_964323_4539"
+                          xmi:uuid="83409a86-89ce-40af-9ec7-51ea58cc77b6"
+                          name="List First">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463266031469_700112_4581"
+                          xmi:uuid="c29b1cce-b1b7-4037-823b-ab45b932d42f"
+                          body="The &lt;List First&gt; rules will take the &lt;list&gt; property and place the first element into&lt;first&gt;. If &lt;list&gt; is empty, &lt;first&gt; will be empty.&#xA;If there are more &lt;list&gt; elements than 1, all remaining elements are placed as a set in &lt;remainder&gt;.&#xA;If &lt;list&gt; is an un-ordered set the order will be indeterminate but repeatable.&#xA;&lt;&lt;List First&gt;&gt; is bidirectional and will compute &lt;list&gt; by appending &lt;first&gt; and &lt;remainder&gt;.&#xA;Note that this will act like a LISP CDR/CAR pair">
+               <annotatedElement xmi:idref="_18_2_62501eb_1463265497056_964323_4539"/>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_18_2_62501eb_1463265520884_395127_4568"
+                            xmi:uuid="687bf5be-e598-4e04-82ae-6410d9219022"
+                            general="_18_1_3ba019e_1429802111601_842589_5968"/>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267046349_495176_4731"
+                            xmi:uuid="0e52e469-0929-42a6-9769-40548599b321"
+                            name="list"
+                            visibility="public"
+                            aggregation="composite">
+               <lowerValue xmi:type="uml:LiteralUnlimitedNatural"
+                           xmi:id="_18_2_62501eb_1463267516524_850695_4772"
+                           xmi:uuid="5ab3bb0a-7ac1-4e9b-88c0-5325c874ef8e"/>
+               <upperValue xmi:type="uml:LiteralUnlimitedNatural"
+                           xmi:id="_18_2_62501eb_1463267516524_197790_4773"
+                           xmi:uuid="92da55c7-454b-40c9-ac5e-648078c4081f"
+                           value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267062670_316011_4745"
+                            xmi:uuid="5e4b5b6f-2bb9-4dad-a698-78c8f8c27a4a"
+                            name="first"
+                            visibility="public"
+                            isOrdered="true"
+                            aggregation="composite">
+               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1463267530673_21008_4774"
+                           xmi:uuid="8961ada7-bff3-4691-b01a-1c2f962f788e"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Port" xmi:id="_18_2_62501eb_1463267077998_51137_4759"
+                            xmi:uuid="2f2742a2-6879-4a0e-9892-c488e4d0b997"
+                            name="remainder"
+                            visibility="public"
+                            aggregation="composite">
+               <lowerValue xmi:type="uml:LiteralUnlimitedNatural"
+                           xmi:id="_18_2_62501eb_1463267565947_59047_4776"
+                           xmi:uuid="89388962-343b-4372-8bc2-4f7c2625837d"/>
+               <upperValue xmi:type="uml:LiteralUnlimitedNatural"
+                           xmi:id="_18_2_62501eb_1463267565947_54604_4777"
+                           xmi:uuid="3ac6974f-7ece-480c-8991-c38c76719fa6"
+                           value="*"/>
+            </ownedAttribute>
+         </packagedElement>
+      </packagedElement>
+   </uml:Model>
+   <SIMF_Rules_Profile:Mapping_Rule xmi:id="_18_1_3ba019e_1431543208293_191803_16795"
+                                    base_StructuredClassifier="_18_1_3ba019e_1431543088979_753673_16748"/>
+   <SIMF_Rules_Profile:Rule xmi:id="_18_1_3ba019e_1429912294682_435234_6055"
+                            base_StructuredClassifier="_18_1_3ba019e_1429802111601_842589_5968"/>
+   <SIMF_Rules_Profile:Rule xmi:id="_18_1_3ba019e_1443825656668_889411_26959"
+                            base_StructuredClassifier="_18_1_3ba019e_1443825538731_383581_26914"/>
+   <SIMF_Rules_Profile:Mapping_Rule xmi:id="_18_2_62501eb_1463265517731_486652_4565"
+                                    base_StructuredClassifier="_18_2_62501eb_1463265497056_964323_4539"/>
+   <SIMF_Rules_Profile:Mapping_Rule xmi:id="_18_1_3ba019e_1446994976702_297276_7302"
+                                    base_StructuredClassifier="_18_1_3ba019e_1446994950750_930471_7277"/>
+</xmi:XMI>
