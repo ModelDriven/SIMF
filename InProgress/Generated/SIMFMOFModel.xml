@@ -10,10 +10,15 @@
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
       <xmi:exporterVersion>18.2</xmi:exporterVersion>
    </xmi:documentation>
-
-
-      <Package xmi:id="_17_0_3_7b3022e_1331219208551_170143_3480" URI="http://www.omg.org/spec/SIMF/20160501/SIMF-MOF-model.xmi"
-                       name="SIMFMOFModel">
+   <uml:Model xmi:type="uml:Model" xmi:id="eee_1045467100313_135436_1" name="SIMF"
+              URI="http://www.omg.org/spec/SIMF/20160501/SIMF-MOF-model.xmi">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_7b3022e_1331156458060_900307_1524"
+                    body="Author:Cory Casanave.&#xA;Created:3/7/12 4:40 PM.&#xA;Title:Semantic Information Modeling for Federation Meta Model.&#xA;Comment:.&#xA;">
+         <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1331219208551_170143_3480"
+                       name="SIMFMetamodel"
+                       URI="http://www.omg.org/spec/SIMF/20160501/SIMF-MOF-model.xmi">
          <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1331156461403_893550_1660"
                           name="Types">
             <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1430759674676_993762_7159"
@@ -2309,7 +2314,7 @@
                </ownedAttribute>
             </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="_18_1_3ba019e_1447093085360_738469_4776"
-                             name="from rue">
+                             name="From Map Rule">
                <memberEnd xmi:idref="_18_1_3ba019e_1447093085360_869731_4777"/>
                <memberEnd xmi:idref="_18_1_3ba019e_1447093085360_940703_4778"/>
                <ownedEnd xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1447093085360_940703_4778"
@@ -2325,7 +2330,7 @@
                </ownedEnd>
             </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="_18_1_3ba019e_1447093112153_444655_4814"
-                             name="to rule">
+                             name="To Map Rule">
                <memberEnd xmi:idref="_18_1_3ba019e_1447093112153_6744_4815"/>
                <memberEnd xmi:idref="_18_1_3ba019e_1447093112153_421278_4816"/>
                <ownedEnd xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1447093112153_421278_4816"
@@ -2961,11 +2966,6 @@
                                general="_18_2_62501eb_1460666057330_291699_5500"/>
             </packagedElement>
          </packagedElement>
-      </Package>
-
-       <mofext:Tag xmi:id="_-Tag" xmi:uuid="eee_1045467100313_135436_1" xmi:type="mofext:Tag">
-        <name>org.omg.xmi.nsPrefix</name>
-        <value>SIMFProfile</value>
-        <element xmi:idref="SIMFMOFModel"/>
-    </mofext:Tag>
+      </packagedElement>
+   </uml:Model>
 </xmi:XMI>

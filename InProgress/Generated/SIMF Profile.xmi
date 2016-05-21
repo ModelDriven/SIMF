@@ -8,7 +8,8 @@
       <xmi:exporterVersion>18.2</xmi:exporterVersion>
    </xmi:documentation>
 
-      <uml:Profile xmi:id="_18_2_62501eb_1463773094644_650562_4768"
+
+      <Profile xmi:id="SIMFProfile"
                        name="SIMFProfile"
                        URI="http://www.omg.org/spec/SIMF/20160501/SIMF-profile.xmi">
          <metamodelReference xmi:idref="_18_2_62501eb_1463773094644_394743_4769"/>
@@ -1914,11 +1915,10 @@
                </ownedAttribute>
             </packagedElement>
          </packagedElement>
-      </uml:Profile>
+      </Profile>
     <mofext:Tag xmi:id="_-Tag" xmi:uuid="_18_0_1_8bf027c_1411745340055_911952_5224" xmi:type="mofext:Tag">
         <name>org.omg.xmi.nsPrefix</name>
         <value>SIMFProfile</value>
         <element xmi:idref="SIMFProfile"/>
     </mofext:Tag>
-
 </xmi:XMI>
