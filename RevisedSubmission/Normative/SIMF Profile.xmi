@@ -7,13 +7,9 @@
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
       <xmi:exporterVersion>18.2</xmi:exporterVersion>
    </xmi:documentation>
-   <xmi:documentation xmi:type="xmi:Documentation">
-      <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
-      <xmi:exporterVersion>18.2</xmi:exporterVersion>
-   </xmi:documentation>
-   <uml:Model xmi:type="uml:Model" xmi:id="_18_0_1_8bf027c_1411745340055_911952_5224"
-              name="SIMF Profile Model">
-      <packagedElement xmi:type="uml:Profile" xmi:id="_18_2_62501eb_1463773094644_650562_4768"
+
+
+      <Profile xmi:id="SIMFProfile"
                        name="SIMFProfile"
                        URI="http://www.omg.org/spec/SIMF/20160501/SIMF-profile.xmi">
          <metamodelReference xmi:idref="_18_2_62501eb_1463773094644_394743_4769"/>
@@ -1919,16 +1915,10 @@
                </ownedAttribute>
             </packagedElement>
          </packagedElement>
-      </packagedElement>
-   </uml:Model>
-   <SIMF_Rules_Profile:Mapping_Rule xmi:id="_18_1_3ba019e_1431543208293_191803_16795"
-                                    base_StructuredClassifier="_18_1_3ba019e_1431543088979_753673_16748"/>
-   <SIMF_Rules_Profile:Rule xmi:id="_18_1_3ba019e_1429912294682_435234_6055"
-                            base_StructuredClassifier="_18_1_3ba019e_1429802111601_842589_5968"/>
-   <SIMF_Rules_Profile:Rule xmi:id="_18_1_3ba019e_1443825656668_889411_26959"
-                            base_StructuredClassifier="_18_1_3ba019e_1443825538731_383581_26914"/>
-   <SIMF_Rules_Profile:Mapping_Rule xmi:id="_18_1_3ba019e_1446994976702_297276_7302"
-                                    base_StructuredClassifier="_18_1_3ba019e_1446994950750_930471_7277"/>
-   <SIMF_Rules_Profile:Mapping_Rule xmi:id="_18_2_62501eb_1463265517731_486652_4565"
-                                    base_StructuredClassifier="_18_2_62501eb_1463265497056_964323_4539"/>
+      </Profile>
+    <mofext:Tag xmi:id="_-Tag" xmi:uuid="_18_0_1_8bf027c_1411745340055_911952_5224" xmi:type="mofext:Tag">
+        <name>org.omg.xmi.nsPrefix</name>
+        <value>SIMFProfile</value>
+        <element xmi:idref="SIMFProfile"/>
+    </mofext:Tag>
 </xmi:XMI>
