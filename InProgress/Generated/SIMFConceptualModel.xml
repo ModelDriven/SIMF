@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001"
-         xmlns:SIMF_Rules_Profile="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile.xmi"
          xmlns:SIMF_Concept_Modeling_Profile="http://www.omg.org/spec/SIMF/20160501/SIMF-conceptual-profile.xmi"
          xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+         xmlns:SIMF_Rules_Profile="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile.xmi"
          xmlns:StandardProfile="http://www.omg.org/spec/UML/20131001/StandardProfile">
    <xmi:documentation xmi:type="xmi:Documentation">
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
-      <xmi:exporterVersion>18.2</xmi:exporterVersion>
+      <xmi:exporterVersion>18.3</xmi:exporterVersion>
    </xmi:documentation>
    <xmi:documentation xmi:type="xmi:Documentation">
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
-      <xmi:exporterVersion>18.2</xmi:exporterVersion>
+      <xmi:exporterVersion>18.3</xmi:exporterVersion>
    </xmi:documentation>
    <uml:Model xmi:type="uml:Model" xmi:id="eee_1045467100313_135436_1" name="SIMF"
-              URI="http://www.omg.org/spec/SIMF/20160501/SIMF-conceptual-model.xmi">
+              URI="http://www.omg.org/spec/SIMF/20160501/SIMF-conceptual-model">
       <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_7b3022e_1331156458060_900307_1524"
                     body="Author:Cory Casanave.&#xA;Created:3/7/12 4:40 PM.&#xA;Title:Semantic Information Modeling for Federation Meta Model.&#xA;Comment:.&#xA;">
          <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
@@ -3304,14 +3304,14 @@
          </profileApplication>
       </packagedElement>
    </uml:Model>
-   <SIMF_Concept_Modeling_Profile:Concept_Package xmi:id="_18_2_62501eb_1462317886914_476421_8673"
-                                                  base_Package="_17_0_3_7b3022e_1331219208551_170143_3480"/>
-   <SIMF_Concept_Modeling_Profile:Equivalent_Property xmi:id="_18_2_62501eb_1462309973113_35305_5907"
-                                                      base_Property="_18_2_62501eb_1462309894331_388360_5879"
-                                                      chain="_17_0_4_1_7b3022e_1388781916828_865512_4344 _18_2_62501eb_1460148148985_349219_15509"/>
+   <SIMF_Concept_Modeling_Profile:Concept_Model xmi:id="_18_2_62501eb_1462317886914_476421_8673"
+                                                base_Package="_17_0_3_7b3022e_1331219208551_170143_3480"/>
    <SIMF_Concept_Modeling_Profile:Equivalent_Property xmi:id="_18_2_62501eb_1462208790446_198039_5087"
                                                       base_Property="_18_2_62501eb_1462208757096_172413_5050"
                                                       chain="_17_0_4_1_7b3022e_1388781916828_865512_4344 _18_2_62501eb_1461250151297_931735_4675"/>
+   <SIMF_Concept_Modeling_Profile:Equivalent_Property xmi:id="_18_2_62501eb_1462309973113_35305_5907"
+                                                      base_Property="_18_2_62501eb_1462309894331_388360_5879"
+                                                      chain="_17_0_4_1_7b3022e_1388781916828_865512_4344 _18_2_62501eb_1460148148985_349219_15509"/>
    <SIMF_Concept_Modeling_Profile:Union xmi:id="_18_2_62501eb_1462464651973_207280_6730"
                                         base_Classifier="_18_2_62501eb_1460139113746_536957_11495"/>
    <SIMF_Concept_Modeling_Profile:Annotation_Property xmi:id="_18_2_62501eb_1462304469798_436259_5800"
