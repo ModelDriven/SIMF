@@ -1,0 +1,1544 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/2.5" xmlns:SIMF-rules-profile="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile" xmlns:mofext="http://www.omg.org/spec/MOF/20131001" xmlns:xmi="XMI25">
+  <SIMF-rules-profile:Mapping_Rule xmi:id="_-Mapping_Rule-3" xmi:uuid="725A27D7-DAED-445C-9BE3-C47DC7E88EBE">
+    <base_StructuredClassifier>_18_2_62501eb_1463265497056_964323_4539</base_StructuredClassifier>
+  </SIMF-rules-profile:Mapping_Rule>
+  <SIMF-rules-profile:Mapping_Rule xmi:id="_-Mapping_Rule-1" xmi:uuid="725A27D7-DAED-46FF-9FFD-C47D1806A8DF">
+    <base_StructuredClassifier>_18_1_3ba019e_1431543088979_753673_16748</base_StructuredClassifier>
+  </SIMF-rules-profile:Mapping_Rule>
+  <SIMF-rules-profile:Mapping_Rule xmi:id="_-Mapping_Rule-2" xmi:uuid="725A27D7-DAED-4B07-99BC-C47D0D884458">
+    <base_StructuredClassifier>_18_1_3ba019e_1446994950750_930471_7277</base_StructuredClassifier>
+  </SIMF-rules-profile:Mapping_Rule>
+  <uml:Profile xmi:id="SIMFProfile" xmi:uuid="725A27D7-DAED-4807-97C6-C47D0A93CD0F" xmi:type="uml:Profile">
+    <metamodelReference xmi:idref="SIMFProfile-packageImport"/>
+    <packageImport xmi:id="SIMFProfile-packageImport" xmi:uuid="6be406c3-e971-493a-9585-2fdcd7ede3fd" xmi:type="uml:PackageImport">
+      <importedPackage href="http://www.omg.org/spec/UML/20131001/UML.xmi#_0"/>
+    </packageImport>
+    <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile" xmi:uuid="2bc336da-9080-406d-b365-0881362139f4" xmi:type="uml:Profile">
+      <metamodelReference xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packageImport-1"/>
+      <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-ownedComment" xmi:uuid="b67eb6b3-8741-4f20-afb3-50fd9e5bc563" xmi:type="uml:Comment">
+        <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile"/>
+        <body>The conceptual modeling profile defines the conceptual modeling capabilities of SIMF in UML.</body>
+      </ownedComment>
+      <packageImport xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packageImport-1" xmi:uuid="eba0e9b6-e438-4a05-901a-13981cafc8bc" xmi:type="uml:PackageImport">
+        <importedPackage href="http://www.omg.org/spec/UML/20131001/UML.xmi#_0"/>
+      </packageImport>
+      <packageImport xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packageImport-2" xmi:uuid="7939872f-02f4-499d-a7e7-1c5ff1a14404" xmi:type="uml:PackageImport">
+        <importedPackage href="http://www.omg.org/spec/UML/20131001/UML.xmi#_0"/>
+      </packageImport>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource" xmi:uuid="4300dbf6-8380-4ec8-8706-01866a1441e0" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource-ownedComment" xmi:uuid="1679f25e-8847-478a-b81d-7e07b2b305b2" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource"/>
+          <body>A &lt;&lt;Resource&gt;&gt; is anything that can be referenced by an identifier in a model, ontology or vocabulary. This identifier is often an IRI.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource-id" xmi:uuid="0dada8d1-cd9d-42d7-aba9-052c6acd3702" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource-id-ownedComment" xmi:uuid="ea8579a5-4bb9-4d46-867d-e94cbd60f7a8" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource-id"/>
+            <body>A unique identifier for any resource. When defined for a Package, id has the format defined in [RFC3987]. In this case, it is equivalent to UML:URI, and setting one will set the other..</body>
+          </ownedComment>
+          <name>id</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource-base_NamedElement" xmi:uuid="63570c70-357d-42b3-a759-dc3927fcfd0b" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#NamedElement"/>
+          <name>base_NamedElement</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-51"/>
+        </ownedAttribute>
+        <name>Resource</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Anything" xmi:uuid="85bb3042-25f0-403a-8605-bcab3d2ae801" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Anything-ownedComment" xmi:uuid="1ec59518-a7c6-46d3-9804-01aa23782cbb" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Anything"/>
+          <body>&lt;&lt;Anything&gt;&gt; is a class that represents anything and is equivalent to all other classes of anything in any other model or logic. The defined class is equivalent to SIMF:Anything, OWL:Thing and other "top level" classes. Because of this equivalence, every class in every model virtually inherits from Anything, just as all OWL classes virtually inherit from owl:Thing. &lt;&lt;Anything&gt;&gt; classes may be used to define "global properties"..</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Anything-base_Class" xmi:uuid="fb6a9ddb-41e8-4bec-b1da-afd6b90fc1f2" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <name>base_Class</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-11"/>
+        </ownedAttribute>
+        <name>Anything</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Synonym" xmi:uuid="241ec66f-297b-4a79-a1f0-0d3608f47490" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Synonym-ownedComment" xmi:uuid="268355af-3c39-406f-be8f-5c17a14cb782" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Synonym"/>
+          <body>&lt;&lt;Synonym&gt;&gt; defines an alternate name for the annotated elements of the comment. The alternate name is the body of the comment. The alternate name will not be the "preferred name" of the element.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Synonym-base_Comment" xmi:uuid="959684a9-2c4c-4195-9a5a-521bed28af65" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Comment"/>
+          <name>base_Comment</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-48"/>
+        </ownedAttribute>
+        <name>Synonym</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Union" xmi:uuid="18737087-ff26-4d10-a6b2-dc07b1ad9ff0" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Union-ownedComment" xmi:uuid="01b14c81-4d07-4043-8cd3-c71da48efacf" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Union"/>
+          <body>A &lt;&lt;Union&gt;&gt; is a class that has an extent (set of instances) which is equivalent to the union of the extents of all types that specialize the Union (Subclasses). Specializing types shall include subtypes and types that realize the union. Note: UML realizations are included to support unions across external models because UML generalization can not be used across external models due to the ownership of generalization. [MathWorld] Given two sets A and B, the union is the set that contains elements or objects that belong to either A or to B or to both.h.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Union-base_Classifier" xmi:uuid="c676aa6a-497b-4e72-9d03-ba171faeea7a" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <name>base_Classifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-50"/>
+        </ownedAttribute>
+        <name>Union</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Concept_Model" xmi:uuid="eafde224-8e85-47db-95ec-1753b212dd20" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Concept_Model-ownedComment" xmi:uuid="c1fa4a55-0d54-4654-8fd2-5e34ff7f70c8" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Concept_Model"/>
+          <body>A &lt;&lt;Concept Model&gt;&gt; is a kind of &lt;&lt;Model&gt;&gt; that represents concepts in a real or possible world. Instances of elements in a concept model are "real world" things, not data about those things.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Concept_Model-generalization" xmi:uuid="4ecda647-02a0-4d6e-8684-0c7319ea0ced" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Model"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Concept_Model-base_Package" xmi:uuid="7e305628-2d0d-4bc6-8727-f3d637b7f3c4" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Package"/>
+          <name>base_Package</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-6"/>
+        </ownedAttribute>
+        <name>Concept Model</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-6" xmi:uuid="1f2bcf64-f5cb-4dc5-b140-33970d39e7a2" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Concept_Model-base_Package"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-6-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-6-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-6-ownedEnd" xmi:uuid="c2fde994-70d7-411a-8fbc-0724ad957e63" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-6-ownedEnd-lowerValue" xmi:uuid="3cdd3f35-ee9c-43ee-b41c-9be4854c5db1" xmi:type="uml:LiteralInteger"/>
+          <name>extension_</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Concept_Model"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-6"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Information_Model" xmi:uuid="f8e4b5a9-9226-4767-88ed-7b0b8d13e889" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Information_Model-ownedComment" xmi:uuid="06e4e0ac-7035-40eb-9b43-c4f5adc3a10b" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Information_Model"/>
+          <body>An &lt;&lt;Information Model&gt;&gt; is a kind of &lt;&lt;Model&gt;&gt; that represents a model for some purpose, independent of technical implementation. An information model may contain logical models or data models, as well as other logical viewpoints..</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Information_Model-generalization" xmi:uuid="b6c76417-1df4-4134-9e62-f8b2d7113005" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Model"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Information_Model-base_Package" xmi:uuid="53752d85-de30-4070-85ee-2bb8f7ade741" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Package"/>
+          <name>base_Package</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-8"/>
+        </ownedAttribute>
+        <name>Information Model</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-8" xmi:uuid="822fc862-32ca-45ab-906c-e33655f8f83d" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Information_Model-base_Package"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-8-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-8-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-8-ownedEnd" xmi:uuid="f6d500bf-ef8f-41c8-b6c3-3a30467964a4" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-8-ownedEnd-lowerValue" xmi:uuid="8ea228a2-4541-4788-a675-04493b01a94c" xmi:type="uml:LiteralInteger"/>
+          <name>extension_ConceptModel</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Information_Model"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-8"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Model" xmi:uuid="8e5856bf-98ab-47b5-9bd3-136c8c3301b5" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Model-ownedComment" xmi:uuid="3b71df06-1e6b-431c-b333-b0668ee09871" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Model"/>
+          <body>&lt;&lt;Model&gt;&gt; is stereotype of package that may have an id (see &lt;&lt;Resource&gt;&gt;) and/or a namespace prefix (like the "dc" in "dc:title").</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Model-generalization" xmi:uuid="53a2f884-b156-4f57-916c-02d591340b8d" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Model-base_Package" xmi:uuid="d8483e0b-d3eb-4b4b-a93f-a03aaa9567c1" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Package"/>
+          <name>base_Package</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-10"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Model-namespace_prefix" xmi:uuid="bf3c886c-e733-4e83-8773-e50ce2d96727" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Model-namespace_prefix-ownedComment" xmi:uuid="c32424b7-74aa-4438-8bdd-1e9a19a5e402" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Model-namespace_prefix"/>
+            <body>A hint as to an appropriate abbreviation for a model that may be used in some technology mappings, such as XML. The prefix should be short and contain only letters and numbers and must start with a letter. e.g., "dc" in "dc:title"..</body>
+          </ownedComment>
+          <name>namespace prefix</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <name>Model</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-10" xmi:uuid="85190387-9390-4ed4-b71c-617059b94010" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Model-base_Package"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-10-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-10-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-10-ownedEnd" xmi:uuid="602118c5-a6d5-455e-bf25-08e8cd264654" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-10-ownedEnd-lowerValue" xmi:uuid="6f4faa98-d9e5-40cf-8949-47f98369bb04" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Model</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Model"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-10"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-11" xmi:uuid="92b0fa44-cb0f-4b6f-8cf1-371ae25ba46a" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Anything-base_Class"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-11-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-11-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-11-ownedEnd" xmi:uuid="0a88fa28-4564-4317-ab57-f56df3ed6859" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-11-ownedEnd-lowerValue" xmi:uuid="56f04994-7b11-43ea-a9b2-a873fe569461" xmi:type="uml:LiteralInteger"/>
+          <name>extension_PropertyHolder</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Anything"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-11"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation_Property" xmi:uuid="4a74744e-ef34-4d53-a085-5b1bfea21203" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation_Property-ownedComment" xmi:uuid="10ee188b-2536-4470-85ad-7c0618e08d24" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation_Property"/>
+          <body>An &lt;&lt;Annotation Property&gt;&gt; is a kind of &lt;&lt;Resource&gt;&gt; that asserts a property represents metadata rather than assertions about the subject domain.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation_Property-generalization" xmi:uuid="4de29621-c74f-4a96-b036-da42c0ed1646" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation_Property-base_Property" xmi:uuid="3f3f5d81-6879-4b4e-9205-2a216410645c" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+          <name>base_Property</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-13"/>
+        </ownedAttribute>
+        <name>Annotation Property</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-13" xmi:uuid="6ebe5383-f2a9-48ee-9fde-68273ce03cb4" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation_Property-base_Property"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-13-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-13-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-13-ownedEnd" xmi:uuid="683303d0-14b1-4831-a3a5-f1cddcbbbe9e" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-13-ownedEnd-lowerValue" xmi:uuid="be810743-4cff-45dd-98be-626afda83740" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Annotation Property</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation_Property"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-13"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation" xmi:uuid="3be039c9-07e0-4f1f-80ef-fe51949f80e3" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation-ownedComment" xmi:uuid="738fc039-a521-43ef-8401-adb95f18fe18" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation"/>
+          <body>An &lt;&lt;Annotation&gt;&gt; comment provides a textual "body" as a "value for" one &lt;&lt;Annotation Property&gt;&gt; describing the annotatedElement(s).</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation-base_Comment" xmi:uuid="a1afa4f9-113b-4fe5-bcd6-f92f94aa6428" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Comment"/>
+          <name>base_Comment</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-15"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation-value_for" xmi:uuid="620e9b2b-07ad-4ead-bfa4-a51c09f9bc81" xmi:type="uml:Property">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation-value_for-ownedComment" xmi:uuid="49e343ab-aacf-4e9d-a0f1-1ff39578ebfa" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation-value_for"/>
+            <body>&lt;value for&gt; is the property for which the &lt;&lt;Annotation&gt;&gt; is providing a value. </body>
+          </ownedComment>
+          <name>value for</name>
+          <visibility>public</visibility>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation_Property"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-16"/>
+        </ownedAttribute>
+        <name>Annotation</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-15" xmi:uuid="5197a7d8-3dd2-468f-9013-6c13439cd151" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation-base_Comment"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-15-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-15-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-15-ownedEnd" xmi:uuid="89bc0d8e-c161-4c65-a2a5-04f2035d6933" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-15-ownedEnd-lowerValue" xmi:uuid="ba824f19-165a-40bf-88c3-708a5ee6816c" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Annotation</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-15"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-16" xmi:uuid="1e0af0d6-2627-4916-9d7d-e4d03a8b40ed" xmi:type="uml:Association">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-16-ownedEnd"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation-value_for"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-16-ownedEnd" xmi:uuid="b059b863-62b6-4527-a941-4c848684b3d6" xmi:type="uml:Property">
+          <visibility>private</visibility>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Annotation"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-16"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Disjoint_With" xmi:uuid="4852621d-61a6-4ce2-9c5b-ba5b9c04a300" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Disjoint_With-ownedComment" xmi:uuid="c9f8a5b5-69a4-47c6-bba6-73895af04ade" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Disjoint_With"/>
+          <body>A &lt;&lt;Disjoint With&gt;&gt; dependency is an assertion that two model elements do not and may not denote any of the same set of entities. When applied to a classifier, every element of the classifier's extent (set of instances) is included in the set of disjoint things. </body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Disjoint_With-base_Dependency" xmi:uuid="874b19c9-eec4-4e9f-b084-2645d59d2609" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+          <name>base_Dependency</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-18"/>
+        </ownedAttribute>
+        <name>Disjoint With</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-18" xmi:uuid="46cd0bc8-2f75-4ebb-b8e0-2c407c9cba5e" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Disjoint_With-base_Dependency"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-18-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-18-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-18-ownedEnd" xmi:uuid="54cc025c-32e0-4124-a611-ffeab7aeb52f" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-18-ownedEnd-lowerValue" xmi:uuid="66b8d3e5-c17f-465e-9c94-e91d109b0b5f" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Disjoint with</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Disjoint_With"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-18"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Class" xmi:uuid="e059b1bb-a7d0-4c78-8c82-90ebb838887f" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Class-ownedComment" xmi:uuid="70b88d24-a097-40a8-a13f-c3db772ea19b" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Class"/>
+          <body>A &lt;&lt;Equivalent Class&gt;&gt; generalization is an assertion that two classes have the same extents (set of instances). Unlike ontological languages it is not assumed that the two elements are consistent, as statements from different context may or may not agree.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Class-base_Generalization" xmi:uuid="8c856b66-9342-4570-a156-c0a3993e0195" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Generalization"/>
+          <name>base_Generalization</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-21"/>
+        </ownedAttribute>
+        <icon xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Class-icon" xmi:uuid="d2a96d01-6017-4221-9e01-8a1b45e5f9a9" xmi:type="uml:Image">
+          <content>ac ed 0 5 7a 0 0 4 0 0 0 0 2 0 0 0 3d 44 3a 5c 53 50 35 20 62 75 67 5c 45 71 75 69 76 61 6c 65 6e 74 20 43 6c 61 73 73 65 73 5c 49 63 6f 6e 20 46 69 6e 61 6c 5c 65 71 75 69 76 61 6c 65 6e 74 5f 63 6c 61 73 73 2e 73 76 67 0 0 b 2f 3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 22 31 2e 30 22 20 65 6e 63 6f 64 69 6e 67 3d 22 55 54 46 2d 38 22 20 73 74 61 6e 64 61 6c 6f 6e 65 3d 22 6e 6f 22 3f 3e a 3c 21 2d 2d 20 47 65 6e 65 72 61 74 6f 72 3a 20 41 64 6f 62 65 20 49 6c 6c 75 73 74 72 61 74 6f 72 20 31 36 2e 30 2e 30 2c 20 53 56 47 20 45 78 70 6f 72 74 20 50 6c 75 67 2d 49 6e 20 2e 20 53 56 47 20 56 65 72 73 69 6f 6e 3a 20 36 2e 30 30 20 42 75 69 6c 64 20 30 29 20 20 2d 2d 3e a a 3c 73 76 67 a 20 20 20 78 6d 6c 6e 73 3a 64 63 3d 22 68 74 74 70 3a 2f 2f 70 75 72 6c 2e 6f 72 67 2f 64 63 2f 65 6c 65 6d 65 6e 74 73 2f 31 2e 31 2f 22 a 20 20 20 78 6d 6c 6e 73 3a 63 63 3d 22 68 74 74 70 3a 2f 2f 63 72 65 61 74 69 76 65 63 6f 6d 6d 6f 6e 73 2e 6f 72 67 2f 6e 73 23 22 a 20 20 20 78 6d 6c 6e 73 3a 72 64 66 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 31 39 39 39 2f 30 32 2f 32 32 2d 72 64 66 2d 73 79 6e 74 61 78 2d 6e 73 23 22 a 20 20 20 78 6d 6c 6e 73 3a 73 76 67 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 32 30 30 30 2f 73 76 67 22 a 20 20 20 78 6d 6c 6e 73 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 32 30 30 30 2f 73 76 67 22 a 20 20 20 78 6d 6c 6e 73 3a 73 6f 64 69 70 6f 64 69 3d 22 68 74 74 70 3a 2f 2f 73 6f 64 69 70 6f 64 69 2e 73 6f 75 72 63 65 66 6f 72 67 65 2e 6e 65 74 2f 44 54 44 2f 73 6f 64 69 70 6f 64 69 2d 30 2e 64 74 64 22 a 20 20 20 78 6d 6c 6e 73 3a 69 6e 6b 73 63 61 70 65 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 69 6e 6b 73 63 61 70 65 2e 6f 72 67 2f 6e 61 6d 65 73 70 61 63 65 73 2f 69 6e 6b 73 63 61 70 65 22 a 20 20 20 76 65 72 73 69 6f 6e 3d 22 31 2e 31 22 a 20 20 20 78 3d 22 30 70 78 22 a 20 20 20 79 3d 22 30 70 78 22 a 20 20 20 77 69 64 74 68 3d 22 32 34 70 78 22 a 20 20 20 68 65 69 67 68 74 3d 22 32 34 70 78 22 a 20 20 20 76 69 65 77 42 6f 78 3d 22 30 20 30 20 32 34 20 32 34 22 a 20 20 20 65 6e 61 62 6c 65 2d 62 61 63 6b 67 72 6f 75 6e 64 3d 22 6e 65 77 20 30 20 30 20 32 34 20 32 34 22 a 20 20 20 78 6d 6c 3a 73 70 61 63 65 3d 22 70 72 65 73 65 72 76 65 22 a 20 20 20 69 64 3d 22 73 76 67 32 22 a 20 20 20 69 6e 6b 73 63 61 70 65 3a 76 65 72 73 69 6f 6e 3d 22 30 2e 39 31 20 72 31 33 37 32 35 22 a 20 20 20 73 6f 64 69 70 6f 64 69 3a 64 6f 63 6e 61 6d 65 3d 22 65 71 75 69 76 61 6c 65 6e 74 5f 63 6c 61 73 73 2e 73 76 67 22 3e 3c 6d 65 74 61 64 61 74 61 a 20 20 20 20 20 69 64 3d 22 6d 65 74 61 64 61 74 61 39 34 22 3e 3c 72 64 66 3a 52 44 46 3e 3c 63 63 3a 57 6f 72 6b a 20 20 20 20 20 20 20 20 20 72 64 66 3a 61 62 6f 75 74 3d 22 22 3e 3c 64 63 3a 66 6f 72 6d 61 74 3e 69 6d 61 67 65 2f 73 76 67 2b 78 6d 6c 3c 2f 64 63 3a 66 6f 72 6d 61 74 3e 3c 64 63 3a 74 79 70 65 a 20 20 20 20 20 20 20 20 20 20 20 72 64 66 3a 72 65 73 6f 75 72 63 65 3d 22 68 74 74 70 3a 2f 2f 70 75 72 6c 2e 6f 72 67 2f 64 63 2f 64 63 6d 69 74 79 70 65 2f 53 74 69 6c 6c 49 6d 61 67 65 22 20 2f 3e 7a 0 0 4 0 3c 64 63 3a 74 69 74 6c 65 3e 3c 2f 64 63 3a 74 69 74 6c 65 3e 3c 2f 63 63 3a 57 6f 72 6b 3e 3c 2f 72 64 66 3a 52 44 46 3e 3c 2f 6d 65 74 61 64 61 74 61 3e 3c 64 65 66 73 a 20 20 20 20 20 69 64 3d 22 64 65 66 73 39 32 22 3e 3c 6c 69 6e 65 61 72 47 72 61 64 69 65 6e 74 a 20 20 20 20 20 20 20 79 32 3d 22 31 39 2e 35 22 a 20 20 20 20 20 20 20 78 32 3d 22 39 22 a 20 20 20 20 20 20 20 79 31 3d 22 31 39 2e 35 22 a 20 20 20 20 20 20 20 78 31 3d 22 32 22 a 20 20 20 20 20 20 20 67 72 61 64 69 65 6e 74 55 6e 69 74 73 3d 22 75 73 65 72 53 70 61 63 65 4f 6e 55 73 65 22 a 20 20 20 20 20 20 20 69 64 3d 22 53 56 47 49 44 5f 31 5f 22 3e 3c 73 74 6f 70 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 73 74 6f 70 33 37 22 a 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 73 74 6f 70 2d 63 6f 6c 6f 72 3a 23 46 41 46 41 46 41 22 a 20 20 20 20 20 20 20 20 20 6f 66 66 73 65 74 3d 22 30 22 20 2f 3e 3c 73 74 6f 70 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 73 74 6f 70 33 39 22 a 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 73 74 6f 70 2d 63 6f 6c 6f 72 3a 23 46 35 46 35 46 35 22 a 20 20 20 20 20 20 20 20 20 6f 66 66 73 65 74 3d 22 31 22 20 2f 3e 3c 2f 6c 69 6e 65 61 72 47 72 61 64 69 65 6e 74 3e 3c 2f 64 65 66 73 3e 3c 73 6f 64 69 70 6f 64 69 3a 6e 61 6d 65 64 76 69 65 77 a 20 20 20 20 20 70 61 67 65 63 6f 6c 6f 72 3d 22 23 66 66 66 66 66 66 22 a 20 20 20 20 20 62 6f 72 64 65 72 63 6f 6c 6f 72 3d 22 23 36 36 36 36 36 36 22 a 20 20 20 20 20 62 6f 72 64 65 72 6f 70 61 63 69 74 79 3d 22 31 22 a 20 20 20 20 20 6f 62 6a 65 63 74 74 6f 6c 65 72 61 6e 63 65 3d 22 31 30 22 a 20 20 20 20 20 67 72 69 64 74 6f 6c 65 72 61 6e 63 65 3d 22 31 30 22 a 20 20 20 20 20 67 75 69 64 65 74 6f 6c 65 72 61 6e 63 65 3d 22 31 30 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 70 61 67 65 6f 70 61 63 69 74 79 3d 22 30 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 70 61 67 65 73 68 61 64 6f 77 3d 22 32 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 77 69 64 74 68 3d 22 31 39 32 30 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 68 65 69 67 68 74 3d 22 31 30 35 38 22 a 20 20 20 20 20 69 64 3d 22 6e 61 6d 65 64 76 69 65 77 39 30 22 a 20 20 20 20 20 73 68 6f 77 67 72 69 64 3d 22 66 61 6c 73 65 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 7a 6f 6f 6d 3d 22 32 32 2e 36 32 37 34 31 37 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 63 78 3d 22 31 38 2e 39 32 30 32 33 34 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 63 79 3d 22 31 33 2e 38 38 37 38 30 32 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 78 3d 22 31 39 31 32 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 79 3d 22 2d 38 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 77 69 6e 64 6f 77 2d 6d 61 78 69 6d 69 7a 65 64 3d 22 31 22 a 20 20 20 20 20 69 6e 6b 73 63 61 70 65 3a 63 75 72 72 65 6e 74 2d 6c 61 79 65 72 3d 22 73 76 67 32 22 20 2f 3e 3c 67 a 20 20 20 20 20 69 64 3d 22 67 34 36 33 35 22 3e 3c 67 a 20 20 20 20 20 20 20 74 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 2d 31 2e 30 38 39 2c 30 2c 30 7a 0 0 3 8c 2c 2d 31 2e 30 38 39 2c 32 35 2e 30 37 31 36 35 36 2c 32 34 2e 38 33 34 36 35 32 29 22 a 20 20 20 20 20 20 20 69 64 3d 22 67 34 35 37 37 22 3e 3c 67 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 67 33 37 34 31 22 a 20 20 20 20 20 20 20 20 20 74 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 31 2e 31 34 37 36 32 39 32 2c 30 2c 30 2c 31 2e 30 38 38 33 37 39 34 2c 2d 32 2e 32 30 38 36 35 30 34 2c 2d 30 2e 30 36 37 32 30 36 29 22 3e 3c 70 6f 6c 79 67 6f 6e a 20 20 20 20 20 20 20 20 20 20 20 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3d 22 31 30 22 a 20 20 20 20 20 20 20 20 20 20 20 70 6f 69 6e 74 73 3d 22 31 34 2c 32 2e 35 20 32 30 2e 35 2c 32 2e 35 20 32 30 2e 35 2c 39 20 22 a 20 20 20 20 20 20 20 20 20 20 20 69 64 3d 22 70 6f 6c 79 67 6f 6e 34 35 22 a 20 20 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 6e 6f 6e 65 3b 73 74 72 6f 6b 65 3a 23 33 66 35 31 62 35 3b 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3a 31 30 22 20 2f 3e 3c 2f 67 3e 3c 67 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 67 33 37 34 31 2d 32 22 a 20 20 20 20 20 20 20 20 20 74 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 2d 31 2e 31 34 37 36 32 39 32 2c 30 2c 30 2c 2d 31 2e 30 38 38 33 37 39 34 2c 32 36 2e 32 35 34 34 36 32 2c 32 34 2e 30 35 35 33 35 37 29 22 3e 3c 70 6f 6c 79 67 6f 6e a 20 20 20 20 20 20 20 20 20 20 20 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3d 22 31 30 22 a 20 20 20 20 20 20 20 20 20 20 20 70 6f 69 6e 74 73 3d 22 31 34 2c 32 2e 35 20 32 30 2e 35 2c 32 2e 35 20 32 30 2e 35 2c 39 20 22 a 20 20 20 20 20 20 20 20 20 20 20 69 64 3d 22 70 6f 6c 79 67 6f 6e 34 35 2d 38 22 a 20 20 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 6e 6f 6e 65 3b 73 74 72 6f 6b 65 3a 23 33 66 35 31 62 35 3b 73 74 72 6f 6b 65 2d 6d 69 74 65 72 6c 69 6d 69 74 3a 31 30 22 20 2f 3e 3c 2f 67 3e 3c 72 65 63 74 a 20 20 20 20 20 20 20 20 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 23 33 66 35 31 62 35 3b 66 69 6c 6c 2d 6f 70 61 63 69 74 79 3a 31 22 a 20 20 20 20 20 20 20 20 20 69 64 3d 22 72 65 63 74 34 35 37 35 22 a 20 20 20 20 20 20 20 20 20 77 69 64 74 68 3d 22 31 35 2e 32 35 33 36 31 39 22 a 20 20 20 20 20 20 20 20 20 68 65 69 67 68 74 3d 22 31 2e 37 35 30 30 38 39 34 22 a 20 20 20 20 20 20 20 20 20 78 3d 22 2d 37 2e 35 37 30 33 31 30 31 22 a 20 20 20 20 20 20 20 20 20 79 3d 22 2d 31 37 2e 36 39 37 31 36 38 22 a 20 20 20 20 20 20 20 20 20 74 72 61 6e 73 66 6f 72 6d 3d 22 6d 61 74 72 69 78 28 2d 30 2e 37 30 37 31 30 36 37 38 2c 30 2e 37 30 37 31 30 36 37 38 2c 2d 30 2e 37 30 37 31 30 36 37 38 2c 2d 30 2e 37 30 37 31 30 36 37 38 2c 30 2c 30 29 22 20 2f 3e 3c 2f 67 3e 3c 2f 67 3e 3c 2f 73 76 67 3e 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 4 </content>
+          <format>custom_created.mdico</format>
+        </icon>
+        <name>Equivalent Class</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property" xmi:uuid="c3bf8890-c68b-439e-97f9-739865ae977c" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-ownedComment" xmi:uuid="7350c93a-a6b8-4dc5-b97e-c520cf4b41b3" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property"/>
+          <body>&lt;&lt;Equivalent Property&gt;&gt; is a declaration that a property is equivalent to one or more other properties (using "equivalent to") or is equivalent to a chain of other properties (using "chain"). &lt;&lt;Equivalent Property&gt;&gt; with at least one value for the "equivalent to" property is an alternative way of expressing &lt;&lt;Equivalent To&gt;&gt;, without introducing crossing lines on a diagram. Either "equivalent to" or "chain" must have a value.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-equivalent_to" xmi:uuid="3352589e-0209-42f4-91f4-3bbea567af3d" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-equivalent_to-ownedComment" xmi:uuid="477ee5c2-4f3b-48e2-a520-d8e551422d92" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-equivalent_to"/>
+            <body>A set of properties that the &lt;&lt;Equivalent Property&gt;&gt; is equivalent to. Note that equivalence can also be declared with a &lt;&lt;Equivalent To&gt;&gt; dependency.</body>
+          </ownedComment>
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-equivalent_to-lowerValue" xmi:uuid="78b4bb6b-9b6d-4022-b288-49e5de228b3a" xmi:type="uml:LiteralUnlimitedNatural"/>
+          <upperValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-equivalent_to-upperValue" xmi:uuid="5df5005e-f56e-4724-a623-8e8e99cbaaae" xmi:type="uml:LiteralUnlimitedNatural">
+            <value>*</value>
+          </upperValue>
+          <name>equivalent to</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-base_Property" xmi:uuid="805153db-4d62-478a-ae29-7607b2d12bbb" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+          <name>base_Property</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-49"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-chain" xmi:uuid="e7733780-c7eb-4677-8a59-cc0a949c1f16" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-chain-ownedComment" xmi:uuid="4bb80837-e200-486f-bd3e-ea7dd4f8fe40" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-chain"/>
+            <body>An ordered set of properties forming a "property composition" expressing a traversal path that is equivalent to the stereotyped property. This is similar to a "property chain". (Note that in an OWL property chain, the property composition is not equivalent, it is a subproperty.) Due to potential "missing information" in creating a chain, a chain may or may not be able to be determined from asserting the chained property. Such a determination is defined in the mapping rules for that property in a particular context. Note that a chain may also be defined with mapping rules.s.</body>
+          </ownedComment>
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-chain-lowerValue" xmi:uuid="54b235e4-ce4f-4ed9-9074-7269d8613218" xmi:type="uml:LiteralUnlimitedNatural"/>
+          <upperValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-chain-upperValue" xmi:uuid="9cde6290-edf3-4521-a8af-166efb02bfeb" xmi:type="uml:LiteralUnlimitedNatural">
+            <value>*</value>
+          </upperValue>
+          <name>chain</name>
+          <visibility>public</visibility>
+          <isOrdered>true</isOrdered>
+        </ownedAttribute>
+        <name>Equivalent Property</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-21" xmi:uuid="c59210a6-1dfe-43e6-a229-1dad545fa8a4" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Class-base_Generalization"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-21-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-21-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-21-ownedEnd" xmi:uuid="347d7b80-4f58-4c97-a570-e7bbdf46f01e" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-21-ownedEnd-lowerValue" xmi:uuid="dac2eaac-dd55-431b-9f5d-c1538c61ea0e" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Equivalent Class</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Class"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-21"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-22" xmi:uuid="7332008a-0002-4642-b3f3-037559c66163" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-base_Classifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-22-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-22-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-22-ownedEnd" xmi:uuid="d1b8f172-724e-469b-90ee-c8f295ee7e43" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-22-ownedEnd-lowerValue" xmi:uuid="55ef35ef-bd59-4861-ac6e-012e1c6eeb9f" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Unit</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-22"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Enumerates" xmi:uuid="077fe250-be53-4fa8-ad3c-32383ede9ebd" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Enumerates-ownedComment" xmi:uuid="d93ba8f4-b5aa-417f-bee3-7a6a8dc74614" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Enumerates"/>
+          <body>An &lt;&lt;Enumerates&gt;&gt; dependency asserts that the supplier of the dependency is a type and the client of the dependency is a package containing a complete set of possible instance specifications. In this way, &lt;&lt;Enumerates&gt;&gt; is more general than a UML Enumeration because it can enumerate more than just UML data types.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Enumerates-base_Dependency" xmi:uuid="b743f217-6ce7-428d-97d3-74cb12a37b84" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+          <name>base_Dependency</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-24"/>
+        </ownedAttribute>
+        <name>Enumerates</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-24" xmi:uuid="224d13e1-6d69-4c4c-aacd-1afc60ae1a29" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Enumerates-base_Dependency"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-24-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-24-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-24-ownedEnd" xmi:uuid="ecfca9cc-7c73-4699-be0c-6db5856c35ec" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-24-ownedEnd-lowerValue" xmi:uuid="b3c2dd7c-6090-441c-979e-9b89b024aff8" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Enumerates</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Enumerates"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-24"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Is_In_Context" xmi:uuid="37ff4cf1-559a-4baa-9b33-80afc8844105" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Is_In_Context-ownedComment" xmi:uuid="e483ceea-a05d-41fa-9b23-df68183f4cd4" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Is_In_Context"/>
+          <body>&lt;&lt;Is In context&gt;&gt; is an assertion that the client of the dependency is in the context of the supplier of the dependency. All assertions and rules defined in the supplier context apply to the client and everything in the context of the client (i.e., it is transitive). Packages, classes, situations and instances are typical contexts. Note that &lt;&lt;Is In Context&gt;&gt; is the default interpretation of a dependency, if no stereotype is specified it will be interpreted as &lt;&lt;Is In Context&gt;&gt;.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Is_In_Context-base_Dependency" xmi:uuid="f3c767d6-233c-4ad7-9ca5-a8a5db9cf4a2" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+          <name>base_Dependency</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-26"/>
+        </ownedAttribute>
+        <name>Is In Context</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-26" xmi:uuid="fa8c1b53-ea89-44e3-b6ad-bba6ed803ac6" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Is_In_Context-base_Dependency"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-26-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-26-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-26-ownedEnd" xmi:uuid="1574a04a-611a-4936-910a-fae8ead5ae0c" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-26-ownedEnd-lowerValue" xmi:uuid="0078e658-945b-43a5-a8c5-d58e5ed5b5e0" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Is in context</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Is_In_Context"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-26"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Role" xmi:uuid="256d373a-2a20-42de-85ac-37ae19fceb06" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Role-ownedComment" xmi:uuid="90dfe583-e672-463c-b7ff-aba433cd2d20" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Role"/>
+          <body>A &lt;&lt;Role&gt;&gt; is a classification of an entity based on that entity's behavior, participation in a situation, or capabilities. A &lt;&lt;Role&gt;&gt; &lt;&lt;Classifies&gt;&gt; the types that may play that role. e.g., "Teacher". A role is a "non rigid sortal", a type that may change over the lifetime of an entity. </body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Role-base_Class" xmi:uuid="a7f47476-bbfa-4633-a2d0-58e41d76dabc" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Class"/>
+          <name>base_Class</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-28"/>
+        </ownedAttribute>
+        <name>Role</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-28" xmi:uuid="454ef890-714e-4a21-97b7-ddbaa0afc103" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Role-base_Class"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-28-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-28-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-28-ownedEnd" xmi:uuid="43091362-3052-46f7-9532-b6fde3ab7591" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-28-ownedEnd-lowerValue" xmi:uuid="581300a0-9c28-4a0f-95f3-a1c371492662" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Role</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Role"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-28"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Classifies" xmi:uuid="ccba8d5d-4331-49f9-86c8-b6e318a9e489" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Classifies-ownedComment" xmi:uuid="b7c40116-705a-4cae-a0b2-9a20df5464eb" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Classifies"/>
+          <body>A classification defined by a &lt;&lt;Classifies&gt;&gt; generalization or realization is a "mix in" or "non rigid" classification of an entity beyond any fundamental entity type. An instance must be typed by the classifies supertype for it to also be classified as the classifies subtype. A classification may be contextual, such as within a relation, situation and/or time frame. Instances may have any number of types and classifications may change over time. Classification is used in defining what a &lt;&lt;Role&gt;&gt; may be a role of, and for phases, what a &lt;&lt;Phase&gt;&gt; is a phase of. Classifications may be added to or removed from an individual over time and in different context. t. </body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Classifies-base_Generalization" xmi:uuid="95efa1c0-2804-4333-8508-913cc039c467" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Generalization"/>
+          <name>base_Generalization</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-30"/>
+        </ownedAttribute>
+        <name>Classifies</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-30" xmi:uuid="91e553c4-143b-4dca-9369-217207d3d3e2" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Classifies-base_Generalization"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-30-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-30-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-30-ownedEnd" xmi:uuid="a78c705a-cd66-4881-9fbe-2f2052c605c2" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-30-ownedEnd-lowerValue" xmi:uuid="5c869a89-5cb6-44c4-9718-eef7378b53d4" xmi:type="uml:LiteralInteger"/>
+          <name>extension_RoleOf</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Classifies"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-30"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Phase" xmi:uuid="af8df78a-16b2-442d-ae97-b8c7a70df2be" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Phase-ownedComment" xmi:uuid="7549d451-c84d-4af0-96ae-56267ff5c6b2" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Phase"/>
+          <body>A &lt;&lt;Phase&gt;&gt; (a.k.a. "State") is a classification of an entity based on change of that entity over time. A &lt;&lt;Phase&gt;&gt; &lt;&lt;Classifies&gt;&gt; the types that may have that phase (e.g., "Teenager"). A phase is a "non rigid sortal", a type that may change over the lifetime of an entity.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Phase-base_Class" xmi:uuid="d5b41906-04a4-4d07-8605-71acb9b425d5" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Class"/>
+          <name>base_Class</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-32"/>
+        </ownedAttribute>
+        <name>Phase</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-32" xmi:uuid="f35162da-12db-4be4-9b50-93661b1a21c9" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Phase-base_Class"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-32-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-32-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-32-ownedEnd" xmi:uuid="4a0edcad-505c-4af5-b672-9196fcc957c5" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-32-ownedEnd-lowerValue" xmi:uuid="d8aacdcd-7867-4f1f-8e31-7a4eb86f211b" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Phase</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Phase"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-32"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Value_Type" xmi:uuid="47f404a1-c281-4f6d-9b47-a3c9bfb2ce72" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Value_Type-ownedComment" xmi:uuid="6d48743f-3302-4cda-8eda-a3e002fa8c0e" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Value_Type"/>
+          <body>A &lt;&lt;Value Type&gt;&gt; is a type representing an atomic unit of information without independent identity. Values include numbers, strings and enumerations. In some cases values may have internal structure. Quantity kinds and units are also values. Values may stereotype any classifier. UML data types, including primitives and enumerations, are implicitly values..</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Value_Type-base_Classifier" xmi:uuid="56d79c27-4ea2-4201-b340-24c845805f9d" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <name>base_Classifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-34"/>
+        </ownedAttribute>
+        <name>Value Type</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-34" xmi:uuid="b280a964-34fc-4d9d-a94a-97355b0d149b" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Value_Type-base_Classifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-34-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-34-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-34-ownedEnd" xmi:uuid="7a3a1331-5813-4b80-92c5-54914896e8a5" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-34-ownedEnd-lowerValue" xmi:uuid="e0ba0237-62f3-4aa4-bf11-91abdf4c2d89" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Value</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Value_Type"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-34"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Intersection" xmi:uuid="287b0a76-5e93-4f77-9e33-578bbc8c42e7" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Intersection-ownedComment" xmi:uuid="f4b2a242-aa37-4e55-90e0-259e9c0f1627" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Intersection"/>
+          <body> An &lt;&lt;Intersection&gt;&gt; is a class that has an extent (set of instances) equivalent to the intersection of the extents of all supertypes. Intersection is a stronger statement than a subtype, as a subtype may be a subset of the intersection. An instance of all the supertypes implies an instance is also an instance of the intersection type. For intersection, The SIMF profile considers UML generalization and UML realization equivalent. This is due to ownership and legacy considerations in UML. Generalization is the preferred representation. Note: Realizations are included to support unions across external models. UML generalization can not be used across external models due to the ownership of generalization. </body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Intersection-base_Classifier" xmi:uuid="610e2f0a-b6c4-4cda-b6b1-dc7dae0d458f" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <name>base_Classifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-36"/>
+        </ownedAttribute>
+        <name>Intersection</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-36" xmi:uuid="e5c294d3-a510-43ea-9e57-4cf81cf92070" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Intersection-base_Classifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-36-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-36-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-36-ownedEnd" xmi:uuid="d4072ea6-2537-4824-b859-f56092b83c9a" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-36-ownedEnd-lowerValue" xmi:uuid="a091f7f6-ef55-4346-b572-3d33d6ed4521" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Intersection</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Intersection"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-36"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Base_Unit_Type" xmi:uuid="a0213a7f-a0c7-40e8-858a-d0bacfe765b0" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Base_Unit_Type-ownedComment" xmi:uuid="a95cbc12-5759-47be-8f7c-707cceb351b3" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Base_Unit_Type"/>
+          <body>&lt;&lt;Base Unit Type&gt;&gt; is a kind of &lt;&lt;Unit Type&gt;&gt; that marks one unit type of a quantity kind as the base unit type within a model. The base unit type provides the basis for conversions between units of the same quantity kind. The base unit always has a ratio of one and an offset of zero.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Base_Unit_Type-generalization" xmi:uuid="3ea32553-02dc-4032-b7a8-414d6abfb250" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Base_Unit_Type-base_Classifier" xmi:uuid="e3e2543b-077b-4e4a-b763-99567a6f5df9" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <name>base_Classifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-38"/>
+        </ownedAttribute>
+        <name>Base Unit Type</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-38" xmi:uuid="0179f833-5024-46eb-8746-021cd2030633" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Base_Unit_Type-base_Classifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-38-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-38-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-38-ownedEnd" xmi:uuid="598ecb3e-dfd4-4e03-9429-1eb58d78825a" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-38-ownedEnd-lowerValue" xmi:uuid="8c86da32-4e99-4f17-955f-8a4d111265ee" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Base Type</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Base_Unit_Type"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-38"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-39" xmi:uuid="592f6a2e-5fe9-4383-ae6e-5a13ac8a34ab" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Has_Value-base_Dependency"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-39-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-39-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-39-ownedEnd" xmi:uuid="d4d81702-413c-487b-8aa4-8d0c27a839ce" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-39-ownedEnd-lowerValue" xmi:uuid="f19787b8-c2c6-48e5-aa37-5c23eccba9fa" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Has Value</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Has_Value"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-39"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type" xmi:uuid="fe346f9a-c668-45a9-879e-c40da412cda3" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-ownedComment" xmi:uuid="24febec6-bd61-4c8c-acad-5b75d3e5a789" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type"/>
+          <body>A &lt;&lt;Unit Type&gt;&gt; is a &lt;&lt;Value Type&gt;&gt; and an &lt;&lt;External Reference&gt;&gt; that represents a type of a quantity value referencing a specific unit. A Unit Type [?TBD] a required type of a property representing a quantity. [JCGM 200:2008] A Unit is a real scalar quantity, defined and adopted by convention, with which any other quantity of the same quantity kind can be compared to express the ratio of the two quantities as a number. e.g. Degrees Centigrade, Miles. Each unit type represents refinement of a quantity kind using generalization and is thus substitutable for that quantity kind. Typically quantity kinds are used in conceptual models and unit types in physical or logical models. Unit types may only subtype quantity kinds and numbers. Note that unit types are not units, but the type of quantity values expressed in a common unit as defined in [JCGM 200:2008]. Each instance of a unit type shares a common unit (as defined by standards) with a reference defined by "external reference" and "external term". erm".
+</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-generalization-1" xmi:uuid="6216d1e3-fd46-4ea6-aefa-46d23320fc5e" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Value_Type"/>
+        </generalization>
+        <generalization xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-generalization-2" xmi:uuid="95bbb098-349f-406a-b82b-303016299878" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-base_Classifier" xmi:uuid="775adfde-7cd7-4243-b332-a428764843ea" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <name>base_Classifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-22"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-ratio" xmi:uuid="589fe248-5ea5-4966-9c31-72b8174d2139" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Real"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-ratio-ownedComment" xmi:uuid="289e2505-9857-428f-9277-fb5802c823f7" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-ratio"/>
+            <body>The multiplier by which to multiply the unit to convert to the base unit as defined within the same model.</body>
+          </ownedComment>
+          <name>ratio</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-offset" xmi:uuid="dc38269d-5af2-410b-953c-c7fca97f3049" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Real"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-offset-ownedComment" xmi:uuid="59abf932-1a4a-4bb7-86c2-f96b25e041f8" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-offset"/>
+            <body>The difference between zero in the unit and zero in the base unit after the ratio is applied to the base unit as defined within the same model.</body>
+          </ownedComment>
+          <name>offset</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-symbol" xmi:uuid="43289e32-63c6-458e-8fde-417e23840fa0" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-symbol-ownedComment" xmi:uuid="296d36af-5f9e-41bc-88f6-b00f627fe5e9" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Unit_Type-symbol"/>
+            <body>The accepted symbol for a unit. e.g. "g" for "Gram".</body>
+          </ownedComment>
+          <name>symbol</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <name>Unit Type</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-41" xmi:uuid="5f8f8217-72a0-47c7-bb59-0f8b01854492" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-base_Element"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-41-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-41-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-41-ownedEnd" xmi:uuid="d9bc61ac-74cd-4f71-94d0-210ba3a02613" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-41-ownedEnd-lowerValue" xmi:uuid="5e9bccc6-b6f1-4de2-a5cf-0a8ef2cc1010" xmi:type="uml:LiteralInteger"/>
+          <name>extension_unnamed1</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-41"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Quantity_Kind" xmi:uuid="10d4457f-c5cf-42a5-9f8b-f00fe67e801f" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Quantity_Kind-ownedComment" xmi:uuid="68875024-a4e0-467d-a903-8767f99d013e" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Quantity_Kind"/>
+          <body>&lt;&lt;Quantity Kind&gt;&gt; is an aspect common to mutually comparable quantities represented by one or more units. Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature.[ JCGM 200:2008]. Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature. SIMF takes a wider view of quantity kinds to include conversions that may be contextual and time dependent, such as currencies.s.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Quantity_Kind-generalization" xmi:uuid="585f6181-b526-4bba-b1d2-5469870724fa" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Value_Type"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Quantity_Kind-base_Classifier" xmi:uuid="dd6a0495-093c-4e07-a8d5-8895f865d27a" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <name>base_Classifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-43"/>
+        </ownedAttribute>
+        <name>Quantity Kind</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-43" xmi:uuid="e6777e2c-935c-45b7-97fb-de810ed82760" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Quantity_Kind-base_Classifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-43-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-43-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-43-ownedEnd" xmi:uuid="ced30d4f-a613-4e9f-b6b9-760302443973" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-43-ownedEnd-lowerValue" xmi:uuid="56944fa7-2bc6-4e69-a78e-c8fdc86033fb" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Quantity Kind</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Quantity_Kind"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-43"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_To" xmi:uuid="b08cbf89-919e-4f2a-8084-62fc05002443" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_To-ownedComment" xmi:uuid="f7bcba77-ac81-4911-80bf-1796e0692077" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_To"/>
+          <body>An &lt;&lt;Equivalent To&gt;&gt; dependency is an assertion that two model elements represent the same thing or the same set of things. Unlike ontological languages it is not assumed that the two elements are consistent, as statements from different contexts may or may not agree.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_To-base_Element" xmi:uuid="9e0b5a3d-b39b-45d3-b3b7-2abaa0572359" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+          <name>base_Element</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-45"/>
+        </ownedAttribute>
+        <name>Equivalent To</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-45" xmi:uuid="6ba7c8d8-4d6e-41df-a980-d4f8600c3ea8" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_To-base_Element"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-45-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-45-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-45-ownedEnd" xmi:uuid="755e865e-db69-4c77-a0a7-c9fcac5cfa2b" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-45-ownedEnd-lowerValue" xmi:uuid="fa9f321e-1e55-4638-b3ec-9e8bf37c4f9d" xmi:type="uml:LiteralInteger"/>
+          <name>extension_unnamed1</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_To"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-45"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference" xmi:uuid="6af7e284-acec-4590-a407-0d6603f5e288" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-ownedComment" xmi:uuid="34653a5d-855e-4259-8f09-320378f85039" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference"/>
+          <body>&lt;&lt;External Reference&gt;&gt; provides traceability to the source of a "fact" in a model based on some external information resource. This references helps to facilitate provenance. Reference is a statement about the model data and has no semantic implication. Source reference may impact the trust in a statement but the evaluation of trust is outside of this specification. External reference is combined with the owned comment(s) to create SIMF descriptions as defined in the SIMF meta model...</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-base_Element" xmi:uuid="b6c014bb-aa64-4fc2-a670-82a68e1c82a5" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Element"/>
+          <name>base_Element</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-41"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-external_reference" xmi:uuid="90e34fe8-b4de-4b5e-b991-5bbad786c4d0" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-external_reference-ownedComment" xmi:uuid="f3ede90a-23d0-4d5d-bfa0-00f644cc9d87" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-external_reference"/>
+            <body>Specifies the location URL of the external resource. The format must comply with [RFC3987].</body>
+          </ownedComment>
+          <name>external reference</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-external_term" xmi:uuid="8e543cda-6e40-4938-b77e-e02248a59103" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-external_term-ownedComment" xmi:uuid="90312b83-785f-42b7-be28-97817957e8ca" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-External_Reference-external_term"/>
+            <body>The external term or location of the information in the source. The form of expression of the term or term path is dependent on the referenced technology.</body>
+          </ownedComment>
+          <name>external term</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <name>External Reference</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Has_Value" xmi:uuid="638dc88f-7e05-43be-8dc0-b79948ba1ee4" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Has_Value-ownedComment" xmi:uuid="738cbde4-2f61-4176-a3bb-56cadd1ea807" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Has_Value"/>
+          <body>A &lt;&lt;Has Value&gt;&gt; dependency asserts that the client of the dependency is a type and the supplier of the dependency is an instance specification that defines acceptable values for one or more properties of that type. Each slot of the instance specification is a value for a corresponding property in the type. &lt;&lt;Has Value&gt;&gt; corresponds to one or more OWL property restrictions containing a "hasValue" constraint.  
+
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Has_Value-base_Dependency" xmi:uuid="43770a7b-dd3d-4149-a436-4663d04a6060" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+          <name>base_Dependency</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-39"/>
+        </ownedAttribute>
+        <name>Has Value</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-48" xmi:uuid="32138862-5c44-4b10-8f2f-9e9d17e427a4" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Synonym-base_Comment"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-48-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-48-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-48-ownedEnd" xmi:uuid="2d27b692-b12b-4bf9-adcd-76545da2b74f" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-48-ownedEnd-lowerValue" xmi:uuid="1420f571-4f53-40f9-b2a4-9ca325fe1209" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Synonym</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Synonym"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-48"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-49" xmi:uuid="ced60945-7d1a-4d08-8b71-2b8286d83464" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property-base_Property"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-49-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-49-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-49-ownedEnd" xmi:uuid="c6ea51ab-fd79-471f-8552-72242990b930" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-49-ownedEnd-lowerValue" xmi:uuid="aa990e66-ac65-47b2-9080-16f6d4b38d09" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Subproperty Chain</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Equivalent_Property"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-49"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-50" xmi:uuid="86615cb2-4ef9-40a2-bcb9-023392c22291" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Union-base_Classifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-50-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-50-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-50-ownedEnd" xmi:uuid="55d32356-cfca-4c7c-9528-9e5c61a6df43" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-50-ownedEnd-lowerValue" xmi:uuid="8671ffe7-0ad3-4883-aa73-ae0fb2c9ee67" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Union</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Union"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-50"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-51" xmi:uuid="db054b1a-968a-4a5a-95db-f51c98a39659" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource-base_NamedElement"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-51-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-51-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-51-ownedEnd" xmi:uuid="d96eed41-9f6a-4f25-b03d-18e2fdddffa0" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-51-ownedEnd-lowerValue" xmi:uuid="1d1a2fec-fe75-4067-9d27-81938379fe86" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Resource</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Resource"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-51"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Sufficient" xmi:uuid="7ce49850-f9d3-45c4-a2f5-593c2c3d3c13" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Sufficient-ownedComment" xmi:uuid="eb79dc25-f3c4-4ce4-bdca-aaddcf024a2f" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Sufficient"/>
+          <body>Specifying &lt;&lt;Sufficient&gt;&gt; for one or more of a type's properties means that an instance having an acceptable cardinality of values for all of those properties implies that the instance is an instance of that type.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-Sufficient-base_Property" xmi:uuid="b4d1dc53-b229-4dfc-8753-369d03f522bf" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+          <name>base_Property</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-53"/>
+        </ownedAttribute>
+        <name>Sufficient</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-53" xmi:uuid="9f3d0f26-e676-4a8f-b429-257b7a8aa778" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Sufficient-base_Property"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-53-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-53-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-53-ownedEnd" xmi:uuid="9b7dabc3-0942-4548-8a68-a1263072dba0" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-53-ownedEnd-lowerValue" xmi:uuid="ae267344-2075-40ad-942f-9f9313b4acf5" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Sufficent</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Sufficient"/>
+          <association xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-packagedElement-53"/>
+        </ownedEnd>
+      </packagedElement>
+      <name>SIMF Concept Modeling Profile</name>
+      <URI>http://www.omg.org/spec/SIMF/20160501/SIMF-concept-modeling-profile</URI>
+    </packagedElement>
+    <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile" xmi:uuid="d7682cf3-dc60-4565-b5bc-bb6f736c01ab" xmi:type="uml:Profile">
+      <metamodelReference xmi:idref="SIMFProfile-SIMF_Rules_Profile-packageImport"/>
+      <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-ownedComment" xmi:uuid="164bc4a2-8c3b-4141-b203-a785925e3c3c" xmi:type="uml:Comment">
+        <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile"/>
+        <body>The SIMF rules profile defines the way to model rules and mapping within and between data sources via a conceptual model.</body>
+      </ownedComment>
+      <packageImport xmi:id="SIMFProfile-SIMF_Rules_Profile-packageImport" xmi:uuid="06992609-3962-4ed2-a9a3-fc3303022f73" xmi:type="uml:PackageImport">
+        <importedPackage href="http://www.omg.org/spec/UML/20131001/UML.xmi#_0"/>
+      </packageImport>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule_Model" xmi:uuid="806531fc-dfff-4bf7-9147-bd02034b00c4" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule_Model-ownedComment" xmi:uuid="08b697a6-1387-4cf8-ad3f-b6e75c723904" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Rule_Model"/>
+          <body>A &lt;&lt;Rule Model&gt;&gt; defines a package as containing rule specifications and asserts those rules to be true.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule_Model-generalization" xmi:uuid="2776d497-7ebc-4d94-819f-2fc33b20a6e2" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Concept_Modeling_Profile-Model"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule_Model-base_Package" xmi:uuid="3fcaa76f-e519-4460-be77-a587d1860ec2" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Package"/>
+          <name>base_Package</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-2"/>
+        </ownedAttribute>
+        <name>Rule Model</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-2" xmi:uuid="cc239144-4561-428c-b7fa-bcefc6c788cf" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Rule_Model-base_Package"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-2-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-2-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-2-ownedEnd" xmi:uuid="3c5da9d9-d3b4-40d3-99bf-6ec04a9d93a9" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-2-ownedEnd-lowerValue" xmi:uuid="74f43085-af72-4dc0-b46d-f40a3eaa7074" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Physical</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Rule_Model"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-2"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Facade" xmi:uuid="473b9b88-9278-4223-86fb-48d67791a29d" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Facade-ownedComment" xmi:uuid="199654ce-f588-45b3-bb4e-4f604cd22d7d" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Facade"/>
+          <body>&lt;&lt;Facade&gt;&gt; defines a classifier as being a view of (facade of) one or more other classifiers. Facades usually define additional properties that match some external view of a conceptual model element. A facade will represent the classifier for which it is a facade. A Facade will use one of two methods to relate the facade properties to the conceptual Model: * &lt;&lt;Rule&gt;&gt; using the facade. * Applying the &lt;&lt;computation&gt;&gt; stereotype and Subclassing "Representation Computation" 
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Facade-base_Classifier" xmi:uuid="5abfca41-798c-49d1-a172-f0692cbb27a4" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <name>base_Classifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-4"/>
+        </ownedAttribute>
+        <name>Facade</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-4" xmi:uuid="1dc07245-821d-41a5-9ddc-7f54afd27547" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Facade-base_Classifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-4-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-4-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-4-ownedEnd" xmi:uuid="40b0cd56-1a96-4731-aea8-3cffc15a9cf9" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-4-ownedEnd-lowerValue" xmi:uuid="b0c9dbb0-a88f-4138-bcf4-6c8bec72847e" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Facade</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Facade"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-4"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Match" xmi:uuid="ba2a5bb2-5329-4bdf-9bdc-82cef701833f" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Match-ownedComment" xmi:uuid="e84d4996-e26a-421f-b374-70ed688070b5" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Match"/>
+          <body>Match specifies an element in a structure that must match a model element for the pattern to match. The match is the starting point for the pattern from which all paths are computed. &lt;&lt;Match&gt; is a shortcut for &lt;&lt;Pattern Element&gt;&gt; strength=Match</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Rules_Profile-Match-generalization" xmi:uuid="bee205cd-d3be-44f6-bcdd-e7e537a95813" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element"/>
+        </generalization>
+        <name>Match</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Mapping_Rule" xmi:uuid="77c14313-a7ba-4b50-85c1-a39c6020d56c" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Mapping_Rule-ownedComment" xmi:uuid="d7c0c14a-b0ae-439f-800e-f180817e76e4" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Mapping_Rule"/>
+          <body>&lt;&lt;Mapping Rule&gt;&gt; defines a pattern structure described by a structured classifier that shows how both "sides" of a representation (conceptual and logical) are related. Each "side" must match, including any traversals through structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. The pattern is described using structured classifier properties and connectors. The mapping engine ensures that the patterns match, bidirectionally.y.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Rules_Profile-Mapping_Rule-generalization" xmi:uuid="ff745220-9c89-4106-a1fd-e792ee112eca" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Rules_Profile-Rule"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Mapping_Rule-base_StructuredClassifier" xmi:uuid="b0c96875-cb83-4d4f-8ff1-2bfd53e5bc77" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#StructuredClassifier"/>
+          <name>base_StructuredClassifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-11"/>
+        </ownedAttribute>
+        <name>Mapping Rule</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Subset_of" xmi:uuid="17e81cbd-eb81-494b-a4b6-d3df9a54f0dc" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Subset_of-ownedComment" xmi:uuid="7fd7832d-46b3-48d7-b2e5-5aba86128e8c" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Subset_of"/>
+          <body>In a pattern or mapping rule, &lt;Subset of&gt; defines a pattern property that represents a subset of another property. The subset may be constrained by a more specific type, expressions, values or required cardinalities. Subset stereotypes the end of a connector that is the superset.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Subset_of-base_ConnectorEnd" xmi:uuid="2d5c17e4-fbf5-4b31-b62e-e468847132b1" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ConnectorEnd"/>
+          <name>base_ConnectorEnd</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-10"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Subset_of-default" xmi:uuid="d1c3ce8d-e26b-49ac-bf3e-f7175609a01b" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Subset_of-default-ownedComment" xmi:uuid="30715c7a-15c2-422a-94b1-f504142cf166" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Subset_of-default"/>
+            <body>True if the subset should be populated only if no other subsets have been populated.</body>
+          </ownedComment>
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-Subset_of-default-lowerValue" xmi:uuid="0146ff85-9926-438a-aea3-f5e776865a83" xmi:type="uml:LiteralInteger"/>
+          <name>default</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <name>Subset of</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Map" xmi:uuid="a7a6925e-bc60-44b6-ab5a-2ea63765fdf6" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-ownedComment" xmi:uuid="7fd12f94-fb56-4a75-9434-0782dba22cbd" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Map"/>
+          <body>&lt;&lt;Map&gt;&gt; defines an equality rule between two properties in a &lt;&lt;Rule&gt;&gt; - they must represent the same information, perhaps using different representations. Maps should be drawn &lt;from&gt; the representation &lt;to&gt; the more conceptual. &lt;&lt;Map&gt;&gt; may be used between models, as is common for a &lt;&lt;Mapping Rule&gt;&gt; or within one model to equate different representations for the same thing (e.g., property paths)..</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-base_Connector" xmi:uuid="9547c401-9ca8-4719-ae24-bd63c35e4827" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Connector"/>
+          <name>base_Connector</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-9"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-type" xmi:uuid="dae328d9-e126-41c6-abab-145d738e6e27" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-type-ownedComment" xmi:uuid="b0dda34e-6d28-42f7-b046-794f21c8e48a" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Map-type"/>
+            <body>&lt;type&gt; is a restriction on the type of a property or relation that a map represents. One "side" of the map connector must have this type.</body>
+          </ownedComment>
+          <name>type</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-condition" xmi:uuid="76a68e04-a02d-4361-8bd2-d4f17d235b44" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ValueSpecification"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-condition-ownedComment" xmi:uuid="2147d939-905a-47b0-9495-75f97d73fbc3" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Map-condition"/>
+            <body>&lt;condition&gt; is an expression that must be true for the map rule to hold.</body>
+          </ownedComment>
+          <name>condition</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-default" xmi:uuid="f64c8467-458f-430a-a57d-0156cc710bd1" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-default-ownedComment" xmi:uuid="e8877266-b10f-4075-996b-6a2c3fc69b7c" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Map-default"/>
+            <body>&lt;default&gt; is true if the map should be enforced only if no other maps apply.</body>
+          </ownedComment>
+          <name>default</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-coerce" xmi:uuid="88809437-a788-4653-a222-1cf40fcc089b" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Map-coerce-ownedComment" xmi:uuid="5a348206-4718-44a2-a450-1f1296c38b99" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Map-coerce"/>
+            <body>Where &lt;coerce&gt; has a value of TRUE a map rule will be evaluated even if the &lt;from&gt; is not type compatible with the &lt;to&gt; type. Where &lt;coerce&gt; is FALSE or unstated a map rule will be evaluated only if the &lt;from&gt; is type compatible with the &lt;to&gt; type. Type compatible shall be defined as one of: Being the same type, &lt;from&gt; being a subtype of &lt;to&gt; (as defined by a type generalization rule), &lt;from&gt; being a representation of &lt;to&gt; (as defined by a representation rule). Representation rules applied to a supertype apply to a subtype..</body>
+          </ownedComment>
+          <name>coerce</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <name>Map</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-9" xmi:uuid="c37310c2-6bb6-4822-a298-a30343bfeca0" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Map-base_Connector"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-9-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-9-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-9-ownedEnd" xmi:uuid="86eb209f-4389-4cbf-9790-08fad2236cdb" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-9-ownedEnd-lowerValue" xmi:uuid="6a1b208a-6c53-487e-ad74-5761ff2e7e55" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Map</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Map"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-9"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-10" xmi:uuid="5d5fceb1-9570-4105-a94e-45893eeb048c" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Subset_of-base_ConnectorEnd"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-10-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-10-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-10-ownedEnd" xmi:uuid="a9515b73-e39e-457d-8601-139a10511a17" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-10-ownedEnd-lowerValue" xmi:uuid="503c3a61-efad-4c2c-a173-a3c7ceee81c7" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Subset of</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Subset_of"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-10"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-11" xmi:uuid="281a9309-21b9-497a-8bed-86dc1f1a99d3" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Mapping_Rule-base_StructuredClassifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-11-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-11-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-11-ownedEnd" xmi:uuid="58b2a524-9e71-447b-9e2a-af923c4b6114" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-11-ownedEnd-lowerValue" xmi:uuid="5a1fafa0-eb1d-446d-bfa7-d34e659a1bb0" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Representation Rule</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Mapping_Rule"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-11"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element" xmi:uuid="d3e3e3f6-371b-4347-8c8d-464f9a795a94" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-ownedComment" xmi:uuid="2df01315-5214-404d-a956-9f813f91d66f" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element"/>
+          <body>&lt;&lt;Pattern element&gt;&gt; further defines a connector, connector end or property within a pattern based on the tag values. Note that the UML default value may be used to set the initial value of a pattern element.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-type" xmi:uuid="e4210eee-5712-4918-a418-50d85a609741" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-type-ownedComment" xmi:uuid="c8e91fdc-2e35-49e1-b2da-c3fc929e956f" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-type"/>
+            <body>&lt;type&gt; is a restriction on the type of a property or relation that a pattern element represents. </body>
+          </ownedComment>
+          <name>type</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-condition" xmi:uuid="e650433d-bf06-4008-b56b-42115874d8a0" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ValueSpecification"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-condition-ownedComment" xmi:uuid="15ff486a-644d-4f5a-9034-d90a338e463b" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-condition"/>
+            <body>&lt;condition&gt; states a condition that must be true within the scope of the pattern element. This can be used for pattern matching, setting values or restriction of paths.</body>
+          </ownedComment>
+          <name>condition</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-base_Connector" xmi:uuid="7d305ddc-fee1-4eec-bc32-d503029d8244" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Connector"/>
+          <name>base_Connector</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-13"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-base_Property" xmi:uuid="3a4056b0-828a-4a5b-b54b-112ebe63071b" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
+          <name>base_Property</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-14"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-base_ConnectorEnd" xmi:uuid="3381dac4-5554-4a8d-b87d-1e6e81ce5894" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ConnectorEnd"/>
+          <name>base_ConnectorEnd</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-15"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-quantifier" xmi:uuid="19f72432-9816-471f-b4a3-dab19a4cad60" xmi:type="uml:Property">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-quantifier-ownedComment" xmi:uuid="a4eb19ca-c221-458a-a343-97e9b669b679" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-quantifier"/>
+            <body>A property that defines a quantification within a pattern. The quantifier defines the set of things that will populate the pattern property for all instances of the pattern. Quantifiers operate over the type of a pattern element and define a set or subset that corresponds to the extend of the pattern elements type. e.g. for all people p: People is the context and P is the quantified property. In SIMF the quantified property would typically be named &lt;quantifier&gt; &lt;type&gt;. So the above quantified property would be named "all people". The quantified property will be asserted to have the quantified type. type.
+</body>
+          </ownedComment>
+          <name>quantifier</name>
+          <visibility>public</visibility>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Quantifier"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-strength" xmi:uuid="5b9b24b8-b577-4263-a5a5-3fbbbd799a34" xmi:type="uml:Property">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-strength-ownedComment" xmi:uuid="4cb762d2-3622-4565-a7ed-18acac6fbd14" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-strength"/>
+            <body>&lt;strength&gt; defines the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern.</body>
+          </ownedComment>
+          <name>strength</name>
+          <visibility>public</visibility>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-explicit" xmi:uuid="b7ed24a5-f689-48b9-8724-5e3767a3424c" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-explicit-ownedComment" xmi:uuid="d0e91f2e-e50a-448a-bc5d-fe25ac8cae76" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-explicit"/>
+            <body>If &lt;explicit&gt; is true, the pattern element must be explicitly asserted as the indicted type, not derived or inferred from a supertype or super property.</body>
+          </ownedComment>
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-explicit-lowerValue" xmi:uuid="e5ce158d-eef1-46b3-a967-ad82c2b7bcc8" xmi:type="uml:LiteralInteger"/>
+          <name>explicit</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-computation" xmi:uuid="863a2320-5d6b-45f8-a5a4-7b06c1e0c3ef" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ValueSpecification"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-computation-ownedComment" xmi:uuid="b6c5fe16-f9de-4907-9735-d030017965e1" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-computation"/>
+            <body>&lt;computation&gt; computes a value for the pattern element based on the expression. Where computation is used inverse mapping is not specified - any inverse mapping is implementation specific.</body>
+          </ownedComment>
+          <name>computation</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <name>Pattern Element</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-13" xmi:uuid="1c64d941-9d0e-4378-87c5-b44205873c0e" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-base_Connector"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-13-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-13-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-13-ownedEnd" xmi:uuid="6f37068b-1f58-472f-aa00-b7ed2e6c2b4d" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-13-ownedEnd-lowerValue" xmi:uuid="89df52c8-84db-4a32-abf6-fb77732c759c" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Filter</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-13"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-14" xmi:uuid="bf454ff9-591d-4091-bcea-6fe081b9d26f" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-base_Property"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-14-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-14-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-14-ownedEnd" xmi:uuid="7fcad433-6a1b-428b-9100-ba8bb397e84c" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-14-ownedEnd-lowerValue" xmi:uuid="b5cd572d-e0e8-4e35-aa6f-aee32ae328bd" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Filter</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-14"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-15" xmi:uuid="2199b708-cb36-4e8a-aecb-d251da4fa1b2" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element-base_ConnectorEnd"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-15-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-15-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-15-ownedEnd" xmi:uuid="4bf9fbfa-d912-4504-bea7-77aa6080fb73" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-15-ownedEnd-lowerValue" xmi:uuid="d09a68a0-44f0-4283-bcf0-633f20f344a0" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Filter</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-15"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-16" xmi:uuid="520cfa85-4042-41f5-949b-d657c024a9f4" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Rule-base_StructuredClassifier"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-16-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-16-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-16-ownedEnd" xmi:uuid="8f1f0135-bb6f-4aa9-b8de-9755f0addfdf" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-16-ownedEnd-lowerValue" xmi:uuid="9fd5441e-00ea-4616-b956-d175e4f6a4f0" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Rule</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Rule"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-16"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Represents" xmi:uuid="32a6dba5-d8d7-437f-8d69-8120cd7c9fa4" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Represents-ownedComment" xmi:uuid="b4b51e59-eedf-42eb-962c-224245fec4b8" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Represents"/>
+          <body>&lt;&lt;Represents&gt;&gt; is an assertion that the source type or feature provides a more concrete way to represent the target type or feature. Represents may be used within conceptual models or from a physical model to a conceptual model. • A representation that is a dependency or realization makes no assumption that the types are substitutable. • A representation that is a generalization is substitutable for what it represents. </body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Represents-condition" xmi:uuid="9aa52192-e040-45ff-abb6-b0e589eee906" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#ValueSpecification"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Represents-condition-ownedComment" xmi:uuid="35546cc9-ceff-4fc3-ad76-3abf3c272d27" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Represents-condition"/>
+            <body>&lt;condition&gt; is an expression that must be true for the source to represent the target.</body>
+          </ownedComment>
+          <name>condition</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Represents-base_Generalization" xmi:uuid="e16266dc-85fc-4286-9a6b-1e6d6b6d6925" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Generalization"/>
+          <name>base_Generalization</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-18"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Represents-base_Dependency" xmi:uuid="ed554c53-b1ad-4d87-8977-c6857952f6fc" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+          <name>base_Dependency</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-19"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Represents-map-all" xmi:uuid="08e76955-ec55-43a3-89c1-0a7e14bc2688" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Represents-map-all-ownedComment" xmi:uuid="c6ff9d0a-4db9-4086-9dcb-8f3fa8b5d16b" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Represents-map-all"/>
+            <body>&lt;map-all&gt; implies a direct mapping between instances of the types in both directions. &lt;map all&gt; is equivalent to a mapping with a rule mapping properties of each type but is lower precedence than other mappings - if types have a more specific map it will apply first.</body>
+          </ownedComment>
+          <name>map-all</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <name>Represents</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-18" xmi:uuid="3a6389fb-6f86-446d-ade0-1ede7f1a0954" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Represents-base_Generalization"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-18-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-18-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-18-ownedEnd" xmi:uuid="05690528-11ad-4192-a6bb-7ac23f7d75c3" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-18-ownedEnd-lowerValue" xmi:uuid="1ab235a6-e786-45c1-b039-0eec7fd5f54d" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Represents</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Represents"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-18"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-19" xmi:uuid="08d51de1-dad3-4051-82ed-4bd95e00458b" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Represents-base_Dependency"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-19-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-19-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-19-ownedEnd" xmi:uuid="09f6b8d0-bf2e-4997-9f59-356c896b5e2d" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-19-ownedEnd-lowerValue" xmi:uuid="bded18d1-16f1-48e2-93c7-391cc9a2c2fc" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Represents</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Represents"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-19"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule" xmi:uuid="cc1d0670-e03e-495b-a289-c72d68ca0417" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule-ownedComment" xmi:uuid="71c27b04-15f2-4984-a40c-9f1bb10ea48e" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Rule"/>
+          <body>&lt;&lt;Rule&gt;&gt; defines a pattern that must hold true for the context of the rule. The pattern is described using structured classifier properties and connectors. A rule is a pattern structure described by a structured classifier that shows how elements are related. Each mapped element must match, including any traversals through structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. The mapping engine ensures that the patterns match, bidirectionally.y.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule-base_StructuredClassifier" xmi:uuid="bee70ecf-ef42-4de1-97ff-e56c6bfffdd4" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#StructuredClassifier"/>
+          <name>base_StructuredClassifier</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-16"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule-holds_within" xmi:uuid="79b94d51-ed7f-4b46-8a37-fab6e31864f7" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Namespace"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Rule-holds_within-ownedComment" xmi:uuid="748b5f61-0a5c-4056-973e-67c21c8cc15f" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Rule-holds_within"/>
+            <body>&lt;holds within&gt; is the context in which a rule is asserted (required to be true). Anything contextualized by the context is subject to the proposition. If not stated the rule is asserted by its owner.</body>
+          </ownedComment>
+          <name>holds within</name>
+          <visibility>public</visibility>
+        </ownedAttribute>
+        <name>Rule</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier" xmi:uuid="48bc3243-7f0a-41bf-8005-05a0aa20214c" xmi:type="uml:Enumeration">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-ownedComment" xmi:uuid="e3d42071-4586-4b25-accb-7758ca9869fc" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Quantifier"/>
+          <body>The set of quantifiers for pattern variables. Quantifiers operate over the type of a pattern element and define a set or subset that corresponds to the extend of the pattern elements type.</body>
+        </ownedComment>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-None" xmi:uuid="2f63c499-f21a-476f-8dc9-52d732544a5b" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-None-ownedComment" xmi:uuid="849f1136-cdbd-47c7-87db-e430a95fd5b0" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Quantifier-None"/>
+            <body>A quantifier where no instance of the type may fill the role. E.g. "there may not exist".</body>
+          </ownedComment>
+          <name>None</name>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-There_Exists" xmi:uuid="f009159b-7d10-4281-b480-d2ea626e4834" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-There_Exists-ownedComment" xmi:uuid="309fc74a-0f62-45a9-aaf8-a37710d2d569" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Quantifier-There_Exists"/>
+            <body>The existential quantifier - at least one element must exist.</body>
+          </ownedComment>
+          <name>There Exists</name>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-Exactly_One" xmi:uuid="15595a51-06a0-45be-bb30-5bd990ad0f01" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-Exactly_One-ownedComment" xmi:uuid="c6ffbd1f-f5d8-40ab-b27a-c055bbd16392" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Quantifier-Exactly_One"/>
+            <body>The existential quantifier limited to exactly one of a potentially larger set</body>
+          </ownedComment>
+          <name>Exactly One</name>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-Some" xmi:uuid="3a8d381a-8655-445b-9441-eea79a452ab4" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-Some-ownedComment" xmi:uuid="cfef7706-4d1d-4219-bd5f-7065ac9b7a96" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Quantifier-Some"/>
+            <body>A stratified existential quantifier for a common values - example: &lt;Some&gt; people like computers. For logics that do not support "some", some may be interpreted as "There Exists".</body>
+          </ownedComment>
+          <name>Some</name>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-Most" xmi:uuid="3f3c75b9-e9c8-4579-b259-77c0bbdd7ce9" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-Most-ownedComment" xmi:uuid="8582fa2b-c7a8-4cdb-bfeb-c30a4a2087b2" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Quantifier-Most"/>
+            <body>A stratified existential quantifier with a default for a "typical" value - example: &lt;Most&gt; people have 2 arms. For logics that do not support "most", most may be interpreted as "There Exists".</body>
+          </ownedComment>
+          <name>Most</name>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-All" xmi:uuid="b388888b-fa99-4d70-99ae-7a793accd488" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Quantifier-All-ownedComment" xmi:uuid="6a4eb8b2-478e-4d4d-982e-372d48929bb9" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Quantifier-All"/>
+            <body>The universal quantifier - the quantified property is a stand-in for all elements of the extent of the quantified type</body>
+          </ownedComment>
+          <name>All</name>
+        </ownedLiteral>
+        <name>Quantifier</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength" xmi:uuid="11b5ba9f-82a4-46a2-a66f-ab15e3943427" xmi:type="uml:Enumeration">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-ownedComment" xmi:uuid="86fac035-5929-4e12-a350-f7ac7705528e" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength"/>
+          <body>Pattern Element Strength defines a set of options for the mapping behavior of a pattern element.</body>
+        </ownedComment>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Match" xmi:uuid="9646de70-7429-4691-8560-4b3afe8dede6" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Match-ownedComment" xmi:uuid="ce8e932f-c24e-4828-a715-1a7cbf4b9d18" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Match"/>
+            <body>Match is used in query and mapping patterns, all elements of the classified type that match the pattern are selected as instances of the pattern. Match may be considered a qualified "All". Match does not assert the existence of something, it determines the existence of a pattern match such that other assertions may be made. Relationships between properties with &lt;quantifier&gt;=Match must hold between the matched properties for the pattern to match. </body>
+          </ownedComment>
+          <name>Match</name>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Assert" xmi:uuid="8281bb59-94e6-44da-917a-fce99494dfee" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Assert-ownedComment" xmi:uuid="bc26f3b1-fb2f-44ce-ade2-ea145c9a5a4e" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Assert"/>
+            <body>The element will be asserted as required for a valid pattern. Assert is the default.</body>
+          </ownedComment>
+          <name>Assert</name>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Default" xmi:uuid="8eabd593-14bf-4ea5-8609-59906d9bebda" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Default-ownedComment" xmi:uuid="9a818fbe-4efb-4638-86f1-604697c6f70a" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Default"/>
+            <body>The element will be asserted only if no other values are asserted within the pattern or as pre-existing assertions.</body>
+          </ownedComment>
+          <name>Default</name>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Exists" xmi:uuid="9fa482b7-0372-4a39-8f5c-7482f04bbfad" xmi:type="uml:EnumerationLiteral">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Exists-ownedComment" xmi:uuid="00e77ab0-206d-47eb-8ced-bef0c5f256c7" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Pattern_Element_Strength-Exists"/>
+            <body>Existing element that will be used to compute other values but does not otherwise impact the pattern.</body>
+          </ownedComment>
+          <name>Exists</name>
+        </ownedLiteral>
+        <name>Pattern Element Strength</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-Subsumes" xmi:uuid="d3302be1-8913-4fde-acbc-2ebcd47373f1" xmi:type="uml:Stereotype">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Rules_Profile-Subsumes-ownedComment" xmi:uuid="5a92da30-e8b8-441a-8baf-a762f7bd51ab" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Rules_Profile-Subsumes"/>
+          <body>&lt;&lt;Subsumes&gt;&gt; is a dependency between rules. When a rule subsumes another the subsumed rule will not apply (fire). if the &lt;subsumed by&gt; rules applies (fires). Where rules are also patterns, a rule may specialize another which will subsume the specialized rule as well as include the generalized rule parts as parts of the specialized rule.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Rules_Profile-Subsumes-base_Dependency" xmi:uuid="5c8647c8-5048-4ca5-b0ea-4cff210d6a6b" xmi:type="uml:Property">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
+          <name>base_Dependency</name>
+          <visibility>private</visibility>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-24"/>
+        </ownedAttribute>
+        <name>Subsumes</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-24" xmi:uuid="c1c425b2-0dbe-4fe3-a4e4-1498debd0189" xmi:type="uml:Extension">
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-Subsumes-base_Dependency"/>
+        <memberEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-24-ownedEnd"/>
+        <navigableOwnedEnd xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-24-ownedEnd"/>
+        <ownedEnd xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-24-ownedEnd" xmi:uuid="73a9aad4-e8cb-4201-a755-0a9fb821126d" xmi:type="uml:ExtensionEnd">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Rules_Profile-packagedElement-24-ownedEnd-lowerValue" xmi:uuid="df858bb1-db3e-432d-bec5-6452f7b65673" xmi:type="uml:LiteralInteger"/>
+          <name>extension_Subsumes</name>
+          <visibility>private</visibility>
+          <aggregation>composite</aggregation>
+          <type xmi:idref="SIMFProfile-SIMF_Rules_Profile-Subsumes"/>
+          <association xmi:idref="SIMFProfile-SIMF_Rules_Profile-packagedElement-24"/>
+        </ownedEnd>
+      </packagedElement>
+      <name>SIMF Rules Profile</name>
+      <URI>http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile</URI>
+    </packagedElement>
+    <packagedElement xmi:id="SIMFProfile-SIMF_Computation_Rules" xmi:uuid="9ab81c39-f491-482b-9b6f-85fdcfe9e06d" xmi:type="uml:Package">
+      <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-ownedComment" xmi:uuid="2b658f82-5bdb-407e-92dc-b3c347e98b79" xmi:type="uml:Comment">
+        <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules"/>
+        <body>Computation rules define mappings that are implemented via external methods. As such the implementation is defined by implementations, not the specification.</body>
+      </ownedComment>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Computation_Rules-MapID" xmi:uuid="1b2ba1da-2de5-49a0-a3a4-abe303f40d90" xmi:type="uml:Class">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-MapID-ownedComment" xmi:uuid="4a2f0530-0235-463f-afcf-a001c05675ba" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-MapID"/>
+          <body>&lt;&lt;MapID&gt;&gt; is a rule where the source is an ID and the target is a class, maps an instance of the ID to an instance of the class.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Computation_Rules-MapID-generalization" xmi:uuid="67477f5f-429f-4ac6-9f37-a1762ce307fd" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Computation_Rules-Rule_Computation"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-MapID-id" xmi:uuid="ab18d662-2f76-4ed3-a390-374dcbdcbdc1" xmi:type="uml:Port">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-MapID-id-ownedComment" xmi:uuid="f8a81d7b-c395-4b51-8cda-18f051d7c670" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-MapID-id"/>
+            <body>The source type (ID)</body>
+          </ownedComment>
+          <name>id</name>
+          <visibility>public</visibility>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-MapID-identified" xmi:uuid="66bfca31-2b6e-4694-8af8-4b9028b1b2af" xmi:type="uml:Port">
+          <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Classifier"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-MapID-identified-ownedComment" xmi:uuid="eb62fa29-4b0e-41f1-be89-d659524d1082" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-MapID-identified"/>
+            <body>The identified type (Identified by ID)</body>
+          </ownedComment>
+          <name>identified</name>
+          <visibility>public</visibility>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <name>MapID</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Computation_Rules-Rule_Computation" xmi:uuid="da8d3a0b-b174-4845-8398-32219b48ea2e" xmi:type="uml:Class">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-Rule_Computation-ownedComment" xmi:uuid="0ba3475e-7c58-4830-b0a9-6e11913f987e" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-Rule_Computation"/>
+          <body>&lt;&lt;Rule Computation&gt;&gt; is an abstract supertype for a facade that includes external implementation. The implementation is outside of this specification.</body>
+        </ownedComment>
+        <name>Rule Computation</name>
+        <isAbstract>true</isAbstract>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Computation_Rules-ExistsRule" xmi:uuid="468ff9d3-fbc2-4cac-8185-4ed29fe461e6" xmi:type="uml:Class">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-ExistsRule-ownedComment" xmi:uuid="8a1e3eef-9824-48db-9e2f-f2ef5e970a4b" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-ExistsRule"/>
+          <body>&lt;&lt;Exists Rule&gt; is a rule to map the existence of an &lt;element&gt; to a boolean. &lt;exists&gt; is true iff &lt;element&gt; is not null.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Computation_Rules-ExistsRule-generalization" xmi:uuid="60a35244-6f5f-4689-ba04-2240da3080ce" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Computation_Rules-Rule_Computation"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-ExistsRule-exists" xmi:uuid="933147d5-2a7e-4836-8663-18e41a0d4c93" xmi:type="uml:Port">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-ExistsRule-exists-ownedComment" xmi:uuid="c86df37a-d620-4386-bacc-5fc1eab67ece" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-ExistsRule-exists"/>
+            <body>Boolean that will be true if &lt;element&gt; is not null.</body>
+          </ownedComment>
+          <name>exists</name>
+          <visibility>public</visibility>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-ExistsRule-element" xmi:uuid="264883a9-7e54-4a4f-9172-99814f6124f1" xmi:type="uml:Port">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-ExistsRule-element-ownedComment" xmi:uuid="29c0476b-21f0-4647-9fc1-7864c40269b1" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-ExistsRule-element"/>
+            <body>If &lt;element&gt; in not null, &lt;exists&gt; will be true.</body>
+          </ownedComment>
+          <name>element</name>
+          <visibility>public</visibility>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <name>ExistsRule</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Computation_Rules-Summarize" xmi:uuid="d1c8f97b-afdf-4986-b1a0-cfea1b571ed5" xmi:type="uml:Class">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-Summarize-ownedComment" xmi:uuid="c28982ee-129a-4cd6-9545-1af13d1b369a" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-Summarize"/>
+          <body>&lt;&lt;Summarize&gt;&gt; is a rule that produces a natural language description of an element. Summarize may not be bi-directional and is expected to have information loss. &lt;summary&gt; is a summary of &lt;element&gt;. Content of summary is implementation specific.c.</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Computation_Rules-Summarize-generalization" xmi:uuid="441c5055-002f-4cd4-a464-d118cf5d6f99" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Computation_Rules-Rule_Computation"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-Summarize-summary" xmi:uuid="88eae994-822d-4894-a5fc-096a950a229b" xmi:type="uml:Port">
+          <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+          <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-Summarize-summary-ownedComment" xmi:uuid="4f25a8c8-1a26-4b62-8891-953b96402cf5" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-Summarize-summary"/>
+            <body>The element summary</body>
+          </ownedComment>
+          <name>summary</name>
+          <visibility>public</visibility>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-Summarize-element" xmi:uuid="a6e0ec2e-fa47-4010-8683-e25ac03d90ce" xmi:type="uml:Port">
+          <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-Summarize-element-ownedComment" xmi:uuid="18911572-c1d8-42d7-a915-49fb824069ea" xmi:type="uml:Comment">
+            <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-Summarize-element"/>
+            <body>The summarized element.</body>
+          </ownedComment>
+          <name>element</name>
+          <visibility>public</visibility>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <name>Summarize</name>
+      </packagedElement>
+      <packagedElement xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First" xmi:uuid="83409a86-89ce-40af-9ec7-51ea58cc77b6" xmi:type="uml:Class">
+        <ownedComment xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-ownedComment" xmi:uuid="c29b1cce-b1b7-4037-823b-ab45b932d42f" xmi:type="uml:Comment">
+          <annotatedElement xmi:idref="SIMFProfile-SIMF_Computation_Rules-List_First"/>
+          <body>The &lt;List First&gt; rules will take the &lt;list&gt; property and place the first element into&lt;first&gt;. If &lt;list&gt; is empty, &lt;first&gt; will be empty. If there are more &lt;list&gt; elements than 1, all remaining elements are placed as a set in &lt;remainder&gt;. If &lt;list&gt; is an un-ordered set the order will be indeterminate but repeatable. &lt;&lt;List First&gt;&gt; is bidirectional and will compute &lt;list&gt; by appending &lt;first&gt; and &lt;remainder&gt;. Note that this will act like a LISP CDR/CAR pair</body>
+        </ownedComment>
+        <generalization xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-generalization" xmi:uuid="687bf5be-e598-4e04-82ae-6410d9219022" xmi:type="uml:Generalization">
+          <general xmi:idref="SIMFProfile-SIMF_Computation_Rules-Rule_Computation"/>
+        </generalization>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-list" xmi:uuid="0e52e469-0929-42a6-9769-40548599b321" xmi:type="uml:Port">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-list-lowerValue" xmi:uuid="5ab3bb0a-7ac1-4e9b-88c0-5325c874ef8e" xmi:type="uml:LiteralUnlimitedNatural"/>
+          <upperValue xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-list-upperValue" xmi:uuid="92da55c7-454b-40c9-ac5e-648078c4081f" xmi:type="uml:LiteralUnlimitedNatural">
+            <value>*</value>
+          </upperValue>
+          <name>list</name>
+          <visibility>public</visibility>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-first" xmi:uuid="5e4b5b6f-2bb9-4dad-a698-78c8f8c27a4a" xmi:type="uml:Port">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-first-lowerValue" xmi:uuid="8961ada7-bff3-4691-b01a-1c2f962f788e" xmi:type="uml:LiteralInteger"/>
+          <name>first</name>
+          <visibility>public</visibility>
+          <isOrdered>true</isOrdered>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-remainder" xmi:uuid="2f2742a2-6879-4a0e-9892-c488e4d0b997" xmi:type="uml:Port">
+          <lowerValue xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-remainder-lowerValue" xmi:uuid="89388962-343b-4372-8bc2-4f7c2625837d" xmi:type="uml:LiteralUnlimitedNatural"/>
+          <upperValue xmi:id="SIMFProfile-SIMF_Computation_Rules-List_First-remainder-upperValue" xmi:uuid="3ac6974f-7ece-480c-8991-c38c76719fa6" xmi:type="uml:LiteralUnlimitedNatural">
+            <value>*</value>
+          </upperValue>
+          <name>remainder</name>
+          <visibility>public</visibility>
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <name>List First</name>
+      </packagedElement>
+      <name>SIMF Computation Rules</name>
+      <URI>http://www.omg.org/spec/SIMF/20160501/SIMF-computation-rules</URI>
+    </packagedElement>
+    <name>SIMFProfile</name>
+    <URI>http://www.omg.org/spec/SIMF/20160501/SIMF-profile</URI>
+  </uml:Profile>
+  <SIMF-rules-profile:Rule xmi:id="_-Rule-2" xmi:uuid="725A27D7-DAED-407D-9E3F-C47D3406B6E1">
+    <base_StructuredClassifier>_18_1_3ba019e_1429802111601_842589_5968</base_StructuredClassifier>
+  </SIMF-rules-profile:Rule>
+  <SIMF-rules-profile:Rule xmi:id="_-Rule-1" xmi:uuid="725A27D7-DAED-40D6-94CF-C47DDFED3BDB">
+    <base_StructuredClassifier>_18_1_3ba019e_1443825538731_383581_26914</base_StructuredClassifier>
+  </SIMF-rules-profile:Rule>
+  <mofext:Tag xmi:id="_-Tag-1" xmi:uuid="725A27D7-DAED-4031-9727-C47D27E70CF0" xmi:type="mofext:Tag">
+    <name>org.omg.xmi.nsPrefix</name>
+    <value>SIMF-profile</value>
+    <element>_18_2_62501eb_1463773094644_650562_4768</element>
+  </mofext:Tag>
+  <mofext:Tag xmi:id="_-Tag-3" xmi:uuid="725A27D7-DAED-41E9-9F2F-C47D0EC8D6F3" xmi:type="mofext:Tag">
+    <name>org.omg.xmi.nsPrefix</name>
+    <value>SIMF-rules-profile</value>
+    <element>_17_0_5_1_7b3022e_1396472296683_836894_3505</element>
+  </mofext:Tag>
+  <mofext:Tag xmi:id="_-Tag-2" xmi:uuid="725A27D7-DAED-4ADC-92AC-C47DE41FE733" xmi:type="mofext:Tag">
+    <name>org.omg.xmi.nsPrefix</name>
+    <value>SIMF-conceptual-profile</value>
+    <element>_18_0_1_8bf027c_1408661861698_946768_5587</element>
+  </mofext:Tag>
+</xmi:XMI>

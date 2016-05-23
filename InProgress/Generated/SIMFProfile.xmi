@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001"
-         xmlns:StandardProfile="http://www.omg.org/spec/UML/20131001/StandardProfile"
-         xmlns:SIMF_Rules_Profile="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile.xmi"
+         xmlns:SIMF-rules-profile="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile"
+         xmlns:mofext="http://www.omg.org/spec/MOF/20131001"
          xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
-   <xmi:documentation xmi:type="xmi:Documentation">
-      <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
-      <xmi:exporterVersion>18.2</xmi:exporterVersion>
-   </xmi:documentation>
-
-
-      <Profile xmi:id="SIMFProfile"
+      <uml:Profile xmi:type="uml:Profile" xmi:id="_18_2_62501eb_1463773094644_650562_4768"
                        name="SIMFProfile"
-                       URI="http://www.omg.org/spec/SIMF/20160501/SIMF-profile.xmi">
+                       URI="http://www.omg.org/spec/SIMF/20160501/SIMF-profile">
          <metamodelReference xmi:idref="_18_2_62501eb_1463773094644_394743_4769"/>
          <packageImport xmi:type="uml:PackageImport" xmi:id="_18_2_62501eb_1463773094644_394743_4769"
                         xmi:uuid="6be406c3-e971-493a-9585-2fdcd7ede3fd">
@@ -20,7 +14,7 @@
          <packagedElement xmi:type="uml:Profile" xmi:id="_18_0_1_8bf027c_1408661861698_946768_5587"
                           xmi:uuid="2bc336da-9080-406d-b365-0881362139f4"
                           name="SIMF Concept Modeling Profile"
-                          URI="http://www.omg.org/spec/SIMF/20160501/SIMF-conceptual-profile.xmi">
+                          URI="http://www.omg.org/spec/SIMF/20160501/SIMF-concept-modeling-profile">
             <metamodelReference xmi:idref="_18_0_1_8bf027c_1408661861699_857659_5588"/>
             <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463765878500_425868_4567"
                           xmi:uuid="b67eb6b3-8741-4f20-afb3-50fd9e5bc563"
@@ -41,7 +35,7 @@
                              name="Resource">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422546632138_823005_4338"
                              xmi:uuid="1679f25e-8847-478a-b81d-7e07b2b305b2"
-                             body="A &lt;&lt;Resource&gt;&gt; is anything that can be referenced by an IRI in a model, ontology or vocabulary.">
+                             body="A &lt;&lt;Resource&gt;&gt; is anything that can be referenced by an identifier in a model, ontology or vocabulary. This identifier is often an IRI.">
                   <annotatedElement xmi:idref="_18_0_1_8bf027c_1408661908824_320374_5622"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_8bf027c_1422542645920_899661_4258"
@@ -51,7 +45,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462642803132_270306_4602"
                                 xmi:uuid="ea8579a5-4bb9-4d46-867d-e94cbd60f7a8"
-                                body="Unique identifier for any resource. &#xA;When defined for a Package, id is equivalent to UML:URI - setting one will set the other.The format must comply with as defined in [RFC3987].">
+                                body="A unique identifier for any resource. &#xA;When defined for a Package, id has the format defined in [RFC3987]. In this case, it is equivalent to UML:URI, and setting one will set the other.">
                      <annotatedElement xmi:idref="_18_0_2_8bf027c_1422542645920_899661_4258"/>
                   </ownedComment>
                </ownedAttribute>
@@ -68,7 +62,7 @@
                              name="Anything">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422547096438_791538_4342"
                              xmi:uuid="1ec59518-a7c6-46d3-9804-01aa23782cbb"
-                             body="&lt;&lt;Anything&gt;&gt; defines a class that represents anything and is equivalent to all other classes of anything in any other model or logic.  The defined class is equivalent to SIMF:Anything, OWL:Thing and other &#34;top level&#34; classes.&#xA;Because of this equivalence, every class in every model virtually inherits from anything, just as all OWL classes virtually inherit from owl:Thing.&#xA;&lt;&lt;Anything&gt;&gt; classes may be used as a classifier to define &#34;global properties&#34;.">
+                             body="&lt;&lt;Anything&gt;&gt; is a class that represents anything and is equivalent to all other classes of anything in any other model or logic.  The defined class is equivalent to SIMF:Anything, OWL:Thing and other &#34;top level&#34; classes.&#xA;Because of this equivalence, every class in every model virtually inherits from Anything, just as all OWL classes virtually inherit from owl:Thing.&#xA;&lt;&lt;Anything&gt;&gt; classes may be used to define &#34;global properties&#34;.">
                   <annotatedElement xmi:idref="_18_0_1_8bf027c_1408662750370_15319_5669"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_3_3bc0198_1433368465218_102240_4263"
@@ -84,7 +78,7 @@
                              name="Synonym">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463761057434_321434_4527"
                              xmi:uuid="268355af-3c39-406f-be8f-5c17a14cb782"
-                             body="Synonym defines an alternate name for the annotated elements of the comment. The alternate name is the body of the comment.&#xA;The alternate name will not be the &#34;preferred name&#34; of the element.">
+                             body="&lt;&lt;Synonym&gt;&gt; defines an alternate name for the annotated elements of the comment. The alternate name is the body of the comment.&#xA;The alternate name will not be the &#34;preferred name&#34; of the element.">
                   <annotatedElement xmi:idref="_18_0_1_8bf027c_1408732702938_45332_4392"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1461867020857_980710_4872"
@@ -100,7 +94,7 @@
                              name="Union">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463761977741_225852_4541"
                              xmi:uuid="01b14c81-4d07-4043-8cd3-c71da48efacf"
-                             body="A &lt;&lt;Union&gt;&gt; is a class that has an extent (set of instances) which is the complete union of the extents of all types that specialize the Union (Subclasses). Specializing types shall include subtypes and types that realize the union.&#xA;&#xA;Note: Realizations are included to support unions across external models. UML generalization can not be used across external models due to the ownership of generalization.&#xA;&#xA;[MathWorld] Given two sets A and B, the union is the set that contains elements or objects that belong to either A or to B or to both.  We write A È B">
+                             body="A &lt;&lt;Union&gt;&gt; is a class that has an extent (set of instances) which is equivalent to the union of the extents of all types that specialize the Union (Subclasses). Specializing types shall include subtypes and types that realize the union.&#xA;&#xA;Note: UML realizations are included to support unions across external models because UML generalization can not be used across external models due to the ownership of generalization.&#xA;&#xA;[MathWorld] Given two sets A and B, the union is the set that contains elements or objects that belong to either A or to B or to both.">
                   <annotatedElement xmi:idref="_18_0_1_8bf027c_1409322510396_866557_6932"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1462468558169_190108_4490"
@@ -113,10 +107,10 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_8bf027c_1418002266669_632692_4244"
                              xmi:uuid="eafde224-8e85-47db-95ec-1753b212dd20"
-                             name="Concept Package">
+                             name="Concept Model">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422546680726_622490_4340"
                              xmi:uuid="c1fa4a55-0d54-4654-8fd2-5e34ff7f70c8"
-                             body="A model of a real or possible world. Instances of elements in a concept model are &#34;real wold&#34; things, not data about those things.">
+                             body="A &lt;&lt;Concept Model&gt;&gt; is a kind of &lt;&lt;Model&gt;&gt; that represents concepts in a real or possible world. Instances of elements in a concept model are &#34;real world&#34; things, not data about those things.">
                   <annotatedElement xmi:idref="_18_0_2_8bf027c_1418002266669_632692_4244"/>
                </ownedComment>
                <generalization xmi:type="uml:Generalization"
@@ -150,10 +144,10 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_8bf027c_1418002310175_447385_4283"
                              xmi:uuid="f8e4b5a9-9226-4767-88ed-7b0b8d13e889"
-                             name="Logical Package">
+                             name="Information Model">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422546698126_907542_4341"
                              xmi:uuid="06e4e0ac-7035-40eb-9b43-c4f5adc3a10b"
-                             body="A model for some purpose independent of technical implementation. A logical package may contain information or data models as well as other logical viewpoints.">
+                             body="An &lt;&lt;Information Model&gt;&gt; is a kind of &lt;&lt;Model&gt;&gt; that represents &#xA;a model for some purpose, independent of technical implementation. An information model may contain logical models or data models, as well as other logical viewpoints.">
                   <annotatedElement xmi:idref="_18_0_2_8bf027c_1418002310175_447385_4283"/>
                </ownedComment>
                <generalization xmi:type="uml:Generalization"
@@ -186,10 +180,10 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_8bf027c_1422543641601_11667_4282"
                              xmi:uuid="8e5856bf-98ab-47b5-9bd3-136c8c3301b5"
-                             name="Package">
+                             name="Model">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_8bf027c_1422546663560_557888_4339"
                              xmi:uuid="3b71df06-1e6b-431c-b333-b0668ee09871"
-                             body="&lt;&lt;Package&gt;&gt; is a kind of Resource that contains other resources and may have a namespace prefix (like the &#34;dc&#34; in &#34;dc:title&#34;).">
+                             body="&lt;&lt;Model&gt;&gt; is stereotype of package that may have an id (see &lt;&lt;Resource&gt;&gt;) and/or a namespace prefix (like the &#34;dc&#34; in &#34;dc:title&#34;).">
                   <annotatedElement xmi:idref="_18_0_2_8bf027c_1422543641601_11667_4282"/>
                </ownedComment>
                <generalization xmi:type="uml:Generalization"
@@ -210,7 +204,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463759590164_235174_4515"
                                 xmi:uuid="c32424b7-74aa-4438-8bdd-1e9a19a5e402"
-                                body="&lt;namespace prefix&gt; is a hint as to an appropriate abbreviation for a package that may be used in some technology mappings, such as XML. The prefix should be short and contain only letters and numbers and must start with a letter. e.g.,  &#34;dc&#34; in &#34;dc:title&#34;.">
+                                body="A hint as to an appropriate abbreviation for a model that may be used in some technology mappings, such as XML. The prefix should be short and contain only letters and numbers and must start with a letter. e.g.,  &#34;dc&#34; in &#34;dc:title&#34;.">
                      <annotatedElement xmi:idref="_18_0_1_8bf027c_1410291663142_556199_4654"/>
                   </ownedComment>
                </ownedAttribute>
@@ -254,7 +248,7 @@
                              name="Annotation Property">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462642018541_551263_4553"
                              xmi:uuid="10ee188b-2536-4470-85ad-7c0618e08d24"
-                             body="&lt;&lt;Annotation Property&gt;&gt; defines a property representing metadata rather than a property representing information about the subject domain.">
+                             body="An &lt;&lt;Annotation Property&gt;&gt; is a kind of &lt;&lt;Resource&gt;&gt; that asserts a property represents metadata rather than assertions about the subject domain.">
                   <annotatedElement xmi:idref="_18_2_8d40284_1446013773240_239852_4488"/>
                </ownedComment>
                <generalization xmi:type="uml:Generalization" xmi:id="_18_2_8d40284_1446013805908_939759_4494"
@@ -289,7 +283,7 @@
                              name="Annotation">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462642039312_43473_4600"
                              xmi:uuid="738fc039-a521-43ef-8401-adb95f18fe18"
-                             body="An &lt;&lt;Annotation&gt;&gt; comment provides a textual value for the annotated elements of the comment where the body of the comment is the annotation property value.">
+                             body="An &lt;&lt;Annotation&gt;&gt; comment provides a textual &#34;body&#34; as a &#34;value for&#34; one &lt;&lt;Annotation Property&gt;&gt; describing the annotatedElement(s).">
                   <annotatedElement xmi:idref="_18_0_4_8d40284_1446637691832_812562_4282"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1446637851399_224264_4289"
@@ -343,7 +337,7 @@
                              name="Disjoint With">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463764429154_206008_4551"
                              xmi:uuid="c9f8a5b5-69a4-47c6-bba6-73895af04ade"
-                             body="&lt;&lt;Disjoint With&gt;&gt; is an assertion that the &lt;source&gt; and &lt;target&gt; of the dependency do not and may not denote any of the same set of entities.&#xA;When applied to a classifier every element of the classifier's extent (set of instances) is included in the set of disjoint things.&#xA;">
+                             body="A &lt;&lt;Disjoint With&gt;&gt; dependency is an assertion that two model elements do not and may not denote any of the same set of entities.&#xA;When applied to a classifier, every element of the classifier's extent (set of instances) is included in the set of disjoint things.&#xA;">
                   <annotatedElement xmi:idref="_18_0_4_8d40284_1452103255914_355054_4282"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1452103410981_101548_4289"
@@ -376,7 +370,7 @@
                              name="Equivalent Class">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463763728952_301799_4550"
                              xmi:uuid="70b88d24-a097-40a8-a13f-c3db772ea19b"
-                             body="A &lt;&lt;Equivalent Class&gt;&gt; generalization is an assertion that two classes have the same extents (set of instances). Unlike ontological languages it is not assumed that the two elements are consistent as statements from different context may or may not agree.">
+                             body="A &lt;&lt;Equivalent Class&gt;&gt; generalization is an assertion that two classes have the same extents (set of instances). Unlike ontological languages it is not assumed that the two elements are consistent, as statements from different context may or may not agree.">
                   <annotatedElement xmi:idref="_18_0_4_8d40284_1459972500203_691763_4288"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1460034093697_967638_4290"
@@ -396,7 +390,7 @@
                              name="Equivalent Property">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462641365930_343679_4496"
                              xmi:uuid="7350c93a-a6b8-4dc5-b97e-c520cf4b41b3"
-                             body="&lt;&lt;Equivalent Property&gt;&gt; is a declaration that a property is equivalent to others using either &#34;equivalent to&#34; or &#34;chain&#34;. Equivalent Property is a shortcut for other ways to define property equivalence.&#xA;Either &#34;equivalent to&#34; or &#34;chain&#34; must have a value.">
+                             body="&lt;&lt;Equivalent Property&gt;&gt; is a declaration that a property is equivalent to one or more other properties (using &#34;equivalent to&#34;) or is equivalent to a chain of other properties (using &#34;chain&#34;). &lt;&lt;Equivalent Property&gt;&gt; with at least one value for the &#34;equivalent to&#34; property is an alternative way of expressing &lt;&lt;Equivalent To&gt;&gt;, without introducing crossing lines on a diagram.&#xA;Either &#34;equivalent to&#34; or &#34;chain&#34; must have a value.">
                   <annotatedElement xmi:idref="_18_0_4_8d40284_1459972776251_126885_4413"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_4_8d40284_1460048438318_218984_4363"
@@ -406,7 +400,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462641418395_102052_4497"
                                 xmi:uuid="477ee5c2-4f3b-48e2-a520-d8e551422d92"
-                                body="&lt;equivalent to&gt; defines a set of properties that the stereotyped property is equivalent to. Note that equivalence can also be declared with a &lt;&lt;Equivalent With&gt;&gt; dependency.">
+                                body="A set of properties that the &lt;&lt;Equivalent Property&gt;&gt; is equivalent to. Note that equivalence can also be declared with a &lt;&lt;Equivalent To&gt;&gt; dependency.">
                      <annotatedElement xmi:idref="_18_0_4_8d40284_1460048438318_218984_4363"/>
                   </ownedComment>
                   <lowerValue xmi:type="uml:LiteralUnlimitedNatural"
@@ -432,7 +426,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Property"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1462641525784_404247_4498"
                                 xmi:uuid="4bb80837-e200-486f-bd3e-ea7dd4f8fe40"
-                                body="&lt;chain&gt; define ordered set of properties that express a traversal path which is equivalent to the stereotyped property, also known as a &#34;property chain&#34;.&#xA;&#xA;Due to potential &#34;missing information&#34; in creating a chain, a chain may or may not be able to be determined from asserting the chained property. Such a determination is defined in the mapping rules for that property in a particular context.&#xA;&#xA;Note that a chain may also be defined with mapping rules.">
+                                body="An ordered set of properties forming a &#34;property composition&#34; expressing a traversal path that is equivalent to the stereotyped property. This is similar to a &#34;property chain&#34;. (Note that in an OWL property chain, the property composition is not equivalent, it is a subproperty.)&#xA;&#xA;Due to potential &#34;missing information&#34; in creating a chain, a chain may or may not be able to be determined from asserting the chained property. Such a determination is defined in the mapping rules for that property in a particular context.&#xA;&#xA;Note that a chain may also be defined with mapping rules.">
                      <annotatedElement xmi:idref="_18_0_4_8d40284_1460047309650_344393_4292"/>
                   </ownedComment>
                   <lowerValue xmi:type="uml:LiteralUnlimitedNatural"
@@ -482,7 +476,7 @@
                              name="Enumerates">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463764838671_980109_4553"
                              xmi:uuid="d93ba8f4-b5aa-417f-bee3-7a6a8dc74614"
-                             body="An &lt;&lt;Enumerates&gt;&gt; dependency asserts that the set of instance specifications or classifiers in a package is the complete set of instances of the &lt;source&gt; type. &#xA;&lt;&lt;Enumerates&gt;&gt; is the general form of specifying an Enumeration. Enumerations may also be specified as a UML Enumeration - but UML Enumerations are limited to data types. &lt;&lt;Enumerates&gt;&gt; may enumerate any type.">
+                             body="An &lt;&lt;Enumerates&gt;&gt; dependency asserts that the supplier of the dependency is a type and the client of the dependency is a package containing a complete set of possible instance specifications. In this way, &lt;&lt;Enumerates&gt;&gt; is more general than a UML Enumeration because it can enumerate more than just UML data types.">
                   <annotatedElement xmi:idref="_18_1_3ba019e_1446213823899_269602_6496"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446213853441_871009_6523"
@@ -514,7 +508,7 @@
                              name="Is In Context">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446044827144_643146_7934"
                              xmi:uuid="e483ceea-a05d-41fa-9b23-df68183f4cd4"
-                             body="&lt;&lt;Is in context&gt;&gt; is an assertion that the &lt;source&gt; of the dependency is in the context of the &lt;target&gt; of the dependency. All assertions and rules defined in the target context apply to the source and everything in the context of the source (in context is transitive). Packages, classes, situations and instances are typical context. Note that &lt;&lt;Is In Context&gt;&gt; is the default interpretation of a dependency, if no stereotype is specified it will be interpreted as &lt;&lt;Is In Context&gt;&gt;.">
+                             body="&lt;&lt;Is In context&gt;&gt; is an assertion that the client of the dependency is in the context of the supplier of the dependency. All assertions and rules defined in the supplier context apply to the client and everything in the context of the client (i.e., it is transitive). Packages, classes, situations and instances are typical contexts. Note that &lt;&lt;Is In Context&gt;&gt; is the default interpretation of a dependency, if no stereotype is specified it will be interpreted as &lt;&lt;Is In Context&gt;&gt;.">
                   <annotatedElement xmi:idref="_18_0_2_3ba019e_1421784986476_882971_5389"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446209504083_766693_6120"
@@ -541,30 +535,12 @@
                               xmi:uuid="0078e658-945b-43a5-a8c5-d58e5ed5b5e0"/>
                </ownedEnd>
             </packagedElement>
-            <packagedElement xmi:type="uml:Extension" xmi:id="_17_0_5_1_7b3022e_1400520003056_394147_5943"
-                             xmi:uuid="c0f5b83c-b102-4be1-8ea0-5a3d9a3b5174">
-               <memberEnd xmi:idref="_17_0_5_1_7b3022e_1400520003056_58639_5944"/>
-               <memberEnd xmi:idref="_17_0_5_1_7b3022e_1400520003057_865190_5945"/>
-               <navigableOwnedEnd xmi:idref="_17_0_5_1_7b3022e_1400520003057_865190_5945"/>
-               <ownedEnd xmi:type="uml:ExtensionEnd"
-                         xmi:id="_17_0_5_1_7b3022e_1400520003057_865190_5945"
-                         xmi:uuid="979b2e0e-f87c-4951-974e-d6581e2ed2a0"
-                         name="extension_"
-                         visibility="private"
-                         aggregation="composite"
-                         type="_17_0_5_1_7b3022e_1400519996298_378531_5942"
-                         association="_17_0_5_1_7b3022e_1400520003056_394147_5943">
-                  <lowerValue xmi:type="uml:LiteralInteger"
-                              xmi:id="_17_0_5_1_7b3022e_1400520003057_676254_5946"
-                              xmi:uuid="7ee333bf-5ace-4a1a-aac0-2c19df192173"/>
-               </ownedEnd>
-            </packagedElement>
             <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_3ba019e_1421782981734_29113_5226"
                              xmi:uuid="256d373a-2a20-42de-85ac-37ae19fceb06"
                              name="Role">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446055879612_807762_6366"
                              xmi:uuid="90dfe583-e672-463c-b7ff-aba433cd2d20"
-                             body="A &lt;&lt;Role&gt;&gt; is a classification of an entity based on that entities behavior, participation in a situation or capabilities. A &lt;&lt;Role&gt;&gt; &lt;&lt;Classifies&gt;&gt; the types that may play that role. e.g., &#34;Teacher&#34;.&#xA;A role is a &#34;non rigid sortal&#34;, a type that may change over the lifetime of an entity. ">
+                             body="A &lt;&lt;Role&gt;&gt; is a classification of an entity based on that entity's behavior, participation in a situation, or capabilities. A &lt;&lt;Role&gt;&gt; &lt;&lt;Classifies&gt;&gt; the types that may play that role. e.g., &#34;Teacher&#34;.&#xA;A role is a &#34;non rigid sortal&#34;, a type that may change over the lifetime of an entity. ">
                   <annotatedElement xmi:idref="_18_0_2_3ba019e_1421782981734_29113_5226"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_3ba019e_1421783015039_964443_5252"
@@ -596,16 +572,9 @@
                              name="Classifies">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_3ba019e_1423854221831_439438_8349"
                              xmi:uuid="b7c40116-705a-4cae-a0b2-9a20df5464eb"
-                             body="A classification defined by a &lt;&lt;Classifies&gt;&gt; generalization or realization is a &#34;mix in&#34; or &#34;non rigid&#34; classification of an entity beyond any fundamental entity type. &#xA;An instance must be typed by the classifies supertype for it to also be classified as the classifies subtype. A classification may be contextual, such as within a relation,  situation and/or timeframe. Instances may have any number of types and classifications may change over time.&#xA;&#xA;Classification is used in defining what a &lt;&lt;Role&gt;&gt; may be a role of and for phases, what a &lt;&lt;Phase&gt;&gt; is a phase of.&#xA;&#xA;Classifications may be added to or removed from an individual over time and in different context. ">
+                             body="A classification defined by a &lt;&lt;Classifies&gt;&gt; generalization or realization is a &#34;mix in&#34; or &#34;non rigid&#34; classification of an entity beyond any fundamental entity type. &#xA;An instance must be typed by the classifies supertype for it to also be classified as the classifies subtype. A classification may be contextual, such as within a relation, situation and/or time frame. Instances may have any number of types and classifications may change over time.&#xA;&#xA;Classification is used in defining what a &lt;&lt;Role&gt;&gt; may be a role of, and for phases, what a &lt;&lt;Phase&gt;&gt; is a phase of.&#xA;&#xA;Classifications may be added to or removed from an individual over time and in different context. ">
                   <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1400519996298_378531_5942"/>
                </ownedComment>
-               <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1400520003056_58639_5944"
-                               xmi:uuid="6817eed4-db6c-4b41-ba5a-ae2076080d9d"
-                               name="base_Dependency"
-                               visibility="private"
-                               association="_17_0_5_1_7b3022e_1400520003056_394147_5943">
-                  <type href="http://www.omg.org/spec/UML/20131001/UML.xmi#Dependency"/>
-               </ownedAttribute>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1400679376520_623189_4591"
                                xmi:uuid="95efa1c0-2804-4333-8508-913cc039c467"
                                name="base_Generalization"
@@ -637,7 +606,7 @@
                              name="Phase">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463761592760_196937_4540"
                              xmi:uuid="7549d451-c84d-4af0-96ae-56267ff5c6b2"
-                             body="A &lt;&lt;Phase&gt;&gt; (a.k.a. &#34;State&#34;) is a classification of an entity based on change of that entity over time. A &lt;&lt;Phase&gt;&gt; &lt;&lt;Classifies&gt;&gt; the types that may have that phase. e.g., &#34;Teenager&#34;.&#xA;A phase is a &#34;non rigid sortal&#34;, a type that may change over the lifetime of an entity.">
+                             body="A &lt;&lt;Phase&gt;&gt; (a.k.a. &#34;State&#34;) is a classification of an entity based on change of that entity over time. A &lt;&lt;Phase&gt;&gt; &lt;&lt;Classifies&gt;&gt; the types that may have that phase (e.g., &#34;Teenager&#34;).&#xA;A phase is a &#34;non rigid sortal&#34;, a type that may change over the lifetime of an entity.">
                   <annotatedElement xmi:idref="_18_0_2_3ba019e_1421783049347_18052_5256"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_0_2_3ba019e_1421783074534_366928_5282"
@@ -670,7 +639,7 @@
                              name="Value Type">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446054126634_529893_6359"
                              xmi:uuid="6d48743f-3302-4cda-8eda-a3e002fa8c0e"
-                             body="A &lt;&lt;Value Type&gt;&gt; is a type representing an atomic unit of information without independent identity. Values include numbers, strings and enumerations. In some cases values may have internal structure.&#xA;&#xA;Quantity kinds and units are also values. Values may stereotype any classifier. UML Data types, including primitives and enumerations, are implicitly values.">
+                             body="A &lt;&lt;Value Type&gt;&gt; is a type representing an atomic unit of information without independent identity. Values include numbers, strings and enumerations. In some cases values may have internal structure.&#xA;&#xA;Quantity kinds and units are also values. Values may stereotype any classifier. UML data types, including primitives and enumerations, are implicitly values.">
                   <annotatedElement xmi:idref="_18_1_3ba019e_1430917928596_64302_5962"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1430917952517_487535_5989"
@@ -702,7 +671,7 @@
                              name="Intersection">
                <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_5_1_7b3022e_1402609583192_583605_6637"
                              xmi:uuid="f4b2a242-aa37-4e55-90e0-259e9c0f1627"
-                             body="An &lt;&lt;Intersection&gt;&gt; is a class that has an extent (set of instances) which is the complete intersection of the extents of all supertypes. Intersection is a stronger statement than a subtype as a subtype may not be a complete intersection. If an instance has all supertypes the  intersection type will be inferred.&#xA;For intersection, SIMF considers generalization and realization equivalent. This is due to ownership and legacy considerations in UML. Generalization is the preferred representation.&#xA;Note: Realizations are included to support unions across external models. UML generalization can not be used across external models due to the ownership of generalization.&#xA;">
+                             body="&#xA;An &lt;&lt;Intersection&gt;&gt; is a class that has an extent (set of instances) equivalent to the intersection of the extents of all supertypes. Intersection is a stronger statement than a subtype, as a subtype may be a subset of the intersection. An instance of all the supertypes implies an instance is also an instance of the intersection type.&#xA;For intersection, The SIMF profile considers UML generalization and UML realization equivalent. This is due to ownership and legacy considerations in UML. Generalization is the preferred representation.&#xA;Note: Realizations are included to support unions across external models. UML generalization can not be used across external models due to the ownership of generalization.&#xA;">
                   <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1402609485539_18277_6621"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1402609510332_812433_6633"
@@ -735,7 +704,7 @@
                              name="Base Unit Type">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1430922417329_328350_8875"
                              xmi:uuid="a95cbc12-5759-47be-8f7c-707cceb351b3"
-                             body="One unit type of a quantity kind may be marked as the &lt;&lt;Base Unit&gt;&gt; within a model. The base unit provides the basis for conversions between units of the same quantity kind. The base unit always has a ratio of one and an offset of zero.">
+                             body="&lt;&lt;Base Unit Type&gt;&gt; is a kind of &lt;&lt;Unit Type&gt;&gt; that marks one unit type of a quantity kind as the base unit type within a model. The base unit type provides the basis for conversions between units of the same quantity kind. The base unit always has a ratio of one and an offset of zero.">
                   <annotatedElement xmi:idref="_18_1_3ba019e_1430922154660_808767_8827"/>
                </ownedComment>
                <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1430922188486_948221_8860"
@@ -786,7 +755,7 @@
                              name="Unit Type">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1430922374287_439761_8874"
                              xmi:uuid="24febec6-bd61-4c8c-acad-5b75d3e5a789"
-                             body="A &lt;&lt;Unit Type&gt;&gt; is a type of a quantity value referencing a specific unit. A Unit Type a required type of a property representing a quantity. &#xA;&#xA;[JCGM 200:2008] A Unit is a real scalar quantity, defined and adopted by convention, with which any other quantity of the same quantity kind can be compared to express the ratio of the two quantities as a number. e.g. Degrees Centigrade, Miles.&#xA;&#xA;Each unit type represents refinement of a quantity kind using generalization and is thus substitutable for that quantity kind. Typically quantity kinds are used in conceptual models and unit types in physical or logical models.&#xA;&#xA;Unit types may only subtype quantity kinds and numbers.&#xA;&#xA;Note that unit types are not units, but the type of quantity values expressed in a common unit as defined in [JCGM 200:2008].&#xA;&#xA;Each instance of a unit type shares a common unit (as defined by standards) with a reference defined by &#34;external reference&#34; and &#34;external term&#34;.&#xA;">
+                             body="A &lt;&lt;Unit Type&gt;&gt; is a &lt;&lt;Value Type&gt;&gt; and an &lt;&lt;External Reference&gt;&gt; that represents a type of a quantity value referencing a specific unit. A Unit Type [?TBD] a required type of a property representing a quantity. &#xA;&#xA;[JCGM 200:2008] A Unit is a real scalar quantity, defined and adopted by convention, with which any other quantity of the same quantity kind can be compared to express the ratio of the two quantities as a number. e.g. Degrees Centigrade, Miles.&#xA;&#xA;Each unit type represents refinement of a quantity kind using generalization and is thus substitutable for that quantity kind. Typically quantity kinds are used in conceptual models and unit types in physical or logical models.&#xA;&#xA;Unit types may only subtype quantity kinds and numbers.&#xA;&#xA;Note that unit types are not units, but the type of quantity values expressed in a common unit as defined in [JCGM 200:2008].&#xA;&#xA;Each instance of a unit type shares a common unit (as defined by standards) with a reference defined by &#34;external reference&#34; and &#34;external term&#34;.&#xA;">
                   <annotatedElement xmi:idref="_18_0_2_3ba019e_1422225413006_529440_5597"/>
                </ownedComment>
                <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1446211531807_478562_6213"
@@ -809,7 +778,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Real"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446595216764_562635_4424"
                                 xmi:uuid="289e2505-9857-428f-9277-fb5802c823f7"
-                                body="&lt;ration&gt; is the multiplier by which to multiply the unit to convert to the base unit as defined within the same model.">
+                                body="The multiplier by which to multiply the unit to convert to the base unit as defined within the same model.">
                      <annotatedElement xmi:idref="_18_1_3ba019e_1430935210163_329660_9245"/>
                   </ownedComment>
                </ownedAttribute>
@@ -820,7 +789,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Real"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446595251553_661147_4426"
                                 xmi:uuid="59abf932-1a4a-4bb7-86c2-f96b25e041f8"
-                                body="&lt;offset&gt; is the difference between zero in the unit and zero in the base unit after the ratio is applied to the base unit as defined within the same model.">
+                                body="The difference between zero in the unit and zero in the base unit after the ratio is applied to the base unit as defined within the same model.">
                      <annotatedElement xmi:idref="_18_1_3ba019e_1431033405505_222113_12514"/>
                   </ownedComment>
                </ownedAttribute>
@@ -831,7 +800,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446595313571_231705_4428"
                                 xmi:uuid="296d36af-5f9e-41bc-88f6-b00f627fe5e9"
-                                body="&lt;symbol&gt; is the accepted symbol for a unit. e.g. &#34;g&#34; for &#34;Gram&#34;.">
+                                body="The accepted symbol for a unit. e.g. &#34;g&#34; for &#34;Gram&#34;.">
                      <annotatedElement xmi:idref="_18_1_3ba019e_1431033526801_652230_12516"/>
                   </ownedComment>
                </ownedAttribute>
@@ -857,7 +826,7 @@
                              name="Quantity Kind">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1430922842810_784227_8903"
                              xmi:uuid="68875024-a4e0-467d-a903-8767f99d013e"
-                             body="&lt;&lt;Quantity Kind&gt;&gt; is an aspect common to mutually comparable quantities represented by one or more units. Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature.[ JCGM 200:2008]. &#xA;&#xA;Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature. SIMF takes a wider view of quantity kinds to include conversions that may be contextual and time dependent - such as currencies.">
+                             body="&lt;&lt;Quantity Kind&gt;&gt; is an aspect common to mutually comparable quantities represented by one or more units. Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature.[ JCGM 200:2008]. &#xA;&#xA;Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature. SIMF takes a wider view of quantity kinds to include conversions that may be contextual and time dependent, such as currencies.">
                   <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1398808809623_851045_5550"/>
                </ownedComment>
                <generalization xmi:type="uml:Generalization" xmi:id="_18_1_3ba019e_1446211498078_84019_6210"
@@ -891,10 +860,10 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1396472339386_216144_3544"
                              xmi:uuid="b08cbf89-919e-4f2a-8084-62fc05002443"
-                             name="Equivalent With">
+                             name="Equivalent To">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_3ba019e_1423855802525_123939_8562"
                              xmi:uuid="f7bcba77-ac81-4911-80bf-1796e0692077"
-                             body="&lt;&lt;Equivalent With&gt;&gt; is an assertion that two model elements represent the same thing or set of things. Unlike ontological languages it is not assumed that the two elements are consistent as statements from different context may or may not agree.">
+                             body="An &lt;&lt;Equivalent To&gt;&gt; dependency is an assertion that two model elements represent the same thing or the same set of things. Unlike ontological languages it is not assumed that the two elements are consistent, as statements from different contexts may or may not agree.">
                   <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1396472339386_216144_3544"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_7b3022e_1396472339388_335343_3546"
@@ -928,7 +897,7 @@
                              name="External Reference">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446209770802_55609_6150"
                              xmi:uuid="34653a5d-855e-4259-8f09-320378f85039"
-                             body="&lt;&lt;ExternalReference&gt;&gt; provides traceability to the source of a &#34;fact&#34; in a model based on some external information resource. This references helps to facilitate provenance. Reference is a statement about the model data and has no semantic implication. Source reference may impact the trust in a statement but the evaluation of trust is outside of this specification. &#xA;External reference is combined with the owned comment(s) to create SIMF descriptions as defined in the SIMF meta model..">
+                             body="&lt;&lt;External Reference&gt;&gt; provides traceability to the source of a &#34;fact&#34; in a model based on some external information resource. This references helps to facilitate provenance. Reference is a statement about the model data and has no semantic implication. Source reference may impact the trust in a statement but the evaluation of trust is outside of this specification. &#xA;External reference is combined with the owned comment(s) to create SIMF descriptions as defined in the SIMF meta model..">
                   <annotatedElement xmi:idref="_18_1_3ba019e_1446209589384_166177_6139"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446209589387_117054_6141"
@@ -945,7 +914,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446209836573_628249_6177"
                                 xmi:uuid="f3ede90a-23d0-4d5d-bfa0-00f644cc9d87"
-                                body="Specifies the location URL of the resource. The format must comply with as defined in [RFC3987].">
+                                body="Specifies the location URL of the external resource. The format must comply with [RFC3987].">
                      <annotatedElement xmi:idref="_18_1_3ba019e_1446209690300_82908_6146"/>
                   </ownedComment>
                </ownedAttribute>
@@ -956,7 +925,7 @@
                   <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
                   <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446209848894_69539_6178"
                                 xmi:uuid="90312b83-785f-42b7-be28-97817957e8ca"
-                                body="Specifies the external term or location of the information in the source. The form of expression of the term or term path is dependent on the referenced technology.">
+                                body="The external term or location of the information in the source. The form of expression of the term or term path is dependent on the referenced technology.">
                      <annotatedElement xmi:idref="_18_1_3ba019e_1446209722516_962141_6147"/>
                   </ownedComment>
                </ownedAttribute>
@@ -966,7 +935,7 @@
                              name="Has Value">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446055741105_535697_6364"
                              xmi:uuid="738cbde4-2f61-4176-a3bb-56cadd1ea807"
-                             body="A &lt;&lt;Has Value&gt;&gt; dependency asserts a &lt;target&gt; instance specification defines acceptable values for a &lt;source&gt; type.&#xA;&#xA;Each slot of the instance specification is a value for the corresponding property. Each link to the value specification is a value for a corresponding relationship.&#xA;&#xA;Where there is more than one &lt;&lt;Has Value&gt;&gt; for the same type, if any one restriction for the same value is satisfied, the restriction is satisfied.&#xA;&#xA;&lt;&lt;Has Value&gt;&gt; Corresponds to &#34;has value&#34; in OWL. &#xA;">
+                             body="A &lt;&lt;Has Value&gt;&gt; dependency asserts that the client of the dependency is a type and the supplier of the dependency is an instance specification that defines acceptable values for one or more properties of that type. Each slot of the instance specification is a value for a corresponding property in the type. &#xA;&#xA;&lt;&lt;Has Value&gt;&gt; corresponds to one or more OWL property restrictions containing a &#34;hasValue&#34; constraint.&#xA;&#xA;">
                   <annotatedElement xmi:idref="_17_0_5_1_7b3022e_1398542543959_173370_5399"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1446213190781_665330_6407"
@@ -1046,7 +1015,7 @@
                              name="Sufficient">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_2_62501eb_1463760727519_496889_4525"
                              xmi:uuid="eb79dc25-f3c4-4ce4-bdca-aaddcf024a2f"
-                             body="&lt;&lt;Sufficient&gt;&gt; defines one of the set of sufficient conditions that will infer type of an instance based on existence of a property value for that instance.">
+                             body="Specifying &lt;&lt;Sufficient&gt;&gt; for one or more of a type's properties means that an instance having an acceptable cardinality of values for all of those properties implies that the instance is an instance of that type.">
                   <annotatedElement xmi:idref="_18_2_62501eb_1463077095321_210189_4567"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_2_62501eb_1463077114778_761056_4595"
@@ -1077,7 +1046,7 @@
          <packagedElement xmi:type="uml:Profile" xmi:id="_17_0_5_1_7b3022e_1396472296683_836894_3505"
                           xmi:uuid="d7682cf3-dc60-4565-b5bc-bb6f736c01ab"
                           name="SIMF Rules Profile"
-                          URI="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile.xmi">
+                          URI="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile">
             <metamodelReference xmi:idref="_17_0_5_1_7b3022e_1396472296684_908081_3506"/>
             <ownedComment xmi:type="uml:Comment" xmi:id="_18_0_2_3ba019e_1424205699372_605128_9336"
                           xmi:uuid="164bc4a2-8c3b-4141-b203-a785925e3c3c"
@@ -1130,7 +1099,7 @@
                              name="Facade">
                <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1429811382472_13363_6705"
                              xmi:uuid="199654ce-f588-45b3-bb4e-4f604cd22d7d"
-                             body="&lt;&lt;Facade&gt;&gt; defines a classifier as being a view of (facade of) one or more other classifiers. Facades usually define additional properties that match some external view of a conceptual model element. &#xA;&#xA;A facade will &#34;represent&#34; the classifier for which it is a facade. A Facade will use one of two methods to relate the facade properties to the conceptual Model:&#xA;•&#x9;A  &lt;&lt;Rule&gt;&gt; using the facade.&#xA;•&#x9;Applying the &lt;&lt;computation&gt;&gt; stereotype and Subclassing “Representation Computation”&#xA;">
+                             body="&lt;&lt;Facade&gt;&gt; defines a classifier as being a view of (facade of) one or more other classifiers. Facades usually define additional properties that match some external view of a conceptual model element. &#xA;A facade will represent the classifier for which it is a facade. A Facade will use one of two methods to relate the facade properties to the conceptual Model:&#xA;* &lt;&lt;Rule&gt;&gt; using the facade.&#xA;* Applying the &lt;&lt;computation&gt;&gt; stereotype and Subclassing &#34;Representation Computation&#34;&#xA;">
                   <annotatedElement xmi:idref="_18_1_3ba019e_1429802003479_393526_5924"/>
                </ownedComment>
                <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_3ba019e_1429804401206_638459_5982"
@@ -1745,7 +1714,7 @@
          <packagedElement xmi:type="uml:Package" xmi:id="_18_1_3ba019e_1431543059748_655570_16747"
                           xmi:uuid="9ab81c39-f491-482b-9b6f-85fdcfe9e06d"
                           name="SIMF Computation Rules"
-                          URI="http://www.omg.org/spec/SIMF/20160501/SIMF-computation-rules.xmi">
+                          URI="http://www.omg.org/spec/SIMF/20160501/SIMF-computation-rules">
             <ownedComment xmi:type="uml:Comment" xmi:id="_18_1_3ba019e_1446076459220_753742_6375"
                           xmi:uuid="2b658f82-5bdb-407e-92dc-b3c347e98b79"
                           body="Computation rules define mappings that are implemented via external methods. As such the implementation is defined by implementations, not the specification.">
@@ -1915,10 +1884,18 @@
                </ownedAttribute>
             </packagedElement>
          </packagedElement>
-      </Profile>
-    <mofext:Tag xmi:id="_-Tag" xmi:uuid="_18_0_1_8bf027c_1411745340055_911952_5224" xmi:type="mofext:Tag">
-        <name>org.omg.xmi.nsPrefix</name>
-        <value>SIMFProfile</value>
-        <element xmi:idref="SIMFProfile"/>
-    </mofext:Tag>
+      </uml:Profile>
+   <mofext:Tag xmi:type="mofext:Tag" xmi:id="_1" name="org.omg.xmi.nsPrefix" value="SIMF-profile" element="_18_2_62501eb_1463773094644_650562_4768"/>
+   <mofext:Tag xmi:type="mofext:Tag" xmi:id="_2" name="org.omg.xmi.nsPrefix" value="SIMF-conceptual-profile" element="_18_0_1_8bf027c_1408661861698_946768_5587"/>
+   <mofext:Tag xmi:type="mofext:Tag" xmi:id="_3" name="org.omg.xmi.nsPrefix" value="SIMF-rules-profile" element="_17_0_5_1_7b3022e_1396472296683_836894_3505"/>
+   <SIMF-rules-profile:Mapping_Rule xmi:id="_18_1_3ba019e_1431543208293_191803_16795"
+                                    base_StructuredClassifier="_18_1_3ba019e_1431543088979_753673_16748"/>
+   <SIMF-rules-profile:Rule xmi:id="_18_1_3ba019e_1443825656668_889411_26959"
+                            base_StructuredClassifier="_18_1_3ba019e_1443825538731_383581_26914"/>
+   <SIMF-rules-profile:Mapping_Rule xmi:id="_18_1_3ba019e_1446994976702_297276_7302"
+                                    base_StructuredClassifier="_18_1_3ba019e_1446994950750_930471_7277"/>
+   <SIMF-rules-profile:Rule xmi:id="_18_1_3ba019e_1429912294682_435234_6055"
+                            base_StructuredClassifier="_18_1_3ba019e_1429802111601_842589_5968"/>
+   <SIMF-rules-profile:Mapping_Rule xmi:id="_18_2_62501eb_1463265517731_486652_4565"
+                                    base_StructuredClassifier="_18_2_62501eb_1463265497056_964323_4539"/>
 </xmi:XMI>
