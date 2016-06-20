@@ -1,0 +1,25 @@
+Prefix(:=<http://example.com/SIMF/Company#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://example.com/SIMF/Company>
+
+Declaration(Class(:Employee))
+Declaration(Class(:Employer))
+Declaration(ObjectProperty(:employedBy))
+Declaration(ObjectProperty(:employs))
+AnnotationAssertion(rdfs:label :Employee "Employee"@en)
+SubClassOf(:Employee ObjectIntersectionOf(ObjectMaxCardinality(1 :employedBy :Employer) ObjectMinCardinality(1 :employedBy :Employer)))
+AnnotationAssertion(rdfs:label :Employer "Employer"@en)
+AnnotationAssertion(rdfs:label :employedBy "employed by"@en)
+InverseObjectProperties(:employedBy :employs)
+ObjectPropertyDomain(:employedBy :Employee)
+ObjectPropertyRange(:employedBy :Employer)
+AnnotationAssertion(rdfs:label :employs "employs"@en)
+ObjectPropertyDomain(:employs :Employer)
+ObjectPropertyRange(:employs :Employee)
+)
