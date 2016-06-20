@@ -1,0 +1,37 @@
+Prefix(:=<http://example.com/ontology/Library#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://example.com/ontology/Library>
+	Declaration(Class(:Book))
+	Declaration(Class(:LibraryBranch))
+	Declaration(Class(:Periodical))
+	Declaration(ObjectProperty(:lends))
+	Declaration(ObjectProperty(:lentBy))
+
+	SubClassOf(:LibraryBranch
+		ObjectMinCardinality(1 :lends ObjectUnionOf(:Periodical :Book)))
+
+	Declaration(AnnotationProperty(:description))
+	Declaration(AnnotationProperty(:branchEntryDate))
+	AnnotationPropertyDomain(:branchEntryDate :LibraryBranch)
+	AnnotationPropertyRange(:branchEntryDate xsd:date)
+
+	InverseObjectProperties(:lends :lentBy)
+	ObjectPropertyDomain(:lends :LibraryBranch)
+	ObjectPropertyRange(:lends ObjectUnionOf(:Periodical :Book))
+	ObjectPropertyDomain(:lentBy ObjectUnionOf(:Periodical :Book))
+	ObjectPropertyRange(:lentBy :LibraryBranch)
+
+	AnnotationAssertion(rdfs:label :Periodical "Periodical"@en)
+	AnnotationAssertion(rdfs:label :lends "lends"@en)
+	AnnotationAssertion(rdfs:label :lentBy "lent by"@en)
+	AnnotationAssertion(rdfs:label :Book "Book"@en)
+	AnnotationAssertion(rdfs:label :LibraryBranch "Library Branch"@en)
+	AnnotationAssertion(:description :LibraryBranch
+		"A building where Books or Periodicals may be read or borrowed."@en)
+)
