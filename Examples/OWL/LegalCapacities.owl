@@ -1,0 +1,51 @@
+Prefix(:=<http://example.com/SIMF/LegalCapacities#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://example.com/SIMF/LegalCapacities>
+	Import(<http://example.com/SIMF/Agents#>)
+	Import(<http://example.com/SIMF/Relations#>)
+	Import(<http://example.com/SIMF/LegalCore#>)
+	Import(<http://example.com/SIMF/Contracts#>)
+
+	Declaration(Class(<http://example.com/SIMF/Agents#AutonomousAgent>))
+	Declaration(Class(<http://example.com/SIMF/Contracts#Contract>))
+	Declaration(Class(:LegalCapacity))
+	Declaration(Class(:LegalConstruct))
+	Declaration(Class(<http://example.com/SIMF/LegalCore#Constitution>))
+	Declaration(Class(<http://example.com/SIMF/LegalCore#Law>))
+
+	SubClassOf(:LegalCapacity
+		ObjectMinCardinality(1 :isCapacityOf
+			<http://example.com/SIMF/Agents#AutonomousAgent>
+		)
+	)
+	SubClassOf(:LegalConstruct
+		ObjectSomeValuesFrom(
+			<http://example.com/SIMF/Relations#isConferredBy>
+			ObjectUnionOf(
+				<http://example.com/SIMF/Contracts#Contract>
+				<http://example.com/SIMF/LegalCore#Constitution>
+				<http://example.com/SIMF/LegalCore#Law>
+			)
+		)
+	)
+
+	Declaration(ObjectProperty(<http://example.com/SIMF/Agents#hasCapacity>))
+	Declaration(ObjectProperty(<http://example.com/SIMF/Relations#isConferredBy>))
+	Declaration(ObjectProperty(<http://example.com/SIMF/Relations#isConferredOn>))
+	Declaration(ObjectProperty(:isCapacityOf))
+
+	InverseObjectProperties(<http://example.com/SIMF/Agents#hasCapacity> :isCapacityOf)
+	SubObjectPropertyOf(:isCapacityOf <http://example.com/SIMF/Relations#isConferredOn>)
+	ObjectPropertyDomain(:isCapacityOf :LegalCapacity)
+	ObjectPropertyRange(:isCapacityOf <http://example.com/SIMF/Agents#AutonomousAgent>)
+
+	AnnotationAssertion(rdfs:label :LegalCapacity "Legal Capacity"@en)
+	AnnotationAssertion(rdfs:label :LegalConstruct "Legal Construct"@en)
+	AnnotationAssertion(rdfs:label :isCapacityOf "is capacity of"@en)
+)

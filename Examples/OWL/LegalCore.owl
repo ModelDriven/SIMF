@@ -1,0 +1,17 @@
+Prefix(:=<http://example.com/SIMF/LegalCore#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://example.com/SIMF/LegalCore>
+Import(<http://example.com/SIMF/LegalCapacities#>)
+Import(<http://example.com/ontology/Unnamed1#>)
+
+Declaration(Class(:Constitution))
+Declaration(Class(:Law))
+AnnotationAssertion(rdfs:label :Constitution "Constitution"@en)
+AnnotationAssertion(rdfs:label :Law "Law"@en)
+)
