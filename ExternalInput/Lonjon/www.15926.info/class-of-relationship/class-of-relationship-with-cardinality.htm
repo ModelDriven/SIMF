@@ -1,0 +1,69 @@
+<html>
+<head>
+<title> Classes of relationship with cardinality</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Class of&nbsp;relationship with Cardinality</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">19&nbsp;Dec. 2010</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In ISO 15926-2 you will find a number of subtypes of </font><a href="../data-model/index.htm#ClassOfRelationship"><b><font face="Palatino Linotype">ClassOfRelationship</font></b></a><font face="Palatino Linotype">. Where ClassOfRelationship has some interesting attributes and subtypes, these are inherited by its subtypes.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;"><a name="Cardinalities"><span style="margin-top:0; margin-bottom:10;">Cardinalities</span></a></span></font><span style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"></font></span></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">As an example we work out the model of </span></font><span style="margin-top:0; margin-bottom:10;"><a href="../data-model/index.htm#CompositionOfIndividual"><b><font face="Palatino Linotype">CompositionOfIndifidual</font></b></a><font face="Palatino Linotype"> and </font></span><a href="../data-model/index.htm#ClassOfCompositionOfIndividual"><b><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">ClassOfCompositionOfIndividual</span></font></b></a><b><font face="Palatino Linotype">. </font></b><font face="Palatino Linotype">Assume an instance of ClassOfInanimatePhysicalObject called TWO-STAGE CENTRIFUGAL PUMP, of which members shall have two impellers:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="two-stage-centrifugal-pump.jpg" width="500" height="627" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Two-stage centrifugal pump with two impellers</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">Cardinalities in ISO 15926-2 are somewhat longwindedly expressed, due to the normalized character of this model. See the derived template&nbsp;below where we defined that a two-stage centrifugal pump&nbsp;must be composed of two individual impellers.</span></font><font face="Palatino Linotype"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="two-stage-centrifugal-pump-template.png" width="439" height="389" border="0" usemap="#ImageMap1"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="font-size:10pt;"><b>#1234 plays the 'whole' role in two member relationships.</b></span></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">The instance of ClassOfRelationship has two attributes, the classOfPart and the classOfWhole. And it has two other (optional)&nbsp;attributes, the end1Cardinality and end2Cardinality. The end1Cardinality &nbsp;tells something about the classOfPart attribute, because that is the first in the alphabetical order.</span></font><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">The attribute end1Cardinality points at an instance of Cardinality called CAR1:1 &nbsp;that has&nbsp;a minimumCardinality attribute and a maximumCardinalty attribute with the value '1' . That means that any member (e.g. #2345)&nbsp;of&nbsp;the 'domain' (rdf:object) 'BOLT'&nbsp;&nbsp;can play that 'part' role of one and only one&nbsp;member of that ClassOfRelationship.</span></font><font face="Palatino Linotype"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype"><img src="end1Cardinality.jpg" width="182" height="41" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <table border="1" width="914" cellspacing="0" bordercolordark="white" bordercolorlight="black" align="center">
+                <tr>
+                    <td width="908" bgcolor="#FFFFCC">
+                        <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype"><span style="font-size:11pt;">Part 2 states for the&nbsp;Cardinality attributes:</span></font></p>
+                        <p style="margin-top:0; margin-bottom:0;" align="justify"><b><font face="Palatino Linotype"><span style="font-size:11pt;">maximum_cardinality</span></font></b><font face="Palatino Linotype"><span style="font-size:11pt;"> : The maximum number of times a member of the domain can participate in the role specified. If no maximum_cardinality is specified, then there is no maximum constraint.</span></font></p>
+                        <p style="margin-top:0; margin-bottom:5;" align="justify"><font face="Palatino Linotype"><span style="font-size:11pt;">NOTE 1 Common values for maximum_cardinality are 1 and many. Many is the result of specifying no value.</span></font></p>
+                        <p style="margin-top:0; margin-bottom:0;" align="justify"><b><font face="Palatino Linotype"><span style="font-size:11pt;">minimum_cardinality</span></font></b><font face="Palatino Linotype"><span style="font-size:11pt;"> : The minimum_cardinality is the minimum number of times a member of the domain class may participate in the role specified. </span></font></p>
+                        <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype"><span style="font-size:11pt;">If no minimum_cardinality is specified the value shall be taken as zero.</span></font></p>
+                        <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><span style="font-size:11pt;">NOTE 2 Common values for the minimum_cardinality are zero and one.</span></font></p>
+                    </td>
+                </tr>
+            </table>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">The attribute end2Cardinality points at an instance of Cardinality called CAR2:2 &nbsp;that has&nbsp;a minimumCardinality attribute and a maximumCardinalty attribute with the value '2' . That means that any member (e.g. #1234) of&nbsp;the 'domain' (rdf:object) '2BOLTS'&nbsp;&nbsp;can play that 'whole' role of two and only two&nbsp;members of that ClassOfRelationship (if more or less, then it is no longer a '2BOLTS' class).</span></font><font face="Palatino Linotype"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype"><img src="end2Cardinality.jpg" width="197" height="170" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">The definition of cardinality, as shown above, may seem somewhat counterintuitive, because it is a definition for the ClassOfRelationship, and not (as usual) on the objects being related. So it tells how many instances of that ClassOfRelationship may exist with that (rdf:)object. So, at first glance you might be reading that one impeller can be part of two centrifugal pumps, but here it is defined as the reverse.</span></font><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Please be aware that the #1234 may or may not be a&nbsp;temporal part, where #2345 and #3456 always are temporal parts. This has been worked out in the analysis diagram below:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="cardinality.png" width="739" height="662" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">A temporal part of a centrifugal pump has a temporal part of an impeller as a part</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Note that the whole-life pump and its&nbsp;two whole-life&nbsp;impellers cannot have properties and other information attributed to them (such as composition), other than their ID and its <b>essential</b> class (here: 'TwoStageCentrifugalPump' and 'PumpImpeller').&nbsp;The essence of </font><a href="../data-model/index.htm#WholeLifeIndividual"><font face="Palatino Linotype">WholeLifeIndividual</font></a><font face="Palatino Linotype"> is that it can be attributed only with information that will remain valid <b>throughout its entire life</b>. Only short-lived individuals, of which it is dead-certain that they will NEVER change, even not in location, might be attributed with all their information. I wouldn't bet on that to happen in a plant.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">So any piece of information (read: template instance)&nbsp;should be attributed to a temporal part with a different ID and the same <span style="margin-top:20; margin-bottom:20;">date-time as that of the whole-life parent.</span></font><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:20; margin-bottom:20;">In case you change a tyre of your car, that will result in a temporal part of your car, but in remains your car. Even if you change each and every part of your car, it will remain your car, unless you formally declare it &quot;dead&quot;.</span></font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<map name="ImageMap1">
+<area shape="rect" coords="49, 79, 103, 106" href="../data-model/mnemonics.htm#COIPO">
+<area shape="rect" coords="39, 330, 87, 358" href="../data-model/mnemonics.htm#MPO">
+<area shape="rect" coords="152, 34, 218, 60" href="../data-model/mnemonics.htm#COCPOI">
+<area shape="rect" coords="115, 141, 161, 161" href="../data-model/mnemonics.htm#CARD">
+<area shape="rect" coords="273, 138, 322, 159" href="../data-model/mnemonics.htm#CARD">
+<area shape="rect" coords="387, 83, 438, 105" href="../data-model/mnemonics.htm#COIPO">
+<area shape="rect" coords="389, 289, 431, 315" href="../data-model/mnemonics.htm#MPO">
+<area shape="rect" coords="385, 365, 431, 386" href="../data-model/mnemonics.htm#MPO">
+<area shape="rect" coords="224, 284, 273, 312" href="../data-model/mnemonics.htm#CPOI">
+<area shape="rect" coords="215, 363, 270, 388" href="../data-model/mnemonics.htm#CPOI">
+</map></body>
+</html> 

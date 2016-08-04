@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> Context</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Context</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">27 Nov. 2010, rev. 14 March 2011, rev. 1 April 2011, rev. 5 Febr. 2012, rev. 12 May 2012, rev. 3 June 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This topic deals with the context in which something happens to a possible&nbsp;individual.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Model</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">When something happens to an individual that is happening to a temporal part of that individual. The problem is that many things may happen almost simultaneously to an individual. For example things happen to you in the context of your private life, of your employment, of the tennis club, etc.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Classifying an instance of TemporalWholePart with a ClassOfTemporalWholePart places that temporal part in a certain context, as defined by the classifying ClassOfTemporalWholePart.</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="ClassOfTemporalWholePartDefinition.png" width="461" height="320" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ClassOfTemporalWholePart</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">and placed in an overall context, such as a change order:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="ClassOfTemporalWholePartDefinitionWithContext.png" width="501" height="435" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">At individual level we must refer to the ClassOfTemporalWholePart. Referring to the EnumeratedSetOfClass is not possible, because TemporalWholePart is not a (Part2) Class.</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="BeginningOfTemporalPartInAContext.png" width="697" height="298" border="0"></font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Implementation Note</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">We have a plethora of templates for temporal part of a possible individual. These templates do not include this context option. There are two possibilities for using context:</font></p>
+            <ol>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">Double the number of template classes</font></div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:10;">
+                    <div align="justify"><font face="Palatino Linotype">Adding this aspect to existing instances of templates for temporal part of a possible individual.</font></div>
+                </li>
+            </ol>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Option 2 requires some clarification. It works similar to the use of the template </font><a href="EndingOfIndividual.png"><font face="Palatino Linotype">EndingOfIndividual</font></a><font face="Palatino Linotype">, in that we have to search for the ID of the temporal part we want to end, on the basis of the information we have, so the ID of the temporal whole, the date-time and the template class ID.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In this case we can do the same, but instead of ending the temporal part, we create an instance of a template called PlacingATemporalPartInAContext:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="PlacingATemporalPartInAContext.png" width="346" height="347" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">thereby using the IDs of items #1 and #2 that were playing a role in the original template-without-context.</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

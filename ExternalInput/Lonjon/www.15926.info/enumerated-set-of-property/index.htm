@@ -1,0 +1,44 @@
+<html>
+<head>
+<title> Enumerated set of property</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">How to populate an EnumeratedPropertySet?</font></h1>
+            <p style="margin-top:0; margin-bottom:10;"><b><a href="../index.htm"><font face="Microsoft Sans Serif"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a></b><font face="Microsoft Sans Serif">12 Feb. 2011, rev. 23 Nov. 2011</font></p>
+            <hr>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">The way to populate an instance of EnumeratedPropertySet is shown in the diagram below</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">&nbsp;</p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">.</font><img src="enumerated-set-property-template.png" width="438" height="441" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font size="2" face="Microsoft Sans Serif">Population of an EnumeratedPropertySet</font></b><font face="Microsoft Sans Serif"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Microsoft Sans Serif">The cardinalities tell us that:</font></p>
+            <ul>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Microsoft Sans Serif">R123456 must be the 'classifier' in two member relationships of the ClassOfClassification</font></div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Microsoft Sans Serif">R654321 and R654322 may only be once&nbsp;the 'classified' in those two relationships.</font></div>
+                </li>
+            </ul>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><span style="margin-top:0;"><font face="Microsoft Sans Serif">Part 2 tells us:</font></span><font face="Microsoft Sans Serif"></font></p>
+            <p align="left" style="margin-top:0; margin-bottom:10;"><font size="2" face="Microsoft Sans Serif">An <a href="../data-model/index.htm#EnumeratedPropertySet">EnumeratedPropertySet</a> is a <a href="../data-model/index.htm#ClassOfProperty">ClassOfProperty</a> and an <a href="../data-model/index.htm#EnumeratedSetOfClass">EnumeratedSetOfClass</a> whose members are an enumerated set of properties of the </font><font size="2" face="Microsoft Sans Serif" color="red"><b>same</b></font><font size="2" face="Microsoft Sans Serif"> <a href="../data-model/index.htm#SinglePropertyDimension">SinglePropertyDimension</a> or <a href="../data-model/index.htm#MultidimensionalPropertySpace">MultidimensionalPropertySpace</a>.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font size="2" face="Microsoft Sans Serif">EXAMPLE {115 Volt, 240 Volt} is an example of an EnumeratedPropertySet.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font size="2" face="Microsoft Sans Serif">EXPRESS specification:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font size="2" face="Microsoft Sans Serif">ENTITY enumerated_property_set &nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font size="2" face="Microsoft Sans Serif">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (class_of_property, enumerated_set_of_class); &nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font size="2" face="Microsoft Sans Serif">END_ENTITY; &nbsp;</font><font face="Microsoft Sans Serif"></font></p>
+            <p style="margin-top:0; margin-bottom:20;" align="justify"><font face="Microsoft Sans Serif">The sequence of the enumerated classes in the set&nbsp;is random.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Microsoft Sans Serif"><b>Set of MultidimensionalPropertySpace</b></font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Microsoft Sans Serif">An instance of&nbsp;EnumeratedPropertySet can also exist of members of an enumerated set of instances of <a href="../multidimensional-property-space/multidimensional-property-space.htm">MultidimensionalPropertySpace</a>. Example: {{Q1,Q2,Q3}{H1,H2,H3}}, defining three points on a QH-curve of a pump.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

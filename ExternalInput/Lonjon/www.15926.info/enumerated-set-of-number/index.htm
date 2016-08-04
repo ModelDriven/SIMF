@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> Enumerated set of numbers</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">How to populate an EnumeratedNumberSet?</font></h1>
+            <p style="margin-top:0; margin-bottom:10;"><b><a href="../index.htm"><font face="Microsoft Sans Serif"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a></b><font size="2" face="Microsoft Sans Serif">13 Feb. 2011, rev. 10 March 2011, rev. 24 March 2011, rev. 24 Nov. 2011</font></p>
+            <hr>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">The way to populate an instance of EnumeratedNumberSet is shown in the diagram below.</font><font face="Microsoft Sans Serif" color="red"><b> </b></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">&nbsp;</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="DefiningAnEnumeratedSetOfNumbers.png" width="438" height="441" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font size="2" face="Microsoft Sans Serif">Population of an EnumeratedNumberSet</font></b><font face="Microsoft Sans Serif"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><span style="margin-top:0;"><font face="Microsoft Sans Serif">Part 2 tells us:</font></span><font face="Microsoft Sans Serif"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b>EnumeratedNumberSet</b></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;">An <a href="../data-model/index.htm#EnumeratedNumberSet">EnumeratedNumberSet</a> is a <a href="../data-model/index.htm#ClassOfNumber">ClassOfNumber</a> and an <a href="../data-model/index.htm#EnumeratedSetOfClass">EnumeratedSetOfClass</a>.</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">EXAMPLE The set of integer numbers {3,4,5} can be represented by an instance of EnumeratedNumberSet.</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">EXPRESS specification:</p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;">ENTITY enumerated_number_set &nbsp;</p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (class_of_number, enumerated_set_of_class); &nbsp;</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">END_ENTITY; &nbsp;<font face="Microsoft Sans Serif"></font></p>
+            <p style="margin-top:0; margin-bottom:20;" align="justify"><font face="Microsoft Sans Serif">The sequence of the enumerated classes in the set&nbsp;is random. If that sequence is important to you, use the template discussed in the topic How to populate a <a href="../multidimensional-number/multidimensional-number.htm">MultidimensionalNumber</a>?</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

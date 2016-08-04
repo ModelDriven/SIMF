@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> Set of individual</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+<p>A</p>
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify">Aggregate of&nbsp;individual</h1>
+            <p align="justify"><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a>26 Jan. 2011, rev. 27 Jan. 2011, rev. 30 Jan. 2011, rev. 12 Feb. 2011, rev. 12 March 2011, rev. 5 Febr. 2012</p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In Part 2 we have <a href="../data-model/index.htm#EnumeratedSetOfClass">EnumeratedSetOfClass</a>, but we don't have something like a EnumeratedSetOfIndividual. Yet we do need that often in any context (box of 100 screws, team of 11 soccer players, etc)&nbsp;. </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">This topic shows how an aggregate&nbsp;of individuals&nbsp;can be modelled, in valid Part 2 constructs.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Discussion</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">First the diagram of this application model:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">&nbsp;</p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="aggregate-of-two-bolts.jpg" width="562" height="695" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b>aggregate of individually identified objects</b></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">&nbsp;</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">At the bottom&nbsp;you see the usual composition diagram. But in a distributed world it is possible that more 'parts' would be added. In order to avoid that, or at least signal that, we can classify the 'whole' with a class that defines the number of allowable 'parts'.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">We use for that the entity type <a href="../data-model/index.htm#ClassOfParticulateMaterial">ClassOfParticulateMaterial</a>, in this example with an instance called 'AGGREGATE OF POSSIBLE INDIVIDUAL' with the subclass '2 BOLTS'. Using the entity type <a href="../data-model/index.htm#Cardinality">Cardinality</a></font><font face="Microsoft Sans Serif"> we can define that the aggregate shall contain 2&nbsp;possible individuals, expressed&nbsp;in a computer-interpretable manner.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">NOTE - Which of the two attributes of the class of relationship is meant by end1 and which by end2 depends on the alphabetical order (in English) of the attribute names.</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">For an explanation of the cardinalities refer to <a href="../class-of-relationship/class-of-relationship-with-cardinality.htm">this topic</a>.</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;"><b>Template</b></span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">The template for each 'whole' - &nbsp;'part' combination is:</span></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="CompositionOfAnIndividual.png" width="629" height="469" border="0"></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;"><b>Bulk material</b></span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In case you deal with bulk material (e.g. 9&nbsp;bolts of a certain kind), where the bolts are not being recorded individually, you can use the following template:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="AggregateOfMonotypeIndividual.png" width="428" height="413" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b>counted aggregate of bulk material</b></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">When you have a Bill of Material or Purchase Order&nbsp;with one or more lines with counted bulk material, then use an instance of this template for each such line and use the ExpressInteger (here '9' ) and the definition or description of the class involved (here 'BOLT' ). What his template boils down to is that you express that you deal with a number of unidentified members of that class.</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

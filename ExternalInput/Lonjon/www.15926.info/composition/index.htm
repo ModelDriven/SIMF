@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> Composition</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Composition of an&nbsp;individual</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">26 March 2011, rev. 1 April 2011, rev. 5 Febr. 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Instances of PossibleIndividual may be composed of other instances of PossibleIndividual. The Part 2 data model distinguishes a few flavors of composition:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="composition-in-part2.jpg" width="609" height="650" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The subtypes </font><a href="../data-model/index.htm#Participation"><font face="Palatino Linotype">Participation</font></a><font face="Palatino Linotype">, </font><a href="../data-model/index.htm#TemporalWholePart"><font face="Palatino Linotype">TemporalWholepart</font></a><font face="Palatino Linotype">, and </font><a href="../data-model/index.htm#TemporalBounding"><font face="Palatino Linotype">TemporalBounding</font></a><font face="Palatino Linotype"> have been discussed elsewhere. We will discuss the three entity types that apply to instances of </font><a href="../data-model/index.htm#ArrangedIndividual"><font face="Palatino Linotype">ArrangedIndividual</font></a><font face="Palatino Linotype"> in the 'whole' role: </font><a href="../data-model/index.htm#ArrangementOfIndividual"><font face="Palatino Linotype">ArrangementOfIndividual</font></a><font face="Palatino Linotype">, </font><a href="../data-model/index.htm#AssemblyOfIndividual"><font face="Palatino Linotype">AssemblyOfIndividual</font></a><font face="Palatino Linotype">, and </font><a href="../data-model/index.htm#FeatureWholePart"><font face="Palatino Linotype">FeatureWholePart</font></a><font face="Palatino Linotype">.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The typical&nbsp;model for composition, in template format, is:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="ClassOfCompositionDefinition.png" width="461" height="318" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype">Template for an instance of ClassOfCompositionOfIndividual</font></b><font face="Palatino Linotype"></font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="CompositionOfAnIndividual.png" width="629" height="469" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype">Template for an instance of CompositionOfIndividual</font></b><font face="Palatino Linotype"></font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Analysis diagram</font></h2>
+            <p align="justify"><font face="Palatino Linotype">The analysis diagram for the above case is as follows.</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="composition-ad.png" width="474" height="432" border="0"></font></p>
+            <h2 align="justify"><font face="Palatino Linotype">Subtypes of CompositionOfIndividual</font></h2>
+            <p align="justify"><font face="Palatino Linotype">Now the templates for the three&nbsp;subtypes, that involve an ArrangedIndividual,&nbsp;follow below (for my convenience I leave the IDs the same). We start with the </font><a href="../data-model/index.htm#ArrangementOfIndividual"><font face="Palatino Linotype">ArrangementOfIndividual</font></a><font face="Palatino Linotype">:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="ClassOfArrangementDefinition.png" width="461" height="318" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ClassOfArrangementOfIndividual</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="ArrangementOfAnIndividual.png" width="606" height="639" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ArrangementOfIndividual</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify"><font face="Palatino Linotype">Then the template for </font><a href="../data-model/index.htm#AssemblyOfIndividual"><font face="Palatino Linotype">AssemblyOfIndividual</font></a><font face="Palatino Linotype">:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="ClassOfAssemblyDefinition.png" width="461" height="318" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ClassOfAssemblyOfIndividual</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="AssemblyOfAnIndividual.png" width="629" height="469" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of AssemblyOfIndividual</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify"><font face="Palatino Linotype">And finally the </font><a href="../data-model/index.htm#FeatureWholePart"><font face="Palatino Linotype">FeatureWholePart</font></a><font face="Palatino Linotype">:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="ClassOfFeatureWholePartDefinition.png" width="461" height="312" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ClassOfFeatureWholePart</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="FeatureOfIndividual.png" width="637" height="462" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of FeatureWholePart</span></font></b></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

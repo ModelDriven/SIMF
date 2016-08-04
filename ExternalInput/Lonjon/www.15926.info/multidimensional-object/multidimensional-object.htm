@@ -1,0 +1,83 @@
+<html>
+<head>
+<title> Multidmensional objects</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify">How to use a MultidimensionalObject</h1>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a><b>2 Feb. 2011, rev. 16 Feb. 2011, rev. 18 Feb. 2011, rev. 19 March</b></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In ISO 15926-5 you can find two&nbsp;rather esoteric entity types, the <a href="../data-model/index.htm#ClassOfMultidimensionalObject">ClassOfMultidimensionalObject</a> and the <a href="../data-model/index.htm#MultidimensionalObject">MultidimensionalObject</a></font><font face="Microsoft Sans Serif">. In this topic I'll try to give an explanation of what they are and how to use them.</font></p>
+            <p align="left" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">For <a href="../data-model/index.htm#Relationship">Relationship</a>&nbsp;Part 2 gives the note: </font>Only classes of binary relationship are supported. More complex objects can be supported using Multidimensional Object and ClassOfMultidimensionalObject.</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">For </span><a href="../data-model/index.htm#MultidimensionalObject">MultidimensionalObject</a> gives the note: </font>A MultidimensionalObject is an AbstractObject that is an ordered list of Thing.</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Until I hear the contrary I can state that you can model an n-ary relationship with a MultidimensionalObject. That doesn't mean that all multidimensional objects are n-ary relationships, but &quot;ordered lists&quot;.</span></font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Discussion</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Let's first look at the diagram:</span></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="diagram_0004.png" width="600" height="656" border="0"></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Let us first focus on the class, attribute by attribute.</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">&quot;<b>roles&quot; attribute </b></span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">The rdf:object of this attribute is a set of instances of <a href="../data-model/index.htm#RoleAndDomain">RoleAndDomain</a> that indicate what the role actually is and what subtype of Thing is the object. If the multidimensional object is the input in a function (so a <a href="../data-model/index.htm#ClassOfFunctionalMapping">ClassOfFunctional Mapping</a>), then each role is the same as its parameter name in that function.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><b>&quot;cardinalities&quot; attribute</b></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">If&nbsp;any of the Roles could exist 0, 1, or more times for an instance of MultidimensionalObject, then that shall be expressed by a list of instances of Cardinality. If one or more such cardinalities apply, all cardinalities shall be defined (see an example <a href="../multidimensional-property/multidimensional-property.htm">here</a>).</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><b>&quot;optional_element&quot;attribute</b></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">If a Role is optional, fill in TRUE, if mandatory fill in FALSE. For this attribute always a full list of these Booleans shall be given (which is a nuisance).</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;"><b>&quot;parameters&quot; attribute</b></span></font><b><font face="Microsoft Sans Serif"> and </font></b><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;"><b>&quot;parameter_position&quot; attribute</b></span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">IMHO these attributes are meaningless and should not have been here. These are parameters in some function that actually is defined for each instance of ClassOfFunctionalMapping (see diagram below).</span></font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Example</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Part 2 gives an example in its Figure 165. The diagram for that is:</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;">&nbsp;</p>
+            <p align="center" style="margin-top:0; margin-bottom:5;"><img src="multidimensional-object.jpg" width="772" height="442" border="0"></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;">&nbsp;</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Please note that the lists ( L[1:?] ) have been replaced with separate attributes. The 'optional_element' attribute is never used by us, but the attribute is not optional, which, as said, is a nuisance.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In case the function is actually used, the numerical values will have to be fetched, thereby observing that the proper instances of Scale are being taken into account. Note that this is so, because an instance of PRESSURE can be quantified against more than one scale. Such instance is, to paraphrase Matthew's expression for an instance of TEMPERATURE as being &quot;a degree of hotness&quot; that still needs quantification against one or more applicable scales, a degree of &quot;pressureness&quot;.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">The above diagram looks in template format as follows:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="multidimensional-object-template.png" width="568" height="267" border="0" usemap="#ImageMap1"></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:5;"><font face="Microsoft Sans Serif">Another example</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">The listing of one of the &quot;lowered&quot; (formerly: &quot;shorthand&quot;) templates, the</span></font><span style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"> </font></span><font face="Microsoft Sans Serif">template &quot;IndirectPropertyScaleReal&quot; is:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Courier New">Roles:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Courier New">1 hasPropertyType ClassOfIndirectProperty</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Courier New">2 hasPropertyPossessor PossibleIndividual</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Courier New">3 valPropertyValue ExpressReal</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:15;"><font face="Courier New">4 hasPropertyScale Scale</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">We see here four instances of <a href="../data-model/index.htm#RoleAndDomain">RoleAndDomain</a>: </span></font></p>
+            <ol>
+                <li><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">the instance of <a href="../data-model/index.htm#Role">Role</a> &quot;hasPropertyType&quot; and the domain &quot;ClassOfIndirectProperty&quot;</span></font></li>
+                <li><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">the instance of <a href="../data-model/index.htm#Role">Role</a> &quot;hasPropertyPossessor&quot; and the domain &quot;PossibleIndividual&quot;</span></font></li>
+                <li><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">the instance of <a href="../data-model/index.htm#Role">Role</a> &quot;hasPropertyValue&quot; and the domain &quot;ExpressReal&quot;</span></font></li>
+                <li style="margin-bottom:0;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">the instance of <a href="../data-model/index.htm#Role">Role</a> &quot;hasPropertyScale&quot; and the domain &quot;Scale&quot;</span></font></li>
+            </ol>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">This is covered by the &quot;roles&quot;attribute.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Derivatives</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">There are, as can been seen on the diagram above, five subtypes of MultidimensionalObject, that will be dealt with in separate topics (later):</font></p>
+            <ul>
+                <li><font face="Microsoft Sans Serif"><a href="../multidimensional-number/multidimensional-number.htm">MultidimensionalNumber</a></font></li>
+                <li><font face="Microsoft Sans Serif"><a href="../multidimensional-number-space/multidimensional-number-space.htm">MultidimensionalNumberSpace</a></font></li>
+                <li><font face="Microsoft Sans Serif"><a href="../multidimensional-property/multidimensional-property.htm">MultidimensionalProperty</a></font></li>
+                <li><font face="Microsoft Sans Serif"><a href="../multidimensional-property-space/multidimensional-property-space.htm">MultidimensionalPropertySpace</a></font></li>
+                <li><font face="Microsoft Sans Serif"><a href="../multidimensional-scale/multidimensional-scale.htm">MultidimensionalScale</a></font></li>
+            </ul>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<map name="ImageMap1">
+<area shape="rect" coords="99, 28, 147, 52" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="104, 76, 151, 105" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="225, 51, 280, 78" href="../data-model/mnemonics.htm#COMO">
+<area shape="rect" coords="235, 218, 274, 239" href="../data-model/mnemonics.htm#MDP">
+<area shape="rect" coords="348, 52, 397, 80" href="../data-model/mnemonics.htm#COFM">
+<area shape="rect" coords="491, 54, 535, 86" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="494, 133, 541, 158" href="../data-model/mnemonics.htm#PTY">
+<area shape="rect" coords="495, 217, 535, 239" href="../data-model/mnemonics.htm#SPD">
+<area shape="rect" coords="366, 194, 409, 217" href="../data-model/mnemonics.htm#PTY">
+<area shape="rect" coords="370, 235, 409, 257" href="../data-model/mnemonics.htm#PTY">
+<area shape="rect" coords="342, 125, 394, 156" href="../data-model/mnemonics.htm#FMAP">
+</map></body>
+</html> 

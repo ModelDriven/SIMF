@@ -1,0 +1,112 @@
+<html>
+<head>
+<title> FunctionalPhysicalObject vs MaterializedPhysicalObject</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+<h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype" color="white">FunctionalPhysicalObject vs MaterializedPhysicalObject</font><font face="Palatino Linotype"></font></h1>
+<p><font face="Palatino Linotype" color="white">latest update: 9&nbsp;June&nbsp;2012</font><font color="white">&nbsp;&nbsp;</font><a href="index-revlog.htm"><img src="REVISION-LOG.png" width="103" height="19" border="0"></a><font color="white"> &nbsp;&nbsp;</font><a href="../index.htm"><img src="home-button-icon15.gif" width="40" height="39" border="0" align="absmiddle"></a></p>
+<table align="center" cellpadding="5" cellspacing="0" width="70%">
+    <tr>
+        <td bgcolor="white">
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This is a short story about functional and materialized physical objects, and how they relate to each other.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"></font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Graph</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The following graph covers quite a story, about something that happens thousands of times on any construction site: the installation of a piece of equipment, an instrument, a pipe, etc.</font></p>
+            <p align="center"><img src="installation.png" width="1095" height="553" border="0"></p>
+            <p align="center"><b><font face="Palatino Linotype">A MaterializedPhysicalObject is installed to fulfil the requirements of a FunctionalPhysicalObject</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">The following sections of any EPC (Engineering, Procurement, Construction) contractor are involved:</font></p>
+            <ul>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">the engineers and designers cover the blue part;</font>
+                    </div>
+                                                                                                                                </li>
+                <li><font face="Palatino Linotype">the procurement people                and the suppliers cover the yellow part;</font></li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify">                <font face="Palatino Linotype">the construction crew covers the green part.</font>
+                    </div>
+                                                                </li>
+                
+            </ul>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><span style="background-color:rgb(102,255,255); margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">Detailed Engineering &amp; Plant Design</font></span><font face="Palatino Linotype"></font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><span style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">In this phase of the project the requirements, as defined by the Process Engineers, are the basis of so-called Piping &amp; Instrument Diagrams (P&amp;IDs). These schematic diagrams depict the required networks of piping and instrumentation&nbsp;of the plant to be built. The equipment and instrumentation items, shown with&nbsp;symbols, are interconnected.</font></span><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><span style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">Next the technical disciplines work on their detailed engineering, such as:</font></span><font face="Palatino Linotype"></font></p>
+            <ul>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">Electrical One-line Diagrams for power generation and distribution</font>
+                    </div>
+                                                                                                                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">Logic Diagams</font>
+                    </div>
+                                                                                                                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">Instrument Loop Diagrams</font>
+                    </div>
+                                                                                                                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">P&amp;IDs for equipment auxiliary systems (e.g. lube and seal oil systems)</font>
+                    </div>
+                                                                                                                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">the Piping Group starts building their 3D models, thereby detailing the geometry of the plant and the piping connections.</font>
+                    </div>
+                                                                                                                                </li>
+            </ul>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype">In this phase of the project we need to be able to generate and collect data about all these things, but there is nothing tangible yet. We deal here with what ISO 15926 calls &quot;FunctionalPhysicalObject&quot;s. SAP calls them Function Places. The definition in ISO 15926-2&nbsp;for them is: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><i><font face="Palatino Linotype">&quot;</font><font face="Palatino Linotype" color="black">A FunctionalPhysicalObject is a PhysicalObject that has functional, rather than
+material, continuity as its basis for identity&quot;.</font></i><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Functional physical objects (&quot;FPO&quot;)&nbsp;often get a tag number, or equipment number, or line number, but by far not all FPOs get one (e.g. an elbow in a (pipe)line normally doesn't get one, unless we need to store information that is specifically about that elbow, such as a material certificate).</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">As can be seen on above diagram, a particular&nbsp;FPO is a member of a ClassOfFunctionalObject. The latter is a very generic class, such as PUMP FUNCTION. The definition of ClassOfFunctionalObject is: </font></p>
+            <ul>
+                <p align="left" style="margin-top:0; margin-bottom:0;"><i><font face="Palatino Linotype">&quot;A ClassOfFunctionalObject is a ClassOfArrangedIndividual that indicates the function or purpose of an object.&quot;</font></i><font face="Palatino Linotype"></font></p>
+                <p align="left" style="margin-top:0; margin-bottom:0;"><i><font face="Palatino Linotype">EXAMPLE Pump, valve, and car are examples of ClassOfFunctionalObject. Particular models of pump, valve, car, etc are instances of ClassOfInanimatePhysicalObject that are specializations of these instances of ClassOfFunctionalObject.</font></i><font face="Palatino Linotype"></font></p>
+            </ul>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The role of&nbsp;Specification (&quot;data sheet')</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Let us focus now on our proverbial pump P-101. Its story is typical for most equipment and other hardware.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The Mechanical Engineers write a Pump Specification, based on a set of process data that has been derived from the process design done&nbsp;by the Process Engineers. That specification also covers all sorts of requirements by the authorities and the future plant owner (e.g. required overcapacity). A specification is&nbsp;the definition of a ClassOfInanimatePhysicalObject of which
+the particular FPO is a member.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Because that FPO is already a member of the instance of ClassOfFunctionalObject &quot;PUMP FUNCTION&quot;, the above&nbsp;ClassOfInanimate PhysicalObject shall be a subclass of &quot;PUMP FUNCTION&quot;.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">A specification is sent to, say, three suppliers with a request for quotation (see below). It details all requirements for the piece of hardware that we want to buy.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The role of the P&amp;ID</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The pump symbol by itself does not reveal much news. It is the place and function of that pump in the context of the plant network that tells what the role of that pump really is.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The fact that a&nbsp;P&amp;ID (co-)defines a ClassOfInanimatePhysicalObject is because&nbsp;you can build more than one plant from the same P&amp;ID. Think about parallel trains in a plant, or about P&amp;IDs of process licensors.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Having said that, nothing stops a software supplier to generate FPOs on the basis of the P&amp;ID. That is very useful when defining the connectivity of all FPOs. Manually that is undoable, and certainly not maintainable. </font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><span style="background-color:rgb(255,255,204);"><font face="Palatino Linotype">Procurement</font></span><font face="Palatino Linotype"></font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The yellow part of above diagram deals with the physical world. Suppliers can specify their instances of ClassOfInanimatePhysicalObject as entries in their catalogs. Next to that they have other documentation that relates to these classes.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">A task of the Procurement group, together with the related technical disciplines, is to make a selection of the offered goods (and services), by comparing them with the requirements as set forth for the FPOs. That is not always easy and certainly hard to automate.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">But once the decision has been made that, in this case, the offered pump meets those requirements, then this can be put on record by creating a ClassOfInanimatePhysicalObject that is a class-of-temporal-part of the offered ClassOfInanimate PhysicalObject AND of the requirements ClassOfInanimatePhysicalObject. This is in fact a class of function place.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This should be done not only for the successful bidder, but also forany other bidder, if so applicable.
+By doing so it will be easy to find an alternative in case of problems with the successful bidder/supplier. </font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="background-color:rgb(255,204,153);">Construction</span></font><font face="Palatino Linotype"></font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Whenever the MaterializedPhysicalObject is installed at the &quot;Function Place&quot;, that is put on record with declaring the installed item to be a temporal part of both the FunctionalPhysicalObject AND that MaterializedPhysicalObject (see Figure 51 of ISO 15926-2).</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Inheritance</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">An interesting aspect is that the installed item inherits all information (except meta-information) from its temporal &quot;wholes&quot;.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Templates</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The following two templates apply:</font></p>
+            <h4 align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">FunctionalPhysicalObjectWithTemporalPart</font></b><font face="Palatino Linotype"></font></h4>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="FunctionalPhysicalObjectWithTemporalPart.png" width="767" height="614" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><span style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Item #1 is declared as an instance of FunctionalPhysicalObject and as an instance of WholeLifeIndividual. Using the template </font><a href="http://www.infowebml.ws/TS/TS-details/TemplatesForIdentification.htm#IdentificationOfTemporalPart"><font face="Palatino Linotype">IdentificationOfTemporalPart</font></a><font face="Palatino Linotype"> it gets its tag number ('P-101' in the diagram). Using this template allows you to change the tag number without many problems (tag numbers are notmally not changed, but it does happen).</font></span><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><span style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This item #1 is the &quot;Ur&quot;-functional physical object that never changes, and only can be ended when it is no longer required in the system it belongs to.</font></span><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><span style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">A temporal part of item #1 is created in item #2, and that item is classified with the applicable instance of ClassOfArrangedIndividual (that can be a ClassOfInanimatePhysicalObject, a ClassOfOrganism (with ClassOfPerson as a subtype), ClassOfOrganization, etc.).</font></span><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Whenever that class changes, you end the validity of item #2 with an instance of template </font><a href="http://www.infowebml.ws/TS/TS-details/TemplatesForExistence.htm#EndingOfTemporalPart"><font face="Palatino Linotype">EndingOfTemporalPart</font></a><font face="Palatino Linotype"> and you create a new instance of above template, with a new item #2 that is classified with the new version of the ClassOfArrangedIndividual.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:20;"><font face="Palatino Linotype">This may sound complex, but it reflects reality. Fortunately it can be automated.</font></p>
+            <h4 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">InstallationOfMaterializedPhysicalObjectInFunctionPlace</font></h4>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="InstallationOfMaterializedPhysicalObjectInFunctionPlace.png" width="859" height="529" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The installation activity is modeled in above template. It is based on the match between the requirements class&nbsp;and the class of the&nbsp;purchased/available object.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The item #4 physical object that is in the hasInstalledIndividual role is a temporal part of item #1 in both this and&nbsp;the previous template and also a temporal part of the materialized physical object item #2 in this template. The ID can be generated automatically.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Once a materialized physical object (here a pump with a serial number) is installed to perform the function defined for the functional physical object, the &quot;Function Place&quot;, an instance of the above template is created. </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">All information about the <b>installed</b> physical object (item #4) shall be attributed to that item #4 with instances of the applicable templates, whereby item #4 fulfils the 'hasTemporalWhole' role in those templates.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Any information about the materialized physical object (item #2), that does not apply to it being installed, shall be attributed to item #2. Example: the physical object is de-installed for maintenance reasons, then any&nbsp;information about that maintenance shall be attributed to item #2. In the templates used for that this item #2 shall fulfil the 'hasTemporalWhole' role.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The installed individual may be replaced because of a change in the requirements that no longer can be met, or of course because of wear and tear. In that case item #4 is ended, using the </font><a href="http://www.infowebml.ws/TS/TS-details/TemplatesForExistence.htm#EndingOfTemporalPart"><font face="Palatino Linotype">EndingOfTemporalPart</font></a><font face="Palatino Linotype">&nbsp;template, thus ending the validity of above template.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This keeps the plant information&nbsp;in sync with the design.</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

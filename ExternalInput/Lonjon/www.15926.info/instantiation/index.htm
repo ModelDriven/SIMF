@@ -1,0 +1,115 @@
+<html>
+<head>
+<title> Instances and members</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">Instantiating an instance of PossibleIndividual</font></h1>
+            <h2 style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">(or one of its subtypes)</font></h2>
+            <p><b><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><font face="Palatino Linotype">July 2010, rev. 9 Dec. 2010, rev. 10 May 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h2><font face="Palatino Linotype">Introduction</font></h2>
+            <p><font face="Palatino Linotype">In ISO 15926-2 we find the following schema for </font><a href="../data-model/index.htm#PossibleIndividual"><font face="Palatino Linotype">PossibleIndividual</font></a><font face="Palatino Linotype">:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="possible-individual.jpg" width="466" height="452" border="0"></font></p>
+            <p align="center"><font face="Palatino Linotype"><span style="font-size:10pt;"><b>PossibleIndividual with subtypes</b></span></font></p>
+            <p align="justify"><font face="Palatino Linotype">Please note that none of the subtyping graphs are ONEOF. This is not an oversight, but done on purpose. It means that the model allows for 'complex entity types', where combinations of two or more subtypes can be made.</font></p>
+            <p align="justify"><font face="Palatino Linotype">Given the fact that, once instantiated, no instance may be changed, it is of imperative importance that all instances of PossibleIndividual are properly typed when instantiated.</font></p>
+            <h3 align="justify" style="margin-bottom:0;"><font face="Palatino Linotype">Why is proper typing important?</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In the course of time rules will be defined that apply for a certain entity type (or subtype thereof). One of those rules has already been incorporated in the data model: unless an individual is an ArrangeIndividual (see below) it cannot be the 'whole' in an </font><a href="../data-model/index.htm#ArrangementOfIndividual"><font face="Palatino Linotype">ArrangementOfIndividual</font></a><font face="Palatino Linotype"> relationship, or of its subtypes </font><a href="../data-model/index.htm#AssemblyOfIndividual"><font face="Palatino Linotype">AssemblyOfIndividual</font></a><font face="Palatino Linotype">
+and </font><a href="../data-model/index.htm#FeatureWholePart"><font face="Palatino Linotype">FeatureWholePart</font></a><font face="Palatino Linotype">.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">An example of such a rule might be that an </font><a href="../data-model/index.htm#Activity"><font face="Palatino Linotype">Activity</font></a><font face="Palatino Linotype"> cannot have a mass.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">Combinations - 1</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">Obviously not all combinations are meaningful in the real world. The three subtypes at the righthand side are of the first diagram, in most cases, meaningful:</font></p>
+            <ul>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify">
+                        <p><font face="Palatino Linotype">The definition for </font><a href="../data-model/index.htm#WholeLifeIndividual"><font face="Palatino Linotype">WholeLifeIndividual</font></a><font face="Palatino Linotype"> is: &quot;</font><font face="Palatino Linotype" color="#7B4B23"><i>A WholeLifeIndividual is a PossibleIndividual that is a member of a ClassOfIndividual, and is not a temporal part of any other PossibleIndividual that is also a member of the same ClassOfIndividual. A WholeLifeIndividual
+includes its past and future.</i></font><b><font face="Palatino Linotype"> </font></b><font face="Palatino Linotype">&quot;.</font></p>
+                    </div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify">
+                        <p><font face="Palatino Linotype">The definition for </font><a href="../data-model/index.htm#ActualIndividual"><font face="Palatino Linotype">ActualIndividual</font></a><font face="Palatino Linotype"> is: &quot;</font><font face="Palatino Linotype" color="#7B4B23"><i>An ActualIndividual is a PossibleIndividual that is a part
+of the space-time continuum that we inhabit. It exists in the present, past, or future of our universe, as opposed to some imagined universe.</i></font><font face="Palatino Linotype">&quot;.</font></p>
+                    </div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify">
+                        <p style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The definition for </font><a href="../data-model/index.htm#ArrangedIndividual"><font face="Palatino Linotype">ArrangedIndividual</font></a><font face="Palatino Linotype"> is: &quot;</font><font face="Palatino Linotype" color="#7B4B23"><i>An ArrangedIndividual is a PossibleIndividual that has parts that play distinct roles with respect to the whole. The qualities of an ArrangedIndividual are distinct from
+the qualities of its parts.</i></font><font face="Palatino Linotype">&quot;. </font></p>
+                    </div>
+                </li>
+            </ul>
+            <p align="justify"><font face="Palatino Linotype">In the diagram below the typing at time of declaration is shown.</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="instantiation.png" width="313" height="217" border="0"></font></p>
+            <h4 align="justify" style="margin-top:5; margin-bottom:0;"><font face="Palatino Linotype">WholeLifeIndividual</font></h4>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">At some point in time in the engineering of a plant all its possible individuals start to exist. Often, but in no way always, this is when they start to appear on a P&amp;ID (not on a PFD, because those items represent instances of </font><a href="../data-model/index.htm#Activity"><font face="Palatino Linotype">Activity</font></a><font face="Palatino Linotype">. If properly organized there is one discipline
+responsible for the instantiation of instances of PossibleIndividual that are also a&nbsp;WholeLifeIndividual.</font></p>
+            <h4 align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">ActualIndividual</font></h4>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Since the process industries are usually not existing in universes other than the one we inhabit, the instances of PossibleIndividual will always also be an ActualIndividual.</font></p>
+            <h4 align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">ArrangedIndividual</font></h4>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Since most individuals in a plant will, or may, have one or more 'features' (e.g. surface, thread), and since the relationship FeatureWholePart calls for a 'whole' that is an instance of ArrangedIndividual, it is wise to start assuming that any instance of PossibleIndividual will also be an ArrangedIndividual, unless specifically not so. Better safe than sorry at a later date.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">Combinations - 2</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">Looking at the lefthand side of the first diagram above, we can think of the following combinations:</font></p>
+            <ul>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify">
+                        <p><font face="Palatino Linotype">PhysicalObject + Activity</font></p>
+                    </div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify">
+                        <p><font face="Palatino Linotype">MaterializedPhysicalObject + Stream</font></p>
+                    </div>
+                </li>
+            </ul>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">There are, undoubtedly other combinations possible, but none comes to my mind, unless my </font><a href="../proposed-changes-to-data-model/index.htm"><font face="Palatino Linotype">proposal</font></a><font face="Palatino Linotype"> for a revision of Part 2 will be accepted.</font></p>
+            <h4 align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">PhysicalObject + Activity</font></h4>
+            <p align="justify" style="margin-top:0;"><font face="Palatino Linotype">A fire is a PhysicalObjectANDActivity.</font></p>
+            <h4 align="justify" style="margin-bottom:0;"><font face="Palatino Linotype">MaterializedPhysicalObject + Stream</font></h4>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">Where Part 2 states: </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype" color="#7B4B23">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:12pt;">EXAMPLE The naphtha flowing in a pipe between a crude distillation unit and a platformer is a Stream.</span></font><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0;"><font face="Palatino Linotype">that should be, IMHO,&nbsp;a MaterializedPhysicalObjectANDStream (see RDF/XML&nbsp;listing below).</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype">How is it done in RDF/XML?</font></h3>
+            <ul>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&lt;owl:Thing rdf:ID=&quot;T_</span><span style="font-size:12pt; margin-top:0; margin-bottom:0;">d53b6140-9aa7-11e1-a8b0-0800200c9a66</span><span style="font-size:12pt;">&quot;&gt; &lt;!-- a letter_UUID is used --&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><font face="Courier New"><a href="http://dm.rdlfacade.org/data#MaterializedPhysicalObject">http://dm.rdlfacade.org/data#</a></font><a href="http://dm.rdlfacade.org/data#MaterializedPhysicalObject"><font face="Courier New">MaterializedPhysicalObject&quot;</font></a></span><font face="Courier New"><span style="font-size:12pt;">/&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><font face="Courier New"><a href="http://dm.rdlfacade.org/data#MaterializedPhysicalObject">http://dm.rdlfacade.org/data#</a></font><a href="http://dm.rdlfacade.org/data#Stream"><font face="Courier New">Stream</font></a><a href="http://dm.rdlfacade.org/data#MaterializedPhysicalObject"><font face="Courier New">&quot;</font></a></span><font face="Courier New"><span style="font-size:12pt;">/&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><a href="http://dm.rdlfacade.org/data#WholeLifeIndividual"><font face="Courier New">http://dm.rdlfacade.org/data#WholeLifeIndividual</font></a></span><font face="Courier New"><span style="font-size:12pt;">&quot;/&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><a href="http://dm.rdlfacade.org/data#ActualIndividual"><font face="Courier New">http://dm.rdlfacade.org/data#ActualIndividual</font></a></span><font face="Courier New"><span style="font-size:12pt;">&quot;/&gt; </span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><a href="http://dm.rdlfacade.org/data#ActualIndividual"><font face="Courier New">http://dm.rdlfacade.org/data#ArrangedIndividual</font></a></span><font face="Courier New"><span style="font-size:12pt;">&quot;/&gt; </span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&lt;/owl:Thing&gt;</span></font><font face="Palatino Linotype"></font></p>
+            </ul>
+            <p style="margin-top:0; margin-bottom:10;" align="justify">Keep in mind that a whole-life individual can hardly have any&nbsp;information. If in doubt, try to visualize whether the information <b><u>really</u></b> will be valid during the <b><u>entire</u></b> lifetime of the object.</p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify">In order to help recognizing the object you may add a label and/or a comment, such as:</p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;Stream S45&lt;/rdfs:label&gt;</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The naphta stream S45 between the crude distillation unit and the platformer</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdfs:comment&gt;</span></font></p>
+            <p align="justify" style="margin-top:10; margin-bottom:10;"><font face="Palatino Linotype">keeping in mind that that information may change in the lifetime of that stream.</font></p>
+            <p align="justify" style="margin-top:10; margin-bottom:10;"><font face="Palatino Linotype">This would then result in: </font></p>
+            <ul>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&lt;owl:Thing rdf:ID=&quot;T_</span><span style="font-size:12pt; margin-top:0; margin-bottom:0;">d53b6140-9aa7-11e1-a8b0-0800200c9a66</span><span style="font-size:12pt;">&quot;&gt; &lt;!-- a letter_UUID is used --&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;Stream S45&lt;/rdfs:label&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The naphta stream S45 between the crude distillation unit and the platformer</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdfs:comment&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><font face="Courier New"><a href="http://dm.rdlfacade.org/data#MaterializedPhysicalObject">http://dm.rdlfacade.org/data#</a></font><a href="http://dm.rdlfacade.org/data#MaterializedPhysicalObject"><font face="Courier New">MaterializedPhysicalObject&quot;</font></a></span><font face="Courier New"><span style="font-size:12pt;">/&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><font face="Courier New"><a href="http://dm.rdlfacade.org/data#MaterializedPhysicalObject">http://dm.rdlfacade.org/data#</a></font><a href="http://dm.rdlfacade.org/data#Stream"><font face="Courier New">Stream</font></a><a href="http://dm.rdlfacade.org/data#MaterializedPhysicalObject"><font face="Courier New">&quot;</font></a></span><font face="Courier New"><span style="font-size:12pt;">/&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><a href="http://dm.rdlfacade.org/data#WholeLifeIndividual"><font face="Courier New">http://dm.rdlfacade.org/data#WholeLifeIndividual</font></a></span><font face="Courier New"><span style="font-size:12pt;">&quot;/&gt;</span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><a href="http://dm.rdlfacade.org/data#ActualIndividual"><font face="Courier New">http://dm.rdlfacade.org/data#ActualIndividual</font></a></span><font face="Courier New"><span style="font-size:12pt;">&quot;/&gt; </span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:type rdf:resource=&quot;</span></font><span style="font-size:12pt;"><a href="http://dm.rdlfacade.org/data#ActualIndividual"><font face="Courier New">http://dm.rdlfacade.org/data#ArrangedIndividual</font></a></span><font face="Courier New"><span style="font-size:12pt;">&quot;/&gt; </span></font></p>
+                <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Courier New"><span style="font-size:12pt;">&lt;/owl:Thing&gt;</span></font></p>
+            </ul>
+            <p align="justify" style="margin-top:10; margin-bottom:10;">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

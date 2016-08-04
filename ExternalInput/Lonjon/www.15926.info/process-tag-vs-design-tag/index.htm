@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> Process Tag versus Design Tag</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body>
+
+<table width="100%" cellpadding="3" cellspacing="0">
+    <tr>
+        <td width="1522">
+            <h1>Process Design&nbsp;Tag versus Functional Design&nbsp;Tag</h1>
+            <p><font face="Microsoft Sans Serif"><b>1 August 2011, revised 7 August 2011, 11 August 2011</b></font></p>
+            <hr>
+            <h2><font face="Microsoft Sans Serif">Introduction</font></h2>
+            <p><font face="Microsoft Sans Serif">As discussed in the topic </font><a href="http://www.15926.info/functional-physical-object/index.htm"><font face="Microsoft Sans Serif">Functional and Physical Objects - the big picture</font></a><font face="Microsoft Sans Serif"> we know Process Design and Plant Design. In Process Design we design the processes in terms of instances of ClassOfActivity (e.g. PUMPING, HEAT EXCHANGING, DISTILLING) and instances of ClassOfInanimatePhysicalObject of which instances of Stream are members.</font></p>
+            <p><font face="Microsoft Sans Serif">This is done with process analysis software, and results in documents like a PFD (Process Flow Diagram), Heat and Material Balances, and Process Data Sheets for equipment. That equipment is, at this stage, still a functional abstraction, a ClassOfActivity. The next stage is to define suitable Technical Solutions, as <a href="../functional-physical-object/index.htm#Difference">discussed</a> in forementioned topic. In the diagram below P-101 is the technical solution for process tag P24, as it is located at hydraulic network node J-1.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Model</font></h2>
+            <p style="margin-top:0; margin-bottom:10;"><font size="4">The&nbsp;template model for that is (see <a href="../data-model/mnemonics.htm">mnemonics</a> for their meaning): </font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="center"><img src="schema-for-process-tag.jpg" width="1081" height="704" border="0" usemap="#ImageMap1"></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">When you click on the yellow object you get to the continued model for P-101 and its technical solution.</span></font></p>
+            <hr>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><a name="Attributed">Attributed</a> Information</h2>
+            <p align="justify"><font face="Microsoft Sans Serif">In the diagam below a beginning has been made with explaining what information can be attibuted to the various objects (more to follow):</font></p>
+            <p align="center"><img src="function-place-installed-as-process-tag.jpg" width="981" height="616" border="0"></p>
+            <p align="center">&nbsp;</p>
+            <p align="justify"><font face="Microsoft Sans Serif">The stream STRM-593092 participates in the&nbsp;pumping activity ACT-345642&nbsp;at node J-1. The set of stream data, of which we show only one here, is composed into the Heat &amp; Material Balance. These stream data are stored at class level. The individual activity and stream, ACT-345642 and STRM-593092, represent information about a process simulation.</font></p>
+            <p align="justify"><font face="Microsoft Sans Serif">Based on this the Process Engineer creates his Process Data Sheet for (here) the function place P-101. This is not a plain copy of the stream data, but includes other requirements, such as the required overcapacity.</font></p>
+            <p align="justify"><font face="Microsoft Sans Serif">These &quot;process conditions&quot; (minimum, normal, maximum, etc) are entered in the Pump Specification for (here)&nbsp;P-101.</font></p>
+            <p align="justify">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<map name="ImageMap1">
+<area shape="rect" coords="990, 555, 1077, 581" href="../installing-a-physical-object/index.htm">
+<area shape="rect" coords="992, 659, 1075, 686" href="../installing-a-physical-object/index.htm">
+</map></body>
+</html> 

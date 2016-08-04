@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> Multidmensional property</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify">How to define&nbsp;a MultidimensionalProperty?</h1>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a><b>20 Feb. 2011, rev. 21 Feb. 2011, rev. 25 Feb. 2011, rev. 19 March 2011</b></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><a name="Introduction">Introduction</a></font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In ISO 15926-5 you can find two&nbsp;rather esoteric entity types, the <a href="../data-model/index.htm#ClassOfMultidimensionalObject">ClassOfMultidimensionalObject</a> and the <a href="../data-model/index.htm#MultidimensionalObject">MultidimensionalObject</a>. These are discussed in a <a href="http://www.15926.info/multidimensional-object/multidimensional-object.htm">separate topic</a>. In this topic I'll try to give an explanation of one of the derivatives, the <a href="../data-model/index.htm#MultidimensionalProperty">MultidimensionalProperty</a>.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">Part 2 defines: </p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">A <b>MultidimensionalProperty</b>&nbsp;is a <b><a href="http://www.15926.info/data-model/index.htm#Property">Property</a></b>&nbsp;that is also a <b><a href="http://www.15926.info/data-model/index.htm#MultidimensionalObject">MultidimensionalObject</a></b>.</p>
+            <p style="margin-top: 0pt; margin-bottom: 10px;" align="justify">EXAMPLE
+ A pump flow head characteristic is a multidimensional object. It 
+consists of a continuum of Q, H property pairs, where Q is the flow rate
+ and H is the flowing head difference. Each pair of properties Qa and 
+Ha, where Qa is a particular flow rate and Ha a particular head, is a 
+multidimensional property [Qa, Ha].</p>
+            <p style="margin-top: 0pt; margin-bottom: 10px;" align="justify"><b>EXPRESS specification</b>:</p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">ENTITY multidimensional_property &nbsp;</p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (property, multidimensional_object); &nbsp;&nbsp;</p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">END_ENTITY; </p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">&nbsp;</p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Discussion</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Let's use&nbsp;the (adapted) diagram below&nbsp;as reference:</span></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="diagram-0004-adapted.jpg" width="600" height="656" border="0"></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">The adaptation, whereby the non-applicable attributes are being left out, shows that the esoteric character disappears. For details see <a href="../multidimensional-object/multidimensional-object.htm">here</a>.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Let us first focus on the ClassOfMultidimensionalObject, attribute by attribute.</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">&quot;<b>roles&quot; attribute </b></span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">The rdf:object of this attribute is a set of instances of <a href="../data-model/index.htm#RoleAndDomain">RoleAndDomain</a> that indicate what the role actually is and what subtype of Thing is the object. If the multidimensional object is the input in a function (so a <a href="../data-model/index.htm#ClassOfFunctionalMapping">ClassOfFunctional Mapping</a>), then each role is the same as its parameter name in that function.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><b>&quot;cardinalities&quot; attribute</b></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">If&nbsp;any of the Roles could exist 0, 1, or more times for an instance of MultidimensionalObject, then that shall be expressed by a list of instances of Cardinality. If one or more such cardinalities apply, all cardinalities shall be defined. (no example comes to my mind)</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">and then of the MultidimensionalProperty:</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><b>&quot;elements&quot; attribute</b></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Here the 1:? properties that are part of the multidimensional property, where that cardinality is determined by the &quot;cardinalities&quot; attribute of the classifying ClassOfMultidimensionalObject.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><a name="Example">Example</a></font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Let us see how a Q-H point on a&nbsp;pump curve is modelled&nbsp;:</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;">&nbsp;</p>
+            <p align="center" style="margin-top:0; margin-bottom:5;"><img src="multidimensional-property-example2.jpg" width="678" height="277" border="0"></p>
+            <p align="center" style="margin-top:10; margin-bottom:10;"><b>Q-H point</b></p>
+            <p align="justify" style="margin-top:10; margin-bottom:10;"><font face="Microsoft Sans Serif">In template format this looks like this:</font></p>
+            <p align="center" style="margin-top:10; margin-bottom:10;"><img src="multidimensional-property-example2-template.png" width="546" height="197" border="0" usemap="#ImageMap1"></p>
+            <p align="justify" style="margin-top:10; margin-bottom:10;"><font face="Microsoft Sans Serif">Normally MDP-9877 is quantified against a <a href="../multidimensional-scale/multidimensional-scale.htm">MultidimensionalScale</a> with a <a href="../multidimensional-number/multidimensional-number.htm">MultidimensionalNumber</a> that is represented with a <a href="../multidimensional-inforep/multidimensional-inforep.htm">MultidimensionalInformationRepresentation</a>.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<map name="ImageMap1">
+<area shape="rect" coords="146, 28, 192, 51" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="147, 80, 192, 104" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="273, 51, 326, 79" href="../data-model/mnemonics.htm#COMO">
+<area shape="rect" coords="278, 143, 327, 165" href="../data-model/mnemonics.htm#MDP">
+<area shape="rect" coords="414, 118, 454, 142" href="../data-model/mnemonics.htm#PTY">
+<area shape="rect" coords="415, 161, 456, 183" href="../data-model/mnemonics.htm#PTY">
+</map></body>
+</html> 

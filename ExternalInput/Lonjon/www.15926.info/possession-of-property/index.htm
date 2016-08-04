@@ -1,0 +1,118 @@
+<html>
+<head>
+<title> Possession of property</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Possession of a&nbsp;property by a possible individual</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">4 Dec.&nbsp;2010, rev. 16 Jan. 2011, rev. 25 Jan. 2011, rev. 21 March 2011, rev. 5 Febr. 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In Part 2 a distinction is made between properties and indirect properties. The definitions given are:</font></p>
+            <hr>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><B><font face="Palatino Linotype">Property</font></B><font face="Palatino Linotype"></font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><font face="Palatino Linotype">A 
+<B>Property</B>&nbsp;is a <B>ClassOfIndividual</B> 
+that is a member of a continuum of a <B>ClassOfProperty</B>. The <B>Property</B>&nbsp;may be 
+quantified by mapping to a number on a scale.</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">NOTE 1 A member of 
+a <B>Property</B>&nbsp;is a <B>PossibleIndividual</B>&nbsp;&nbsp;that has the same degree 
+or magnitude of the quality or characteristic represented by the 
+<B>Property</B>&nbsp;as other members.</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">NOTE 2 The types of 
+characteristic or quality, such as temperature or density, are instances of 
+<B>ClassOfProperty</B>.</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">NOTE 3 Duplicate 
+properties (e.g. that map to the same number on the same scale) should not be 
+created within the same data store.</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><font face="Palatino Linotype">EXAMPLE <span style="background-color:yellow;">A 
+particular degree of hotness can be represented as an instance of 
+<B>Property</B>.</span></font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><B><font face="Palatino Linotype">EXPRESS 
+specification</font></B><font face="Palatino Linotype">:</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">ENTITY property 
+&nbsp;</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF 
+(class_of_individual); &nbsp;</font></P>
+            <P style="margin-top:0px; margin-bottom:10px;" align=justify><font face="Palatino Linotype">END_ENTITY; &nbsp;</font></P>
+            <P style="margin-top:0px; margin-bottom:10px;" align=justify><font face="Palatino Linotype">Note - A property is something that usually is measured and shown on a P&amp;ID with the proper instrumentation.</font></P>
+            <hr>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><B><font face="Palatino Linotype" color="black">IndirectProperty</font></B><font face="Palatino Linotype"></font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><font face="Palatino Linotype">An 
+<B>IndirectProperty</B>&nbsp;is a <B>Relationship</B> 
+between a <B>Property</B> and a <B>PossibleIndividual</B>. The nature of the 
+<B>IndirectProperty</B>&nbsp;is defined by its classification by a 
+<B>ClassOfIndirectProperty</B>. A property is indirect when it does not directly 
+apply to the <B>PossibleIndividual</B>&nbsp;it 
+applies to, but is derived from some process.</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">NOTE </font><b><font face="Palatino Linotype" color="#C00000"><span style="background-color:yellow;">A property is 
+indirect because it does not directly apply</span></font></b><font face="Palatino Linotype"><span style="background-color:yellow;">. There can only be one temperature 
+that a thing has (at a time), so a Maximum Allowable Working Temperature is not 
+its temperature, but an indirect property derived from doing some tests or 
+calculations to determine its value (as opposed to it being a current 
+measurement). This is what makes it indirect.</span></font><font face="Palatino Linotype"></font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><font face="Palatino Linotype">EXAMPLE A Maximum 
+Allowable Working Pressure of 50 barg for V101 is specified by an 
+<B>IndirectProperty</B>&nbsp;between the pressure of 50 barg and V101, classified by 
+the <B>ClassOfIndirectProperty</B>&nbsp;Maximum 
+Allowable Working Pressure.</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><B><font face="Palatino Linotype">EXPRESS 
+specification</font></B><font face="Palatino Linotype">:</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">ENTITY 
+indirect_property &nbsp;</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF 
+(relationship); &nbsp;</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">&nbsp;&nbsp;&nbsp;&nbsp;possessor &nbsp;&nbsp;: 
+&nbsp;&nbsp;possible_individual; &nbsp;</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">&nbsp;&nbsp;&nbsp;&nbsp;property &nbsp;&nbsp;&nbsp;&nbsp;: 
+&nbsp;&nbsp;property; &nbsp;</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 5px" align=justify><font face="Palatino Linotype">END_ENTITY; &nbsp;</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 5px" align=justify><B><font face="Palatino Linotype">Attribute 
+definitions</font></B><font face="Palatino Linotype">:</font></P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify><font face="Palatino Linotype">&nbsp;&nbsp;&nbsp;&nbsp;possessor &nbsp;&nbsp;: 
+&nbsp;&nbsp;The <B>PossibleIndividual</B>&nbsp;that possesses 
+the <B>IndirectProperty</B>. &nbsp;</font></P>
+            <P style="margin-top:0px; margin-bottom:10px;" align=justify><font face="Palatino Linotype">&nbsp;&nbsp;&nbsp;&nbsp;property &nbsp;&nbsp;&nbsp;&nbsp;: 
+&nbsp;&nbsp;The <B>Property</B>&nbsp;that is indirectly possessed by 
+the <B>PossibleIndividual</B>. &nbsp;</font></P>
+            <P style="margin-top:0px; margin-bottom:10px;" align=justify><font face="Palatino Linotype"><span style="background-color:rgb(210,218,229);">The model for a completely quantified property is given in a separate </span></font><span style="background-color:rgb(210,218,229);"><a href="../possession-of-indirect-property/index.htm"><font face="Palatino Linotype">topic</font></a></span><font face="Palatino Linotype"><span style="background-color:rgb(210,218,229);">.</span></font><font face="Palatino Linotype"></font></P>
+            <hr>
+            <h2 style="margin-top:0px; margin-bottom:0px;" align=justify><font face="Palatino Linotype">Model</font></h2>
+            <P style="margin-top:0px; margin-bottom:0px;" align=justify><font face="Palatino Linotype">A temporal part of myVessel #MPO-439112, identified #MPO-439112-20070814T174605Z,</font></P>
+            <ul>
+                <li style="margin-top:0px; margin-bottom:0px;" align=justify>
+                    <div align="justify"><font face="Palatino Linotype">is classified with an instance of Property 'Pressure' </font></div>
+                                                                </li>
+                <li style="margin-top:0px; margin-bottom:0px;" align=justify>
+                    <div align="justify"><font face="Palatino Linotype">that is related by an instance of PropertyQuantification</font></div>
+                                                                </li>
+                <li style="margin-top:0px; margin-bottom:0px;" align=justify>
+                    <div align="justify"><font face="Palatino Linotype">that is classified with an instance of Scale 'barg'</font></div>
+                                                                </li>
+                <li style="margin-top:0px; margin-bottom:0px;" align=justify>
+                    <div align="justify"><font face="Palatino Linotype">with an instance of RealNumber</font></div>
+                                                                </li>
+                <li style="margin-top:0px; margin-bottom:0px;" align=justify>
+                    <div align="justify"><font face="Palatino Linotype">that is represented by an instance of ExpressReal</font></div>
+                                                                </li>
+                <li style="margin-top:0px; margin-bottom:0px;" align=justify>
+                    <div align="justify"><font face="Palatino Linotype">that has the content '30.5'</font></div>
+                                                                </li>
+            </ul>
+            <p align="center" style="margin-bottom:0;"><font face="Palatino Linotype"><img src="property-possessed-by-individual.png" width="768" height="455" border="0"></font></p>
+            <p align="center" style="margin-top:0;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">myVessel has a pressure&nbsp;of 50 barg</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Template</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The representation in template format is as follows:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="PropertyWithValueOfTemporalPart.png" width="635" height="413" border="0"></font></p>
+            <p align="center">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

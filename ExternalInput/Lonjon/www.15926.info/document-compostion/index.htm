@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> Document composition</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000" bgcolor="white">
+    <tr>
+        <td>
+            <h1>Document composition</h1>
+            <p><b><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a>20 Jan. 2011, rev. 23 Jan. 2011, rev. 17 March 2011</b></p>
+            <hr>
+            <p align="justify"><font size="4">The contents of a document are defined by an instance of <a href="../data-model/index.htm#ClassOfInformationRepresentation">ClassOfInformationRepresentation</a>. Below is an application model to illustrate that:</font></p>
+            <p align="center"><img src="document-composition.png" width="571" height="293" border="0" usemap="#ImageMap1"></p>
+            <p align="center"><b>Model for example documents (partial)</b></p>
+            <p align="justify"><font size="4">In this model we have&nbsp;one piece of text in French presented in <i>italics</i>&nbsp;and one JPEG picture presented in &quot;Sunburst&quot; effect&nbsp;as the contents of your document. </font></p>
+            <table align="center" cellspacing="0" width="500" border="1" bordercolordark="white" bordercolorlight="black">
+                <tr>
+                    <td width="490">
+                        <p align="center"><img src="laurier-rose-fleur-rebigue.jpg" width="500" height="375" border="0"></p>
+                        <p align="center"><font size="4"><i>Les lauriers roses sont en fleurs.</i></font></p>
+                    </td>
+                </tr>
+            </table>
+            <p align="center"><b>Our example document</b></p>
+            <p align="justify"><font size="4">In this case&nbsp;you have two instances of ClassOfInformationRepresentation, the picture and the text, that are composed into our document by using instances of <a href="../data-model/index.htm#ClassOfCompositionOfIndividual">ClassOfCompositionOfIndividual</a>.</font></p>
+            <p align="justify"><font size="4">For the text you use the subtype <a href="../data-model/index.htm#ExpressString">ExpressString</a> of ClassOfInformationRepresentation that is classified by an instance of <a href="../data-model/index.htm#Language">Language</a> 'French'. Language&nbsp;is a subtype of <a href="../data-model/index.htm#ClassOfClassOfInformationRepresentation">ClassOfClassOfInformationRepresentation</a>. That ExpressString is a specialization of the instance of <a href="../data-model/index.htm#ClassOfInformationPresentation">ClassOfInformationPresentation</a> called 'Italics'.</font></p>
+            <p align="justify"><font size="4">For the picture you use the subtype <a href="../data-model/index.htm#ExpressBinary">ExpressBinary</a> that of ClassOfInformationRepresentation that is classified by an instance of <a href="../data-model/index.htm#RepresentationForm">RepresentationForm</a> 'JPEG'. RepresentationForm &nbsp;is a subtype of ClassOfClassOfInformationRepresentation. That ExpressBinary is a specialization of the instance of ClassOfInformationPresentation&nbsp;called 'SunburstEffect'.</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<map name="ImageMap1">
+<area shape="rect" coords="66, 25, 107, 50" href="../data-model/mnemonics.htm#REPF">
+<area shape="rect" coords="171, 28, 212, 48" href="../data-model/mnemonics.htm#COIP">
+<area shape="rect" coords="175, 93, 223, 114" href="../data-model/mnemonics.htm#EXBN">
+<area shape="rect" coords="115, 147, 176, 172" href="../data-model/mnemonics.htm#COCPOI">
+<area shape="rect" coords="358, 26, 402, 50" href="../data-model/mnemonics.htm#COIP">
+<area shape="rect" coords="463, 24, 511, 50" href="../data-model/mnemonics.htm#LANG">
+<area shape="rect" coords="404, 92, 451, 115" href="../data-model/mnemonics.htm#EXST">
+<area shape="rect" coords="401, 149, 464, 175" href="../data-model/mnemonics.htm#COCPOI">
+<area shape="rect" coords="293, 207, 342, 230" href="../data-model/mnemonics.htm#COIR">
+<area shape="rect" coords="300, 274, 348, 292" href="../data-model/mnemonics.htm#COIO">
+</map></body>
+</html> 

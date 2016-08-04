@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> Plant design using classes throughout</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="10" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Plant Design in ISO 15926</font></h1>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">March 2012</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="50" height="48" border="0" vspace="5" hspace="5"></a></font></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Similar to the design of airplanes, cars, etc the design of a plant is modelled at class level. In this topic suggestions will be given about the way this can be accomplished in an ISO 15926-compliant manner. A large number of template classes for representation of information about classes can be found <a href="http://www.infowebml.ws/TemplateSpecs/index.htm">here</a>.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Rationale</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">For many people working in the process industries the idea that plant design is done at class level may be counter-intuitive. This is understandable, because why&nbsp;do we have the entity type FunctionalPhysicalObject? For the answer please read <a href="../functional-vs-materializedPO/functional-vs-materialized-physical-object.htm">this</a>.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Let's look at the situation in aircraft manufacturing. Companies like Boeing and Airbus design their planes, starting with what you could call an <a href="http://en.wiktionary.org/wiki/ur-">ur-class</a>, such as '747'. Such an ur-class defines only the characteristics that will not change. Then they design a whole range of specializations ('variants')&nbsp;of that ur-class. From such a variant design they&nbsp;build
+a number of individual planes that are members of that variant&nbsp;class.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">That design is managed in a PLM (Product Lifecycle Management) system. The word 'lifecycle' in that name does not have the same connotation as in ISO 15926, because classes are eternal, they already existed directly after the Big Bang, it only took a couple of billion years to discover them. What is meant with 'lifecycle' is how, over time, the specializations developed from the ur-class.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">We can do the same with the design of a process plant and its components.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">How it can be done</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">We can use the template&nbsp;<a href="../../aaa-InfowebML/TS/FOL listings-20120205.htm#DefiningAClassVariant">DefiningAClassVariant</a>&nbsp;for that:</span></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="DefiningAClassVariant.png" width="847" height="610" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><span style="font-size:10pt;">Defining the OIM of a variant of&nbsp;ClassOfP101</span></b></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The yellow block stands for the OIM (Object Information Model)&nbsp;of the class&nbsp;variant.&nbsp;That OIM is a collection of all template instances that &nbsp;involve that class. </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">Each instance of the DefiningAClassVariant&nbsp;template is generated&nbsp;when terminating the session, using the UTC time at the time of session termination. In that case the Activity in the template coincides with the design work done in that session, including the collection of the OIM (see below). The PointInTime is&nbsp;the time at termination of that session.</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">In extremis this means that even when you change ONE template about a class, you create a new variant of that class.</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">In this way we can achieve a record of the &quot;life cycle&quot; of a class definition in terms of a temporal sequence of OIMs. </p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;">Composing the OIM of&nbsp;the revised class</h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">It is a problem that a class variant is not necessarily a specialization of the previous&nbsp;class variant. That means that there is no inheritance. Another problem is that we deal here with just one system that maps its revised data to the ISO 15926-8 format and then populates its system façade. The templates involved are only a subset of the total OIM of (here) ClassOfP101. </p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">The only way to compose the OIM of the revised class is to launch a SPARQL query into the hierachy of façades within a <a href="../../aaa-InfowebML/descr/cpf/index.htm">CPF</a>&nbsp;under the rule that all higher façades must be queried, and only one level down from any of such higher façades:</p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="facade-hierarchy.png" width="808" height="376" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><span style="font-size:10pt;"><b>Allowed queries</b></span></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">Then generate as many&nbsp;instances of template <a href="http://www.infowebml.ws/TS/FOL-listings.htm#CompositionOfOIM">CompositionOfOIM</a> as there are templates for the revisions plus the templates found for the OIM that have <b><u>not</u></b> been revised. The <b><i>classOfWhole</i></b> in all instances is (here) ClassOfP101_2012-02-25T14-35-26.576Z and <b><i>classOfPart</i></b> the ID of an instance of a&nbsp;TemplateStatement. Please
+note that&nbsp;such an instance is also a member of ClassOfInformationRepresentation (see <a href="http://www.infowebml.ws/descr/templates/owl-repr-of-templates.htm">here</a>).</p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">At a higher level façade the various quasi &quot;temporal part&quot; classes can be neatly put in temporal sequence using the <b><i>valDefiningDateTime</i></b> values.</p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;">Example of OIM <img src="snew.gif" width="40" height="15" border="0"></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">A good example of an OIM can be found <a href="http://www.infowebml.ws/mapping/line-list-revision.htm">here</a>.</p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Effects on the installed object</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In case a class definition changes&nbsp;often the &quot;criteria for membership&quot; of that class change. In case we have already installed a member object (or, if not yet, the object we purchased for that installation)&nbsp;we have to ask ourself whether the installed item still fulfils the requirements set forth in the latest&nbsp;class definition. </font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="installation-of-pump-in-function-place.png" width="667" height="573" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="font-size:10pt;"><b>Installation of pump with serialno. 654321 in function place P101_2012-02-17T09-32-06.871Z</b></span></font><span style="font-size:10pt;"><b></b></span></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">After the change in the class definition of ClassOfP101 there are two possibilities:</font></p>
+            <ol>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">myPump with serialno. 654321 also fulfils the requirements of the new function place </font>P101_2012-02-25T14-35-26.576Z, then a new instance of the above template is created, linking P101_2012-02-25T14-35-26.576Z with myPump with serialno. 654321</div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">myPump with serialno. 654321 does NOT&nbsp;fulfil the requirements of the new function place </font>P101_2012-02-25T14-35-26.576Z, then myPump must be replaced with another pump, and&nbsp;a new instance of the above template is created, linking P101_2012-02-25T14-35-26.576Z with that new pump.</div>
+                                </li>
+            </ol>
+            <p style="margin-top:0; margin-bottom:0;">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

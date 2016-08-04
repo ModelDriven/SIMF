@@ -1,0 +1,94 @@
+<html>
+<head>
+<title> Proposed changes to the data model of ISO 15926-2</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+<h1><font color="white">Proposed changes to the data model of ISO 15926-2</font></h1>
+<h3><font color="white">latest update: 5 April 2012&nbsp;&nbsp;</font><a href="index-revlog.htm"><img src="REVISION-LOG.png" width="103" height="19" border="0"></a><font color="white"> &nbsp;&nbsp;</font><a href="../index.htm"><img src="home-button-icon15.gif" width="40" height="39" border="0" align="absmiddle"></a></h3>
+<table align="center" cellpadding="5" cellspacing="0" width="1000" bgcolor="white">
+    <tr>
+        <td width="990">
+            <h2><font face="Palatino Linotype">Introduction</font></h2>
+            <p><font face="Palatino Linotype">Below is a diagram that is a combination of diagrams 6, 7 and 8 of ISO 15926-2:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="possible-individual-in-part2.jpg" width="1000" height="561" border="0"></font></p>
+            <p align="justify"><font face="Palatino Linotype">In practice there are a number entity types missing, and these have to be added by reference data. That weakens the strong basis of Part 2.</font></p>
+            <h2 align="justify"><font face="Palatino Linotype">Proposed changes</font></h2>
+            <p align="justify"><font face="Palatino Linotype">Below is a diagram that is a combination of diagrams 6, 7 and 8 of ISO 15926-2:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="possible-and-class-of-individual.png" width="913" height="829" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype">Proposed schema for PossibleIndividual and ClassOfIndividual in Part 2</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify"><font face="Palatino Linotype">The blue boxes are new, the pink box and the subtype links have been moved. The reasons for this are given below.</font></p>
+            <h2 align="justify"><font face="Palatino Linotype">New Kids-on-the-block</font></h2>
+            <h3 align="justify"><font face="Palatino Linotype">Symmetry where possible</font></h3>
+            <p align="justify"><font face="Palatino Linotype">The asymmetry of the present model does not help to easily understand it. The proposed schema brings that symmetry, where possible. The added entity types are:</font></p>
+            <h3 align="justify"><font face="Palatino Linotype">Subtypes of ArrangedIndividual</font></h3>
+            <p align="justify"><font face="Palatino Linotype">The proposed new subtypes of ArrangedIndividual are: </font></p>
+            <ul>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">Organism: &quot;An &lt;organism&gt; is a &lt;physical_object&gt; that is living.&quot;</font></div>
+                </li>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">Person: &quot;A &lt;person&gt; is an &lt;organism&gt; of the species homo sapiens.&quot;</font></div>
+                </li>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">InanimatePhysicalObject: &quot;An &lt;inanimate_physical_object&gt; is a </font><font face="Palatino Linotype">&lt;physicsal_object&gt; that not&nbsp;is living.&quot;</font></div>
+                </li>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">Energy: </font><font face="Palatino Linotype">&quot;An &lt;energy&gt; is a &lt;</font><font face="Palatino Linotype">physical_object</font><font face="Palatino Linotype">&gt; that is capable to perform work.&quot; <i>(questionable)</i></font></div>
+                </li>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">Feature: &quot;A &lt;feature&gt; </font><font face="Palatino Linotype">is a &lt;</font><font face="Palatino Linotype">physical_object</font><font face="Palatino Linotype">&gt; that is </font>a contiguous, non-separable part of some &lt;physical_object&gt; and has an incompletely defined boundary.&quot;</div>
+                </li>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">GeometricalSolid: &quot;A &lt;geometric_solid&gt; </font><font face="Palatino Linotype">is a &lt;</font><font face="Palatino Linotype">physical_object</font><font face="Palatino Linotype">&gt; that is the space occupied by a physical solid.&quot;</font></div>
+                </li>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">FunctionalObject: &quot;A &lt;functional_object&gt; </font><font face="Palatino Linotype">is a &lt;</font><font face="Palatino Linotype">physical_object</font><font face="Palatino Linotype">&gt; that </font>has functional, rather than material, continuity as its basis for identity.&quot;</div>
+                </li>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">Organization: &quot;An &lt;organization&gt; is </font><font face="Palatino Linotype">a &lt;</font><font face="Palatino Linotype">physical_object</font><font face="Palatino Linotype">&gt;</font><font face="Palatino Linotype">&nbsp;that is </font>composed of temporal parts of people and other assets, and is&nbsp;organised with a particular purpose.&quot;</div>
+                </li>
+                <li align="justify">
+                    <div align="justify"><font face="Palatino Linotype">InformationObject: &quot;An &lt;information_object&gt; is an &lt;arranged_individual&gt; that is presents and represents information.&quot;</font></div>
+                </li>
+            </ul>
+            <h3 align="justify"><font face="Palatino Linotype">Subtypes of ClassOfArrangedIndividual</font></h3>
+            <p align="justify"><font face="Palatino Linotype">The proposed new subtypes of ClassOfArrangedIndividual are: </font></p>
+            <ul>
+                <li align="justify">
+                    <div align="justify">ClassOfPhysicalObject: &quot;A &lt;class_of_physical_object&gt; is a &lt;class_of_arranged_individual&gt; whose members are instances of &lt;organism&gt;, &lt;inanimate_physical_object&gt;, or both.&quot;</div>
+                </li>
+                <li align="justify">
+                    <div align="justify">ClassOfStream: &quot;A &lt;class_of_stream&gt; is a &lt;class_of_physical_object&gt;&nbsp;whose members are instances of &lt;stream&gt;.&quot;</div>
+                </li>
+                <li align="justify">
+                    <div align="justify">ClassOfEnergy: &quot;A &lt;class-of_energy&gt; &nbsp;is a &lt;class_of_physical_object&gt;&nbsp;whose members are instances of &lt;energy&gt;.&quot;</div>
+                </li>
+                <li align="justify">
+                    <div align="justify">ClassOfSpatialLocation: &quot;A &lt;class_of_spatial_location&gt; is a &lt;class_of_physical_object&gt;&nbsp;whose members are instances of &lt;spatial_location&gt;.&quot;</div>
+                </li>
+                <li align="justify">
+                    <div align="justify">ClassOfGeometricSolid: &quot;A &lt;class-of_geometric_solid&gt; is a &lt;class_of_physical_object&gt;&nbsp;whose members are instances of &lt;geometric_solid&gt;.&quot;</div>
+                </li>
+                <li align="justify">
+                    <div align="justify">XmlSchemaDataType: &quot;An &lt;xml_schema_data_type&gt; is a &lt;class_of_information_representation&gt; whose members are instances of XML Schema data types.&quot;</div>
+                </li>
+            </ul>
+            <h2 align="justify"><font face="Palatino Linotype">Deprecated entity types</font></h2>
+            <p><font face="Palatino Linotype">The following entity types could be deprecated: MaterializedPhysicalObject, FunctionalPhysicalObject, ClassOfExpressInformationRepresentation, and RepresentationOfGregorianDateAndUtcTime. Throwing away these entities requires an explanation of how their present semantics would be expressed in the proposed schema. </font></p>
+            <p><font face="Palatino Linotype">Please note that the subtypes of the present PossibleIndividual are not in a ONEOF mode. This is not an oversight, but has been done on purpose. It allows for the construction of more complex entities, whereby combinations of two or even more entity types can be&nbsp;made.</font></p>
+            <h3 align="justify"><font face="Palatino Linotype">Functional- and MaterializedPhysicalObject</font></h3>
+            <p><font face="Palatino Linotype">These two&nbsp;entity types have been created in 1996 in an attempt to bridge the gap between the believers in the erstwhile&nbsp;&quot;Facility&quot; and the non-believers. But this compromize has not ended the debate. </font></p>
+            <p><font face="Palatino Linotype">The FunctionalPhysicalObject has the following definition: &quot;</font><b><font face="Palatino Linotype" color="#7B4B23">A FunctionalPhysicalObject&nbsp;is a PhysicalObject&nbsp;that has functional, rather than material, continuity as its basis for identity.</font></b><font face="Palatino Linotype">&quot; . The proposed FunctionalObject would have a&nbsp;definition like: &quot;</font><b><font face="Palatino Linotype" color="#7B4B23">A FunctionalObject is an PhysicalObject&nbsp;that has&nbsp;functional, rather than material, continuity as its basis for identity.&quot; EXAMPLE An AND gate.</font></b><font face="Palatino Linotype"></font></p>
+            <p><font face="Palatino Linotype">If one has&nbsp;to create a function diagram, such as a Logic Diagram for a shutdown system, he/she&nbsp;can do that with that with&nbsp;FunctionalObjects. The material realization of these functional objects takes place by using instance of PhysicalObject that has the proper functional aspects.</font></p>
+            <h3><font face="Palatino Linotype">ClassOfExpressInformationRepresentation&nbsp;and RepresentationOfGregorianDateAndUtcTime</font></h3>
+            <p>The use of these entity types creates problems, because they are not mainstream. The XML Schema data types are.</p>
+            <h2 align="justify"><font face="Palatino Linotype">Moving subtype links</font></h2>
+            <p><font face="Palatino Linotype">ClassOfInanimatePhysicalObject, ClassOfActivity, etc are subtypes of ClassOfArrangedIndividual. But PhysicalObject, Activity, etc are, at present, not subtypes of ArrangedIndividual. This is illogical. Therefore these subtypes of PossibleIndvidual are proposed to become subtypes of ArrangedIndividual.</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

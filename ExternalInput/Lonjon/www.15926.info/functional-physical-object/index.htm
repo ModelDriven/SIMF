@@ -1,0 +1,175 @@
+<html>
+<head>
+<title> Functional and physical objects - the big picture</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table cellpadding="5" cellspacing="0" width="1000" bgcolor="white" align="center">
+    <tr>
+        <td>
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Functional and Physical Objects - the big picture</font></h1>
+            <p align="justify"><b><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><font face="Palatino Linotype">July 2010, rev. 18 Nov. 2010, </font><font face="Palatino Linotype"> rev. 22 Dec. 2010, rev. 11 Feb. 2011, rev. 10 May 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <ul>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Introduction"><font face="Palatino Linotype">Introduction</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Process_design"><font face="Palatino Linotype">Process Design</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Functional_and_Plant_Design"><font face="Palatino Linotype">Functional and Plant Design</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#KarlPopper"><font face="Palatino Linotype">Karl Popper's Three Worlds of Knowledge</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Difference"><font face="Palatino Linotype">Difference between process design and functional&nbsp;design</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="index.htm#Procurement"><font face="Palatino Linotype">Procurement</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Construction"><font face="Palatino Linotype">Construction</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Operations"><font face="Palatino Linotype">Operations</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Maintenance"><font face="Palatino Linotype">Maintenance</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Modeling"><font face="Palatino Linotype">Modeling this</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Twice_the_same_tag"><font face="Palatino Linotype">Twice the same tag?</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Documents"><font face="Palatino Linotype">Documents?</font></a><font face="Palatino Linotype"></font></p>
+                <p style="margin-top:0; margin-bottom:5;"><a href="#Other_examples"><font face="Palatino Linotype">Other examples</font></a><font face="Palatino Linotype"></font></p>
+            </ul>
+            <hr>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Introduction">Introduction</a></font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">The activities around the implementation of ISO 15926 are, for the most, bottom-up, which is good for a quick deployment. This document tries to sketch a scenario for true lifecycle information management on the basis of ISO 15926.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">The design of a plant is, in principle, not different from the design of a car or airplane. Just the number of copies is different. Where a car design is used to produce upto millions of such a car, a plant design usually (not always) results in one plant. Sometimes multiple plants or parts thereof are built according a plant design (e.g. in cases of parallel &quot;trains&quot;, and in cases the design of a process licensor is being used).</span></font><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;">The objects handled in the design process are classes, resulting in a car class (e.g. Mercedes 300SEL)&nbsp;or airplane class (e.g. Boeing 747), with numerous variant&nbsp;classes, due to customer requirements.</span></font><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">All components of such a design are classes as well.</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Process_design">Process design</a></font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">The design of a plant starts with process design. In essence this is </font><a href="../data-model/index.htm#ClassOfActivity"><font face="Palatino Linotype">ClassOfActivity</font></a><font face="Palatino Linotype">-centric, with instances of ClassOfStream<sup>*)</sup>&nbsp;as input and output, and instances of </font><a href="../data-model/index.htm#ClassOfInformationObject"><font face="Palatino Linotype">ClassOfFunctionalObject</font></a><font face="Palatino Linotype"> as the participants whose function, once materialized,&nbsp;it is to&nbsp;execute the activity to the stream(s). </font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">*) Not a Part 2 entity type, shall be in the RDL as a subclass of ClassOfInanimatePhysicalObject.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">This functional process design results in documents like a PFD (Process Flow Diagram) and Heat and Material Balances. Derived from that the &quot;Process Conditions&quot; for equipment, piping, and instrumentation are produced.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="center"><font face="Palatino Linotype"><img src="petroleum_refinery.gif" width="1000" height="643" border="0"></font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="center"><b><font face="Palatino Linotype">Oil refinery processes, showing instances of ClassOfActivity and ClassOfStream</font></b><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="center"><font face="Palatino Linotype">&nbsp;</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Functional_and_Plant_Design">Functional and Plant Design</a></font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Although disputed by some, the concept of the so-called </font><a href="GARM-paper.pdf"><font face="Palatino Linotype">Hamburger Model</font></a><font face="Palatino Linotype">, designed by Wim Gielingh et al&nbsp;in 1988, explains this:</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="center"><font face="Palatino Linotype"><img src="hamburger-model.jpg" width="600" height="345" border="0"></font></p>
+            <p style="margin-top:0; margin-bottom:15;" align="center"><b><font face="Palatino Linotype">Hamburger Model</font></b><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="left"><font face="Palatino Linotype">This can be applied at all composition levels, from the entire plant down to components. </font></p>
+            <p style="margin-top:0; margin-bottom:0;" align="left"><font face="Palatino Linotype">If you read:</font></p>
+            <table cellpadding="0" cellspacing="0" width="1000" height="45">
+                <tr>
+                    <td width="177" height="22">
+                        <p style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">&nbsp;&nbsp;&nbsp;- Functional Unit</font></p>
+                    </td>
+                    <td width="17" height="22"><font face="Palatino Linotype">=</font></td>
+                    <td width="258" height="22">
+                        <p style="margin-top:0; margin-bottom:0;"><a href="../data-model/index.htm#ClassOfFunctionalObject"><font face="Palatino Linotype">ClassOfFunctionalObject</font></a><font face="Palatino Linotype"></font></p>
+                    </td>
+                    <td width="548" height="22"><font face="Palatino Linotype">(the &quot;design&quot;)</font></td>
+                </tr>
+                <tr>
+                    <td width="177">
+                        <p style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">&nbsp;&nbsp;&nbsp;- Technical Solution</font></p>
+                    </td>
+                    <td width="17"><font face="Palatino Linotype">=</font></td>
+                    <td width="258">
+                        <p style="margin-top:0; margin-bottom:0;"><a href="../data-model/index.htm#ClassOfInanimatePhysicalObject"><font face="Palatino Linotype">ClassOfInanimatePhysicalObject</font></a><font face="Palatino Linotype"></font></p>
+                    </td>
+                    <td width="548"><font face="Palatino Linotype">(the &quot;hardware&quot;)</font></td>
+                </tr>
+            </table>
+            <p style="margin-top:0; margin-bottom:10;" align="left"><font face="Palatino Linotype">you're pretty close to understanding the concept.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Now the engineering groups (Process, Mechanical, Control Systems, Electrical, Piping) translate this process design into P&amp;IDs (Piping and Instrument Diagrams) and specifications for all plant items.</font></p>
+            <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype">If you&nbsp;look at the specification/data sheet for P101, you see things like:</font></p>
+            <ul>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype">service description (what does it do in the context of the plant?)</font></div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype">functional requirements, for process equipment often expressed in term of process conditions</font></div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype">physical requirements, such as materials, pressure and temperature ratings, corrosion allowances, etc</font></div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype">protection against hazards (weather, explosion, fire, human exposure, etc)</font></div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype">connections (process, electrical)</font></div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype">testing requirements</font></div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype">references to other documents and standards</font></div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:10;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype">etc</font></div>
+                                </li>
+            </ul>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">All of them are criteria for membership of the&nbsp;<b>class</b> P101. </font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Most of these requirements are based on the place and role that P101 has in the plant design. If the process design and/or plant design changes, we may need a different P101 class, with its definition recorded in a revised specification/data sheet. </font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">And if a member of the P101 class had already been installed, we may need another pump. If the existing installed pump complies with those new criteria for membership, it can stay in situ, if not we have to obtain and install another PhysicalObject that does comply with the revised&nbsp;P101 class.</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="KarlPopper">Karl Popper</a>'s Three Worlds of Knowledge</font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Although equally disputed by some, the concept of the so-called </font><a href="popper80.pdf"><font face="Palatino Linotype">Three Worlds of Knowledge</font></a><font face="Palatino Linotype">, described by the late philosopher Kart Popper has validity in our case. </font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">I quote:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><u><font face="Palatino Linotype">World 1</font></u></b><font face="Palatino Linotype">: There is, first, the world that consists of physical bodies: of stones and of stars; of plants and of animals; but also of radiation, and of other forms of physical energy. I (Karl Popper) will call this physical world ‘world 1’.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><u><font face="Palatino Linotype">World 2</font></u></b><font face="Palatino Linotype">: There is, secondly, the mental or psychological world, the world of our feelings of pain and of pleasure, of our thoughts, of our decisions, of our perceptions and our observations; in other words, the world of mental or psychological states or processes, or of subjective experiences. I will call it ‘world 2’.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><u><font face="Palatino Linotype">World 3</font></u></b><font face="Palatino Linotype">: My main argument will be devoted to the defence of the reality of what I propose to call ‘world 3’. By world 3 I mean the world of the products of the human mind, such as languages; tales and stories and religious myths; scientific conjectures or theories, and mathematical constructions; songs and symphonies; paintings and sculptures. But also aeroplanes and airports and other feats of engineering.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Note - An exegesis of these worlds can be found </font><a href="http://www.knowledgejump.com/knowledge/popper.html"><font face="Palatino Linotype">here</font></a><font face="Palatino Linotype">.</font></b><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="center"><font face="Palatino Linotype"><img src="popper_knowledge2.jpg" width="574" height="409" border="0"></font></p>
+            <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype">Looking back to the above we may conclude:</font></p>
+            <ol>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:15;">the Technical Solutions, defined by Wim Gielingh, and&nbsp;the MaterializedPhysicalObjects are in World 1;</span></font><font face="Palatino Linotype"></font>
+                    </div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:15;">persons involved in any way in the process industries are in World 2;</span></font><font face="Palatino Linotype"></font>
+                    </div>
+                                </li>
+                <li style="margin-top:0; margin-bottom:0;" align="justify">
+                    <div align="justify"><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:15;">the Functional Units, defined by Wim Gielingh, and the FunctionalPhysicalObjects are in World 3.</span></font><font face="Palatino Linotype"></font>
+                    </div>
+                                </li>
+            </ol>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Difference">Difference</a> between process&nbsp;design and plant&nbsp;design</font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">For critical equipment a spare can be purchased at the same time, or later, against the same specification. This spare unit can be put in the warehouse or can be installed as an &quot;installed spare&quot;, with or without automatic switch-over (below&nbsp;the resulting numbering with A and B will be addressed). If, for some reason, the supplier cannot deliver, e.g. because of bankruptcy, another MaterializedPhysical Object is purchased
+from another supplier against the same specification of the class P101.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">In case an installed spare pump is required, we usually number them with A and B, here: P101A and P101B. That means that there are two classes that happen to have the same class definition, except for their service description. That spare pump did not come into existence for process technical reasons, but for business reasons (we want a maximum uptime of the plant).</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Another case of A and B we may find in certain control valve configurations. For the process engineer there may be, at a particular point in the plant design, just one control valve, say FV5. Based on the heat and material balance he then may define a minimum and maximum flow that are far apart from each other, i.e. a large rangeability is required, larger than any single control valve can possibly deliver because of leakage.
+The control systems engineer (I used to be one for many years) then specifies two control valves, one with linear and one with equal percentage characteristics, and with split-range positioners.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">What does that mean? From a process design point of view (i.e. the activity model shown on the Process Flow Diagram) we have the instance of ClassOfFunctionalObject (&quot;Functional Unit&quot;)&nbsp;named FV5. The class definition of FV5 is mainly in terms of process data. The control systems engineer then designs a &quot;Technical Solution&quot; for FV5, here consisting of a set of interconnected things. This technical solution in its entirety still is a class, and is
+shown on a P&amp;ID. This technical solution class is a subclass of FV5, it inherits the class definition from&nbsp;the latter. </font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">In that technical solution we find two control valves, say FV101A and FV101B. Unlike the P101 example these two valves are completely different from each other, and are specified on two different specifications/data sheets. Without the process and control interconnections those two valves would not be able to do what FV5 requires. That is why I said that the class definition of any plant item must include data about its place
+and role in the plant. That sets these classes apart from those defined by standardization bodies and suppliers, because these are only focussing on the object itself, detached from any plant context (they may use a hypothetical set of &quot;standard&quot; process conditions for their class definition).</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">A peculiar example of my thesis, that tag numbers are for classes, is the pressure gauge. There are plant owners that want them to be tagged like any other instrument item, such as PG-101, PG-102, etc, but there are also plant owners that want ALL gauges with the same range tagged with that range, e.g. all pressure gauges with a range of 0-10 barg are to be tagged PG10. They are then considered to be interchangeable commodity
+items. For special gauges, like ones with a diaphragm seal, a special variation on that numbering system is prescribed.</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Procurement">Procurement</a></font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">We send our specification with an RFQ (Request for Quotation) to three or more potential suppliers. Each of these suppliers has a catalog which in effect is a class library, filled with subclasses of RDL classes (these subclasses shall never be part of the RDL content, by the way, but in a local library, controlled by the owner of that library). </font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">The definition of that supplier class is completely detached from the process plant data. If process conditions are required to define the function of the class members, that is done with &quot;standard&quot; conditions.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Upon receipt of the quotations the responsible engineer deliberates whether or not the class definition of the offered goods complies with the criteria for membership of the ClassOfFunctionalObject P101. Then one is selected and purchased. After some time an instance of MaterializedPhysicalObject arrives at the plant and can be installed.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">A temporal part of that instance of MaterializedPhysicalObject is classified as a member of the supplier's class AND, <b><u>as long as it is installed as such</u></b>, as a member of the P101 functional class. As soon as it has been de-installed it is no longer a member of that P101 class, because it cannot actually function as such.</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Construction">Construction</a></font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">In <b>Construction</b> we deal with instances of MaterializedPhysicalObject,&nbsp;each of them does, when installed (they are all properly interconnected and the plant is, after commissioning,&nbsp;ready to go), theoretically&nbsp;comply with one of&nbsp;the plant design classes .</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Operations">Operations</a></font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">In <b>Operations</b> we deal, as navigation reference,&nbsp;with the installed temporal part of&nbsp;instances of FunctionalPhysicalObject&nbsp;that are members of the instances of </font><a href="../data-model/index.htm#ClassOfFunctionalObject"><font face="Palatino Linotype">ClassOfFunctionalObject</font></a><font face="Palatino Linotype">&nbsp;that resulted from the functional plant design AND of the physical plant design. Here measurement results of process fluids (e.g. flow rate, pressure, temperature) and equipment (e.g. vibration) will be collected and stored.</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Maintenance">Maintenance</a></font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">In <b>Maintenance</b> we deal with the physical plant design classes as reference, and in reality with instances of MaterializedPhysicalObject that are members of the supplier classes, and with instances of Activity that are of the <b>maintenance-type</b><i>. </i>Here information about costs and component replacements will be collected and stored.</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Modeling">Modeling</a> this</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Please refer to </font><span style="margin-top:0; margin-bottom:10;"><a href="http://www.15926.info/cradle-to-grave/index.htm"><font face="Palatino Linotype">http://www.15926.info/cradle-to-grave/index.htm</font></a><font face="Palatino Linotype"> for a lifecycle model, reflecting the above.</font></span><font face="Palatino Linotype"><span style="margin-top:0; margin-bottom:10;"></span></font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Twice_the_same_tag">Twice the same tag</a>?</font></h2>
+            <p align="justify"><font face="Palatino Linotype">In the </font><font face="Palatino Linotype">above diagram</font><font face="Palatino Linotype"> you may&nbsp;see the tag P101 shown twice. That is technically possible (&quot;What's in a name?&quot;), and a matter of taste. Interestingly one of the global oil companies has a rule that an instrument loop shall be named by its function, and the component name shall be added then. For example: FIC101 is the loop tag, FIC101-ELEMENT, FIC101-XMTR, FIC101-VALVE, etc are components of that loop. But other companies have other rules. These name play no role in the logic of the data model. So the class in </font><a href="#analysis_diagram"><font face="Palatino Linotype">above diagram</font></a><font face="Palatino Linotype"> might as well have a tag P101-CLASS or anything you might invent to feel good about.</font></p>
+            <p align="justify"><font face="Palatino Linotype">After all each plant, plant system, and system components, as well as activities, streams, properties, etc, etc has its own identifier, mostly in the format of a UUID, such as T24601cb0-95ea-11e1-a8b0-0800200c9a66. The names/tags are only for human &quot;consumption&quot;. There are more objects without a&nbsp;tag than object with a tag anyway.</font></p>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Documents">Documents?</a></font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The reader may wonder why documents are mentioned at all, where the ultimate goal of ISO 15926 seemed to be&nbsp;to do away with them. That goal will not be achieved in our lifetime, but we still can apply the standard. No matter how far and deep the standard is being applied, it always ends up with strings, integers and reals, and binaries.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">So, rather than spending countless hours in expressing all specifications (also referred to as data sheets) fully in 15926 terms, it might be considered follow one or more of these routes:</font></p>
+            <ol>
+                <li align="justify" style="margin-top:0; margin-bottom:10;">
+                    <div align="justify"><font face="Palatino Linotype">Store documents, in their native format or scanned, in an EDMS (Electronic Document Managment System) and map their meta data to ISO 15926 templates, and store these templates in a façade.</font></div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:10;">
+                    <div align="justify"><font face="Palatino Linotype">Build documents in XML and insert for each data field a SPARQL query, so that the document can be rendered with data that are/were valid at a given date-time. This requires a full mapping of all data fields to template format.</font></div>
+                </li>
+            </ol>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><a name="Other_examples">Other examples</a></font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">An example from civil engineering&nbsp;is the difference between an architect and a civil engineer. The architect says: there shall be a&nbsp;dining room and the kitchen, they shall have certain dimensions and shall be close to each other. The civil engineer produces the construction drawings to make that happen. The architect does the functional design, and the civil engineer the physical design.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">An example from human affairs is The President of The United States. From time to time the person &quot;installed&quot;&nbsp;as the President changes completely. At one time it is George W. Bush, at another time it is Barack Obama. The office survives these changes, presidents not always (Kennedy).&nbsp;But &quot;President of The United States&quot; is a ClassOfFunctionalObject, with rather strict criteria for membership, and
+a temporal part of the person&nbsp;Barack Obama is at present&nbsp;the sole active&nbsp;member of that functional class. The &quot;president&quot; is not the person alone, but the person in its role&nbsp;in the fabric of government, defined by the US Constitution and &nbsp;US laws.</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Finally the infamous &quot;pump used as an anchor&quot; case: The class &quot;Anchor of a&nbsp;Dragonfly 920 Extreme&quot; has particular functional criteria for membership, depending on its role in the Dragonfly 920 Extreme design, such as its required mass, form and possibility to attach the anchor chain. If myPump complies with those criteria, and a temporal part of it is &quot;installed&quot; as anchor of myDragonfly, it is a member of that functional anchor class.</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

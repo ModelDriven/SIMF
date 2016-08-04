@@ -1,0 +1,102 @@
+<html>
+<head>
+<title> Temporal parts and 4D</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="10" cellspacing="0" width="70%">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Temporal parts</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">21&nbsp;Dec. 2010, rev. 19 March 2011, rev. 24 Auguust 2011, rev. 5 Febr. 2012, rev. 3 June 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">One of the key concepts of ISO 15926 is that of &quot;temporal parts&quot;, providing the means to place information about instances of PossibleIndividual in the time. </font><span style="background-color:yellow;"><font face="Palatino Linotype" color="red"><b>It is the cornerstone of lifecycle information integration.</b></font></span><font face="Palatino Linotype"></font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Definition</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><span style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">A quote from </font><a href="http://en.wikipedia.org/wiki/Temporal_parts"><font face="Palatino Linotype">Wikipedia</font></a><font face="Palatino Linotype">: </font></span><font face="Palatino Linotype"></font></p>
+            <p align="justify"><i><font face="Palatino Linotype">Temporal parts are sometimes used to account for change. The problem of change is just that if an object x and an object y have different properties, then by Leibniz's Law, one ought to conclude that they are different. For example, if a person changes from having long hair to short hair, then the temporal-parts theorist can say that change is the difference between the temporal parts of a temporally extended object (the person). So, the person changes by having a temporal part with long hair, and a temporal part with short hair; the temporal parts are different, which is consistent with Leibniz's Law.</font></i><font face="Palatino Linotype"></font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Discussion</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This concept is best explained when applied to a person, say John Doe. If you collect all information that is know about John Doe, it quickly becomes clear that not all information falls in the same category. There may be information about his education, his work, his health, his membership of the tennis club, etc, etc.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">And when we look at the information about, for example, his work, we see that he worked for different companies, and within each company he has different functions, labor grades, and salaries, and&nbsp;different projects he worked on, etc, etc. So we may have then a certain hierarchy of temporal parts, i.e. temporal parts of temporal parts.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:15;"><font face="Palatino Linotype">This is, somewhat colorful, depicted in the picture below, where each colored square represents a different slot:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="temporal-parts-hierarchy.jpg" width="562" height="424" border="0"></font></p>
+            <p align="justify" style="margin-top:15; margin-bottom:10;"><span style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The top of the hierarchy (orange)&nbsp;is about the whole-life John Doe, so starting at his birth date-time and ending at the date-time of his death&nbsp;(see under </font><a href="../instantiation/index.htm"><font face="Palatino Linotype">Instantiation</font></a><font face="Palatino Linotype">). Each of the blocks inside contains instances of TemporalWholePart that are classified with the same instance of ClassOfTemporalWholePart (the 'c</font></span><a href="../context/index.htm"><font face="Palatino Linotype">ontext</font></a><span style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">').</font></span><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Such a hierarchy shall be kept in mind when implementing this concept for all temporal parts that can exist in parallel. If not so, for example John Doe's successive ranks in XYZ Ltd, or in another context,&nbsp;for equipment that is either in operation or not, &nbsp;that information better&nbsp;be stored in one slot in order to avoid contradicting information about a piece of equipment being in operation and being out of operation.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Equipment lifecycle&nbsp;information</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype">When we consider a &quot;materialized&quot; pump we may collect its lifecycle information under the following lifecycle contexts:</font></p>
+            <ul>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">The whole-life individual: starting at completion of assembly;</font></div>
+                </li>
+                <ul>
+                    <li align="justify" style="margin-top:0; margin-bottom:0;">
+                        <div align="justify"><font face="Palatino Linotype">manufacturing:</font></div>
+                    </li>
+                    <ul>
+                        <li align="justify" style="margin-top:0; margin-bottom:0;">
+                            <div align="justify"><font face="Palatino Linotype">assembly;</font></div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li align="justify" style="margin-top:0; margin-bottom:0;">
+                            <div align="justify"><font face="Palatino Linotype">testing; </font></div>
+                        </li>
+                    </ul>
+                </ul>
+                <ul>
+                    <ul>
+                        <li align="justify" style="margin-top:0; margin-bottom:0;">
+                            <div align="justify"><font face="Palatino Linotype">logistics.</font></div>
+                        </li>
+                    </ul>
+                    <li align="justify" style="margin-top:0; margin-bottom:0;">
+                        <div align="justify"><font face="Palatino Linotype">receipt at site, including handling and storage;</font></div>
+                    </li>
+                    <li align="justify" style="margin-top:0; margin-bottom:0;">
+                        <div align="justify"><font face="Palatino Linotype">installation and de-installation;</font></div>
+                    </li>
+                    <li align="justify" style="margin-top:0; margin-bottom:0;">
+                        <div align="justify"><font face="Palatino Linotype">commissioning;</font></div>
+                    </li>
+                    <li align="justify" style="margin-top:0; margin-bottom:0;">
+                        <div align="justify"><font face="Palatino Linotype">operations:</font></div>
+                    </li>
+                </ul>
+                <ul>
+                    <ul>
+                        <li align="justify" style="margin-top:0; margin-bottom:0;">
+                            <div align="justify"><font face="Palatino Linotype">in service A;</font></div>
+                        </li>
+                        <li align="justify" style="margin-top:0; margin-bottom:0;">
+                            <div align="justify"><font face="Palatino Linotype">in service B (etc).</font></div>
+                        </li>
+                    </ul>
+                    <li align="justify" style="margin-top:0; margin-bottom:0;">
+                        <div align="justify"><font face="Palatino Linotype">analysis;</font></div>
+                    </li>
+                    <li align="justify" style="margin-top:0; margin-bottom:0;">
+                        <div align="justify"><font face="Palatino Linotype">maintenance;</font></div>
+                    </li>
+                    <li align="justify" style="margin-top:0; margin-bottom:0;">
+                        <div align="justify"><font face="Palatino Linotype">demolition (ending the&nbsp;whole-life individual).</font></div>
+                    </li>
+                </ul>
+            </ul>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This list is not necessarily complete nor correct, but it serves to give you an idea.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Where is procurement? Well, what we procure is not yet our materialized pump. We don't buy a particular pump with its serial number,&nbsp;but a member of the ClassOfMaterializedPhysicalObject of the selected supplier, that shall comply with the requirements&nbsp;spelled out in the specification that classifies the function place for which we buy that pump. This will be dealt with an <a href="../functional-vs-materializedPO/functional-vs-materialized-physical-object.htm">another topic</a>.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Numbering</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Although it is tempting to create a numbering system for all individuals, that reflects the number of the&nbsp;temporal whole AND the context AND the date-time, it is advisable not to do this. A rule of proper modeling is that no logic shall be applied to identifiers. So, the advice is to use random numbers for the temporal parts. As a compromize you may add a random (but unique) number to the ID of the whole life 'parent'. Futhermore let the computer do the retrieving.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Ending a temporal part</font></h3>
+            <p align="justify"><font face="Palatino Linotype">There comes a time that a temporal part ends. This requires some careful programming, because that temporal part needs to be found on the basis of the template signature that began that temporal part. Then we apply the following to that temporal part:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="EndingOfIndividual.png" width="611" height="205" border="0"></font></p>
+            <p align="justify"><font face="Palatino Linotype">When a temporal part has been ended, all relationships that involve that temporal part are no longer valid. &nbsp;For that reason it is wise not to attach more than one information chunk to a temporal part, because when one &quot;sub-chunk&quot; would no longer be valid, you can only make that invalid by ending the temporal part. That will make all other &quot;sub-chunks&quot; invalid as well. So keep the granularity as fine as possible.</font></p>
+            <h3 align="justify"><font face="Palatino Linotype">Context</font></h3>
+            <p align="justify"><font face="Palatino Linotype">As can be concluded from the above, a temporal part most often will require a context in which it is valid. This topic is dealt with separately, see <a href="../context/index.htm">here</a>.</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

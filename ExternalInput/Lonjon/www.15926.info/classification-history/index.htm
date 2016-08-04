@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> History of classifying an individual</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify">Classifying an individual</h1>
+            <p align="justify"><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a><b>7 Dec. 2010, revised 9 Dec. 2010</b></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;">Introduction</h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Individuals are, in their lifetime, being classified in increasing detail. Let us assume that we have an instance of FunctionalPhysicalObject.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">When declaring the individual as an instance of FunctionalPhysicalObject, including its proper typing as an instance of WholeLifeIndividual and in most cases as an instance of ArrangedIndividual, we must classify it with a class that will apply <b>during its entire life</b>. When you come to think of that, you will find that there are not many aspects of an individual that fall in that category. Nowadays it is even not safe to classify a male person as such, because gender change is possible.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">So, when the individual is a pump, stick to that class for the whole life individual, and do <b>not</b> classify it as a centrifugal pump, or as a stainless steel pump. That comes later, and will be attributed to temporal parts of that pump. </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In case you would have classified the whole life individual as a centrifugal pump, and a design change makes it necessary to change that to a positive displacement pump, you will have to end the whole life individual and all its relationships, and declare a new one, and define its relationships again.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">But if you have declared the individual as a pump, and declared a temporal part of that as a centrifugal pump, you end the existence of that temporal part and declare a new temporal part that is a positive displacement pump. Since all other aspects (relationships)&nbsp;are attributed to other temporal parts, nothing else has to be ended, except aspects that are affected by that classification change.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">During the plant design we then learn that the centrifugal pump shall be of stainless steel. So we create a new temporal part of the individual and classify that with an instance of ClassOfCompound 'stainless steel'. And if, at a later date, we find that it shall be made of monel, we end the temporal part that is classified as stainless steel and create a new temporal part that is classified as being made of monel.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">When we go out for quotations to vendors, we classify a temporal part of our individual with the class that is defined by the contents of the applicable specification. This is where the bucket stops for the functional physical object, except when the specification changes. Again, we end the temporal part that is classified with the class defined by&nbsp;previous version of the specification, and create a new temporal part that is classified with the class that is defined by the latest version.</font></p>
+            <p align="center"><img src="classification-history.jpg" width="1050" height="488" border="0"></p>
+            <p align="center"><b>The functional physical object is detailed over time, with temporal parts as placeholders</b></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Microsoft Sans Serif">The above diagram gives cause for some observations:</font></p>
+            <ol>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Microsoft Sans Serif">The fact that there is not one-only common ground for the ClassOfFunctionalObject and the ClassOfInanimatePhyscialObject is because Part 2 misses a ClassOfPrinciple, in this case CentrifugalHydrokineticPrinciple, defined as: &quot;Principle whereby the fluid is accelerated through&nbsp;(an) impeller(s) and the increase in speed is converted into delivery head&quot; (or something similar). In that case the diagram could look like shown below.</font></div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Microsoft Sans Serif">Here the ultimate definition of both classes is done with a document. Defining the classes in a fully modeled way is a horrendous task, because stating that the pump is of stainless steel is not correct, only the wetted parts (need to define the assembly! ) are made of stainles steel. Unless the object is NOT and arranged individual, this fully modeled definition is a no-go if one wants to stick to the principles of ISO 15926. Each equipment or instrument item will prove to be as complex as a process unit.</font></div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Microsoft Sans Serif">As a consequence the classification with stainless steel, as shown above, does not make much sense.</font></div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Microsoft Sans Serif">In order to make the data of the specification computer-interpretable the document could be expressed in RDF/XML, based on an OWL schema.</font></div>
+                </li>
+            </ol>
+            <p align="center" style="margin-top:0; margin-bottom:0;"><img src="specialization-with-principle.jpg" width="375" height="290" border="0"></p>
+            <p align="center"><b>The subclasses are created by specializing them by aspect</b></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

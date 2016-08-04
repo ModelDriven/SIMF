@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> Life cycle of a Class</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Life cycle of a Class</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="../class-of-relationship/home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">10 May 2012, rev. 9 June 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h3>
+            <p align="justify" style="margin-bottom:0;"><font face="Palatino Linotype">In order to find a way to describe the &quot;life cycle&quot; of a (Part 2) Class we have to model that Class in a particular way. My rationale for that is:</font></p>
+            <ul>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">Any change to the information related to a Class may constitute a change in the &quot;criteria for membership&quot;, so in fact a change to another Class. </font> <font face="Palatino Linotype"></font> </div>
+                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">Classes are eternal and unlimited in number, so the best we can do is put on record when a particular template instance about a Class was created. </font> <font face="Palatino Linotype"></font> </div>
+                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">When we have a design class, e.g. for P-101, we may see more than one hundred templates related to that Class, and all were made at different date-times, each with their own UUID. But what we mean is still that P-101 class. </font> <font face="Palatino Linotype"></font> </div>
+                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:10;">
+                    <div align="justify"><font face="Palatino Linotype">In case of changes there will be templates that are contradicting each other, but cannot be deleted (because classes are eternal).</font></div>
+                                </li>
+            </ul>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">So how do we solve that?</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Solution</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">My proposal is:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">If we declare these many different Classes to be subclasses of one &quot;Ur&quot;-Class (see </font><a href="http://en.wiktionary.org/wiki/ur-"><font face="Palatino Linotype">http://en.wiktionary.org/wiki/ur-</font></a><font face="Palatino Linotype">) with an absolute minimum of criteria for membership, we can use that Ur-Class as a collector of all information that has been added, replaced and deleted since we started the record of that Ur-Class. </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Each template has an annotation property that is the same as the </font><font face="Palatino Linotype">record_created</font><font face="Palatino Linotype"> attribute of Thing. </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">To the signature of each template about a Class we add its Ur-Class, conceptually similar to the addition of the </font><font face="Palatino Linotype">hasTemporalWhole</font><font face="Palatino Linotype"> to templates for temporal parts. For example:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="ClassifiedDefinitionOfClass.png" width="697" height="402" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">At times, dictated by the business needs, we can &quot;take stock&quot; and determine what information is&nbsp;(= which templates are) considered to be valid at that point in time. </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">We can use the following generic&nbsp;class model&nbsp;for that:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:20;"><font face="Palatino Linotype"><img src="class-model.png" width="918" height="513" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">We class-of-classify the Ur-Class with an instance of EnumeratedSetOfClass, of which the membership is a matter of choice,&nbsp;in that one could be interested in all information or in a selection, such as only the &quot;process data&quot;. &nbsp;That choice is a set of subclasses of our Ur-Class that were recorded and not overruled by another subclass&nbsp;at a given date-time.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">An Ur-Class can be class-of-classified with many instances of EnumeratedSetOfClass. These are basically a kind of view.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In any case conflicting information shall be avoided, as will be defined in Part 10. For example two different values for the design pressure of the same Class applicable at the same date-time (Classes area always &quot;valid&quot;, but may no longer be applicable in a certain context).</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

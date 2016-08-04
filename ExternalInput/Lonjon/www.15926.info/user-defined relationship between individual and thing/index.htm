@@ -1,0 +1,35 @@
+<html>
+<head>
+<title> Relationship between an individual and a class</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">User-defined relationships between an individual and a class</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><font face="Palatino Linotype">18&nbsp;Dec. 2010, rev. 15 March 2011, rev. 11 May 2012</font><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In ISO 15926-2 you will find only one relationship between an individual and a class: Classification. But in real life there are cases where such an &quot;asymmetric&quot; relationship is required, such as &quot;Ford [an individual]&nbsp;manufactures Mustangs [a class]&quot;. For&nbsp;those cases the model offers a way out: the </font><a href="../data-model/index.htm#ClassOfRelationshipWithRelatedEnd1"><b><font face="Palatino Linotype">ClassOfRelationshipWithRelatedEnd1</font></b></a><font face="Palatino Linotype"> or </font><a href="../data-model/index.htm#ClassOfRelationshipWithRelatedEnd2"><b><font face="Palatino Linotype">ClassOfRelationshipWithRelatedEnd2</font></b></a><font face="Palatino Linotype"></font><b> </b></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype" color="red">WARNING</font></b><font face="Palatino Linotype"> - Do not use this lightly, because it may turn out to be nonsensical and the exchange of information may fail for that reason.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Model</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Of the two attributes of </font><a href="../data-model/index.htm#ClassOfRelationshipWithSignature"><b><font face="Palatino Linotype">ClassOfRelationshipWithSignature</font></b></a><font face="Palatino Linotype">, classOfEnd1 and classOfEnd2, one can be overriden by an attribute that points at an instance of Thing, i.e. anything you want to point at (even when it's nonsense). This is done by introducing either the </font><a href="../data-model/index.htm#ClassOfRelationshipWithRelatedEnd1"><b><font face="Palatino Linotype">ClassOfRelationshipWithRelatedEnd1</font></b></a><font face="Palatino Linotype"> or </font><a href="../data-model/index.htm#ClassOfRelationshipWithRelatedEnd2"><b><font face="Palatino Linotype">ClassOfRelationshipWithRelatedEnd2</font></b></a><b><font face="Palatino Linotype">.</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">NOTE - End1 is the attribute, in the </font><a href="http://www.tc184-sc4.org/wg3ndocs/wg3n1328/lifecycle_integration_schema.html"><font face="Palatino Linotype">EXPRESS model</font></a><font face="Palatino Linotype">, whose name (in English) is lowest in&nbsp;alphabetical order, or when using an instance of ClassOfRelationshipWithSignature, that is lowest in the alphabetical order of the names (in English) of the&nbsp;instances of Role that are used.</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="john-doe-may-marry-as-of-his-18th.png" width="916" height="551" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">John Doe may marry a woman as of his 18th birthday, using a ClassOfRelationshipWithRelatedEnd1</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify"><font face="Palatino Linotype">The conversion of the attribute (property) names, if so required,&nbsp;shall be done with a rule.</font></p>
+            <p align="justify"><font face="Palatino Linotype">This is, of course, not an industrial case, so let us look at another, more appropriate, example. The case for that is that we want to express the fact that a temporal part of the XYZ Ltd performs the pump maintenance activities&nbsp;in the&nbsp;plant of ABC Corp.</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="xyz-performs-maintenance-activities-for-abc.png" width="979" height="551" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">The XYZ Ltd is the contractor in all pump maintenance activities in the plant of the ABC Corp</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify"><font face="Palatino Linotype">From the above diagram the template below is derived:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="RelationBetweenTemporalPartAndClass.png" width="702" height="613" border="0"></font></p>
+            <p align="center">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

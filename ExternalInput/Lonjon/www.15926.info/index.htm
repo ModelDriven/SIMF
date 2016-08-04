@@ -1,0 +1,213 @@
+<html>
+
+<head>
+<title>ISO 15926 Data Modeling Topics, author Hans Teijgeler</title>
+<meta name="generator" content="Namo WebEditor">
+  <meta name="keywords" content="ISO 15926,15926,15926.info,topics,application model,templates">
+</head>
+
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+<table width="70%" cellpadding="10" cellspacing="0" align="center" bgcolor="#F7F1E6">
+    <tr>
+        <td>
+            <h1 align="center" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">ISO 15926 Data Modeling Topics</font></h1>
+            <p align="center" style="margin-top:0; margin-bottom:0;"><b><font face="Palatino Linotype">author Hans Teijgeler /&nbsp;&nbsp;latest revision on 14&nbsp;July&nbsp;2012&nbsp;&nbsp;&nbsp;</font></b><a href="revision-log/index.htm"><font face="Palatino Linotype"><img src="revision-log.gif" width="75" height="20" border="0" align="absmiddle"></font></a><font face="Palatino Linotype"></font></p>
+            <hr>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2 style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><img align="left" src="CIMG4658.JPG" width="112" height="146" border="0" vspace="5" hspace="5"><span style="font-size:14pt;">I worked on AP221 and ISO 15926 from 1992 onwards.</span></font><span style="font-size:14pt;"></span></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><span style="font-size:14pt;">This website is to help you understand how application models can be made on the basis of ISO 15926-2 entity types and ISO 15926-4 reference data. You will notice that it all boils down to some kind of Data Lego, from which you can build about anything (even nonsense :)) &nbsp;).</span></font><span style="font-size:14pt;"></span></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><span style="font-size:14pt;">Behind all this is a whole &quot;engine room&quot;, using FOL (First Order Logic) that validates these application models. Visit </span></font><span style="font-size:14pt;"><a href="http://www.infowebml.ws"><font face="Palatino Linotype"><b>www.infowebml.ws</b></font></a><font face="Palatino Linotype"> for this.</font></span></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><span style="font-size:14pt;"><font face="Palatino Linotype">On the website <a href="http://www.15926.org"><b>www.15926.org</b></a> you can find a <a href="http://www.15926.org/index_phpbb.php?sid=5f2ee6b47d92cda31902a2e836f6e3ff">Forum</a>, <a href="http://www.15926.org/15926_tools.php?sid=5f2ee6b47d92cda31902a2e836f6e3ff">template specifications</a> (work in progress), and <a href="http://www.15926.org/publications/general-discussions/">other&nbsp;stuff</a>
+that may interest you.</font></span></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><span style="font-size:14pt;">In case you disagree with what I wrote (and that is very well possible, I'm human and make mistakes), then please send me an </span></font><span style="font-size:14pt;"><a href="mailform-wm.php"><font face="Palatino Linotype">e-mail</font></a></span><font face="Palatino Linotype"><span style="font-size:14pt;">.</span></font></p>
+            <hr>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Publications</font></h2>
+            <p align="justify"><font face="Palatino Linotype"><span style="font-size:14pt;">Please see </span></font><a href="http://www.15926.org/publications/general-discussions/"><font face="Palatino Linotype"><span style="font-size:14pt;">http://www.15926.org/publications/general-discussions/</span></font></a><font face="Palatino Linotype"> </font></p>
+            <hr>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify">Templates</h2>
+            <p align="justify"><font face="Palatino Linotype"><span style="font-size:14pt;"><a href="http://www.infowebml.ws/TS/TS-details/">Here</a> you can find 244&nbsp;base templates I designed. These still must be approved by the MMT. </span></font></p>
+            <hr>
+            <h2 align="justify"><font face="Palatino Linotype">Mapping example</font></h2>
+            <p align="justify"><a href="http://www.infowebml.ws/mapping/line-list.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Here</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> you can find a complete mapping of a Line List. <img src="snew.gif" width="40" height="15" border="0"></span></font></p>
+            <hr>
+            <h2 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Topics</font></h2>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype"><span style="font-size:14pt;">Until now I have made&nbsp;the following contributions:</span></font></p>
+            <ul>
+                <li style="margin-top:0; margin-bottom:10;">
+                    <h3 style="margin-top:0; margin-bottom:5;"><a href="intro-and-legend/index.htm"><font face="Palatino Linotype">Introduction and Legend</font></a><font face="Palatino Linotype"></font></h3>
+                </li>
+                <li style="margin-top:0; margin-bottom:10;">
+                    <h3 style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype">Data model matters</font></h3>
+                </li>
+                <ul>
+                    <li style="margin-top:0; margin-bottom:5;"><a href="data-model/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">ISO 15926-2 Data Model, a different way of access</span></font></a><span style="font-size:14pt;"></span></li>
+                    <li style="margin-top:0; margin-bottom:5;"><a href="proposed-changes-to-data-model/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Proposed changes to the data model of ISO 15926-2</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font><font face="Palatino Linotype"></font></li>
+                </ul>
+            </ul>
+            <ul>
+                <li style="margin-top:10; margin-bottom:5;">
+                    <h3 style="margin-top:10; margin-bottom:5;"><font face="Palatino Linotype">Tutorials</font></h3>
+                </li>
+                <ul>
+                    <li style="margin-top:0; margin-bottom:5;"><a href="instance-and-member/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Instances and members</span></font></a></li>
+                    <li style="margin-top:0; margin-bottom:5;"><a href="instantiation/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Instantiation</span></font></a></li>
+                    <li style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype"><span style="font-size:14pt;"><a href="temporal-parts/index.htm">Temporal parts</a> </span></font><b><font face="Palatino Linotype" color="red"><span style="font-size:10pt; background-color:yellow;">revised 20120603</span></font></b></li>
+                    <li style="margin-top:0; margin-bottom:5;"><a href="context/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Context</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font><b><font face="Palatino Linotype" color="red"><span style="font-size:10pt; background-color:yellow;">revised 20120603</span></font></b></li>
+                    <li style="margin-top:0; margin-bottom:5;"><a href="consolidation/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Sharing and Consolidating</span></font></a> <span style="font-size:14pt;"><font face="Palatino Linotype"><img src="snew.gif" width="31" height="12" border="0"></font></span></li>
+                    <li style="margin-top:0; margin-bottom:20;"><a href="presentation.pdf"><font face="Palatino Linotype"><span style="font-size:14pt;">Presentation 2012/2</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font><font face="Palatino Linotype"></font><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font><span style="font-size:14pt;"></span><span style="font-size:14pt;"></span></li>
+                </ul>
+                <li style="margin-top:10; margin-bottom:10;">
+                    <h3 style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype">Basic Plant Modelling</font></h3>
+                </li>
+                <ul>
+                    <li style="margin-top:0; margin-bottom:5;">
+                        <p style="margin-top:0; margin-bottom:5;"><a href="functional-physical-object/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Functional and physical objects - the big picture</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font></p>
+                    </li>
+                    <li style="margin-top:0; margin-bottom:5;">
+                        <p style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype"><span style="font-size:14pt;"><a href="cradle-to-grave/index.htm">Lifecycle Model</a> </span></font><b><font face="Palatino Linotype" color="red"><span style="font-size:10pt; background-color:yellow;">revised 20120609</span></font></b><span style="font-size:14pt;"></span><span style="font-size:14pt;"></span></p>
+                    </li>
+                    <li style="margin-top:0; margin-bottom:5;">
+                        <p style="margin-top:0; margin-bottom:0;"><a href="functional-vs-materializedPO/functional-vs-materialized-physical-object.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Functional Physical Object vs Materialized Physical Object</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font><b><font face="Palatino Linotype" color="red"><span style="font-size:10pt; background-color:yellow;">revised 20120603</span></font></b><font face="Palatino
+Linotype"><span style="font-size:14pt;"> </span></font></p>
+                    </li>
+                </ul>
+            </ul>
+            <ul>
+                <li style="margin-top:0; margin-bottom:10;">
+                    <h3 style="margin-top:10; margin-bottom:5;"><font face="Palatino Linotype">Application models</font></h3>
+                </li>
+                <ul>
+                    <li style="margin-top:5; margin-bottom:5;"><b><font face="Palatino Linotype">Thing-related topics</font></b><font face="Palatino Linotype"></font></li>
+                    <ul>
+                        <li style="margin-top:5; margin-bottom:5;"><a href="representing-a-thing/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Representing a&nbsp;thing</span></font></a><font face="Palatino Linotype"> </font></li>
+                    </ul>
+                    <li style="margin-top:10; margin-bottom:5;"><b><font face="Palatino Linotype">Class-related topics</font></b><font face="Palatino Linotype"></font></li>
+                    <ul>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="plant-design/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Plant design in ISO 15926</span></font></a></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="life-cycle-of-a-class/index.htm"><span style="font-size:14pt;">Life cycle of a Class</span></a> <span style="font-size:14pt;"><font face="Palatino Linotype"><img src="snew.gif" width="31" height="12" border="0"></font></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="enumerated-set-of-class/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">How to populate an EnumeratedSetOfClass?</span></font></a><span style="font-size:14pt;"></span><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="enumerated-set-of-number/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">How to populate an EnumeratedNumberSet?</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="enumerated-set-of-property/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">How to populate an EnumeratedPropertySet?</span></font></a><font face="Palatino Linotype"></font></li>
+                    </ul>
+                    <li style="margin-top:10pt; margin-bottom:5;"><b><font face="Palatino Linotype">Relationship-related topics</font></b><font face="Palatino Linotype"></font></li>
+                    <ul>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="user-defined relationships/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">User-defined relationships between individuals</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="user-defined relationship between individual and thing/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">User-defined relationship between an individual and a class</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="class-of-relationship/class-of-relationship-with-cardinality.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Class of relationship with Cardinality</span></font></a><font face="Palatino Linotype"></font></li>
+                    </ul>
+                    <li style="margin-top:10pt; margin-bottom:5;"><b><font face="Palatino Linotype">Individual-related topics</font></b><font face="Palatino Linotype"></font></li>
+                    <ul>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="activity-models/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Activity models</span></font></a><font face="Palatino Linotype"><span style="font-size:14pt;"> </span></font><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="aggregate-of-individual/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Aggregate of individual</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="relative-location/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Location of one individual related to another</span></font></a><span style="font-size:14pt;"></span><span style="font-size:14pt;"></span><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="composition/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Composition of an individual, with its subtypes</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="connection/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Connection of one individual to another</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="containment/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Containment of one individual in another</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="stream at a location at a time/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Stream at a location and at a time</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="possession-of-property/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Possession of property</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="possession-of-indirect-property/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Possession of indirect property</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="coordinate-system/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Coordinate system</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="possession-of-shape-with-dimension/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Possession of shape with dimension</span></font></a><font face="Palatino Linotype"></font></li>
+                    </ul>
+                    <li style="margin-top:10pt; margin-bottom:5;"><b><font face="Palatino Linotype"><a name="Document_related">Document-related</a> topics</font></b><font face="Palatino Linotype"></font></li>
+                    <ul>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="document-definition/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Document definition</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="document-compostion/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Document composition</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="document-approval/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Document approval</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype"><span style="font-size:14pt;"><a href="document-publishing/index.htm">Document publishing</a></span></font><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype"><span style="font-size:14pt;"><a href="document-revision/index.htm">Document revision</a></span></font><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="representing a system/index.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Representing a system</span></font></a><font face="Palatino Linotype"></font><span style="font-size:14pt;"></span><span style="font-size:14pt;"></span></li>
+                    </ul>
+                    <li style="margin-top:10; margin-bottom:5;"><b><font face="Palatino Linotype">Multidimensional_object-related topics</font></b><font face="Palatino Linotype"></font></li>
+                    <ul>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="multidimensional-object/multidimensional-object.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">MultidimensionalObject</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="multidimensional-number/multidimensional-number.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">MultidimensionalNumber</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="multidimensional-number-space/multidimensional-number-space.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">MultidimensionalNumberSpace</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="multidimensional-property/multidimensional-property.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">MultidimensionalProperty</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="multidimensional-property-space/multidimensional-property-space.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">MultidimensionalPropertySpace</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="multidimensional-scale/multidimensional-scale.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">MultidimensionalScale</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="multidimensional-inforep/multidimensional-inforep.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">MultidimensionalInformationRepresentation</span></font></a><span style="font-size:14pt;"></span></li>
+                        <li style="margin-top:0; margin-bottom:5;"><a href="position-in-xyz-coordinates/position-in-xyz.htm"><font face="Palatino Linotype"><span style="font-size:14pt;">Position in X-, Y-, and Z-coordinates</span></font></a></li>
+                    </ul>
+                    <p style="margin-top:0; margin-bottom:5;">&nbsp;</p>
+                    <ul>
+                        <hr>
+                    </ul>
+                    <h2 style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype">Disclaimer</font></h2>
+                    <p style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="font-size:14pt;">This material shown on this web site&nbsp;is &quot;work in progress&quot; material that has been developed with input and feedback&nbsp;from the ISO 15926 community. In cases where there is a difference between material on this website and material on </span></font><span style="font-size:14pt;"><a href="http://15926.org"><font face="Palatino Linotype">15926.org</font></a></span><font face="Palatino
+Linotype"><span style="font-size:14pt;"> the latter prevails.</span></font></p>
+                    <p style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><span style="font-size:14pt;">I exclude any liability for consequential damages caused by direct or indirect use of the contents of this website.</span></font></p>
+                </ul>
+            </ul>
+            <hr>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=15926inf">
+<img src="i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+EXref="";top.document.referrer?EXref=top.document.referrer:EXref=document.referrer;//-->
+</script><script type="text/javascript"><!--
+var EXlogin='15926inf' // Login
+var EXvsrv='s10' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;EXsrc="src";
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXref?EXref=EXref:EXref=EXd.referrer;
+EXd.write("<img "+EXsrc+"=http://e1.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXref)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="s10.g" />
+</div></noscript></div>
+
+</body>
+
+</html>

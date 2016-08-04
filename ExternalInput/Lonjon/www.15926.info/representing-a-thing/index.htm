@@ -1,0 +1,59 @@
+<html>
+<head>
+<title> Representing a thing</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Representing a thing</font></h1>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">25 August 2011</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Instances of the entity types of the ISO 15926-2 data model are empty, there is no information in them, except for some meta data. Using relationships we can say something about composition, containment, etc, but in fact we point at other empty shells.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In the end humans need to know more than that, they have to see text, numbers, images, etc in order to understand the information.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">That is the scope of this topic.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Paradigm shift required</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Information representation is a complex matter. In the past years it appeared that this subject gives cause to a lot of misunderstanding. So when you read this topic, be prepared for a paradigm shift.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The letter A is a class</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This paragraph title stands for the entire alphabet, all numbers, all Booleans, even for the representation of a date and time. If that were not the case, there could be only one of each, and we wouldn't have something to read at all.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">All the a's you find in this topic on this screen are physical objects (pixels on a screen, or ink on paper, that are&nbsp;members of the instance of ExpressString&nbsp;&quot;a&quot; that is a subtype of ClassOfInformationRepresentation.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">For the vast majority of cases you are interested in the contents, regardless on which copy it is </font><b><font face="Palatino Linotype" color="red">p</font></b><font face="Palatino Linotype">resented (as opposed to </font><b><font face="Palatino Linotype" color="red">rep</font></b><font face="Palatino Linotype">resented).</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Yes, there are paper documents (physical objects), but they are of minor importance in the context of ISO 15926. The only time you want to store information about a particular paper document is when you need to manage that copy. This may be the case when the document contains information that may only be disclosed to some people. You have numbered copies then, and you keep record of who got which copy.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">And yes, there are revisions of documents. Where classes have no temporal parts, how then do we handle that? See the </font><a href="../document-revising/index.htm"><font face="Palatino Linotype">applicable topic</font></a><font face="Palatino Linotype">.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Model</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Below is a compacted model for representing anything:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="representing.jpg" width="853" height="324" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">From this model many specialized templates can be derived.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Let us review this model in some detail.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">At the left-hand side we see two noteworthy things:</font></p>
+            <ol>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><font face="Palatino Linotype">The entity type (ABS)Thing, being an abstract entity type, may not be instantiated. All its subtypes (except the abstract supertype ones) can be described and/or identified&nbsp;with a selection from the possibilities at the right.</font></div>
+                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:10;">
+                    <div align="justify"><font face="Palatino Linotype">Class and its subtypes can be &quot;defined&quot;, the other subtypes of Thing cannot. Class and it subtypes can also be described and/or identified.</font></div>
+                </li>
+            </ol>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The PossibleIndividual that is the 'sign' of the RepresentationOfThing usually is a PhysicalObject, but can also be an Activity, like a stop sign by a police officer. As said before, this part of the model will only be used seldomly. We use it mainly for the model for revising, approval, issuing, etc a document. We do not approve a paper copy, but the class. Yet only instances of PossibleIndividual can participate in an approving activity. This is solved by approving the physical object that is the record on the server. See the </font><a href="../index.htm#Document_related"><font face="Palatino Linotype">Document-related Topics</font></a><font face="Palatino Linotype"> on the home page.</font></p>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">InformationObject, -Representation, and -Presentation</font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">ClassOfInformationObject is defined in ISO 15926-2 as follows:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">A ClassOfInformationObject is a ClassOfArrangedIndividual whose members are members of zero or more ClassOfInformationRepresentation and of zero or more ClassOfInformationPresentation.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">This can be modelled as follows:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="information-object1.jpg" width="397" height="141" border="0"></font></p>
+            <p align="justify"><font face="Palatino Linotype">but better as follows:</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="information-object2.jpg" width="350" height="137" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">because the presentation part (e.g. bold, font type, fot size, color) shapes the representation part.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Even more likely it will be as follows:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="information-object3.jpg" width="369" height="281" border="0"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">See also the topic </font><a href="../document-compostion/index.htm"><font face="Palatino Linotype">Document composition</font></a><font face="Palatino Linotype">.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Usually such a composition of documents in ISO 15926 terms is rather cumbersome, although&nbsp;the effort could be worthwhile&nbsp;for documents with many data,&nbsp;like equipment specifications, in order to make the contained data available in computer-interpretable format. In the past I spent considerable time on composing such documents in this way, but sofar it seems that this didn't get attention. </font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

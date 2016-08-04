@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> How to populate an EnumeratedSetOfClass?</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td bgcolor="white">
+            <h1>How to populate an EnumeratedSetOfClass?</h1>
+            <p><b><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a>Nov. 2010, rev. 8 Mar. 2011, rev. 24 Nov. 2011</b></p>
+            <hr>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0;">From time to time I stumbled on the same question, found the answer, and over time&nbsp;forgot that answer again. The question how to populate an instance of EnumeratedSetOfClass is one of those questions. That's why I write it down here.</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0;">The answer can be seen from the diagram below.</span></font><span style="margin-top:0;"><font face="Microsoft Sans Serif" color="red"><b> </b></font></span></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">&nbsp;</p>
+            <p align="center" style="margin-top:0;"><img src="definition-of-enumerated-set-of-class.png" width="578" height="565" border="0"></p>
+            <p align="center" style="margin-top:0;"><b>Population of an EnumeratedSetOfClass</b></p>
+            <p align="justify" style="margin-top:0;"><font face="Microsoft Sans Serif"><span style="margin-top:0;">Part 2 tells us:</span></font></p>
+            <p style="margin-top: 0pt; margin-bottom: 10px;" align="justify">An <b>EnumeratedSetOfClass</b>&nbsp;is a <b><a href="http://www.15926.info/data-model/index.htm#ClassOfClass" classofclass=""></a></b> that is an enumerated set of the instances of <b><a href="http://www.15926.info/data-model/index.htm#Class">Class</a></b>. Enumerated means that the full set of members is specified.</p>
+            <p style="margin-top: 0pt; margin-bottom: 10px;" align="justify">EXAMPLE {Plastic, 1.2kg, frame} is an <b>EnumeratedSetOfClass</b>. More generally {{A,B,C},{B,C,D},{C,D,E}} is an <b>EnumeratedSetOfClass</b>. Also &quot;electrical engineering classes for ERDL V1.1&quot; is an <b>EnumeratedSetOfClass</b>.</p>
+            <p style="margin-top: 0pt; margin-bottom: 10px;" align="justify"><b>EXPRESS specification</b>:</p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">ENTITY enumerated_set_of_class &nbsp;</p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (class_of_class); &nbsp;</p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">END_ENTITY; &nbsp;</p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">&nbsp;</p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="justify"><font face="Microsoft Sans Serif"><span style="margin-top:0pt; margin-bottom:0pt;">EnumeratedSetOfClass is a ClassOfClass, so you can classify a Class (or its many subtypes) with it, such as ArithmeticNumber, Property, ClassOfInanimatePhysicalObject, etc.</span></font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="justify"><font face="Microsoft Sans Serif">The sequence of the enumerated classes in the set&nbsp;is random. In case the sequence is important, go to the topics on&nbsp;<a href="../multidimensional-object/multidimensional-object.htm">MultidimensionalObject</a></font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="justify"><font face="Microsoft Sans Serif"><b>Template</b></font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="justify"><font face="Microsoft Sans Serif">Part 7 defines the&nbsp;template for this in a totally different way, by defining a reference class called <b>SetOf2Classes</b> in the RDL (Reference Data Library), thus dictating the number of classes in the set in a different way: </font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="center"><img src="EnumeratedSetOf2Classes.png" width="474" height="323" border="0"></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

@@ -1,0 +1,158 @@
+<html>
+<head>
+<title> Activity model</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">Activity models</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">6 Dec.&nbsp;2010, rev. 9 Dec. 2010, rev. 27 Feb. 2011, rev. 7 Mar. 2011, rev. 8 Mar. 2011, rev. 31 March 2011, rev. 11 May 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h2 align="justify"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">There are four&nbsp;different types of involvement in an activity:</font></p>
+            <ol>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><a href="#Participation"><font face="Palatino Linotype">as a 'participant'</font></a><font face="Palatino Linotype"></font></div>
+                                                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><a href="#Reference"><font face="Palatino Linotype">as a 'reference'</font></a><font face="Palatino Linotype"></font></div>
+                                                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><a href="#Recognition"><font face="Palatino Linotype">as a 'recognized' thing</font></a><font face="Palatino Linotype"></font></div>
+                                                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><a href="#Cause_of_Event"><font face="Palatino Linotype">as an event that is being caused by the activity</font></a><font face="Palatino Linotype"></font></div>
+                                </li>
+                
+            </ol>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">There is a relation between a relationship between individuals and an activity. Two example are shown: &nbsp;<img src="snew.gif" width="31" height="12" border="0"></font></p>
+            <ol>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><a href="#Connecting"><font face="Palatino Linotype">Connecting two flanges - causing two temporal parts that are interconnected by an instance of&nbsp;ConnectionOfIndividual relationship of a certain type</font></a><font face="Palatino Linotype"></font></div>
+                                </li>
+                <li align="justify" style="margin-top:0; margin-bottom:0;">
+                    <div align="justify"><a href="#Disconnecting"><font face="Palatino Linotype">Disconnecting two flanges - causing two temporal parts that have&nbsp;a Status 'disconnected'</font></a><font face="Palatino Linotype"></font></div>
+                                </li>
+            </ol>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><a name="Participation">Participation</a></font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Part 2 defines Participation as follows:</font></p>
+            <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype" color="#8064A2">A Participation&nbsp;is a CompositionOfIndividual that indicates that a PossibleIndividual&nbsp;is a participant in an Activity.</font></p>
+            <p style="margin-top:0; margin-bottom:5;" align="justify"><font face="Palatino Linotype" color="#8064A2">NOTE The PossibleIndividual&nbsp;that is the part in the Participation&nbsp;is may be a temporal part of a WholeLifeIndividual that is classified by the ParticipatingRoleAndDomain that indicates the role it plays in the Activity.</font></p>
+            <p style="margin-top:0; margin-bottom:5;" align="justify"><font face="Palatino Linotype" color="#8064A2">EXAMPLE
+ The relationship between the temporal part of P1234 that performs the 
+discharge of the Motor Vessel Murex on 2nd December 2002, and the 
+activity that is that discharge of that vessel is a Participation.</font></p>
+            <p style="margin-top:0; margin-bottom:5;" align="justify"><b><font face="Palatino Linotype" color="#8064A2">EXPRESS specification</font></b><font face="Palatino Linotype" color="#8064A2">:</font></p>
+            <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype" color="#8064A2">ENTITY participation &nbsp;</font></p>
+            <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (composition_of_individual); &nbsp;</font></p>
+            <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;SELF\composition_of_individual.whole &nbsp;&nbsp;: &nbsp;&nbsp;activity; &nbsp;</font></p>
+            <p style="margin-top:0; margin-bottom:0;" align="justify"><font face="Palatino Linotype" color="#8064A2">END_ENTITY; &nbsp;</font></p>
+            <p style="margin-top:5; margin-bottom:0;" align="justify"><b><font face="Palatino Linotype" color="#8064A2">Attribute definitions</font></b><font face="Palatino Linotype" color="#8064A2">:</font></p>
+            <p style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;whole &nbsp;&nbsp;: &nbsp;&nbsp;The Activity&nbsp;that is the whole in the Participation. </font><font face="Palatino Linotype" color="#403251">&nbsp;</font><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Exegesis</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Normally there are more than one possible individuals participating in an activity, and together they cause some state change in the one that is subjected to that activity. The relationship between an activity and the participants is deemed to be of the composition type.</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="participation-in-an-activity.png" width="749" height="506" border="0"></font></p>
+            <p align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">myPump participates in 'Pumping' as 'Performer'</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify"><font face="Palatino Linotype">When the investment is made to define all sorts of instances of ClassOfParticipation in the RDL, the template will become easy to use.&nbsp;Any such instance then belongs to the OIM (Object Information Model) of the class of activity and the class of inanimate physical object.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Template</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The derived&nbsp;template diagrams are&nbsp;shown below.</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="ClassOfParticipationDefinition.png" width="654" height="312" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ClassOfParticipation</span></font></b></p>
+            <p align="center" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">&nbsp;&nbsp;</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="ParticipationOfTemporalPartInActivity.png" width="606" height="457" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of Participation</span></font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><a name="Reference">InvolementByReference</a></font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Part 2 defines InvolvementByReference as follows:</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><font face="Palatino Linotype" color="#8064A2">An InvolvementByReference&nbsp;is a Relationship&nbsp;that indicates that a Thing is referred to in an Activity.</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><font face="Palatino Linotype" color="#8064A2">NOTE This entity type is for involvements that are not direct Participation of a PossibleIndividual, such as involvement of a class, or of a historical or future temporal part of a PossibleIndividual.</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><font face="Palatino Linotype" color="#8064A2">EXAMPLE A conversation that refers to the Roman Empire is an Activity&nbsp;that relates to the Roman Empire by an InvolvementByReference.</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><b><font face="Palatino Linotype" color="#8064A2">EXPRESS specification:</font></b><font face="Palatino Linotype" color="#8064A2"></font></p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify"><font face="Palatino Linotype" color="#8064A2">ENTITY involvement_by_reference &nbsp;</font></p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (relationship); &nbsp;</font></p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;involved &nbsp;&nbsp;: &nbsp;&nbsp;thing; &nbsp;</font></p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;involver &nbsp;&nbsp;: &nbsp;&nbsp;activity; &nbsp;</font></p>
+            <p style="margin-top:0pt; margin-bottom:0pt;" align="justify"><font face="Palatino Linotype" color="#8064A2">END_ENTITY; &nbsp;</font></p>
+            <p style="margin-top:5pt; margin-bottom:0pt;" align="justify"><b><font face="Palatino Linotype" color="#8064A2">Attribute definitions:</font></b><font face="Palatino Linotype" color="#8064A2"></font></p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;involved &nbsp;&nbsp;: &nbsp;&nbsp;The Thing&nbsp;that is involved in the referenced Activity. &nbsp;</font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;involver &nbsp;&nbsp;: &nbsp;&nbsp;The Activity&nbsp;in which the referenced Thing&nbsp;is involved. &nbsp;</font><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="justify"><b><font face="Palatino Linotype">Exegesis</font></b><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="justify"><font face="Palatino Linotype">Neither an instance of Class (or its many subtypes), nor instances of PossibleIndividual that existed in the past or will (probably) exist in the future, can physically participate in an activity that takes place at present. We can only refer to it. A typical example is the reference that is made to standards (ClassOfInformationRepresentation).</font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="justify"><font face="Palatino Linotype">NOTE - In cases that the activity took place in the same period in time as the possible individual existed, that may have been a matter of participation. However, in cases that a possible individual, that exists in the same period in time as the activity, it is also possible that only reference is been made to that individual. For example when two people talk about the third.</font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="center"><font face="Palatino Linotype"><img src="involvement-by-reference-in-an-activity.png" width="727" height="459" border="0"></font></p>
+            <p style="margin-top:0pt; margin-bottom:10pt;" align="center"><b><font face="Palatino Linotype"><span style="font-size:10pt;">API Standard 1104 is involved by reference as the applicable standard for the welding activity</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Template</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The derived&nbsp;template diagrams are&nbsp;shown below.</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="ClassOfInvolvementByReferenceDefinition.png" width="654" height="341" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ClassOfInvolvementByReference</span></font></b></p>
+            <p align="center" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="InvolvementByReferenceOfIndividualInTemporalPartActivity.png" width="591" height="475" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of InvolvementByReference</span></font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h3 style="margin-top:0pt; margin-bottom:10pt;" align="justify"><font face="Palatino Linotype"><a name="Recognition">Recognition</a></font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Part 2 defines Recognition&nbsp;as follows:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype" color="#8064A2">A Recognition is a Relationship that indicates that a Thing is recognized through an Activity.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype" color="#8064A2">EXAMPLE Measurement activity #358 recognized that the room was a member of the 20 Celsius Property.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><b><font face="Palatino Linotype" color="#8064A2">EXPRESS specification</font></b><font face="Palatino Linotype" color="#8064A2">:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype" color="#8064A2">ENTITY recognition &nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (relationship); &nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;recognized &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;thing; &nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;recognizing &nbsp;&nbsp;: &nbsp;&nbsp;activity; &nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Palatino Linotype" color="#8064A2">END_ENTITY; &nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><b><font face="Palatino Linotype" color="#8064A2">Attribute definitions</font></b><font face="Palatino Linotype" color="#8064A2">:</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:0;"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;recognized &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;The Thing that is recognized by the Activity. &nbsp;</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;recognizing &nbsp;&nbsp;: &nbsp;&nbsp;The Activity that results in the recognition.</font><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Exegesis</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In case something is recognized about an object it means that it is the classification with that 'something' is what is recognized. If you want to recognize the temparature of a temporal part of a stream (see below) the 'recognized' attribute refers to an instance of Classification between that stream and the instance of Property that is quantified as 75.9 °C.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">But we can also recognize that a particular car is a (is classified as) Mercedes 300 SEL. And also that that car has passed the annual check (this is modeled with the classification of that car with that instance of Status).</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">&nbsp;</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="recognition.png" width="832" height="466" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">The temperture measurement activity recognizes that the stream has a temperature of 75.9 °C</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Template</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The derived&nbsp;template diagrams are shown below.</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="ClassOfRecognitionDefinition.png" width="615" height="310" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ClassOfRecognition</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="MeasuringAPropertyOfATemporalPart.png" width="678" height="798" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of Recognition</span></font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h3 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><a name="Cause_of_Event">Cause of Event</a></font></h3>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Part 2 defines Recognition&nbsp;as follows:</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><font face="Palatino Linotype">A CauseOfEvent is a Relationship that indicates that the caused Event is caused by the causer Activity.</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><font face="Palatino Linotype">EXAMPLE The relation that indicates that the tanker loading Activity caused the Event described as 'tank liquid level full' can be represented by an instance of CauseOfEvent.</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><b><font face="Palatino Linotype">EXPRESS specification:</font></b><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0pt; margin-bottom:0px;" align="justify"><font face="Palatino Linotype" color="#8064A2">ENTITY cause_of_event</font></p>
+            <p style="margin-top:0pt; margin-bottom:0px;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (relationship);</font></p>
+            <p style="margin-top:0pt; margin-bottom:0px;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;caused &nbsp;: &nbsp;event;</font></p>
+            <p style="margin-top:0pt; margin-bottom:0px;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;causer &nbsp;&nbsp;: &nbsp;activity;</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><font face="Palatino Linotype" color="#8064A2">END_ENTITY;</font></p>
+            <p style="margin-top:0pt; margin-bottom:0px;" align="justify"><b><font face="Palatino Linotype" color="#8064A2">Attribute definitions:</font></b><font face="Palatino Linotype" color="#8064A2"></font></p>
+            <p style="margin-top:0pt; margin-bottom:0px;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;caused &nbsp;: &nbsp;The Event that is caused in the CauseOfEvent.</font></p>
+            <p style="margin-top:0pt; margin-bottom:10px;" align="justify"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;causer &nbsp;: &nbsp;The Activity that is the causer in the CauseOfEvent.</font><font face="Palatino Linotype"></font></p>
+            <p style="margin-top:0pt; margin-bottom:10px;" align="justify"><font face="Palatino Linotype">and for all clarity:</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><font face="Palatino Linotype" color="#8064A2">An Event&nbsp;is a PossibleIndividual&nbsp;with zero extent in time. An Event&nbsp;is the temporal boundary of one or more PossibleIndividuals, although there may be no knowledge of these PossibleIndividuals.</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><font face="Palatino Linotype" color="#8064A2">EXAMPLE The connection of power to a pump motor&nbsp;is an Event&nbsp;that marks the beginning of a temporal part of that pump motor that is in operation.</font></p>
+            <p style="margin-top:0pt; margin-bottom:5px;" align="justify"><b><font face="Palatino Linotype" color="#8064A2">EXPRESS specification:</font></b><font face="Palatino Linotype" color="#8064A2"></font></p>
+            <p style="margin-top:0pt; margin-bottom:0px;" align="justify"><font face="Palatino Linotype" color="#8064A2">ENTITY event &nbsp;</font></p>
+            <p style="margin-top:0pt; margin-bottom:0px;" align="justify"><span style="margin-top:0pt; margin-bottom:20px;"><font face="Palatino Linotype" color="#8064A2">&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF (possible_individual); &nbsp;</font></span><font face="Palatino Linotype" color="#8064A2"></font></p>
+            <p style="margin-top:0pt; margin-bottom:20px;" align="justify"><span style="margin-top:0pt; margin-bottom:20px;"><font face="Palatino Linotype" color="#8064A2">END_ENTITY; &nbsp;</font></span><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Exegesis</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:20;"><font face="Palatino Linotype">Here we deal with the question what activity caused the event to happen. In the example&nbsp;below we fill a&nbsp;tanker, and&nbsp;there comes a moment that (a temporal part of) the tanker is full.</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="cause-of-event.png" width="1028" height="613" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">The activity 'TankerFilling' causes the event, at the given date-time, that the tanker is full</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">NOTE - This is a rather complex model, also because the model at class level is not symmetrical as compared with the model at individual level.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype">Template</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The derived&nbsp;template diagrams are&nbsp;shown below.</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="ClassOfCauseOfEventBeginningOfIndividualDefinition.png" width="461" height="339" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of ClassOfCauseOfBeginning</span></font></b><font face="Palatino Linotype"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype"><img src="ActivityCausesBeginningOfTemporalPart.png" width="725" height="494" border="0"></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype"><span style="font-size:10pt;">Template for an instance of CauseOfEvent</span></font></b><font face="Palatino Linotype"></font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 

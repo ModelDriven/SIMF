@@ -1,0 +1,67 @@
+<html>
+<head>
+<title> Multidmensional number space</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify">How to define&nbsp;a MultidimensionalNumberSpace?</h1>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a><b>25 Feb. 2011, rev. 19 March 2011</b></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><a name="Introduction">Introduction</a></font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In ISO 15926-5 you can find two&nbsp;rather esoteric entity types, the <a href="../data-model/index.htm#ClassOfMultidimensionalObject">ClassOfMultidimensionalObject</a> and the <a href="../data-model/index.htm#MultidimensionalObject">MultidimensionalObject</a>. These are discussed in a <a href="http://www.15926.info/multidimensional-object/multidimensional-object.htm">separate topic</a>. In this topic I'll try to give an explanation of one of the derivatives, the <a href="../data-model/index.htm#MultidimensionalNumberSpace">MultidimensionalNumberSpace</a>.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">Part 2 defines: </p>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify>A 
+<B>MultidimensionalNumberSpace</B>&nbsp;is a <B><A 
+href="file:///D:/15926/aaa-WEBSITE/data-model/index.htm#NumberSpace">NumberSpace</A></B>&nbsp;and a <B><A 
+href="file:///D:/15926/aaa-WEBSITE/data-model/index.htm#MultidimensionalObject">MultidimensionalObject</A></B>.</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify>EXAMPLE R3, the 
+space defined as being all the triples of real numbers (e.g. &lt;1.0, 2.1, 
+5.4&gt;), is a <B>MultidimensionalNumberSpace</B>.</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><B>EXPRESS 
+specification</B>:</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify>ENTITY 
+multidimensional_number_space &nbsp;</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify>&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF 
+(number_space, multidimensional_object); &nbsp;</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify>END_ENTITY; &nbsp;</P>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">&nbsp;</p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Discussion</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Let's use&nbsp;the (adapted) diagram below&nbsp;as reference:</span></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="diagram-0004-adapted.jpg" width="614" height="657" border="0"></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">The adaptation, whereby the non-applicable attributes are being left out, shows that the esoteric character disappears. For details see <a href="../multidimensional-object/multidimensional-object.htm">here</a>.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Let us first focus on the ClassOfMultidimensionalObject, attribute by attribute.</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">&quot;<b>roles&quot; attribute </b></span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">The rdf:object of this attribute is a set of instances of <a href="../data-model/index.htm#RoleAndDomain">RoleAndDomain</a> that indicate what the role actually is and what subtype of Thing is the object. If the multidimensional object is the input in a function (so a <a href="../data-model/index.htm#ClassOfFunctionalMapping">ClassOfFunctional Mapping</a>), then each role is the same as its parameter name in that function.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><b>&quot;cardinalities&quot; attribute</b></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">If&nbsp;any of the Roles could exist 0, 1, or more times for an instance of MultidimensionalObject, then that shall be expressed by a list of instances of Cardinality. If one or more such cardinalities apply, all cardinalities shall be defined. (no example comes to my mind)</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">and then of the MultidimensionalProperty:</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><b>&quot;elements&quot; attribute</b></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Here the 1:? multidimensional properties that are part of the multidimensional property space, where that cardinality is determined by the &quot;cardinalities&quot; attribute of the classifying ClassOfMultidimensionalObject.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Example</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:5;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">Let us now focus on the MultidimensionalNumberSpace that defines the ultimate limits of the values that any member <a href="../multidimensional-number/multidimensional-number.htm">Multidimensional Number</a> may have:</span></font></p>
+            <p align="center" style="margin-top:0; margin-bottom:5;"><img src="multidimensional-number-space-example.jpg" width="578" height="381" border="0"></p>
+            <p align="center" style="margin-top:20; margin-bottom:20;"><b>MultidimensionalNumberSpace defines the limits of any member MultidimensionalNumber</b></p>
+            <p align="justify" style="margin-top:20; margin-bottom:20;"><font face="Microsoft Sans Serif">In template format this looks like this:</font></p>
+            <p align="center" style="margin-top:20; margin-bottom:20;"><img src="multidimensional-number-space-example-template.png" width="725" height="186" border="0" usemap="#ImageMap1"></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<map name="ImageMap1">
+<area shape="rect" coords="125, 22, 165, 46" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="125, 71, 167, 98" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="246, 46, 303, 71" href="../data-model/mnemonics.htm#COMO">
+<area shape="rect" coords="248, 136, 300, 161" href="../data-model/mnemonics.htm#MDNS">
+<area shape="rect" coords="396, 142, 441, 168" href="../data-model/mnemonics.htm#NRR">
+<area shape="rect" coords="516, 101, 573, 129" href="../data-model/mnemonics.htm#UBONR">
+<area shape="rect" coords="520, 162, 576, 185" href="../data-model/mnemonics.htm#LBONR">
+<area shape="rect" coords="640, 110, 694, 133" href="../data-model/mnemonics.htm#RLNR">
+<area shape="rect" coords="641, 168, 696, 185" href="../data-model/mnemonics.htm#RLNR">
+</map></body>
+</html> 

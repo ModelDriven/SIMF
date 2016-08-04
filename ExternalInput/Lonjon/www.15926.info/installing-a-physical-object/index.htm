@@ -1,0 +1,89 @@
+<html>
+<head>
+<title> Installing a physical object in a function place</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify">Installing a materialized physical object in a function place</h1>
+            <p align="justify"><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a><b>5 Dec. 2010, rev. 11 Feb. 2011, 19 March 2011, 22 July 2011, 28 July 2011, 29 July 2011, 10 August 2011</b></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font size="4">As discussed in <a href="../functional-physical-object/index.htm">another topic</a> we design a&nbsp;&quot;functional unit&quot; alias &quot;function place&quot;, represented by an instance of FunctionalPhysicalObject. Then we acquire one or more instances of MaterializedPhysicalObject, and install them in the function place. In the schema below the function place is a pump P-101.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font size="4">This model is a continuation of the model in which we define the Process Tag P24 for which Design Tag P-101 is the Technical Solution. Click on the yellow marked objects to get to that Process Tag P24.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Model</font></h2>
+            <p align="left" style="margin-top:0; margin-bottom:10;"><font size="4">The&nbsp;template model for that is (see <a href="../data-model/mnemonics.htm">mnemonics</a> for their meaning): </font><font face="Microsoft Sans Serif"> </font></p>
+            <p align="center"><a name="schema"></a><img src="consolidated-schema-of-installation.jpg" width="893" height="550" border="0" usemap="#ImageMap1"></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Below this model has been decomposed into chunks that are explained.</font></p>
+            <ul>
+            </ul>
+            <ol start="1">
+                <li><font face="Microsoft Sans Serif">We specify the pump function&nbsp;P-101 that is required as per Pump Specification:</font></li>
+            </ol>
+            <p align="center"><img src="modelling-the-temporal-part-of-P-101.jpg" width="615" height="494" border="0"></p>
+            <hr>
+            <ol start="2">
+                <li align="justify">
+                    <div align="justify"><font face="Microsoft Sans Serif">We go out for quotation and select the pump that satisfies the requirements of the pump specification:</font></div>
+                                                                                                                                                                                                                                                                </li>
+            </ol>
+            <p align="center"><img src="selecting-the-pump.jpg" width="893" height="494" border="0"></p>
+            <ul>
+                <p align="justify"><font face="Microsoft Sans Serif">With COIPO-34900 we can put on record that the pump class ACME Model 123456 is suitable for the&nbsp;class that defines the requirements for P-101. This is very useful, because whenever the individual pump with serial number 654321 would fail, we can immediately find a replacement, that can be:</font></p>
+            </ul>
+            <ul>
+                <ul>
+                    <li align="justify">
+                        <div align="justify"><font face="Microsoft Sans Serif">a spare&nbsp;member of the class ACME Model 123456 that is in the warehouse</font></div>
+                                                                                                                                </li>
+                    <li><font face="Microsoft Sans Serif">another&nbsp;member of the class ACME Model 123456 that is installed at a less critical place and could be de-installed and&nbsp;used</font></li>
+                    <li><font face="Microsoft Sans Serif">a pump of a competing supplier who lost the order, but whose pump also satisfies the requirements.</font></li>
+                    <hr>
+                </ul>
+            </ul>
+            <ol start="3">
+                <li><font face="Microsoft Sans Serif">We now install our pump at the function place P-101:</font></li>
+            </ol>
+            <ul>
+                <p align="center" style="margin-top:0; margin-bottom:5;"><img src="installation.jpg" width="816" height="201" border="0"></p>
+                <hr>
+            </ul>
+            <ol start="4">
+                <li><font face="Microsoft Sans Serif">The date-time is left out of the diagram, because it would clutter it too much. For each of the&nbsp;Individuals the following diagram applies:</font></li>
+            </ol>
+            <p align="center"><img src="BeginningOfIndividual.jpg" width="687" height="70" border="0"></p>
+            <hr>
+            <ol start="5">
+                <li style="margin-top:0; margin-bottom:0;"><font face="Microsoft Sans Serif">Putting everything together we get the earlier-shown </font><a href="#schema"><font face="Microsoft Sans Serif">schema</font></a><font face="Microsoft Sans Serif">. </font>                                                                </li>
+            </ol>
+            <p style="margin-top:0; margin-bottom:0;"><font face="Microsoft Sans Serif">Please note that when the specification for the pump goes to rev.2, we get a new temporal part of J-1 with revised requirements. </font></p>
+            <p style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">It may happen then that the installed pump no longer satisfies the requirements, and will have to be replaced.</font></p>
+            <hr>
+            <ol start="6">
+                <li style="margin-top:0; margin-bottom:0;"><font face="Microsoft Sans Serif"><a name="point6"></a>Now we have to ask ourselves where to put the pump-related&nbsp;information, such as:</font></li>
+                <ul>
+                    <li style="margin-top:0; margin-bottom:0;"><font face="Microsoft Sans Serif">its position, in terms of XYZ-coordinates</font></li>
+                    <li style="margin-top:0; margin-bottom:0;"><font face="Microsoft Sans Serif">its mass (weight) of 254 kg</font></li>
+                    <li style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">its connection to the adjacent&nbsp;pipe</font></li>
+                </ul>
+                <p style="margin-top:20; margin-bottom:10;"><font face="Microsoft Sans Serif">This is shown in the following schema:</font></p>
+            </ol>
+            <p style="margin-top:0; margin-bottom:10;" align="center"><img src="attribution-of-info.jpg" width="816" height="505" border="0"></p>
+            <p style="margin-top:0; margin-bottom:10;" align="left"><font face="Microsoft Sans Serif">Actually temporal parts of the pump and pipe are involved in the connection (not shown here).</font></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Installing a President</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">This model is also applicable for the installation of a person&nbsp;in the function place &quot;President of the United States of America&quot;. The slogan &quot;John Smith&nbsp;for President&quot; is a possible future instance of US CITIZEN WHO CAN FUNCTION AS THE&nbsp;PRESIDENT OF THE USA.</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="installing-a-president-no-network.jpg" width="801" height="549" border="0"></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><b>Schema for installing a US President without reference to the network of the US Government</b></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<map name="ImageMap1">
+<area shape="rect" coords="228, 364, 310, 487" href="../process-tag-vs-design-tag/index.htm">
+</map></body>
+</html> 

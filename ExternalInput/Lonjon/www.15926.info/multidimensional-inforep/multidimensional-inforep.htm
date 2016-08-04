@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> Multidmensional information representation</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify">How to define&nbsp;a MultidimensionalInformationRepresentation?</h1>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><a href="../index.htm"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></a><b>25 Feb. 2011, rev. 19 March 2011</b></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><a name="Introduction">Introduction</a></font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In ISO 15926-5 you can find two&nbsp;rather esoteric entity types, the <a href="../data-model/index.htm#ClassOfMultidimensionalObject">ClassOfMultidimensionalObject</a> and the <a href="../data-model/index.htm#MultidimensionalObject">MultidimensionalObject</a>. These are discussed in a <a href="http://www.15926.info/multidimensional-object/multidimensional-object.htm">separate topic</a>. In this topic I'll try to give an explanation of one of the derivatives, that is not a part of Part 2: the <b>MultidimensionalInformationRepresentation</b>.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;">Part 2 <b>would have</b>&nbsp;defined it as follows: </p>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify>A 
+<B>MultidimensionalInformationRepresentation</B>&nbsp;is a <b><a href="../data-model/index.htm#ClassOfInformationRepresentation">ClassOfInformationRepresentation</a></b>&nbsp;and a <B><A 
+href="../data-model/index.htm#MultidimensionalObject">MultidimensionalObject</A></B>.</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify>EXAMPLE {1.0, 2.1, 5.4} &nbsp;defines&nbsp;a MultidimensionalNumber.</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px" align=justify><B>EXPRESS 
+specification</B>:</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify>ENTITY 
+multidimensional_information_representation &nbsp;</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify>&nbsp;&nbsp;&nbsp;&nbsp;SUBTYPE OF 
+(class_of_information_representation, multidimensional_object); &nbsp;</P>
+            <P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align=justify>END_ENTITY; &nbsp;</P>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" align="justify">&nbsp;</p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">Discussion</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">In our example of a multidimensional property Q-H POINT we already discovered the need to quantify both properties, with {90.8,4.2}.</span></font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><span style="margin-top:0; margin-bottom:10;">For this we need an instance of </span>MultidimensionalInformationRepresentation. For the time being that will be a Part 4 class, that is an instance of both class_of_information_representation and multidimensional_object.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif"><a name="Example">Example</a></font></h2>
+            <p align="center" style="margin-top:0; margin-bottom:5;"><img src="multidimensional_information_representation.jpg" width="619" height="308" border="0"></p>
+            <p align="center" style="margin-top:20; margin-bottom:20;"><b>MultidimensionalInformationRepresentation defines the numerical values of our Q-H Point</b></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Microsoft Sans Serif">In template format this looks like this:</font></p>
+            <p align="center" style="margin-top:0; margin-bottom:10;"><img src="multidimensional_information_representation-template.png" width="453" height="254" border="0" usemap="#ImageMap1"></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<map name="ImageMap1">
+<area shape="rect" coords="160, 29, 207, 54" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="161, 81, 208, 108" href="../data-model/mnemonics.htm#RAD">
+<area shape="rect" coords="288, 53, 342, 79" href="../data-model/mnemonics.htm#COMO">
+<area shape="rect" coords="414, 129, 451, 153" href="../data-model/mnemonics.htm#EXRL">
+<area shape="rect" coords="414, 192, 452, 214" href="../data-model/mnemonics.htm#EXRL">
+<area shape="rect" coords="297, 232, 356, 253" href="../data-model/mnemonics.htm#COROT">
+<area shape="rect" coords="145, 234, 201, 253" href="../data-model/mnemonics.htm#MDNR">
+</map></body>
+</html> 

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> Home-grown relationships</title>
+
+<meta name="GENERATOR" content="Namo WebEditor">
+</head>
+<body bgcolor="#003300" text="black" link="blue" vlink="purple" alink="red">
+
+<table align="center" cellpadding="5" cellspacing="0" width="1000">
+    <tr>
+        <td width="990" bgcolor="white">
+            <h1 style="margin-top:0; margin-bottom:10;" align="justify"><font face="Palatino Linotype">User-defined relationships between individuals</font></h1>
+            <p align="justify"><a href="../index.htm"><font face="Palatino Linotype"><img align="right" src="home-button-icon15.gif" width="40" height="39" border="0" hspace="5"></font></a><b><font face="Palatino Linotype">18&nbsp;Dec. 2010, rev. 10 March 2011, rev. 13 May 2012</font></b><font face="Palatino Linotype"></font></p>
+            <hr>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Introduction</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">In ISO 15926-2 you will find a number of pre-defined relationships, like connection_of_individual. These will, presumably, be used most often, but they do not cover all situations in real life. So, in order not to get stuck, Part 2 offers a way to use&nbsp;an instance of </font><a href="../data-model/index.htm#OtherRelationship"><b><font face="Palatino Linotype">Other Relationship</font></b></a><font face="Palatino Linotype">&nbsp;in combination with&nbsp;with a </font><a href="../data-model/index.htm#ClassOfRelationshipWithSignature"><b><font face="Palatino Linotype">ClassOfRelationshipWithSignature</font></b></a><font face="Palatino Linotype"> that can be used to classify the new relationship you have in mind.</font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><b><font face="Palatino Linotype" color="red">WARNING</font></b><font face="Palatino Linotype"> - Do not use this lightly, because it may turn out to be nonsensical and the exchange of information may fail for that reason.</font></p>
+            <h2 align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">Model</font></h2>
+            <p align="justify" style="margin-top:0; margin-bottom:10;"><font face="Palatino Linotype">The two attributes of </font><a href="../data-model/index.htm#ClassOfRelationshipWithSignature"><b><font face="Palatino Linotype">ClassOfRelationshipWithSignature</font></b></a><font face="Palatino Linotype">, classOfEnd1 and classOfEnd2, each point at a </font><a href="../data-model/index.htm#RoleAndDomain"><b><font face="Palatino Linotype">RoleAndDomain</font></b></a><font face="Palatino Linotype">, or in fact at an EXPRESS attribute, or in RDF&nbsp;terms a 'property + object', the relationship being the RDF&nbsp;'subject'. </font></p>
+            <p align="justify" style="margin-top:0; margin-bottom:20;"><font face="Palatino Linotype">To give an example: the relationship </font><a href="../data-model/index.htm#CompositionOfIndividual"><b><font face="Palatino Linotype">CompositionOfIndividual</font></b></a><font face="Palatino Linotype"> has two attributes: 'part' and 'whole', both pointing at an instance of&nbsp;PossibleIndividual. The instances of RoleAndDomain are here 'PartANDPossibleIndividual' , respectivily 'Whole'ANDPossibleIndividual'.</font></p>
+            <p align="center"><font face="Palatino Linotype"><img src="marriage-relationship.png" width="932" height="537" border="0"></font></p>
+            <p align="center"><b><font size="2" face="Palatino Linotype">A heterosexual monogamous&nbsp;marriage relationship as a specialization of&nbsp;OtherRelationship</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify"><font face="Palatino Linotype">The conversion of the attribute (property) names, if so required,&nbsp;shall be done with a rule.</font></p>
+            <p align="justify"><b><font face="Palatino Linotype">Template</font></b><font face="Palatino Linotype"></font></p>
+            <p align="justify"><font face="Palatino Linotype">From the above analysis diagram we can derive the following templates, first one for the definition of the instance of ClassOfRelationship WithSignature, and then one for the OtherRelationship:</font></p>
+            <p align="center"><img src="combination-marriage-relationship.png" width="1088" height="773" border="0"></p>
+            <p align="center"><b><font size="2" face="Palatino Linotype">John and Mary Doe have a heterosexual monogamous marriage relationship</font></b></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html> 
