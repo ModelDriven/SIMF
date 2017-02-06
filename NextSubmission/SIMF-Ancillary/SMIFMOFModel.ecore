@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SMIF" nsURI="http://www.omg.org/spec/SIMF/20160501/SIMF-MOF-model">
+  <eAnnotations source="Author:Cory Casanave.&#xA;Created:3/7/12 4:40 PM.&#xA;Title:Semantic Modeling for Information Federation Meta Model.&#xA;Comment:.&#xA;"
+      references="#/"/>
+  <eSubpackages name="SMIFMOFModel" nsURI="http://www.omg.org/spec/SIMF/20160501/SIMF-MOF-model/SMIFMOFModel">
+    <eSubpackages name="Types" nsURI="http://www.omg.org/spec/SMIF/Types">
+      <eAnnotations source="Types provide for ways to categorize anything based on what it is, the roles it plays or the phases it may be in.&#xA;Something may be categorized by any number of types (multiple classification assumption)."
+          references="#//SMIFMOFModel/Types"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//SMIFMOFModel/LexicalScope/LexicalScope #//SMIFMOFModel/TopLevel/Context">
+        <eAnnotations source="A &lt;Type> is a categorization of any thing based on specific criteria. The specific criteria may or may not be formalized in a model.&#xA;A &lt;Type> &lt;categorizes> a set of &lt;Thing>s which comprises the &quot;extent&quot; of the type.&#xA;A &lt;Type> is a &lt;Context> where the things it &lt;categorizes> are &lt;in the context> of the &lt;Type>.&#xA;&#xA;[IDEAS] Type: A set (or class) of Things. &#xA;[ISO 1087] general concept: concept (3.2.1) which corresponds to two or more objects (3.1.1) which form a group by reason of common properties&#xA;[FIBO] Classifier: a standardized classification or delineation for something, per some scheme for such delineation, within a specified context&#xA;[FUML] Type&#xA;[CL] Type:: logical framework in which expressions in the logic are classified into syntactic or lexical categories (types) and restricted to apply only to arguments of a fixed type&#xA;[Guarino1994] Discriminating Predicate&#xA;[OWL] Union(rdfs:Class, rdfs:Datatype)"
+            references="#//SMIFMOFModel/Types/Type"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="categorizes" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Thing" eOpposite="#//SMIFMOFModel/TopLevel/Thing/hasType">
+          <eAnnotations source="The set of things described by a type, the &quot;extent&quot; of the type.&#xA;The thing a type &lt;categorizes>  is subject to the &lt;has assertion> propositions of the type.&#xA;[FIBO] classifies"
+              references="#//SMIFMOFModel/Types/Type/categorizes"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasProperty" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Properties/PropertyType" eOpposite="#//SMIFMOFModel/Properties/PropertyType/propertyOf">
+          <eAnnotations source="A property of a structured type such that there may be bindings of a thing to instances of the structured type with reference to the property which defines the semantics of the bound thing withing the context of the structure.&#xA;[FUML] feature&#xA;[UML] memberEnd. attribute (of classifier)."
+              references="#//SMIFMOFModel/Types/Type/hasProperty"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="assertsPattern" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Patterns/PatternOfType" eOpposite="#//SMIFMOFModel/Patterns/PatternOfType/subjectType">
+          <eAnnotations source="A pattern asserted for all instances of a type. Where the pattern includes parts, the type defines a composition."
+              references="#//SMIFMOFModel/Types/Type/assertsPattern"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasCovering" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Constraints/CoveringConstraint"
+            eOpposite="#//SMIFMOFModel/Constraints/CoveringConstraint/isCoveredBy">
+          <eAnnotations source="Covering constraints of a type." references="#//SMIFMOFModel/Types/Type/hasCovering"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasSpecialization"
+            ordered="false" upperBound="-1" eType="#//SMIFMOFModel/Constraints/GeneralizationConstraint"
+            eOpposite="#//SMIFMOFModel/Constraints/GeneralizationConstraint/hasGeneral">
+          <eAnnotations source="Specialization rules for a type." references="#//SMIFMOFModel/Types/Type/hasSpecialization"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasMultiplicity" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Constraints/MultiplicityConstraint"
+            eOpposite="#//SMIFMOFModel/Constraints/MultiplicityConstraint/multiplicityOf">
+          <eAnnotations source="Multiplicity constraint of a type or property." references="#//SMIFMOFModel/Types/Type/hasMultiplicity"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="propertiesOfType" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Constraints/PropertyTypeConstraint"
+            eOpposite="#//SMIFMOFModel/Constraints/PropertyTypeConstraint/isOfType">
+          <eAnnotations source="Properties typed by a type" references="#//SMIFMOFModel/Types/Type/propertiesOfType"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="recordingTypes" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Records/RecordType" eOpposite="#//SMIFMOFModel/Records/RecordType/aboutType">
+          <eAnnotations source="Record for a thing." references="#//SMIFMOFModel/Types/Type/recordingTypes"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasGeneralization"
+            ordered="false" upperBound="-1" eType="#//SMIFMOFModel/Constraints/GeneralizationConstraint"
+            eOpposite="#//SMIFMOFModel/Constraints/GeneralizationConstraint/hasSpecific">
+          <eAnnotations source="Generalization rules for a type" references="#//SMIFMOFModel/Types/Type/hasGeneralization"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="returnedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Expressions/ExpressionContext"
+            eOpposite="#//SMIFMOFModel/Expressions/ExpressionContext/resultingType">
+          <eAnnotations source="Method returning a type." references="#//SMIFMOFModel/Types/Type/returnedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="respectOf" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Constraints/MultiplicityConstraint"
+            eOpposite="#//SMIFMOFModel/Constraints/MultiplicityConstraint/withRespectTo">
+          <eAnnotations source="Multiplicity constraints using a property or type as a &lt;with respect to> reference."
+              references="#//SMIFMOFModel/Types/Type/respectOf"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="assertedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Mapping/MatchEnd" eOpposite="#//SMIFMOFModel/Mapping/MatchEnd/assertedType">
+          <eAnnotations source="Map rule and that asserts a type" references="#//SMIFMOFModel/Types/Type/assertedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="conceptRule" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Mapping/RepresentationRule" eOpposite="#//SMIFMOFModel/Mapping/RepresentationRule/representedType">
+          <eAnnotations source="Rule defining a concept that is represented by another, more concrete, concept."
+              references="#//SMIFMOFModel/Types/Type/conceptRule"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="representsRule" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Mapping/RepresentationRule" eOpposite="#//SMIFMOFModel/Mapping/RepresentationRule/representedBy">
+          <eAnnotations source="Rule defining a representation of a type." references="#//SMIFMOFModel/Types/Type/representsRule"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="IntersectionType" eSuperTypes="#//SMIFMOFModel/Types/Type">
+        <eAnnotations source="An intersection is a type that has an extent which is the complete intersection of the extents of all supertypes. Intersection is a stronger statement than a subtype as a subtype may not be a complete intersection.&#xA;&#xA;[MathWorld] The intersection of two sets A and B is the set of elements common to A and B. This is written A intersection B, and is pronounced &quot;A intersection B&quot; or &quot;A cap B.&quot; &#xA;&#xA;"
+            references="#//SMIFMOFModel/Types/IntersectionType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="UnionType" eSuperTypes="#//SMIFMOFModel/Types/Type">
+        <eAnnotations source="A Union is a type that has an extent which is the complete union of the extents of all types that specialize the Union. &#xA;&#xA;[FIBO] Logical Unions&#xA;&#xA;[MathWorld] Given two sets A and B, the union is the set that contains elements or objects that belong to either A or to B or to both.  We write A È B &#xA;&#xA;[OWL] ObjectUnionOf( ObjectUnionOf, DataUnionOf)"
+            references="#//SMIFMOFModel/Types/UnionType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="EntityType" eSuperTypes="#//SMIFMOFModel/Types/Type">
+        <eAnnotations source="A type of an identifiable entity. All concrete entity instances must have at least one entity type. Entity type may be mixed with other types to fully define an entity.&#xA;&#xA;[FUML] Classifier&#xA;&#xA;[Guarino1994] Substantial or Pseudo-Sortal (Substantial being concrete)&#xA;[Guizzardi]  A  Rigid Universal.&#xA;(Rigid Universal): A universal G is rigid (or modally constant) iff for any w,w ∈ W 3. extw(G) = extw(G)  Putting definitions 4.1 and 4.3 together, we have that for any rigid universal G the following is true 4. ext(G) = extw(G), for all w ∈ W A rigid universal is one that applies to its instances necessarily, i.e., in every possible world. Every substance sortal G is a rigid universal. &#xA;[OWL] rdfs:Class (as Entity Type does not include values). However, non=primitive values are typically represented as rdfs:Class"
+            references="#//SMIFMOFModel/Types/EntityType"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Situations" nsURI="http://www.omg.org/spec/SMIF/Situations">
+      <eAnnotations source="A situation is a particular configuration of things and their relations including spatial, temporal, and logical connections between those things valid over a period of time. Situations form the basis of all complex, time dependent entities."
+          references="#//SMIFMOFModel/Situations"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SituationType" eSuperTypes="#//SMIFMOFModel/Types/EntityType">
+        <eAnnotations source="A situation type defines a kind of identifiable arrangement of individuals, assertions and the relations between them over a timespan.  As an identifiable entity, situations may participate in other situations and relationships by being bound to properties of those situations or relationships with bindings, thus situations are “first class” entities in a SMIF model.&#xA;The roles or behaviors things (any entity or value) may play in a situation are identified as properties of the situation type.&#xA;Entity types and roles may also be situation types.&#xA;Syn. Type of a state of affairs.&#xA;A situation type may have properties such that instances, may bind things to structures based on properties.&#xA;Things may be bound to a structure (i.e. play a role in the structure) via properties. Things bound to properties of a structure may change over time, unless otherwise constrained.&#xA;&#xA;[DTV] situation kind: state of affairs that may or may not happen in some possible world&#xA;&#xA;"
+            references="#//SMIFMOFModel/Situations/SituationType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Situation" abstract="true" eSuperTypes="#//SMIFMOFModel/TopLevel/Proposition #//SMIFMOFModel/TopLevel/TemporalEntity #//SMIFMOFModel/TopLevel/Context #//SMIFMOFModel/LexicalScope/LexicalScope">
+        <eAnnotations source="A situation is an identifiable entity composed of an arrangement of entities and the relations between them over a time interval. Situations are propositions and may be asserted as true or false in some context.  Situations may change over time, unless otherwise constrained. As an identifiable entity, situations may participate in relationships, thus situations are &quot;first class&quot; elements in SMIF.&#xA;&#xA;[SBVR] &quot;State of affairs&quot;&#xA;[SOWA1999] Nexus&#xA;"
+            references="#//SMIFMOFModel/Situations/Situation"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="matchedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Patterns/PatternMatch" eOpposite="#//SMIFMOFModel/Patterns/PatternMatch/matches">
+          <eAnnotations source="Pattern matches that match the subject situation."
+              references="#//SMIFMOFModel/Situations/Situation/matchedBy"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ActualSituation" eSuperTypes="#//SMIFMOFModel/TopLevel/ActualEntity #//SMIFMOFModel/Situations/Situation">
+        <eAnnotations source="An actual situation is an individual situation that actually exists, happened in the past or may exist in some possible world, not a template or process definition. Such situations must exist for a time interval, however there are no constraints on such a time interval - from an instant to the life of the universe.&#xA;&#xA;DTV: Occurrence: state of affairs that is a happening in the universe of discourse&#xA;"
+            references="#//SMIFMOFModel/Situations/ActualSituation"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Values" nsURI="http://www.omg.org/spec/SMIF/Values">
+      <eAnnotations source="&lt;html>&#xA;  &lt;head>&#xA;&#x9;&#x9;&lt;style>&#xA;&#x9;&#x9;&#x9;p {padding:0px; margin:0px;}&#xA;&#x9;&#x9;&lt;/style>&#xA;&#x9;&lt;/head>&#xA;  &lt;body>&#xA;    &lt;p>&#xA;The values package defines the concepts of values and quantities expressed in units.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;&amp;#160;&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;Values may be differentiated from entities in that values have no independent lifetime or &amp;quot;identity&amp;quot; other than the value its self. E.g. the number 5 &amp;quot;just is&amp;quot; and can't be changed. Properties and relations referencing values can, of course, change but the values are constant.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;The failure to properly express units in data models often results in errors, inefficiencies and risk. Translation and federations between models, schema and data sources that is not cognizant of the units used would be even more error prone and risky. For example, what does &amp;ldquo;Speed limit 50&amp;rdquo; mean? For these reasons the SMIF language provides specific support for specifying quantity kinds and unit types in conceptual, logical and physical models. The SMIF mapping rules may then perform the appropriate unit conversions.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;The foundation of information specification in SMIF at all levels is the type system. Types specified for all properties and relations involving values must match the types of the related values. The concepts of units and values as defined in &amp;quot;VIM&amp;quot; [JCGM 200-2008] is used as the basis for defining the types used in SMIF to guarantee type safety of quantities across different representations. Since many existing models and schema do not include well defined units some effort may be required to find and then specify the implicit units based on documentation, SME interviews or inspection of data or source code. It is recommended that the units used by external models and schema be determined prior to attempting federation and integration of information based on those models or schema.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;&lt;b>&lt;u>VIM [JCGM 200-2008] concepts of quantities and units&lt;/u>&lt;/b>&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;VIM&amp;#160;defines&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;ul>&#xA;      &lt;li>&#xA;quantity: property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference [ed. to a unit]&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;kind of quantity (kind): aspect common to mutually comparable quantities&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;measurement unit (unit): real scalar quantity, defined and adopted by convention, with which any other quantity of the same kind can be compared to express the ratio of the two quantities as a number&#xA;&#xA;      &lt;/li>&#xA;    &lt;/ul>&#xA;    &lt;p>&#xA;&lt;b>&lt;u>SMIF concepts of quantities and units&lt;/u>&lt;/b>&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;SMIF uses the VIM concepts to define &amp;quot;quantity values&amp;quot; and types to capture the quantity kind and unit. Types are defined for each Unit. The goals for this type based approach are:&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;ul>&#xA;      &lt;li>&#xA;That it is clearly grounded in semantics as defined in VIM&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That a type may be used to specify the range of a property or relation involving unit based values.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That a quantity value (e.g. 5 grams) be representable as a simple number with a type.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That there is a clear type hierarchy starting with a representationally independent type in a conceptual model (e.g. mass) that can be further specialized to a specific unit in a logical model (e.g. grams) and further specialized to be represented by a physical data type (e.g. &amp;ldquo;double&amp;rdquo;).&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That external models and schema may have unit specifications asserted without changing the schema.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That a quantity of an entity be able to be referenced without a specific quantity value being known (e.g. John&amp;rsquo;s weight).&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That systems of units such as [ISO-80000] or [OMG QUDV] (A part of SysML) be able to be directly referenced as the definition of a unit.&#xA;&#xA;      &lt;/li>&#xA;    &lt;/ul>&#xA;    &lt;p>&#xA;SMIF defines three types to realize the above goals: Quantity Kind, Unit Type, Base Unit Type. SMIF also defines Quantity Values, which are instances of unit types.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;In VIM a quantity has a magnitude that is expressed as a number and a reference. The SMIF quantity value is the numeric value of such a quantity where the reference is specified by the &amp;ldquo;unit reference&amp;rdquo; property of the quantity value&amp;rsquo;s type. The quantity value&amp;rsquo;s type is a &amp;ldquo;Unit Type&amp;rdquo;. The Unit type has attributes for converting a unit to a base unit, a symbol and a unit reference. Based on VIM the unit reference may be &amp;ldquo;a measurement unit, a measurement procedure, a reference material, or a combination of such&amp;rdquo; and is specified with a description that contains reference information. In summary, the reference of a SMIF quantity value is determined indirectly through its unit type. A quantity value has exactly one unit type and exactly one Quantity Kind. A quantity value expressed in any unit of the same quantity kind may be converted to any other unit of the same quantity kind.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;This type-based sapproach allows specification of a property at the conceptual (quantity kind) logical (unit type) or physical (unit type with a numeric type) levels. Such specifications use the same type-based approach used for other aspects of the models. Given this information a SMIF implementation may correctly and reliably convert between compatible types regardless of representation. Please see the specification of the value types, attributes and relationships for more detail.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;&amp;#160;&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;&lt;b>&lt;u>Example:&lt;/u>&lt;/b>&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;ul>&#xA;      &lt;li>&#xA;A specification for a road segment has a property &amp;ldquo;Speed limit&amp;rdquo;.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;The type of this property in a reference conceptual model is &amp;ldquo;Speed:Quantity Kind&amp;rdquo;.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;A unit &amp;ldquo;Kilometer per Hour:Unit Type&amp;rdquo; is defined as a subtype of &amp;ldquo;Speed:Quantity Kind&amp;rdquo; with a &amp;ldquo;unit reference&amp;rdquo; of &amp;ldquo;[ISO-80000.4] Kilometer per Hour&amp;rdquo;. Note that quantity kinds and unit types would normally be defined in reference models that correspond to a &amp;ldquo;system of units&amp;rdquo;.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;Miles per hour is also defined as a subtype of Speed.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;A physical schema defines &amp;ldquo;Speed-KPH: Integer&amp;rdquo;.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;A SMIF mapping rule maps &amp;ldquo;Speed limit&amp;rdquo; to &amp;ldquo;Speed-KPH&amp;rdquo; and asserts a type of &amp;ldquo;Kilometer per Hour&amp;rdquo; on the &amp;ldquo;Speed-KPH&amp;rdquo; end.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;A data file defines a road &amp;ldquo;Route One&amp;rdquo; with a speed limit of 100:KPH-Int.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;When converted to a U.S. application this speed limit of route one can be viewed as 62:MPH-Int.&#xA;&#xA;      &lt;/li>&#xA;    &lt;/ul>&#xA;&lt;/body>&#xA;&lt;/html>"
+          references="#//SMIFMOFModel/Values"/>
+      <eClassifiers xsi:type="ecore:EClass" name="QuantityKind" eSuperTypes="#//SMIFMOFModel/Values/ValueType">
+        <eAnnotations source="[JCGM 200:2008]  A Quantity Kind is an aspect common to mutually comparable quantities represented by one or more units. Units with a common quantity kind may be algorithmically converted to any other unit of that quantity kind. e.g. temperature.&#xA;&#xA;Quantity kinds are a supertype of unit types which are then a type of all quantity values, Quantity values are mutually comparable with all other quantity values categorized by the same quantity kind.&#xA;&#xA;[FIBO] QuantityKind: a categorization type for “quantity” that characterizes quantities as being mutually comparable&#xA;&#xA;[DOLCE] Quality Space"
+            references="#//SMIFMOFModel/Values/QuantityKind"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="UnitType" eSuperTypes="#//SMIFMOFModel/Values/ValueType">
+        <eAnnotations source="A Unit type is a type of a quantity value referencing a specific unit. A Unit Type a required type of a property representing a quantity. &#xA;&#xA;Each quantity value has a reference as defined by the &quot;unit reference&quot; property of the quantity value's  type.&#xA;&#xA;[JCGM 200:2008] A Unit is a real scalar quantity, defined and adopted by convention, with which any other quantity of the same quantity kind can be compared to express the ratio of the two quantities as a number. e.g. Degrees Centigrade, Miles.&#xA;&#xA;Each unit type represents refinement of a quantity kind using generalization and is thus substitutable for that quantity kind. Typically quantity kinds are used in conceptual models and unit types in physical or logical models.&#xA;&#xA;Unit types may only subtype quantity kinds or other units.&#xA;&#xA;Note that unit types are not units, but the type of quantity values expressed with respect to a common unit as defined in [JCGM 200:2008].&#xA;&#xA;[IDEAS] MeasureCategory: A MeasureType whose members are recognized types of MeasureInstance."
+            references="#//SMIFMOFModel/Values/UnitType"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="ratio" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/Real">
+          <eAnnotations source="The multiplier by which to multiple the referenced unit to convert to the base unit within a system of units."
+              references="#//SMIFMOFModel/Values/UnitType/ratio"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/Real">
+          <eAnnotations source="The difference between zero in the referenced unit and zero in the base unit after the ratio is applied within a system of units."
+              references="#//SMIFMOFModel/Values/UnitType/offset"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/String">
+          <eAnnotations source="The accepted symbol for the unit referenced by the unit type"
+              references="#//SMIFMOFModel/Values/UnitType/symbol"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="unitReference" ordered="false"
+            eType="#//SMIFMOFModel/Metadata/Definition">
+          <eAnnotations source="The unit reference is the reference to a unit shared by all quantities values that are instances of a unit type.&#xA;&#xA;[JCGM 200:2008] A reference can be a measurement unit, a measurement procedure, a reference material, or a combination of such. For magnitude of a quantity.&#xA;&#xA;Typical references include ISO 8000 and OMG QUDV."
+              references="#//SMIFMOFModel/Values/UnitType/unitReference"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="definedWithinSystem"
+            ordered="false" eType="#//SMIFMOFModel/Values/SystemOfUnits" eOpposite="#//SMIFMOFModel/Values/SystemOfUnits/unitOfSystem">
+          <eAnnotations source="The system of units in which a unit is defined and is the basis for ratio and offset.&#xA;&#xA;By default the system of units is &quot;si&quot;: http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?csnumber=30669&#xA;"
+              references="#//SMIFMOFModel/Values/UnitType/definedWithinSystem"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BaseUnitType" eSuperTypes="#//SMIFMOFModel/Values/UnitType">
+        <eAnnotations source="One unit type of a quantity kind may be marked as the base unit within a system of units. The base unit provides the basis for conversions between units of the same quantity kind. The base unit always has a ratio of one and an offset of zero.&#xA;&#xA;Type of a [JCGM 200:2008] measurement unit that is adopted by convention for a base quantity &#xA;&#xA;[FIBO] (type of) Base Unit: a measurement unit that is defined by a system of units to be the reference measurement unit for a base quantity&#xA;&#xA;There ma be at most one base unit for a quantity kind within a system of units."
+            references="#//SMIFMOFModel/Values/BaseUnitType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ValueType" eSuperTypes="#//SMIFMOFModel/Types/Type">
+        <eAnnotations source="A type categorizing values where a value is an atomic piece of information without a specific lifetime or identity independent of that value. Values include numbers, strings and other atomic &quot;primitive&quot; data.&#xA;&#xA;[IDEAS] RepresentationType: A Type that is the Powertype of Representation.&#xA;&#xA;[FUML] DataType&#xA;&#xA;[ISO11404] datatype: set of distinct values, characterized by properties of those values, and by operations on those values&#xA;&#xA;[OWL] rdfs:Datatype (Note that some values are represented as OWL classes)"
+            references="#//SMIFMOFModel/Values/ValueType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//SMIFMOFModel/TopLevel/Thing">
+        <eAnnotations source="A Value is an atomic. immutable piece of information without a specific lifetime or identity independent of the value. Values include numbers, strings and other atomic &quot;primitive&quot; data. Values also include structured values, which are immutable.&#xA;&#xA;In UML values may be defined by the name of an instance specification with a value type.&#xA;&#xA;[IDEAS] Representation: A SignType where all the individual Signs are intended to signify the same Thing.&#xA;&#xA;[ISO11404] The identification of members of a datatype family, subtypes of a datatype, and the resulting datatypes of datatype generators may require the syntactic designation of specific values of a datatype.&#xA;&#xA;[OWL] data values"
+            references="#//SMIFMOFModel/Values/Value"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SystemOfUnits" eSuperTypes="#//SMIFMOFModel/TopLevel/Context">
+        <eAnnotations source="[JCGM 200:2008]  A set of base units and derived units, together with their multiples and submultiples, defined in accordance with given rules, for a given system of quantities.&#xA;&#xA;[FIBO] SystemOfUnits: a set of measurement units associated with a system of quantities, together with a set of rules that assign one measurement unit to be the base unit for each base quantity in the system of quantities and a set of rules for the derivation of other units from the base units"
+            references="#//SMIFMOFModel/Values/SystemOfUnits"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="unitOfSystem" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Values/UnitType" eOpposite="#//SMIFMOFModel/Values/UnitType/definedWithinSystem">
+          <eAnnotations source="Unit type defined within a system of units" references="#//SMIFMOFModel/Values/SystemOfUnits/unitOfSystem"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StructuredValueType" eSuperTypes="#//SMIFMOFModel/Values/ValueType #//SMIFMOFModel/Properties/PropertyOwnerType">
+        <eAnnotations source="A structured value type is a type of value that has parts represented as properties - also used for &quot;data types&quot; and forms."
+            references="#//SMIFMOFModel/Values/StructuredValueType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StructuredValue" eSuperTypes="#//SMIFMOFModel/Values/Value #//SMIFMOFModel/Properties/PropertyOwner">
+        <eAnnotations source="A value that may have sub-elements (owned properties) defined as &quot;structure property type&quot;."
+            references="#//SMIFMOFModel/Values/StructuredValue"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="Boolean">
+        <eAnnotations source="A value that may be true or false.&#xA;&#xA;[FIBO] boolean&#xA;[ISO11404] Description: boolean is the mathematical datatype associated with two-valued logic.&#xA;[OWL] xsd:boolean"
+            references="#//SMIFMOFModel/Values/Boolean"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="String">
+        <eAnnotations source="Text is a &lt;Value> represented using symbols which have a meaning to stakeholders but otherwise have no formal semantic implication. Properties involving values may have a semantic implication.&#xA;&#xA;[FIBO] Text&#xA;[NIEM] TextType&#xA;[OWL] xsd:string"
+            references="#//SMIFMOFModel/Values/String"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="DataValue">
+        <eAnnotations source="Data value is equivalent with value and only required due to UML restriction that there can be no supertype of a data type and a class."
+            references="#//SMIFMOFModel/Values/DataValue"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="PrimitiveValue">
+        <eAnnotations source="A simple value with no parts that can be represented as a string.&#xA;[FUML] PrimitiveType&#xA;[ISO11404] primitive datatypes, which are defined axiomatically without reference to other datatypes&#xA;[OWL] rdfs:Literal"
+            references="#//SMIFMOFModel/Values/PrimitiveValue"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="Numeric">
+        <eAnnotations source="The concept of a numeric value or set of numeric values that may be expressed in any way. This includes &quot;structures&quot; for representing non-scalar values.&#xA;[ISO11404] numeric: A datatype is said to be numeric if its values are conceptually quantities (in some mathematical number system)."
+            references="#//SMIFMOFModel/Values/Numeric"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="MeasurementValue">
+        <eAnnotations source="The value of a measure - e.g. 5 MM. Measurement values may be scalar or non-scalar. Scalar measurements will be numeric."
+            references="#//SMIFMOFModel/Values/MeasurementValue"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="Integer">
+        <eAnnotations source="A number with no fraction.&#xA;&#xA;[IDEAS] Integer: A RationalNumber that can be written without a fractional or decimal component. &#xA;&#xA;[FIBO] integer&#xA;&#xA;[ISO11404] Integer: he mathematical datatype comprising the exact integral values.&#xA;&#xA;[OWL] xsd:integer"
+            references="#//SMIFMOFModel/Values/Integer"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="Real">
+        <eAnnotations source="Any number that may have a fraction.&#xA;&#xA;[IDEAS] RealNumber: A Type that is a Dedekind cut of the set of rational numbers.&#xA;&#xA;[ISO11404] real is a family of datatypes which are computational approximations to the mathematical datatype comprising the “real numbers”. Specifically, each real datatype designates a collection of mathematical real values&#xA;&#xA;[OWL] xsd:real&#xA;"
+            references="#//SMIFMOFModel/Values/Real"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EDataType" name="Number">
+        <eAnnotations source="An arithmetical value representing a particular quantity and used in counting and making calculations and for showing order in a series or for identification.&#xA;&#xA;[IDEAS] A Type that is a number - i.e. a RealNumber or an Integer&#xA;&#xA;[FIBO] number&#xA;[NIEM] NumericType"
+            references="#//SMIFMOFModel/Values/Number"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="UnitValue" abstract="true" eSuperTypes="#//SMIFMOFModel/Values/Value">
+        <eAnnotations source="A unit value is a numeric magnitude with a unit type that may be used as the value of a quantity property as defined by [JCGM 200:2008]. The reference of the quantity is defined by the &quot;unit reference&quot; property of the Unit Type.&#xA;&#xA;e.g. 5cm is an instance of the unit type &quot;Centimeter&quot;&#xA;&#xA;Each unit value has exactly one UNit Type as a type.&#xA;&#xA;In a physical model a quantity value must have a type that specifies its unit (e.g. &quot;Gram&quot;). The magnitude shall be expressed using &quot;hasValue&quot;&#xA;&#xA;[JCGM 200:2008]  A quantity is a property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference. &#xA;&#xA;Note: A quantity as defined here is a scalar. However, a vector or a tensor, the components of which are quantities, is also considered to be a quantity.&#xA;&#xA;[IDEAS] ScaleMapping: A CoupleType whose members are all the couples linking MeasurePoints to RealNumbers. The CoupleType (i.e. the set of couples) represents the scale.&#xA;&#xA;&#xA;&#xA;[FIBO] QuantityValue: number and measurement unit together giving magnitude of a quan-tity&#xA;&#xA;[Guizzardi] (quale): A point in a n-dimensional quality domain"
+            references="#//SMIFMOFModel/Values/UnitValue"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasValue" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/MeasurementValue">
+          <eAnnotations source="The value of a quantity that, when multiplied by the unit defined in a subtype of quantity kind, specifies a measurement value such as 3 Meters.&#xA;[OWL] rdf:value restricted to abstract quantity"
+              references="#//SMIFMOFModel/Values/UnitValue/hasValue"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ScalarQuantity" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/Values/UnitValue">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="_unnamed_ScalarQuantity"
+            ordered="false" lowerBound="1" eType="#//SMIFMOFModel/Values/Number">
+          <eAnnotations source="The value of a quantity that, when multiplied by the unit defined in a subtype of quantity kind, specifies a measurement value such as 3 Meters."
+              references="#//SMIFMOFModel/Values/ScalarQuantity/_unnamed_ScalarQuantity"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Identifiers" nsURI="http://www.omg.org/spec/SMIF/Identifiers">
+      <eAnnotations source="Terms and identifiers provide for signs for (ways to identify) anything."
+          references="#//SMIFMOFModel/Identifiers"/>
+      <eClassifiers xsi:type="ecore:EClass" name="UniqueIdentifier" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/Identifiers/Identifier">
+        <eAnnotations source="A unique identifier is an entity used to uniquely identify something. The identified thing is referenced by what the identifier &lt;identifies>.&#xA;Identifiers are defined and &lt;unique within> a lexical scope as its namespace.&#xA;Multiple identifiers may use the same word or text value (or other forms of values) in differing &lt;unique within> namespaces such that the same word may have different meanings in different context.&#xA;An entity may have any number of identifiers."
+            references="#//SMIFMOFModel/Identifiers/UniqueIdentifier"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="uniqueWithin" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Identifiers/Namespace" eOpposite="#//SMIFMOFModel/Identifiers/Namespace/scopesIdentifier">
+          <eAnnotations source="The namespace in which an identifier is defined and has a unique value.&#xA;[FUML] memberNamespace"
+              references="#//SMIFMOFModel/Identifiers/UniqueIdentifier/uniqueWithin"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="IRIIdentifier" eSuperTypes="#//SMIFMOFModel/Identifiers/TechnicalIdentifier">
+        <eAnnotations source="A IRI/URI Identifier for an entity, as defined in [RFC3987].&#xA;&#xA;[FIBO] anyURI&#xA;"
+            references="#//SMIFMOFModel/Identifiers/IRIIdentifier"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Term" eSuperTypes="#//SMIFMOFModel/Identifiers/Name #//SMIFMOFModel/Identifiers/UniqueTextIdentifier">
+        <eAnnotations source="A word, phrase or name used by stakeholders to uniquely identify entities. &#xA;&#xA;[ISO 1087] term: verbal designation of a general concept in a specific subject field."
+            references="#//SMIFMOFModel/Identifiers/Term"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="UniqueTextIdentifier" eSuperTypes="#//SMIFMOFModel/Identifiers/UniqueIdentifier #//SMIFMOFModel/Identifiers/TextIdentifier">
+        <eAnnotations source="An &lt;Identifier> that is represented using text. e.g. a &quot;word&quot;, &quot;phrase&quot; or &quot;name&quot;."
+            references="#//SMIFMOFModel/Identifiers/UniqueTextIdentifier"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Identifier" eSuperTypes="#//SMIFMOFModel/Values/Value">
+        <eAnnotations source="An identifier is any value that is used to distinguish an entity from other entities. Note that any identifier may be contextualized by one or more context, including language context. Identifiers are a “sign” for an identity where identity is an abstraction of individuality that is the basis for identifiers.&#xA;&#xA;[IDEAS] Name: A Representation that identifies a Thing.&#xA;[FIBO] Identifier&#xA;[CL] Term: expression which denotes an individual, consisting of either a name or, recursively, a function term applied to a sequence of arguments, which are themselves terms"
+            references="#//SMIFMOFModel/Identifiers/Identifier"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="identifies" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity" eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/identifiedBy">
+          <eAnnotations source="The entity an identifier identifies.&#xA;&#xA;[FIBO] identifies: is the relationship between something and that which provides a unique reference for it&#xA;&#xA;[ISO 1087] designator: representation of a concept (3.2.1) by a sign which&#xA;denotes it"
+              references="#//SMIFMOFModel/Identifiers/Identifier/identifies"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="preferredFor" ordered="false"
+            eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity" eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasPreferred">
+          <eAnnotations source="The entity an identifier is preferred for." references="#//SMIFMOFModel/Identifiers/Identifier/preferredFor"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Namespace" eSuperTypes="#//SMIFMOFModel/TopLevel/Context">
+        <eAnnotations source="A namespace is a context that provides a way to make identifiers unique and identify exactly one entity. For example, the Virginia driver's license division provides unique driver's license numbers.&#xA;&#xA;Similar to [IDEAS] UniqueNamingScheme: A NamingScheme where different Names will not contain tokens of the same Representation Type. &#xA;Note: SMIF identifiers are not instances of their namespace.&#xA;&#xA;[FIBO] IdentificationScheme: system for allocating identifiers to objects&#xA;&#xA;[ISO 1087] terminology 1: set of designations (3.4.1) belonging to one special language (3.1.3)&#xA;&#xA;[FUML] Namespace&#xA;&#xA;[CL] Vocabulary"
+            references="#//SMIFMOFModel/Identifiers/Namespace"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="scopesIdentifier" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Identifiers/UniqueIdentifier" eOpposite="#//SMIFMOFModel/Identifiers/UniqueIdentifier/uniqueWithin">
+          <eAnnotations source="An Identifier defined within the scope of a namespace.&#xA;[FUML] member"
+              references="#//SMIFMOFModel/Identifiers/Namespace/scopesIdentifier"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TextIdentifier" eSuperTypes="#//SMIFMOFModel/Identifiers/Identifier">
+        <eAnnotations source="A code or other simple value that can be represented as text, identifying something that may or may not be unique. Simple identifiers may be codes, names, numbers or compound values.&#xA;[NIEM] IdentificationType (IdentificationID=value)"
+            references="#//SMIFMOFModel/Identifiers/TextIdentifier"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/String">
+          <eAnnotations source="Text value of an identifier" references="#//SMIFMOFModel/Identifiers/TextIdentifier/value"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Name" eSuperTypes="#//SMIFMOFModel/Identifiers/TextIdentifier">
+        <eAnnotations source="A word or set of words by which a person, animal, place, or thing is known, addressed, or referred to. Names are not necessarily unique.&#xA;&#xA;[IDEAS] Name: A Representation that identifies a Thing.&#xA;&#xA;[CL] Discourse Name&#xA;"
+            references="#//SMIFMOFModel/Identifiers/Name"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false"
+            lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity"
+            eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasName">
+          <eAnnotations source="An entity named by a name." references="#//SMIFMOFModel/Identifiers/Name/names"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TechnicalIdentifier" eSuperTypes="#//SMIFMOFModel/Identifiers/UniqueTextIdentifier">
+        <eAnnotations source="A technical identifier is defined within a technical system, information structure or system of systems for references and identity within that system or information element. Such identifiers may have no meaning outside of that system.&#xA;&#xA;Typical technical identifiers include inter document &quot;refs&quot;, record numbers, etc. The system should be referenced as the namespace.&#xA;"
+            references="#//SMIFMOFModel/Identifiers/TechnicalIdentifier"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Expressions" nsURI="http://www.omg.org/spec/SMIF/Expressions">
+      <eAnnotations source="Expressions define computations across SMIF models." references="#//SMIFMOFModel/Expressions"/>
+      <eClassifiers xsi:type="ecore:EClass" name="FunctionType" eSuperTypes="#//SMIFMOFModel/Properties/PropertyOwnerType #//SMIFMOFModel/Expressions/ExpressionContext">
+        <eAnnotations source="A declaration of a function which performs a calculation on arguments (properties) to produce a result (function result).  I.e. the definition of plus(a:Number, b:Number).&#xA;&#xA;Functions are intended to be side-effect free and context free (they only depend on their arguments and don't change anything) but assertions to specify that certain functions are pure may be required,&#xA;Note: FUNCTION ARGUMENTS ARE PROPERTIES of the function.&#xA;&#xA;[FUML] Operation where ownedParameter corresponds with &lt;has property> and type corresponds with &lt;resulting type>."
+            references="#//SMIFMOFModel/Expressions/FunctionType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="implementedBy" ordered="false"
+            eType="#//SMIFMOFModel/Expressions/ExpressionNode" eOpposite="#//SMIFMOFModel/Expressions/ExpressionNode/implements">
+          <eAnnotations source="Expression which defines the implementation of a function."
+              references="#//SMIFMOFModel/Expressions/FunctionType/implementedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isUsedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Expressions/FunctionCall" eOpposite="#//SMIFMOFModel/Expressions/FunctionCall/calls">
+          <eAnnotations source="Function calls using a function declaration." references="#//SMIFMOFModel/Expressions/FunctionType/isUsedBy"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ConstantReference" eSuperTypes="#//SMIFMOFModel/Expressions/ExpressionNode">
+        <eAnnotations source="A calculation that returns a thing identified by &lt;has value>.&#xA;&#xA;[FIBO] Constant&#xA;[FUML] LiteralSpecification where subtype of literal is determined by the type of &lt;has value>. &#xA;-LiteralInteger->type is Integer or a subtype&#xA;-LiteralReal-> type is not integer or a subtype&#xA;-LiteralBoolean->type is Boolean&#xA;-LiteralString->type is Text&#xA;&#xA;"
+            references="#//SMIFMOFModel/Expressions/ConstantReference"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasValue" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/TopLevel/Thing" eOpposite="#//SMIFMOFModel/TopLevel/Thing/referencedBy">
+          <eAnnotations source="A constant value referenced in an expression." references="#//SMIFMOFModel/Expressions/ConstantReference/hasValue"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ExpressionNode" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/Expressions/ExpressionContext">
+        <eAnnotations source="An abstract class representing the computation of a value which is then bound to the context from which it is called. Each expression node has a type of the most general type it can return.&#xA;&#xA;An expression node may reference other elements. Where the other elements are also expression nodes they will be considered part of the referencing expression and evaluated in the context of that expression.&#xA;&#xA;The set of related expression nodes forms a &quot;tree&quot; for evaluation.&#xA;&#xA;[FIBO] Expression&#xA;[UML] Expression"
+            references="#//SMIFMOFModel/Expressions/ExpressionNode"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionText" ordered="false"
+            eType="#//SMIFMOFModel/Values/String">
+          <eAnnotations source="Textual expression of the expression which is further refined by subtypes of expression.&#xA;[UML] StringExpression "
+              references="#//SMIFMOFModel/Expressions/ExpressionNode/expressionText"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionTextLanguage"
+            ordered="false" eType="#//SMIFMOFModel/Values/String">
+          <eAnnotations source="expression language used for the expression text"
+              references="#//SMIFMOFModel/Expressions/ExpressionNode/expressionTextLanguage"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Expressions/Evaluation" eOpposite="#//SMIFMOFModel/Expressions/Evaluation/evaluates">
+          <eAnnotations source="Evaluations of an expression node." references="#//SMIFMOFModel/Expressions/ExpressionNode/evaluatedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="implements" ordered="false"
+            eType="#//SMIFMOFModel/Expressions/FunctionType" eOpposite="#//SMIFMOFModel/Expressions/FunctionType/implementedBy">
+          <eAnnotations source="Function implemented by an expression" references="#//SMIFMOFModel/Expressions/ExpressionNode/implements"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//SMIFMOFModel/Expressions/ExpressionNode #//SMIFMOFModel/Properties/PropertyOwner">
+        <eAnnotations source="An element of an expression that performs some operation based on a function type and produces a result.  I.e. plus(a,1).&#xA;Arguments are bound to the function call via bindings."
+            references="#//SMIFMOFModel/Expressions/FunctionCall"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="calls" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Expressions/FunctionType" eOpposite="#//SMIFMOFModel/Expressions/FunctionType/isUsedBy">
+          <eAnnotations source="Function called" references="#//SMIFMOFModel/Expressions/FunctionCall/calls"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Traversal" eSuperTypes="#//SMIFMOFModel/Expressions/ExpressionNode #//SMIFMOFModel/Properties/PropertyOwner">
+        <eAnnotations source="Traversal from the current &lt;evaluates in> context to another across a relation or other structure.&#xA;&#xA;A traversal is a structure such that the structure's bindings may hold other properties of a traversal constant as independent variables where &lt;traverses through> is the dependent variable. The traversal shall be considered to have the type of the relation it is traversing. Traversing binary relations does not require any bindings.&#xA;&#xA;[OWL] ObjectPropertyChain"
+            references="#//SMIFMOFModel/Expressions/Traversal"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="traverseToRelation"
+            ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="Where traverse to relation is false, the traversal will return the bound element(s) of the &lt;traverses through> property from the current context via any intermediate relationships.&#xA;&#xA;Where traverse to relation is true, the traversal shall return the structure/situation/relationship owning the property binding.&#xA;&#xA;By default, traverse to relation is false."
+              references="#//SMIFMOFModel/Expressions/Traversal/traverseToRelation"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="inverse" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="Indicates that the traversal is defined based on properties that reference the current context. This results in traversing &quot;backwards&quot; across a property to an inverse property or the relation.&#xA;"
+              references="#//SMIFMOFModel/Expressions/Traversal/inverse"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="traversesThrough" lowerBound="1"
+            upperBound="-1" eType="#//SMIFMOFModel/Properties/PropertyType" eOpposite="#//SMIFMOFModel/Properties/PropertyType/traversedBy">
+          <eAnnotations source="Property or properties through which a traversal traverses as the dependent variable(s)."
+              references="#//SMIFMOFModel/Expressions/Traversal/traversesThrough"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ObjectOperationType" eSuperTypes="#//SMIFMOFModel/Expressions/FunctionType">
+        <eAnnotations source="An operation bound to a specific &quot;receiver&quot; in the &quot;Object Oriented&quot; sense.&#xA;[FUML] Operation"
+            references="#//SMIFMOFModel/Expressions/ObjectOperationType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Properties/PropertyType" eOpposite="#//SMIFMOFModel/Properties/PropertyType/receivedBy">
+          <eAnnotations source="The property that is the receiver of an object operation. &#xA;[UML] class (of Operation)"
+              references="#//SMIFMOFModel/Expressions/ObjectOperationType/receiver"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Equality" eSuperTypes="#//SMIFMOFModel/Expressions/ExpressionNode">
+        <eAnnotations source="Returns TRUE if all &lt;has equal> things have the same value or represent the same thing or set of things regardless of how they are represented.&#xA;Equality will return TRUE or FALSE.&#xA;[ISO11404: EqualityIn every value space there is a notion of equality, for which the following rules hold:&#xA;⎯ for any two instances (a, b) of values from the value space, either a is equal to b, denoted a = b , or a is not equal to b, denoted a ≠ b ;&#xA;⎯ there is no pair of instances (a, b) of values from the value space such that both a = b and a ≠ b ;&#xA;⎯ for every value a from the value space, a = a ;&#xA;⎯ for any two instances (a, b) of values from the value space, a = b if and only if b = a ;&#xA;⎯ for any three instances (a, b, c) of values from the value space, if a = b and b = c , then a = c . On every datatype, the operation Equal is defined in terms of the equality property of the value space, by:&#xA;⎯ for any values a, b drawn from the value space, Equal(a,b) is true if a = b , and false otherwise."
+            references="#//SMIFMOFModel/Expressions/Equality"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasEqual" ordered="false"
+            lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Thing"
+            eOpposite="#//SMIFMOFModel/TopLevel/Thing/hasEquality">
+          <eAnnotations source="Set of things that must have the same value or represent the same thing or set of things for Equality to return true."
+              references="#//SMIFMOFModel/Expressions/Equality/hasEqual"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Evaluation" eSuperTypes="#//SMIFMOFModel/Expressions/ExpressionContext">
+        <eAnnotations source="The evaluation of an expression. All references to an evaluation shall return the result of evaluating the &lt;evaluates> expression node. All expression nodes referenced within an evaluation shall return the result of evaluating that expression node.&#xA;An evaluation may be used in place of anything that requires the &lt;resulting type> of the evaluation."
+            references="#//SMIFMOFModel/Expressions/Evaluation"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="evaluates" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Expressions/ExpressionNode" eOpposite="#//SMIFMOFModel/Expressions/ExpressionNode/evaluatedBy">
+          <eAnnotations source="The expression node &quot;head&quot; an evaluation evaluates."
+              references="#//SMIFMOFModel/Expressions/Evaluation/evaluates"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ExpressionContext" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/TopLevel/IdentifiableEntity">
+        <eAnnotations source="An abstract element defining the static or dynamic evaluation context and resulting type of an expression.&#xA;An expression context that is referenced by another expression context inherits the referencing context by default."
+            references="#//SMIFMOFModel/Expressions/ExpressionContext"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatesIn" ordered="false"
+            eType="#//SMIFMOFModel/TopLevel/Context" eOpposite="#//SMIFMOFModel/TopLevel/Context/contextualizes.1">
+          <eAnnotations source="Context of evaluation and namespace resolution for an expression."
+              references="#//SMIFMOFModel/Expressions/ExpressionContext/evaluatesIn"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="resultingType" ordered="false"
+            lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/returnedBy">
+          <eAnnotations source="Type of the result of a function&#xA;[UML] type (of an operation or expression)."
+              references="#//SMIFMOFModel/Expressions/ExpressionContext/resultingType"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Relationships" nsURI="http://www.omg.org/spec/SMIF/Relationships">
+      <eAnnotations source="Relationships are primitive but identifiable conditions that relate other entities through properties of the relationships. Relationships have their semantics described by a relationship type. The ends of relationships are defined by &quot;structured property type&quot;, a relationship may have any number of &quot;ends&quot;.&#xA;Relationships are first-class &quot;actual&quot; and &quot;temporal&quot; things that exist in their own right. These are known as &quot;external relations&quot; in much of the theoretical literature."
+          references="#//SMIFMOFModel/Relationships"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="#//SMIFMOFModel/Situations/ActualSituation #//SMIFMOFModel/Properties/PropertyOwner">
+        <eAnnotations source="A relationship defines a situation involving related things. A relationship may be asserted within a context as true or false within that context. Each relationship type has a number of  bindings of which do not change for the life of the relationship.. &#xA;A relationship may be true or false within its context (including a timeframe) but is atomic in its truth value.&#xA;Relationships may participate in (be bound to) other relationships and as such bindings involving a relationship may change over time. That is, relationships are &quot;first class&quot; objects.&#xA;&#xA;[IDEAS] tuple: A relationship between two or more things.&#xA;Note: SMIF allows one end of a relationship.&#xA;&#xA;[OWL] An OWL class that is a subclass of SMIF: Relationship&#xA;"
+            references="#//SMIFMOFModel/Relationships/Relationship"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RelationshipType" eSuperTypes="#//SMIFMOFModel/Situations/SituationType #//SMIFMOFModel/Properties/PropertyOwnerType">
+        <eAnnotations source="A relationship type defines a type of condition, the relationship, involving related things. A relationship may be asserted within a context as true or false within that context. Each relationship type has a number of &lt;has property> &quot;structured property type&quot; properties which describe the role of the related things with respect to the relationship, values of which uniquely do not change for the life of the relationship. &#xA;A relationship may be true or false within its context (including a timeframe) but is atomic in its truth value.&#xA;Relationships may participate in (be bound to) other relationships and as such bindings involving a relationship may change over time.  &#xA;The terms for properties of a relationship in a conceptual model are typically verb phrases, connecting the relationship with the related types.&#xA;&#xA;[FIBO] A kind of Mediating Thing&#xA;&#xA;[IDEAS] TupleType: The Powertype of tuple.&#xA;&#xA;[FUML] Association where memberEnd corresponds with &lt;has property>. Note that SMIF relationships are &quot;first class&quot; and may also be considered to correspond to an association class where there are any properties or other relationships referencing the subject relationship.&#xA;&#xA;[UML] AssociationClass (note that &quot;end ownership&quot; is meaningless in SMIF).&#xA;&#xA;[Guizzardi2015] Relator: endurants of a special kind, with the power of connecting (mediating) other endurants. Note: Guissardi &quot;mediation&quot; corresponds with relationship properties.&#xA;&#xA;&#xA;"
+            references="#//SMIFMOFModel/Relationships/RelationshipType"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Constraints" nsURI="http://www.omg.org/spec/SMIF/Constraints">
+      <eAnnotations source="Rules define constraints or behaviors that are asserted in specified context."
+          references="#//SMIFMOFModel/Constraints"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Rule" abstract="true" eSuperTypes="#//SMIFMOFModel/TopLevel/Proposition">
+        <eAnnotations source="A rule is a proposition that constrains one or more entities by limiting possible conditions or producing some effect.&#xA;Note that rules may or may not be defined in the same context that they hold within or constraint. This support the &quot;open world assumption&quot; that a rule may be asserted outside of the scope of the rule or what the rule is constraining."
+            references="#//SMIFMOFModel/Constraints/Rule"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="constrains" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity" eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/constrainedBy">
+          <eAnnotations source="The entity or entities constrained by a rule.  &#xA;Where a rule constrains a context, all things contextualized by the context shall be subject to the rule.&#xA;Where there are no &lt;constrains> for a rule, the rule applies globally - to the universal context."
+              references="#//SMIFMOFModel/Constraints/Rule/constrains"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="subsumes" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Constraints/Rule" eOpposite="#//SMIFMOFModel/Constraints/Rule/subsumedBy">
+          <eAnnotations source="When a rule subsumes another the subsumed rule will not apply (fire) if the &lt;subsumed by> rules applies (fires).&#xA;Where rules are also patterns, a rule may specialize another which will subsume the specialized rule as well as include the generalized rule parts as parts of the specialized rule."
+              references="#//SMIFMOFModel/Constraints/Rule/subsumes"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="subsumedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Constraints/Rule" eOpposite="#//SMIFMOFModel/Constraints/Rule/subsumes">
+          <eAnnotations source="When rule is &lt;subsumed by> another the subsumed rule will not apply (fire) if the &lt;subsumed by> rules applies (fires)."
+              references="#//SMIFMOFModel/Constraints/Rule/subsumedBy"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MultiplicityConstraint" eSuperTypes="#//SMIFMOFModel/Constraints/TypeConstraint">
+        <eAnnotations source="A Multiplicity constraint constrains the number of bindings &lt;multiplicity of> types (including property types) may have in a particular instance of the constrained type. &#xA;&#xA;For a property type, The number of instances bound to a property for the set of instances bound to &lt;with respect to> shall be limited by the minimum and maximum number of the multiplicity. &#xA;&#xA;For non-property types, the multiplicity shall apply to the extent of the type as described by &lt;classifies>.&#xA;&#xA;[IDEAS] superSubType&#xA;&#xA;[FUML] MultiplicityElement: Note: Multiplicity Constraint constraining a type has semantics included in to UML MultiplicityElement.&#xA;&#xA;[OWL] Union(ObjectMaxCardinality, ObjectMinCardinality, ObjectExactCardinality, DataMaxCardinality, DataMinCardinality, DataExactCardinality)"
+            references="#//SMIFMOFModel/Constraints/MultiplicityConstraint"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="mininumNumber" ordered="false"
+            eType="#//SMIFMOFModel/Values/Integer">
+          <eAnnotations source="Minimum number in a set as constrained by a multiplicity.&#xA;[FUML] MultiplicityElement.lowerValue&#xA;[OWL] MinCardinality"
+              references="#//SMIFMOFModel/Constraints/MultiplicityConstraint/mininumNumber"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumNumber" ordered="false"
+            eType="#//SMIFMOFModel/Values/Integer">
+          <eAnnotations source="Maximum number in a set as constrained by a multiplicity.&#xA;[FUML] MultiplicityElement.upperValue&#xA;[OWL] maxCardinality"
+              references="#//SMIFMOFModel/Constraints/MultiplicityConstraint/maximumNumber"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="atOnce" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/Boolean">
+          <eAnnotations source="When at once is true, the constraint applies for each snapshot in time but not across snapshots (e.g. a car can have at most one driver at a time). When at once is false the constraint applies across all time (e.g. a person has exactly one birth mother across all time)."
+              references="#//SMIFMOFModel/Constraints/MultiplicityConstraint/atOnce"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSufficent" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/Boolean">
+          <eAnnotations source="One of the set of sufficient conditions that will infer the type designated in &lt;constrains>."
+              references="#//SMIFMOFModel/Constraints/MultiplicityConstraint/isSufficent"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="withRespectTo" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/respectOf">
+          <eAnnotations source="One or more types or properties that define the &quot;from&quot; side of a multiplicity. &#xA;&#xA;Where with respect to is undefined and &lt;multiplicity of> is a property, all properties that are &lt;property of> the same structured type as &lt;multiplicity of> shall be considered the set of &lt;with respect to> properties.  I.e. all the &quot;other ends&quot; of a relationship.&#xA;&#xA;&lt;with respect to> provides for complex multiplicities across n-ary situations, data structures and relationships. "
+              references="#//SMIFMOFModel/Constraints/MultiplicityConstraint/withRespectTo"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicityOf" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/hasMultiplicity">
+          <eAnnotations source="The type or property that is the subject of a multiplicity constraint."
+              references="#//SMIFMOFModel/Constraints/MultiplicityConstraint/multiplicityOf"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="UniquenessConstraint" eSuperTypes="#//SMIFMOFModel/Constraints/TypeConstraint">
+        <eAnnotations source="A constraint that, within the &lt;constrains> type the rule applies to, the set of instances bound to the set of types in the &quot;has unique&quot; relation must be unique and serves to define the &quot;identity&quot; of each individual. &#xA;Note: Uniqueness may be used to define a &quot;key&quot;.&#xA;[OWL] HasKey where CE (subject class expression) is &lt;constrains> and &lt;has unique> is Union(ObjectPropertyExpression, DataPropertyExpression)"
+            references="#//SMIFMOFModel/Constraints/UniquenessConstraint"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPrimaryIdentity"
+            ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="A uniqueness constraint that can be interpreted as a &quot;primary key&quot;, the identity of an entity."
+              references="#//SMIFMOFModel/Constraints/UniquenessConstraint/isPrimaryIdentity"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasUnique" ordered="false"
+            lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/Properties/PropertyType"
+            eOpposite="#//SMIFMOFModel/Properties/PropertyType/hasUniquenessConstraint">
+          <eAnnotations source="The set of involved properties within a type that uniquely identify an individual."
+              references="#//SMIFMOFModel/Constraints/UniquenessConstraint/hasUnique"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ConditionalRule" eSuperTypes="#//SMIFMOFModel/Constraints/Rule #//SMIFMOFModel/Constraints/Conditional">
+        <eAnnotations source="A rule with a general expression as a condition that applies to what the rule &lt;constrains>. Where asserted, the condition must be true.&#xA;[UML] Constraint where &quot;context&quot; corresponds with &lt;holds within> and &quot;constrainedElement&quot; corresponds with &quot;constrains&quot;. &quot;specification&quot; corresponds with &quot;condition&quot;."
+            references="#//SMIFMOFModel/Constraints/ConditionalRule"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TypeConstraint" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/Constraints/Rule">
+        <eAnnotations source="A constraint of a type, including Relationships types.&#xA;"
+            references="#//SMIFMOFModel/Constraints/TypeConstraint"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Equivalent" eSuperTypes="#//SMIFMOFModel/Constraints/Rule">
+        <eAnnotations source="Equivalent is a rule that the things the rule &lt;constraints> denote the same set of things. When applied to a context (including types) each thing the context contextualizes is included in the set of equivalent things.&#xA;&#xA;Related to*:  [ISO 1087] synonymy: relation between or among terms (3.4.3) in a given language representing the same concept (3.2.1)&#xA;&#xA;Related to*: [ISO 1087] equivalence: relation between designations (3.4.1) in different languages representing the same concept (3.2.1)&#xA;&#xA;* SMIF relates concepts, not terms. synonymy may also be represented by multiple terms for the same concept.&#xA;&#xA;[OWL] Union( SameIndividual, EquivalentClasses, EquivalentObjectProperties, EquivalentDataProperties)"
+            references="#//SMIFMOFModel/Constraints/Equivalent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Disjoint" eSuperTypes="#//SMIFMOFModel/Constraints/Rule">
+        <eAnnotations source="Disjoint is a rule that the things denoted by what the rule &lt;constrains> do not and may not denote any of the same set of things.&#xA;When applied to a context (including types) all elements contextualized are included in the set of disjoint individuals.&#xA;&#xA;[FIBO] Mutually Exclusive sets&#xA;&#xA;[IDEAS] PartitionOfSetOfDisjointIndividuals: A FusionOfSetOfIndividuals whose fusioned Type is a SetOfDisjointIndividuals.&#xA;&#xA;[UML] [UML] GeneralizationSet with isDisjoint=TRUE. &quot;constrains&quot; corresponds with  &quot;is covered by&quot;  of each &quot;special&quot; of each generalization. Note the SMIF does not require that disjoint elements have a common supertype, one may be inferred for UML mapping.&#xA;&#xA;[OWL: Union(DisjointClasses, DisjointObjectProperties, DisjointDataProperties, DifferentIndividuals)&#xA;"
+            references="#//SMIFMOFModel/Constraints/Disjoint"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Enumerated" eSuperTypes="#//SMIFMOFModel/Constraints/Rule">
+        <eAnnotations source="The contextualized elements of the &lt;constrains> context is a closed (enumerated) set, it can not be extended. A.K.A. &quot;Closed World Assumption&quot;. Elements may not be asserted by any context other than the one specified in &lt;holds within>.&#xA;&#xA;[FIBO] Selections of Things&#xA;[FUML] Wen constraining a type, corresponds with [FUML] &quot;Enumeration&quot;. SMIF enumerations are not limited to literals. The &quot;ownedLiteral&quot; corresponds with all elements owned by &lt;holds within>.&#xA;[ISO11404] Enumerated: enumerated is a family of datatypes, each of which comprises a finite number of distinguished values having an intrinsic order.&#xA;[OWL] ObjectUnitionOf( DataOneOf, ObjectOneOf )"
+            references="#//SMIFMOFModel/Constraints/Enumerated"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="GeneralizationConstraint" eSuperTypes="#//SMIFMOFModel/Constraints/TypeConstraint">
+        <eAnnotations source="A Type Generalization Constraint is a taxonomic relationship between a more general &lt;has general> type and a more specific &lt;has specific> type. Each instance of the specific type is also an instance of the general type. The specific type inherits the properties and rules of the more general type. &#xA;The extent (&lt;categorizes> property) of the specific type is the same as or a subset of the extent of the more general type.&#xA;Note that &quot;multiple inheritance&quot; is supported.&#xA;&#xA;[IDEAS] superSubtype: A couple relating two Types which asserts that one type is a subset of the other. &#xA;&#xA;[ISO 1087] generic relation: genus-species relation relation between two concepts (3.2.1) where the intension (3.2.9) of one of the concepts includes that of the other concept and at least one additional delimiting characteristic (3.2.7)&#xA;&#xA;[FIBO] Inheritance&#xA;&#xA;[UML] Generalization&#xA;&#xA;[Guizzardi] (Specialization relation): Let F and G be two universals such that F is a specialization of G. Then, for all w ∈ W we have that extw(F) ⊆ extw(G)&#xA;&#xA;[OWL] Union(SubClassOf, SubPropertyOf)"
+            references="#//SMIFMOFModel/Constraints/GeneralizationConstraint"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="redefines" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="Defines the generalization as a redefinition, subsuming the more general type in the definitional context.&#xA;&#xA;Where &lt;redefines> is true the more specific type subsumes the more general type in the definition context. In this case the more general and more specific sets are equivalent. A type may be redefined multiple times, as long as it is unambiguous which definition applies for a particular instance.&#xA;&#xA;Where &lt;redefines> is false or not defined the more specific type represents a subset of the more general property.&#xA;&#xA;Redefinition is most often used with properties (as defined in UML) but may also be applied to other types."
+              references="#//SMIFMOFModel/Constraints/GeneralizationConstraint/redefines"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasGeneral" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/hasSpecialization">
+          <eAnnotations source="The general type in the Generalization rule.&#xA;&#xA;[ISO 1087] concept (3.2.1) in a generic relation (3.2.21) having the broader intension (3.2.9)&#xA;&#xA;[FUML] General (Where redefines is false or not defined)&#xA;[FUML] RedefinableElement.redefinedElement (Where redefines is true)"
+              references="#//SMIFMOFModel/Constraints/GeneralizationConstraint/hasGeneral"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasSpecific" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/hasGeneralization">
+          <eAnnotations source="The specific type in a generalization rule.&#xA;[ISO 1087] generic concept: concept (3.2.1) in a generic relation (3.2.21) having the narrower intension (3.2.9)&#xA;[FUML] specific&#xA;[ISO11404] A subtype is a datatype derived from an existing datatype, designated the base datatype, by restricting the value space to a subset of that of the base datatype whilst maintaining all characterizing operations. Subtypes&#xA;are created by a kind of datatype generator which is unusual in that its only function is to define the relationship between the value spaces of the base datatype and the subtype.&#xA;[OWL] Union( rdfs:subClassOf, SubObjectPropertyOf, SubDataPropertyOf)"
+              references="#//SMIFMOFModel/Constraints/GeneralizationConstraint/hasSpecific"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropertyConstraint" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/Constraints/Rule">
+        <eAnnotations source="Abstract supertype for constraints that constrain properties types.&#xA;&#xA;"
+            references="#//SMIFMOFModel/Constraints/PropertyConstraint"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropertyTransitivityConstraint"
+          eSuperTypes="#//SMIFMOFModel/Constraints/PropertyConstraint">
+        <eAnnotations source="A transitive property defined by &lt;constrains> interlinks two individuals A and C whenever it interlinks A with B and B with C for some individual B. &#xA;For example &quot;larger than&quot; is transitive in that if Joe is larger than Sue and Sue is Larger then Sam, then Joe is larger than Sam.&#xA;[OWL] TransitionObjectProperty&#xA;&#xA;"
+            references="#//SMIFMOFModel/Constraints/PropertyTransitivityConstraint"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropertyTypeConstraint" eSuperTypes="#//SMIFMOFModel/Constraints/PropertyConstraint">
+        <eAnnotations source="A property type constraint defines the type(s) of a property.&#xA;All elements bound to a property must have the type &lt;is of type>. &lt;is of type> may be pre-existing or inferred based on the value of &lt;prerequisite type>.&#xA;Note that Property Type Constraint is a rule independent of the definition of a property to allow for the type of a property to be refined in a more restrictive context.&#xA;&#xA;[FUML] TypedElement.type: Note: A property type constraint applied to a property has the same semantics as a UML TypedElement.&#xA;&#xA;[OWL] Union( AllValuesFrom, SomeValuesFrom, DataPropertyRange, ObjectPropertyRange)). &lt;is of type> corresponds to rdfs:Range. &lt;constrains>  corresponds to rdfs:Domain (note that in an association type or relationship type with two property types, the range will be the domain of the &quot;opposite&quot; property, if any)."
+            references="#//SMIFMOFModel/Constraints/PropertyTypeConstraint"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="prerequisiteType" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="If true, &lt;is of type> is a prerequisite - the bound thing must be of the given type for the property to be bound. A non prerequisite type will cause a binding to infer &lt;is of type>, provided all prerequisite types have been satisfied.&#xA;"
+              references="#//SMIFMOFModel/Constraints/PropertyTypeConstraint/prerequisiteType"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isOfType" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/propertiesOfType">
+          <eAnnotations source="A required type of a thing bound to a property.&#xA;Note that the type may be inferred based on the value of &lt;prerequisite type>.&#xA;[OWL] rdfs:range, "
+              references="#//SMIFMOFModel/Constraints/PropertyTypeConstraint/isOfType"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CoveringConstraint" eSuperTypes="#//SMIFMOFModel/Constraints/TypeConstraint">
+        <eAnnotations source="A constraint that the extent (&lt;categorizes> things) of the &lt;constrains> type is equivalent to the union of the extents of the &lt;is covered by> types.&#xA;[UML] GeneralizationSet with isCovering=TRUE. &quot;constrains&quot; corresponds with the common &quot;general&quot; of each Generalization&quot;. &quot;is covered by&quot; corresponds with each &quot;special&quot; of each generalization."
+            references="#//SMIFMOFModel/Constraints/CoveringConstraint"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isCoveredBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/hasCovering">
+          <eAnnotations source="A type covered by a covering constraint.&#xA;&#xA;The &lt;constrains> type must be a direct supertype of all &lt;is covered by> types.&#xA;"
+              references="#//SMIFMOFModel/Constraints/CoveringConstraint/isCoveredBy"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FacetClassificationConstraint" eSuperTypes="#//SMIFMOFModel/Constraints/GeneralizationConstraint">
+        <eAnnotations source="A Facet Classification Constraint asserts that the specialized type is &quot;non rigid&quot; with respect to the general (rigid) type - that is the &lt;has specific> type may change over the lifetime of instances of the &lt;has general> type. The &lt;has specific> type will be inferred to be a Facet. e.g. &quot;Registered voter&quot; is a facet of a person. &#xA;&#xA;[FIBO] isPlayedBy"
+            references="#//SMIFMOFModel/Constraints/FacetClassificationConstraint"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Conditional" abstract="true">
+        <eAnnotations source="Anything with a condition defined by an expression."
+            references="#//SMIFMOFModel/Constraints/Conditional"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="condition" ordered="false"
+            eType="#//SMIFMOFModel/Expressions/ExpressionNode">
+          <eAnnotations source="Condition that must be TRUE for an element to be asserted. All values other than &quot;TRUE&quot; are FALSE."
+              references="#//SMIFMOFModel/Constraints/Conditional/condition"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="TopLevel" nsURI="http://www.omg.org/spec/SMIF/Top">
+      <eAnnotations source="The top level objects provide the foundation for all objects in a SMIF model"
+          references="#//SMIFMOFModel/TopLevel"/>
+      <eClassifiers xsi:type="ecore:EClass" name="IdentifiableEntity" eSuperTypes="#//SMIFMOFModel/TopLevel/Thing">
+        <eAnnotations source="An identifiable entity is any identifiable thing other than values, this includes individuals, types, axioms, situations, speech acts, information structures, etc.&#xA;Identifiable entities always have some kind of identity and may have identifiers. Note that identity is an abstraction that may have representation in models as any number of identifiers, also known as a &quot;sign&quot;.&#xA;&#xA;[OWL] Entity type (Implied in section [OWL] 5.8) as an instance of rdfs:Class&#xA;"
+            references="#//SMIFMOFModel/TopLevel/IdentifiableEntity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="wasStatedIn" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Metadata/Statement" eOpposite="#//SMIFMOFModel/Metadata/Statement/resultedIn">
+          <eAnnotations source="Metadata representing the speech act, document or other record where a statement captured in a model was made.&#xA;[OWL] rdfs:isDefinedBy"
+              references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/wasStatedIn"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasPreferred" ordered="false"
+            eType="#//SMIFMOFModel/Identifiers/Identifier" eOpposite="#//SMIFMOFModel/Identifiers/Identifier/preferredFor">
+          <eAnnotations source="Default identifier to use for an entity.&#xA;Where multiple identifiers are preferred in differing context any method for selecting the most preferred identifier is implementation specific and not specified by this standard.&#xA;[FUML] NamedElement.name: Note: An Identifier that is &lt;preferred for> an entity is equivalent to the name of a named element."
+              references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasPreferred"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="definedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Metadata/Definition" eOpposite="#//SMIFMOFModel/Metadata/Definition/defines">
+          <eAnnotations source="An informal description of something.&#xA;[FIBO] hasDefinition&#xA;[UML] comment&#xA;[FUML] ownedComment&#xA;"
+              references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/definedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="identifiedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Identifiers/Identifier" eOpposite="#//SMIFMOFModel/Identifiers/Identifier/identifies">
+          <eAnnotations source="An identifier for an &lt;Entity>.&#xA;[FIBO] hasDenotation"
+              references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/identifiedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasMetadata" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Metadata/Metadata" eOpposite="#//SMIFMOFModel/Metadata/Metadata/metadataAbout">
+          <eAnnotations source="Metadata associated with (data about the information concerning) the subject entity.&#xA;[OWL] AnnotationProperty, annotationValue of Annotation Assertion"
+              references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasMetadata"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasName" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Identifiers/Name" eOpposite="#//SMIFMOFModel/Identifiers/Name/names">
+          <eAnnotations source="A human meaningful name for an entity.&#xA;[FIBO] hasName: that by which some thing is known; may apply to anything&#xA;&#xA;[OWL] rdfs:label"
+              references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasName"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasRecord" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Records/Record" eOpposite="#//SMIFMOFModel/Records/Record/about">
+          <eAnnotations source="A record about something." references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasRecord"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="constrainedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Constraints/Rule" eOpposite="#//SMIFMOFModel/Constraints/Rule/constrains">
+          <eAnnotations source="Rules applying to an entity." references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/constrainedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasAuthoritativeSource"
+            ordered="false" upperBound="-1" eType="#//SMIFMOFModel/Metadata/InformationSource"
+            eOpposite="#//SMIFMOFModel/Metadata/InformationSource/madeStatement">
+          <eAnnotations source="Metadata representing the authority behind a statement - who or what made a statement captured in a model."
+              references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasAuthoritativeSource"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasBinding" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Properties/PropertyBinding" eOpposite="#//SMIFMOFModel/Properties/PropertyBinding/boundTo">
+          <eAnnotations source="Bindings asserted for properties within a situation."
+              references="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasBinding"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Thing" abstract="true">
+        <eAnnotations source="Any thing or value that does or may exist in any possible world. Thing is the supertype of all types and may therefore participate in unbounded relations.&#xA;Instances of Thing are referred to as &quot;a thing&quot; in this model.&#xA;&#xA;[IDEAS] Thing&#xA;[OWL] Thing&#xA;[ISO 1087] object: anything perceivable or conceivable&#xA;[FIBO] Thing&#xA;[Guizzardi] Thing&#xA;[FUML] Element&#xA;[SOWA1999] &quot;T&quot;&#xA;[OWL] rdfs:Resource&#xA;"
+            references="#//SMIFMOFModel/TopLevel/Thing"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="inContextOf" ordered="false"
+            lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Context"
+            eOpposite="#//SMIFMOFModel/TopLevel/Context/contextualizes">
+          <eAnnotations source="A &lt;Context> that contextualizes a thing making what it &lt;contextualizes> subject to the propositions referenced by &lt;has assertion> of the context.&#xA;A thing may be &lt;in context of> one or more context.&#xA;[FIBO] hasContext"
+              references="#//SMIFMOFModel/TopLevel/Thing/inContextOf"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasType" ordered="false"
+            lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/categorizes">
+          <eAnnotations source="A type that holds for something.&#xA;Things may have multiple types and these types may change over time. &#xA;The &lt;categorized> thing satisfies the constraints of the &lt;has type> type.&#xA;[FIBO] isClassifiedBy&#xA;[OWL] rdf:type"
+              references="#//SMIFMOFModel/TopLevel/Thing/hasType"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="statedBy" ordered="false"
+            eType="#//SMIFMOFModel/LexicalScope/LexicalScope" eOpposite="#//SMIFMOFModel/LexicalScope/LexicalScope/states">
+          <eAnnotations source="&lt;stated by> is a lexical scope that both defines and asserts a model element."
+              references="#//SMIFMOFModel/TopLevel/Thing/statedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="referencedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Expressions/ConstantReference"
+            eOpposite="#//SMIFMOFModel/Expressions/ConstantReference/hasValue">
+          <eAnnotations source="Referencing constant expression node." references="#//SMIFMOFModel/TopLevel/Thing/referencedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasEquality" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Expressions/Equality" eOpposite="#//SMIFMOFModel/Expressions/Equality/hasEqual">
+          <eAnnotations source="Equality constraints for a thing." references="#//SMIFMOFModel/TopLevel/Thing/hasEquality"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="boundIn" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Properties/PropertyBinding" eOpposite="#//SMIFMOFModel/Properties/PropertyBinding/binds">
+          <eAnnotations source="Bindings in which a thing participates." references="#//SMIFMOFModel/TopLevel/Thing/boundIn"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true" eSuperTypes="#//SMIFMOFModel/TopLevel/IdentifiableEntity">
+        <eAnnotations source="A &lt;Context> is a grouping of &lt;contextualizes> things that are related in some way.&#xA;&#xA;A &lt;Context> also &lt;asserts> propositions that hold for all things the context &lt;contextualizes>, thus providing the link between an assertion and the set of things asserted. Likewise a context &lt;negates> propositions that are false within the context.&#xA;&#xA;Subtypes of &lt;Context>, such as &lt;Type> ascribe more semantics to the context as well as the things it &lt;contextualizes>.&#xA;&#xA;A context provides a binding between a set of propositions and the things those propositions apply to.&#xA;&#xA;[CL] Sort: any subset of the universe of discourse over which some quantifier is allowed to range&#xA;&#xA;[ISO 1087] concept field: unstructured set of thematically related concepts (3.2.1)&#xA;&#xA;[SOWA1999] Mediating&#xA;&#xA;"
+            references="#//SMIFMOFModel/TopLevel/Context"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="asserts" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Proposition" eOpposite="#//SMIFMOFModel/TopLevel/Proposition/holdsWithin">
+          <eAnnotations source="Proposition that is asserted (must be true) for anything contextualized by a context.&#xA;As types are a context, types may assert a proposition for their instances.&#xA;"
+              references="#//SMIFMOFModel/TopLevel/Context/asserts"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="contextualizes" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Thing" eOpposite="#//SMIFMOFModel/TopLevel/Thing/inContextOf">
+          <eAnnotations source="The set of things contextualized by a &lt;Context>, or &quot;in&quot; the &lt;Context> and therefor subject to the &lt;asserts> propositions of the &lt;Context>."
+              references="#//SMIFMOFModel/TopLevel/Context/contextualizes"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="negates" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Proposition" eOpposite="#//SMIFMOFModel/TopLevel/Proposition/negatedWithin">
+          <eAnnotations source="Proposition that is negatively asserted (must be FALSE) for anything contextualized by a context.&#xA;As types are a context, types may assert or negate a proposition for their instances.&#xA;"
+              references="#//SMIFMOFModel/TopLevel/Context/negates"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="contextualizes" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Expressions/ExpressionContext"
+            eOpposite="#//SMIFMOFModel/Expressions/ExpressionContext/evaluatesIn">
+          <eAnnotations source="Expressions referencing a context." references="#//SMIFMOFModel/TopLevel/Context/contextualizes.1"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="referencedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/LexicalScope/LexicalReference"
+            eOpposite="#//SMIFMOFModel/LexicalScope/LexicalReference/ReferencedScope">
+          <eAnnotations source="References to a context." references="#//SMIFMOFModel/TopLevel/Context/referencedBy"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Proposition" abstract="true" eSuperTypes="#//SMIFMOFModel/TopLevel/IdentifiableEntity">
+        <eAnnotations source="A proposition is statement, or condition with a truth value (true or false) that can be determined or asserted with some level of confidence (assessment of confidence being outside of this specification).&#xA;All &quot;facts&quot;, statements, speech acts, relationships and rules are propositions.&#xA;Propositions may be asserted to be true within a context which they &lt;holds within>.&#xA;For a situation, the proposition is true if the situation is actual (i.e., takes place, obtains).&#xA;&#xA;[SBVR] the state of affairs is posited by the proposition and if the state of affairs were actual, the proposition would be true&#xA;[CL] Sentence: unit of logical text which is true or false, i.e. which is assigned a truth-value in an interpretation&#xA;[SOWA1999] Proposition"
+            references="#//SMIFMOFModel/TopLevel/Proposition"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="holdsWithin" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Context" eOpposite="#//SMIFMOFModel/TopLevel/Context/asserts">
+          <eAnnotations source="Context in which a proposition is asserted (required to be true). Anything contextualized by the context is subject to the proposition."
+              references="#//SMIFMOFModel/TopLevel/Proposition/holdsWithin"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="negatedWithin" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Context" eOpposite="#//SMIFMOFModel/TopLevel/Context/negates">
+          <eAnnotations source="Context in which a proposition is negated (required to be FALSE). Anything contextualized by the context is subject to the proposition."
+              references="#//SMIFMOFModel/TopLevel/Proposition/negatedWithin"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="qualifiedWithin" ordered="false"
+            eType="#//SMIFMOFModel/Patterns/PropositionVariable" eOpposite="#//SMIFMOFModel/Patterns/PropositionVariable/qualifies"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ActualEntity" eSuperTypes="#//SMIFMOFModel/TopLevel/TemporalEntity">
+        <eAnnotations source="An actual entity is an identifiable, temporal and individual person, specific object, process enactment, agreement, etc. Actual Entities do not have to be physical, e.i. may denote social constructs. Actual entities are disjoint from types.&#xA;A more specific class of actual entity (e.g., Person) is intended to refine the classification of the individual thing.&#xA;Individuality (or selfhood) is the state or quality of being an individual; particularly of being separate from other individuals and possessing  identity. Actual entities typically have a lifetime and some individuals may change over that lifetime. Individuals may have parts that together help define the individual but may change over time. &#xA;&quot;Actual&quot; does not imply current existence.&#xA;&#xA;[ISO 1087] individual concept: concept (3.2.1) which corresponds to only one object &#xA;&#xA;[UML] Loose correspondence with &quot;InstanceSpecification&quot;. SMIF instances are direct instances of their types, there is no &quot;indirection&quot; through value specification as their is in UML.&#xA;&#xA;[Guizzardi] (individual concept)&#xA;&#xA;[CL] Individual: one element of the universe of discourse&#xA;&#xA;[DOLCE] Particular: particulars are entities which have no instances&#xA;&#xA;[SOWA1999] Independent. Can be considered &quot;Actuality&quot; when including social constructs in [SOWA1999] Physical.&#xA;&#xA;[OWL] Individual"
+            references="#//SMIFMOFModel/TopLevel/ActualEntity"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TemporalEntity" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/TopLevel/IdentifiableEntity">
+        <eAnnotations source="A temporal is anything that has a timespan. Temporal things may have temporal relationships with other temporal things.&#xA;&#xA;Note that relationships defined for [DTV] Time Intervals may be specified for &lt;temporal Entity> but are not specified in SMIF. &#xA;&#xA;[SOWA1999] Continuant"
+            references="#//SMIFMOFModel/TopLevel/TemporalEntity"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Patterns" nsURI="http://www.omg.org/spec/SMIF/Patterns">
+      <eAnnotations source="Patterns are templates for structures or compositions of things that may then be expressed as instances of the pattern."
+          references="#//SMIFMOFModel/Patterns"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Pattern" eSuperTypes="#//SMIFMOFModel/Situations/SituationType #//SMIFMOFModel/Situations/Situation #//SMIFMOFModel/LexicalScope/LexicalScope #//SMIFMOFModel/Properties/PropertyOwner">
+        <eAnnotations source="A pattern represents a set of assertions true about individuals or sets of individuals qualified by pattern properties. All propositions asserted or negated by a pattern (as a context) are considered &quot;templates&quot; where identity is not required to match.&#xA; &#xA;The structure of the pattern is defined by the properties and asserted (sub) situations (including relationships) that are asserted by the pattern.&#xA;&#xA;In many cases the relationships and rules defined for a pattern will reference pattern properties. These relationships will hold for instances of the pattern where things are bound to the pattern properties.&#xA;&#xA;[DTV] general situation kind: situation kind that is not an individual situation kind. A situation kind is a general situation kind if it can be exemplified by more than one Event in some possible world, even when it cannot have more than one Event in the possible world chosen to be the universe of discourse.&#xA;&#xA;[UML] StructuredClassifier. Also Similarity with TemplateSignature &#xA;&#xA;[OWL] May be used to represent Class Expressions"
+            references="#//SMIFMOFModel/Patterns/Pattern"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ownsVariable" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Patterns/PatternVariable" eOpposite="#//SMIFMOFModel/Patterns/PatternVariable/hasOwningPattern">
+          <eAnnotations source="A variable property defined within the context of a pattern that is used as part of the patterns definition.&#xA;[UML] ownedAttribute"
+              references="#//SMIFMOFModel/Patterns/Pattern/ownsVariable"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="satisfiedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Patterns/PatternMatch" eOpposite="#//SMIFMOFModel/Patterns/PatternMatch/satisfies">
+          <eAnnotations source="Pattern match that satisfies a pattern." references="#//SMIFMOFModel/Patterns/Pattern/satisfiedBy"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PatternVariable" eSuperTypes="#//SMIFMOFModel/Properties/OwnedPropertyType #//SMIFMOFModel/Constraints/Conditional">
+        <eAnnotations source="A pattern variable is a property of a pattern that provides a contextual property within that pattern for rules and relationships to be bound to.&#xA;A pattern variable is a placeholder for all or a subset of the instances of the variables type.&#xA;Properties of an association or relationship may be bound to a pattern variable where the type of the pattern variable is compatible with the type of the relationship's property type.&#xA;&#xA;[UML] Similarity with TemplateParameter&#xA;[CL] Functional Term&#xA;&#xA;"
+            references="#//SMIFMOFModel/Patterns/PatternVariable"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualification" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Patterns/VariableQualification">
+          <eAnnotations source="&lt;qualification> defines the behavior of an element with respect to a pattern - how the variable impacts the selection, evaluation or assertion of the pattern."
+              references="#//SMIFMOFModel/Patterns/PatternVariable/qualification"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="explicit" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="If true, Element must be explicitly asserted as the indicted type, not derived or inferred from a supertype or super property."
+              references="#//SMIFMOFModel/Patterns/PatternVariable/explicit"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasOwningPattern" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Patterns/Pattern" eOpposite="#//SMIFMOFModel/Patterns/Pattern/ownsVariable">
+          <eAnnotations source="Pattern owning a pattern variable." references="#//SMIFMOFModel/Patterns/PatternVariable/hasOwningPattern"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasSubset" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Patterns/PatternVariable" eOpposite="#//SMIFMOFModel/Patterns/PatternVariable/subsets">
+          <eAnnotations source="Subsets of the variable." references="#//SMIFMOFModel/Patterns/PatternVariable/hasSubset"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="mapsTo" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Mapping/MatchEnd" eOpposite="#//SMIFMOFModel/Mapping/MatchEnd/mapsVariable">
+          <eAnnotations source="Map rule end for a property" references="#//SMIFMOFModel/Patterns/PatternVariable/mapsTo"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="subsets" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Patterns/PatternVariable" eOpposite="#//SMIFMOFModel/Patterns/PatternVariable/hasSubset">
+          <eAnnotations source="Variable that a subset variable subsets. The subset variable shall be populated by a subset of the &lt;subsets> variable based on the type and constraints of the subset variable."
+              references="#//SMIFMOFModel/Patterns/PatternVariable/subsets"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="excludedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Patterns/PatternVariable" eOpposite="#//SMIFMOFModel/Patterns/PatternVariable/excludes"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="excludes" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Patterns/PatternVariable" eOpposite="#//SMIFMOFModel/Patterns/PatternVariable/excludedBy"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="referenceMapping" ordered="false"
+            eType="#//SMIFMOFModel/Mapping/Mapping" eOpposite="#//SMIFMOFModel/Mapping/Mapping/referenceFocus">
+          <eAnnotations source="Mapping for which a more abstract pattern is defined."
+              references="#//SMIFMOFModel/Patterns/PatternVariable/referenceMapping"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="concreteMapping" ordered="false"
+            eType="#//SMIFMOFModel/Mapping/Mapping" eOpposite="#//SMIFMOFModel/Mapping/Mapping/concreteFocus">
+          <eAnnotations source="Mapping for which a more concrete pattern is defined."
+              references="#//SMIFMOFModel/Patterns/PatternVariable/concreteMapping"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropositionVariable" eSuperTypes="#//SMIFMOFModel/Patterns/PatternVariable">
+        <eAnnotations source="A proposition variable utilizes some proposition (e.g. relationships) as a part of the definition of a pattern, it extends a basic proposition in that it adds properties to determine the effect the assertion has on pattern instances.&#xA;A Proposition Variable is a lexical scope context that &lt;asserts> or &lt;negates> other propositions qualified by &lt;has strength> and &lt;explicit>. As a lexical scope it may &quot;own&quot; the asserted propositions.&#xA;Proposition Variable is often used with associations and relationships to define the way pattern properties are related to other pattern properties or actual entities.&#xA;For a pattern associations, [UML] Connector. (type = has type). Each ConnectorEnd corresponds with a Structured Property Binding."
+            references="#//SMIFMOFModel/Patterns/PropositionVariable"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="qualifies" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/TopLevel/Proposition" eOpposite="#//SMIFMOFModel/TopLevel/Proposition/qualifiedWithin"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="VariableQualification">
+        <eAnnotations source="Variable qualification values define the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern."
+            references="#//SMIFMOFModel/Patterns/VariableQualification"/>
+        <eLiterals name="Select">
+          <eAnnotations source="Select is used in query and mapping patterns, all elements of the classified type that match the pattern are selected as instances of the pattern.&#xA;Select may be considered a qualified &quot;All&quot;. Select does not assert the existence of something, it determines the existence of a pattern match such that other assertions may be made.&#xA;Where a pattern is asserted, &quot;Select&quot; variables shall be asserted.&#xA;Relationships between properties with &lt;quantifier>=Select must hold between the selected properties for the pattern to be asserted.&#xA;&#xA;"
+              references="#//SMIFMOFModel/Patterns/VariableQualification/Select"/>
+        </eLiterals>
+        <eLiterals name="Optional">
+          <eAnnotations source="Optional is used in query and mapping patterns, the property shall be populated as a consequence of the pattern matching.&#xA;Where a pattern is asserted, &quot;Optional&quot; variables shall not be asserted.&#xA;Optional is the default if no qualification is stated."
+              references="#//SMIFMOFModel/Patterns/VariableQualification/Optional"/>
+        </eLiterals>
+        <eLiterals name="Assert">
+          <eAnnotations source="The property does not impact the selection of the pattern, it is an asserted consequence of the pattern."
+              references="#//SMIFMOFModel/Patterns/VariableQualification/Assert"/>
+        </eLiterals>
+        <eLiterals name="Negate">
+          <eAnnotations source="The property does not impact the selection of the pattern, it is negated consequence of the pattern - it may not exist."
+              references="#//SMIFMOFModel/Patterns/VariableQualification/Negate"/>
+        </eLiterals>
+        <eLiterals name="ExactlyOne">
+          <eAnnotations source="The existential quantifier limited to exactly one of a potentially larger set of the properties type."
+              references="#//SMIFMOFModel/Patterns/VariableQualification/ExactlyOne"/>
+        </eLiterals>
+        <eLiterals name="ThereExists">
+          <eAnnotations source="The existential quantifier - at least one of the properties type.  "
+              references="#//SMIFMOFModel/Patterns/VariableQualification/ThereExists"/>
+        </eLiterals>
+        <eLiterals name="All">
+          <eAnnotations source="The universal quantifier - the quantified property is a stand-in for all elements of  the existent of the quantified type"
+              references="#//SMIFMOFModel/Patterns/VariableQualification/All"/>
+        </eLiterals>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ExpressionVariable" eSuperTypes="#//SMIFMOFModel/Patterns/PatternVariable #//SMIFMOFModel/Patterns/Computed">
+        <eAnnotations source="An expression variable defines the value of the variable as computed by &lt;computation>. Note that expression variables are not always able to be asserted or reversed and may therefore not provide for bi-directional mapping patterns. Any ability to assert or reverse a computation is implementation specific."
+            references="#//SMIFMOFModel/Patterns/ExpressionVariable"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PartVariable" eSuperTypes="#//SMIFMOFModel/Patterns/TypePatternVariable">
+        <eAnnotations source="A pattern property variable representing a part of the subject type. Additional relations and rules may be made about the part. A type with parts is by its nature a composition.&#xA;"
+            references="#//SMIFMOFModel/Patterns/PartVariable"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBoundaryPart" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="True if the property is on the boundary of the pattern and connectible (may have relationships) external to the pattern. e.g. &quot;Port&quot;"
+              references="#//SMIFMOFModel/Patterns/PartVariable/isBoundaryPart"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FocusVariable" eSuperTypes="#//SMIFMOFModel/Patterns/TypePatternVariable">
+        <eAnnotations source="A property variable of a pattern representing the extent of the subject type within the context of the owning pattern.&#xA;The value of qualification shall be &quot;Select&quot;.&#xA;The &lt;has type> of the variable is asserted be the same as the subject type of the pattern."
+            references="#//SMIFMOFModel/Patterns/FocusVariable"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TypePatternVariable" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/Patterns/PatternVariable">
+        <eAnnotations source="Type Pattern variable is an abstract supertype that provides for a restriction that parts and focus properties must be owned by a pattern of a type."
+            references="#//SMIFMOFModel/Patterns/TypePatternVariable"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PatternOfType" eSuperTypes="#//SMIFMOFModel/Patterns/Pattern">
+        <eAnnotations source="A pattern of type defines a set of properties and relationships that must hold true for all instances of a type. Where the pattern includes parts, the subject type is a composition.&#xA;Patterns augment the semantics of th subject type in the context of the pattern."
+            references="#//SMIFMOFModel/Patterns/PatternOfType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="subjectType" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/assertsPattern">
+          <eAnnotations source="The type which is the context of a pattern of type. The pattern is &quot;about&quot; the subject type."
+              references="#//SMIFMOFModel/Patterns/PatternOfType/subjectType"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PatternMatch" eSuperTypes="#//SMIFMOFModel/Situations/ActualSituation">
+        <eAnnotations source="A pattern match provides the corespondents between a pattern and the situations it matches using variable bindings. &#xA;A pattern match implies and proves that the pattern &lt;categorizes> the situation.&#xA;The matched pattern &lt;states> any consequences of the matching, such as the pattern &lt;categorizes> the pattern instance."
+            references="#//SMIFMOFModel/Patterns/PatternMatch"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="_unnamed_PatternMatch"
+            ordered="false" upperBound="-1" eType="#//SMIFMOFModel/Patterns/VariableBinding"
+            eOpposite="#//SMIFMOFModel/Patterns/VariableBinding/_unnamed_VariableBinding"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="satisfies" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Patterns/Pattern" eOpposite="#//SMIFMOFModel/Patterns/Pattern/satisfiedBy">
+          <eAnnotations source="Pattern that is satisfied by a &quot;Pattern Match&quot; based on a set of &quot;Variable Bindings&quot;."
+              references="#//SMIFMOFModel/Patterns/PatternMatch/satisfies"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="matches" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Situations/Situation" eOpposite="#//SMIFMOFModel/Situations/Situation/matchedBy">
+          <eAnnotations source="The situation qualified as matching the &lt;satisfies> pattern based on the set of &quot;Variable Bindings&quot; stated."
+              references="#//SMIFMOFModel/Patterns/PatternMatch/matches"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="VariableBinding" eSuperTypes="#//SMIFMOFModel/Properties/OwnedPropertyBinding">
+        <eAnnotations source="A variable binding defines a value for a particular variable of a particular owning pattern as part of a pattern match.&#xA;"
+            references="#//SMIFMOFModel/Patterns/VariableBinding"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="_unnamed_VariableBinding"
+            ordered="false" lowerBound="1" eType="#//SMIFMOFModel/Patterns/PatternMatch"
+            eOpposite="#//SMIFMOFModel/Patterns/PatternMatch/_unnamed_PatternMatch"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Computed" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="computation" ordered="false"
+            eType="#//SMIFMOFModel/Expressions/ExpressionNode">
+          <eAnnotations source="&lt;computation> provides an expression that computes a value for the  variable based on the expression applied to the current context.. &#xA;"
+              references="#//SMIFMOFModel/Patterns/Computed/computation"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Mapping" nsURI="http://www.omg.org/spec/SMIF/Mapping">
+      <eAnnotations source="Mapping rules define how data represents concepts or how different data representations are related."
+          references="#//SMIFMOFModel/Mapping"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MatchRule" eSuperTypes="#//SMIFMOFModel/Constraints/Rule">
+        <eAnnotations source="A rule that the 2 ends represent the same things or information about a thing.&#xA;Redundant mappings are ignored and identity is preserved across all mappings.&#xA;"
+            references="#//SMIFMOFModel/Mapping/MatchRule"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="coerce" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="Where &lt;coerce> has a value of TRUE  a map rule will be evaluated even if the &lt;reference end> is not type compatible with the &lt;concrete end> type.&#xA;Where &lt;coerce> is FALSE or unstated a map rule will be evaluated only if the &lt;reference end> is type compatible with the &lt;concrete end> type.&#xA;Type compatible shall be defined as one of: Being the same type, &lt;concrete end> being a subtype of &lt;reference end> (as defined by a type generalization rule), &lt;concrete end> being a representation of &lt;reference end> (as defined by a representation rule).&#xA;Representation rules applied to a supertype apply to a subtype."
+              references="#//SMIFMOFModel/Mapping/MatchRule/coerce"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="concreteEnd" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Mapping/MatchEnd" containment="true"
+            eOpposite="#//SMIFMOFModel/Mapping/MatchEnd/matchFrom">
+          <eAnnotations source="One end of a mapping, to be used for more concrete end."
+              references="#//SMIFMOFModel/Mapping/MatchRule/concreteEnd"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="referenceEnd" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Mapping/MatchEnd" containment="true"
+            eOpposite="#//SMIFMOFModel/Mapping/MatchEnd/matchTo">
+          <eAnnotations source="One end of a match rule, to be used for more abstract end."
+              references="#//SMIFMOFModel/Mapping/MatchRule/referenceEnd"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="mapRuleOf" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Mapping/Mapping" eOpposite="#//SMIFMOFModel/Mapping/Mapping/hasMapRule">
+          <eAnnotations source="Mapping containing a map rule." references="#//SMIFMOFModel/Mapping/MatchRule/mapRuleOf"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MatchEnd" eSuperTypes="#//SMIFMOFModel/Constraints/Conditional #//SMIFMOFModel/Patterns/Computed">
+        <eAnnotations source="One end of a mapping from one thing to another that may be qualified with a condition.&#xA;The set of elements to be mapped is the union of the sets of all mapped types and mapped variables that conform to the condition.&#xA;Match rules are constrained to apply to only conforming types or types that represent the mapped ends (as specified by a representation rule). &#xA;Representation rules applied to a supertype apply to a subtype unless a more specific representation rule is specified for the corresponding types.&#xA;&#xA;"
+            references="#//SMIFMOFModel/Mapping/MatchEnd"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="assertedType" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/assertedBy">
+          <eAnnotations source="Type that will be asserted for the end that is more concrete than the defined type of a property or relationship. e.g. a unit type."
+              references="#//SMIFMOFModel/Mapping/MatchEnd/assertedType"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="mapsVariable" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Patterns/PatternVariable" eOpposite="#//SMIFMOFModel/Patterns/PatternVariable/mapsTo">
+          <eAnnotations source="Variable that defines a set of elements to map to the other side of the mapping rule. The set of elements shall be those bound to the property on evaluation of the mapping."
+              references="#//SMIFMOFModel/Mapping/MatchEnd/mapsVariable"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="matchFrom" ordered="false"
+            eType="#//SMIFMOFModel/Mapping/MatchRule" eOpposite="#//SMIFMOFModel/Mapping/MatchRule/concreteEnd">
+          <eAnnotations source="Mapping rule owning a &quot;concrete&quot; end." references="#//SMIFMOFModel/Mapping/MatchEnd/matchFrom"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="matchTo" ordered="false"
+            eType="#//SMIFMOFModel/Mapping/MatchRule" eOpposite="#//SMIFMOFModel/Mapping/MatchRule/referenceEnd">
+          <eAnnotations source="Mapping rule owning a reference&quot; end." references="#//SMIFMOFModel/Mapping/MatchEnd/matchTo"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Mapping" eSuperTypes="#//SMIFMOFModel/Patterns/Pattern #//SMIFMOFModel/Constraints/Rule">
+        <eAnnotations source="A mapping is a rule based on a pattern that defines how different representations of the same things correspond. There are two &quot;sub patterns&quot;, defined by the concrete and reference variables and other variables reachable from them via characteristics, associations and relationships. These sub-patterns are matched (made to correspond) using &quot;Match Rules&quot;&#xA;Patterns define a set of related elements to be mapped based on two distinguished variables, the &quot;concrete body&quot; and the &quot;reference body&quot;.&#xA;Types in a &quot;concrete&quot; body may be defined to be a representation (data about) a concept in a &quot;reference&quot; pattern.&#xA;Match rules define how elements in each of the sub-patterns are mapped, bidirectionally.&#xA;A mapping utilizing more specific types subsumes maps for more general types.&#xA;Note that the roles of &quot;concrete&quot; and &quot;reference&quot; may or may not reflect different levels of abstraction and in some cases the choice may be arbitrary."
+            references="#//SMIFMOFModel/Mapping/Mapping"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="concreteFocus" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Patterns/PatternVariable" containment="true"
+            eOpposite="#//SMIFMOFModel/Patterns/PatternVariable/concreteMapping">
+          <eAnnotations source="The variable or variables that form the basis for the portion of the pattern for the more concrete (physical) model. The concrete portion of the pattern is derived from the transitive closure of all variables reachable from the pattern variable via characteristics, associations or relationships.&#xA;When a pattern matching the set of concrete variables is created or altered the mapping &quot;fires&quot; and the reference pattern is asserted.&#xA;The qualification of the referenced variable is constrained to be &quot;&quot;select&quot;."
+              references="#//SMIFMOFModel/Mapping/Mapping/concreteFocus"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasMapRule" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Mapping/MatchRule" containment="true"
+            eOpposite="#//SMIFMOFModel/Mapping/MatchRule/mapRuleOf">
+          <eAnnotations source="Map rule that is asserted by a mapping." references="#//SMIFMOFModel/Mapping/Mapping/hasMapRule"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="referenceFocus" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Patterns/PatternVariable" containment="true"
+            eOpposite="#//SMIFMOFModel/Patterns/PatternVariable/referenceMapping">
+          <eAnnotations source="The variable or variables that form the basis for the portion of the pattern for the more abstract/reference (conceptual) model. The reference portion of the pattern is derived from the transitive closure of all variables reachable from the pattern variable via characteristics, associations or relationships.&#xA;When a pattern matching the set of reference variables is created or altered the mapping &quot;fires&quot; and the concrete pattern is asserted.&#xA;The qualification of the referenced variable is constrained to be &quot;&quot;select&quot;."
+              references="#//SMIFMOFModel/Mapping/Mapping/referenceFocus"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="strength" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Mapping/AssertionStrength">
+          <eAnnotations source="Strength defines what will cause a rule to be considered for being asserted (firing). "
+              references="#//SMIFMOFModel/Mapping/Mapping/strength"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Facade" eSuperTypes="#//SMIFMOFModel/Records/RecordType">
+        <eAnnotations source="An intermediary data type used to hold common mappings. Facades may be computed and/or have mapping rules."
+            references="#//SMIFMOFModel/Mapping/Facade"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ComputedFacade" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/Mapping/Facade">
+        <eAnnotations source="A facade that is computed by calling external methods."
+            references="#//SMIFMOFModel/Mapping/ComputedFacade"/>
+        <eOperations name="push">
+          <eAnnotations source="An operation called to evoke the behavior associated with a new facade element being created or modified. Push asserts the more concrete type based on a reference type."
+              references="#//SMIFMOFModel/Mapping/ComputedFacade/push"/>
+        </eOperations>
+        <eOperations name="pull">
+          <eAnnotations source="An operation called to evoke the behavior associated with a facade representing existing elements. Pull asserts the reference type based on a more concrete type."
+              references="#//SMIFMOFModel/Mapping/ComputedFacade/pull"/>
+        </eOperations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RepresentationRule" eSuperTypes="#//SMIFMOFModel/Constraints/ConditionalRule">
+        <eAnnotations source="A representation rule states that the &lt;represented type> has a representation defined by the &lt;represented by> type.&#xA;Representation rules are used to filter Map Rules such that only represented concepts may be mapped.&#xA;A representation is usually complimented with one or more mapping rules.&#xA;"
+            references="#//SMIFMOFModel/Mapping/RepresentationRule"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="mapAll" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="Specifies a direct mapping between instances of the types in both directions.&#xA;&lt;map all> is equivalent to a mapping with a rule mapping properties of each type but is lower precedence than other mappings - if types have a more specific map it will apply first."
+              references="#//SMIFMOFModel/Mapping/RepresentationRule/mapAll"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="representedBy" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/representsRule">
+          <eAnnotations source="The representation of a concept in a more specific form"
+              references="#//SMIFMOFModel/Mapping/RepresentationRule/representedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="representedType" ordered="false"
+            lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/conceptRule">
+          <eAnnotations source="A more general or abstract concept that is being represented."
+              references="#//SMIFMOFModel/Mapping/RepresentationRule/representedType"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="AssertionStrength">
+        <eAnnotations source="Rule strength defines what will cause a rule to be considered for being asserted (firing). "
+            references="#//SMIFMOFModel/Mapping/AssertionStrength"/>
+        <eLiterals name="Global">
+          <eAnnotations source="The rule will be in effect globally." references="#//SMIFMOFModel/Mapping/AssertionStrength/Global"/>
+        </eLiterals>
+        <eLiterals name="Local">
+          <eAnnotations source="The rule will only be in effect if required to fulfill another rule."
+              references="#//SMIFMOFModel/Mapping/AssertionStrength/Local"/>
+        </eLiterals>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="LexicalScope" nsURI="http://www.omg.org/spec/SMIF/Lexical">
+      <eAnnotations source="Lexical scope defines the structure of models and the ownership of model elements."
+          references="#//SMIFMOFModel/LexicalScope"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//SMIFMOFModel/LexicalScope/Package">
+        <eAnnotations source="A root package. A model has no owner and may be directly referenced as an independent information resource. A model is defined in it's self."
+            references="#//SMIFMOFModel/LexicalScope/Model"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LexicalScope" eSuperTypes="#//SMIFMOFModel/Identifiers/Namespace">
+        <eAnnotations source="Lexical scope represents model content (the lexical structure of the model) that then models an area of concern. A lexical scope may define model elements representing anything.&#xA;[CL] Text: A text is a set, list, or bag of phrases. A piece of text shall optionally be identified by a name.&#xA;[OWL] Potential scope of a RDF graph defined by &lt;defines>"
+            references="#//SMIFMOFModel/LexicalScope/LexicalScope"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="defines" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Thing" containment="true">
+          <eAnnotations source="A model element defined within a lexical scope.&#xA;Definition within a scope does not  assert everything within a scope but the lexical scope may be independently asserted, thus asserting what it defines.&#xA;[FUML] ownedElement, ownedMember&#xA;"
+              references="#//SMIFMOFModel/LexicalScope/LexicalScope/defines"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="references" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/LexicalScope/LexicalReference"
+            containment="true" eOpposite="#//SMIFMOFModel/LexicalScope/LexicalReference/extendsScope">
+          <eAnnotations source="A reference providing visibility of a lexical scope to an internal or external context."
+              references="#//SMIFMOFModel/LexicalScope/LexicalScope/references"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="states" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Thing" containment="true"
+            eOpposite="#//SMIFMOFModel/TopLevel/Thing/statedBy">
+          <eAnnotations source="&lt;states> combines &lt;defines> with &lt;has assertion> to both define and assert an element within a lexical scope. &lt;states> provides a more &quot;structural&quot; organization of concepts that are both defined and asserted in the same structure.&#xA;&#xA;&lt;states> is a convenience for the common case where assertion and lexical containment are combined.&#xA;&#xA;"
+              references="#//SMIFMOFModel/LexicalScope/LexicalScope/states"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LexicalReference" eSuperTypes="#//SMIFMOFModel/TopLevel/Context">
+        <eAnnotations source="A Lexical Reference is an external scope that is visible to but not necessarily asserted by the owning lexical scope. "
+            references="#//SMIFMOFModel/LexicalScope/LexicalReference"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ReferencedScope" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/TopLevel/Context" eOpposite="#//SMIFMOFModel/TopLevel/Context/referencedBy">
+          <eAnnotations source="A referenced context, potentially in another model, that provides visibility to the elements in that context.&#xA;[FUML] importedPackage&#xA;[OWL] directlyImports (implies &quot;Include&quot;)"
+              references="#//SMIFMOFModel/LexicalScope/LexicalReference/ReferencedScope"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="extendsScope" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/LexicalScope/LexicalScope" eOpposite="#//SMIFMOFModel/LexicalScope/LexicalScope/references">
+          <eAnnotations source="A lexical scope that is extended by a lexical reference.&#xA;[FUML] importingNamespace"
+              references="#//SMIFMOFModel/LexicalScope/LexicalReference/extendsScope"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Include" eSuperTypes="#//SMIFMOFModel/LexicalScope/LexicalReference">
+        <eAnnotations source="An &quot;Include&quot; is an external scope that is visible and asserted by the owning lexical scope. &#xA;[FUML] PackageImport&#xA;[CL] Importation: An importation contains a name. The intention is that the name identifies a piece of Common Logic content represented externally to the text, and the importation re-asserts that content in the text."
+            references="#//SMIFMOFModel/LexicalScope/Include"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//SMIFMOFModel/LexicalScope/LexicalScope">
+        <eAnnotations source="A model element that provides a definitional scope for other model elements. A package may be represented as a &quot;graph&quot;.&#xA;&#xA;[ISO 1087] concept system: system of concepts set of concepts (3.2.1) structured according to the&#xA;relations among them&#xA;&#xA;[FUML] Package. FUML ownedMember corresponds with SMIF &lt;defines>. FUML &quot;nestedPackage&quot; corresponds with &quot;defines&quot; where the element defined is a package.&#xA;&#xA;[CL] Module: A module consists of a name, an optional set of names called the exclusion set, and a text called the body text."
+            references="#//SMIFMOFModel/LexicalScope/Package"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasPrefix" ordered="false"
+            eType="#//SMIFMOFModel/LexicalScope/Prefix" eOpposite="#//SMIFMOFModel/LexicalScope/Prefix/prefixOf">
+          <eAnnotations source="An abbreviation that can be used to identify a package."
+              references="#//SMIFMOFModel/LexicalScope/Package/hasPrefix"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MOFPackage" eSuperTypes="#//SMIFMOFModel/LexicalScope/Package">
+        <eAnnotations source="A model of a real or possible world as conceived by the model authors."
+            references="#//SMIFMOFModel/LexicalScope/MOFPackage"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LogicalPackage" eSuperTypes="#//SMIFMOFModel/LexicalScope/Package">
+        <eAnnotations source="A model of information about systems independent of technical representation."
+            references="#//SMIFMOFModel/LexicalScope/LogicalPackage"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PhysicalPackage" eSuperTypes="#//SMIFMOFModel/LexicalScope/Package">
+        <eAnnotations source="A physical, technology specific, data schema representing information about a real or possible world."
+            references="#//SMIFMOFModel/LexicalScope/PhysicalPackage"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MappingPackage" eSuperTypes="#//SMIFMOFModel/LexicalScope/Package">
+        <eAnnotations source="A model defining relationships between other models."
+            references="#//SMIFMOFModel/LexicalScope/MappingPackage"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Prefix" eSuperTypes="#//SMIFMOFModel/Identifiers/UniqueTextIdentifier">
+        <eAnnotations source="A technical abbreviation for a package." references="#//SMIFMOFModel/LexicalScope/Prefix"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="prefixOf" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/LexicalScope/Package" eOpposite="#//SMIFMOFModel/LexicalScope/Package/hasPrefix">
+          <eAnnotations source="An abbreviation for a package." references="#//SMIFMOFModel/LexicalScope/Prefix/prefixOf"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Kernel" nsURI="http://www.omg.org/spec/SIMF/20160501/SIMF-MOF-model/SMIFMOFModel/Kernel">
+      <eAnnotations source="The kernel subsets the SMIF classes. The diagrams in this package illustrate the concrete classes that are used to define the SMIF language.&#xA;Note that shaded classes are not instantiated in the kernel and may be &quot;flattened&quot;. Specifications for each class and association are defined in the corresponding package for that concept.&#xA;"
+          references="#//SMIFMOFModel/Kernel"/>
+    </eSubpackages>
+    <eSubpackages name="Associations" nsURI="http://www.omg.org/spec/SMIF/Associations">
+      <eAnnotations source="An association asserts a formal condition involving related things, the association ends. An association may be asserted within a context as true or false within that context. Each association has a number of bindings of which are immutable for that association.&#xA;&#xA;Associations are differentiated from relationships in that associations are fully dependent on the things they relate. These are known as &quot;formal&quot;, &quot;thin&quot;, &quot;internal&quot; or &quot;intrinsic&quot; relations in much of the literature.&#xA;"
+          references="#//SMIFMOFModel/Associations"/>
+      <eClassifiers xsi:type="ecore:EClass" name="AssociationType" eSuperTypes="#//SMIFMOFModel/Properties/PropertyOwnerType">
+        <eAnnotations source="A type of Association (See Association for details) which defines a set of &quot;Association Property Types&quot; which are the types of association property bindings. Associations are not situations - the are not temporal things. THis does not prevent subtypes of associations from being situations.&#xA;[Guizzardi] Intrinsic Relation Type&#xA;[UML] Association&#xA;[OWL] For binary associations, may be considered a pair of properties that are Inverse Object Properties.&#xA;"
+            references="#//SMIFMOFModel/Associations/AssociationType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//SMIFMOFModel/Properties/PropertyOwner #//SMIFMOFModel/TopLevel/Proposition">
+        <eAnnotations source="An association makes a logical statement involving related things, the association ends. An association may be asserted within a context as true or false within that context. Each association type has a number of bindings of which are immutable for that association.&#xA;An association may be true or false within its context and is atomic in its truth value.&#xA;Associations are differentiated from relationships in that associations are not situations - they are not temporal and do not change over time. Associations may be a consequence of relationships or other situations or may be derived from qualities of associated ends.&#xA;Associations can &quot;own&quot; owned property bindings as their &quot;ends&quot;.&#xA;See also: Relationship&#xA;[Guizzardi] Intrinsic Relation&#xA;[UML] Link&#xA;[DOLCE] Formal Relation"
+            references="#//SMIFMOFModel/Associations/Association"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Metadata" nsURI="http://www.omg.org/spec/SMIF/Metadata">
+      <eAnnotations source="Metadata defines data about model elements (their source, definition or trust), which can be differentiated from model elements about the subject domain."
+          references="#//SMIFMOFModel/Metadata"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Statement" eSuperTypes="#//SMIFMOFModel/Metadata/Metadata">
+        <eAnnotations source="Statements provide metadata as to the source of information - who or what said it.&#xA;This source of the information may be captured using &quot;InformationSource&quot; metadata about the metadata.&#xA;&#xA;[ISO11404] provision that conveys information"
+            references="#//SMIFMOFModel/Metadata/Statement"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="statementDateAndTime"
+            ordered="false" lowerBound="1" eType="#//SMIFMOFModel/Values/ValueType">
+          <eAnnotations source="Metadata representing the date and time the statement was made or modified."
+              references="#//SMIFMOFModel/Metadata/Statement/statementDateAndTime"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="version" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/ValueType">
+          <eAnnotations source="Metadata representing an identifier for a version of information."
+              references="#//SMIFMOFModel/Metadata/Statement/version"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="transactionId" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/ValueType">
+          <eAnnotations source="Identifier for an act or transaction creating or modifying information."
+              references="#//SMIFMOFModel/Metadata/Statement/transactionId"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="resultedIn" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity" eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/wasStatedIn">
+          <eAnnotations source="Statement made in a statement by an information source."
+              references="#//SMIFMOFModel/Metadata/Statement/resultedIn"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="InformationSource" eSuperTypes="#//SMIFMOFModel/TopLevel/ActualEntity #//SMIFMOFModel/Metadata/Metadata">
+        <eAnnotations source="Metadata defining the origin or provenance of a set of statements in a model or data.&#xA;Note that the source could be a human, an organization, a mapping or other automated processes."
+            references="#//SMIFMOFModel/Metadata/InformationSource"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="madeStatement" ordered="false"
+            lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity"
+            eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasAuthoritativeSource">
+          <eAnnotations source="Metadata representing statements made by an authoritative source. &#xA;Sources may be people, organizations, documents, information systems, etc. "
+              references="#//SMIFMOFModel/Metadata/InformationSource/madeStatement"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Metadata" eSuperTypes="#//SMIFMOFModel/Records/Record">
+        <eAnnotations source="Information about the source, provenance or origin of information. Metadata may be a managed entity, providing for provenance.&#xA;[NIEM] MetadataType"
+            references="#//SMIFMOFModel/Metadata/Metadata"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="metadataAbout" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity" eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasMetadata">
+          <eAnnotations source="The subject of metadata, the entity described by the metadata.&#xA;[OWL] annotationSubject of Annotation Assertion"
+              references="#//SMIFMOFModel/Metadata/Metadata/metadataAbout"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Definition" eSuperTypes="#//SMIFMOFModel/Metadata/Metadata">
+        <eAnnotations source="An informal or natural language definition of a something and potentially a reference to external definitions.&#xA;A Definition may be in the context of a natural language to scope the language it is expressed in.&#xA;&#xA;[ISO 1087] definition: representation of a concept (3.2.1) by a descriptive statement which serves to differentiate it from related concepts&#xA;&#xA;[FUML] Comment (where body corresponds with &quot;text definition&quot;)."
+            references="#//SMIFMOFModel/Metadata/Definition"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="textDefinition" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Values/String">
+          <eAnnotations source="Text describing a something in natural language. The language may be indicated by a context of the definition.&#xA;[OWL] rdfs:comment"
+              references="#//SMIFMOFModel/Metadata/Definition/textDefinition"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="externalReference"
+            ordered="false" lowerBound="1" eType="#//SMIFMOFModel/Identifiers/IRIIdentifier">
+          <eAnnotations source="A reference to an external information resource that further defines something.&#xA;[FIBO] ReferenceDOcument"
+              references="#//SMIFMOFModel/Metadata/Definition/externalReference"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="externalTerm" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Identifiers/Term">
+          <eAnnotations source="Specific term in an external resource that further defines something."
+              references="#//SMIFMOFModel/Metadata/Definition/externalTerm"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="summaryDescription"
+            ordered="false" lowerBound="1" eType="#//SMIFMOFModel/Values/String">
+          <eAnnotations source="A short description of something." references="#//SMIFMOFModel/Metadata/Definition/summaryDescription"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="defines" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity" eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/definedBy">
+          <eAnnotations source="Some thing described by a definition.&#xA;[FIBO] defines&#xA;[FUML]annotatedElement"
+              references="#//SMIFMOFModel/Metadata/Definition/defines"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Properties" nsURI="http://www.omg.org/spec/SMIF/Properties">
+      <eAnnotations source="Properties define the most granular connections between entities or values. Properties may be used as the ends of relationships, to represent individual characteristics or as elements of a data structure."
+          references="#//SMIFMOFModel/Properties"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PropertyBinding" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/TopLevel/Thing">
+        <eAnnotations source="A property value binding binds a particular thing (the value) to a situation based on a defined property.&#xA;&#xA;Where &lt;binds> is an expression evaluation, the property value shall evaluate to the evaluation of the expression.&#xA;&#xA;Where &lt;binds> is a property, the property value shall be the property values bound to that property in &lt;bound to> situation.&#xA;&#xA;The bound to thing must conform with the &lt;is of type> type of the property. If the bound individual conforms to the &quot;requires type&quot; of the property, the &lt;is of type> of the bound thing will be asserted.&#xA;&#xA;The type of the &lt;bound to> structure must (directly or indirectly) have the type the &lt;bound by> properties &lt;property of> type.&#xA;&#xA;[FUML] Slot (Noting that in SMIF the binding may or may not be owned by the subject, depending on the subtype of property).&#xA;&#xA;[CL] Binding: &#xA;&#xA;[OWL] Union(ObjectPropertyAssertion, DataPropertyAssertion, AnnotationAssertion), RDF Triple&#xA;=Note: RDF Triples do not have identity where as some subtypes of SMIF:Property Type do have identity and are therefor statements."
+            references="#//SMIFMOFModel/Properties/PropertyBinding"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="binds" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/TopLevel/Thing" eOpposite="#//SMIFMOFModel/TopLevel/Thing/boundIn">
+          <eAnnotations source="The thing bound to a property in a specific situation. E.g. if the weight of truck-XYZ is 4500 LBS, the bound individual would be &quot;4500 LBS&quot;.&#xA;[FUML] value&#xA;[OWL] rdf:object"
+              references="#//SMIFMOFModel/Properties/PropertyBinding/binds"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="boundBy" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/Properties/PropertyType" eOpposite="#//SMIFMOFModel/Properties/PropertyType/hasBinding">
+          <eAnnotations source="The property a binding binds a thing to.&#xA;[FUML] definingFeature&#xA;[OWL] rdf:predicate"
+              references="#//SMIFMOFModel/Properties/PropertyBinding/boundBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="boundTo" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity" eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasBinding">
+          <eAnnotations source="The subject of a property binding.&#xA;[FUML] owningInstance (note that in SMIF the owner and subject may not be the same). Where the are the same, the semantics are the same as FUML.&#xA;[OWL] rdf:subject"
+              references="#//SMIFMOFModel/Properties/PropertyBinding/boundTo"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropertyType" abstract="true" eSuperTypes="#//SMIFMOFModel/Types/Type">
+        <eAnnotations source="A property type defines the way in which instances of a type participate in (or, are involved in) instances of another type (including relationships). Sometimes called a variable, argument or role.&#xA;In a conceptual model the terms associated with a property kind are typically &quot;verb phrases&quot; defining how instances of the involved type participate in the situation or relationship.&#xA;In a record (data structure) the property is a &quot;slot&quot; of a record and may have a term which is a noun or verb phrase.&#xA;So that constraints of a type flow to relationships involving that type: All propositions that hold within a type referenced by &lt;is of type> hold within the structured type referenced by &lt;property of>. I.e. the structured type is in the context of the types of its properties.&#xA;In a function, a property is a function argument.&#xA;&#xA;[Guizzardi] MomentUniversal&#xA;&#xA;[FUML] Parameter where owner is operation. Otherwise Property.&#xA;&#xA;[UML] Property. All typed elements in SMIF are Property Types. &#xA;&#xA;[CL] Operator: distinguished syntactic role played by a specified component within a functional term&#xA;&#xA;[OWL] rdf:Property, ObjectUnionOf(owl:ObjectProperty, oe;DatatypeProperty). &#xA;"
+            references="#//SMIFMOFModel/Properties/PropertyType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="propertyOf" ordered="false"
+            eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/hasProperty">
+          <eAnnotations source="Type for which a property is relevant. The domain of the property. &#xA;&lt;property of> excludes &quot;Owned Property Type&quot; and (&quot;Association Type&quot; that is not &quot;Relationship Type&quot;)&#xA;[FUML] featuringClassifier&#xA;[OWL] Domain"
+              references="#//SMIFMOFModel/Properties/PropertyType/propertyOf"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="traversedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Expressions/Traversal" eOpposite="#//SMIFMOFModel/Expressions/Traversal/traversesThrough">
+          <eAnnotations source="Traversals through a property." references="#//SMIFMOFModel/Properties/PropertyType/traversedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="receivedBy" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Expressions/ObjectOperationType"
+            eOpposite="#//SMIFMOFModel/Expressions/ObjectOperationType/receiver">
+          <eAnnotations source="The Object Operation for which a receiver is defined."
+              references="#//SMIFMOFModel/Properties/PropertyType/receivedBy"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasUniquenessConstraint"
+            ordered="false" upperBound="-1" eType="#//SMIFMOFModel/Constraints/UniquenessConstraint"
+            eOpposite="#//SMIFMOFModel/Constraints/UniquenessConstraint/hasUnique">
+          <eAnnotations source="Uniqueness constraints for a property." references="#//SMIFMOFModel/Properties/PropertyType/hasUniquenessConstraint"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasBinding" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/Properties/PropertyBinding" eOpposite="#//SMIFMOFModel/Properties/PropertyBinding/boundBy">
+          <eAnnotations source="Bindings referencing a property." references="#//SMIFMOFModel/Properties/PropertyType/hasBinding"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CharacteristicType" eSuperTypes="#//SMIFMOFModel/Properties/PropertyType #//SMIFMOFModel/Situations/SituationType">
+        <eAnnotations source="A kind of characteristic a type of thing may have, e.g. paint may have a color. Characteristic type is the type of characteristic bindings which are &quot;first class&quot; elements and may participate in relationships and have other characteristics.&#xA;&#xA;[IDEAS] Property: An IndividualType whose members all exhibit a common trait or feature. Often the Individuals are states having a property (the state of being 18 degrees centigrade), where this property can be a CategoricalProperty (qv.) or a DispositionalProperty (qv.).&#xA;&#xA;[ISO 1087] type of characteristics: category of characteristics (3.2.4) which serves as the criterion of subdivision when establishing concept systems. NOTE The type of characteristics colour embraces characteristics (3.2.4) being red, blue, green, etc. The type of characteristics material embraces characteristics made of wood, metal, etc.&#xA;&#xA;[FIBO] Simple Property: Simple Properties are assertions about things in a class, which may be framed in terms of some simple type of information. &#xA;&#xA;[Guizzardi]  qualityUniversal(U) &#xA;&#xA;[DOLCE] Quality Type&#xA;&#xA;[OWL] rdf:Statement&#xA;&#xA;[UML] Property&#xA;"
+            references="#//SMIFMOFModel/Properties/CharacteristicType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CharacteristicBinding" eSuperTypes="#//SMIFMOFModel/Properties/PropertyBinding #//SMIFMOFModel/Situations/ActualSituation">
+        <eAnnotations source="A characteristic of a specific thing, e.g. the color of Pump-1234 in the &lt;bound to> entity. A characteristic is a &quot;first class&quot; element and may participate in relationships and have annotations.&#xA;&#xA;[IDEAS] measureOfIndividual: A typeInstance that asserts an Individual is an instance of a Measure - i.e. the Individual &quot;has&quot; a property corresponding to the Measure.&#xA;&#xA;[ISO 1087] characteristic: abstraction of a property of an object (3.1.1) or of a&#xA;set of objects&#xA;&#xA;[Guizzardi]  quality(x) =def ∃!U qualityUniversal(U) ∧ (x::U)&#xA;&#xA;[DOLCE] Quality"
+            references="#//SMIFMOFModel/Properties/CharacteristicBinding"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="AnnotationProperty" eSuperTypes="#//SMIFMOFModel/Properties/CharacteristicType">
+        <eAnnotations source="An annotation property is a specialization of property where the referenced elements represent metadata about the related proposition, structure or information (or model element) rather than a fact or condition of the domain being represented.&#xA;For an annotation property, &lt;is of type> describes instances of the structured type for which the property is defined.&#xA;Typical uses of annotations include provenance of information, when a record was created, etc.&#xA;[ISO11404] annotation: descriptive information unit attached to a datatype, or a component of a datatype, or a procedure (value), to characterize some aspect of the representations, variables, or operations associated with values of the datatype"
+            references="#//SMIFMOFModel/Properties/AnnotationProperty"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="OwnedPropertyType" eSuperTypes="#//SMIFMOFModel/Properties/PropertyType">
+        <eAnnotations source="An owned property type is a property definition defined as a composite part of an association type - most often used in data structures and relationships. Association property types are the types of association property bindings. Also known as &quot;association end&quot;.&#xA;&#xA;[FIBO] Relationship Property&#xA;[FUML] memberEnd (of association) Property"
+            references="#//SMIFMOFModel/Properties/OwnedPropertyType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropertyOwnerType" abstract="true"
+          eSuperTypes="#//SMIFMOFModel/Types/Type">
+        <eAnnotations source="A type of Property Owner (See Property Owner for details) which defines a set of &quot;Owned Property Types&quot; which are the types of owned property bindings.&#xA;Property owner is abstract and not intended to directly represent semantic elements.&#xA;"
+            references="#//SMIFMOFModel/Properties/PropertyOwnerType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="OwnedPropertyBinding" eSuperTypes="#//SMIFMOFModel/Properties/PropertyBinding">
+        <eAnnotations source="An owned property binding defines a value for a particular property of a particular owning property type (or structure).&#xA;Similar to an OWL triple, an owned property binding does not have independent identity.&#xA;Constraint: Each owned property binding must be &lt;bound by> an owned property type that is owned by the &lt;has type> owned type of the &lt;bound to> property owner.&#xA;&#xA;Owned property type is abstract and not intended to directly represent semantic elements."
+            references="#//SMIFMOFModel/Properties/OwnedPropertyBinding"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropertyOwner" abstract="true" eSuperTypes="#//SMIFMOFModel/TopLevel/Thing">
+        <eAnnotations source="Property Owner is an abstract element for anything that may own a set of property bindings. This element is abstract and not intended to directly represent domain concepts. Subtypes of property owner provide semantic interpretation."
+            references="#//SMIFMOFModel/Properties/PropertyOwner"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Facets" nsURI="http://www.omg.org/spec/SMIF/Facets">
+      <eAnnotations source="The facet package defines facets, roles and phases. Types that &quot;mix in&quot; to other types in a specific context or timeframe."
+          references="#//SMIFMOFModel/Facets"/>
+      <eClassifiers xsi:type="ecore:EClass" name="FacetOfEntity" eSuperTypes="#//SMIFMOFModel/Relationships/Relationship">
+        <eAnnotations source="Facet of entity is the binding of a particular entity to a facet. May also be considered an &quot;as a&quot; relationship. In the case of a role, it states that an entity plays the role, e.g. &quot;Joe as a policeman&quot;. In the case of a phase, it states that an entity has that phase and that it is a phase of that entity, e.g. Sue as a teenager.&#xA;Facet of Entity is a kind of contextual categorization in that the entity assumes all of the characteristics of the facet where the Facet of Entity is asserted. E.g. if Joe has a policeman role, Joe is a policeman.&#xA;&#xA;Facet of entity is an &quot;Extent of Type&quot; association reified as a relationship in that the binding of the entity to the facet may be valid in particular context or time frame. Facet of entity may be the consequence of a relationship. Note: Not represented as an association class due to OMG-MOF limitations.&#xA;&#xA;Facet of entity may only relate entities that have a type compatible with the type of the facet, as defined by a Facet Classification Rule.&#xA;&#xA;[FIBO] (for roles of actors) AgentInRole.&#xA;[FIBO] (for roles of anything else) ThingInRole&#xA;[Guarino1994] Externally Dependent Moment (Also called &quot;Qua individual&quot;)&#xA;[SOWA1999] Prehension"
+            references="#//SMIFMOFModel/Facets/FacetOfEntity"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Phase" eSuperTypes="#//SMIFMOFModel/Facets/Facet #//SMIFMOFModel/Situations/SituationType">
+        <eAnnotations source="A phase (or state) is a static characteristic of something that exists for limited time(s).  Something takes on or looses a phase as a result of some event. E,g, Teenager, living, closed invoice.&#xA;A Phase is a situation in that there is a situation coincident with each phase.&#xA;&#xA;[Guizzardi] (Phased-Sortal): Let PS be a universal and let S be a&#xA;substance sortal specialized (restricted by) PS. Now, let extw(~PS) = extw(S) \ extw(PS)&#xA;be the complement of the extension of PS in world w. In this formula, the&#xA;symbol \ represents the set theoretical operation of set difference. The&#xA;universal PS is a phased-sortal iff for all worlds w ∈ W, there is a w ∈ W such&#xA;that extw(PS) ∩ extw(~PS) ≠ ∅"
+            references="#//SMIFMOFModel/Facets/Phase"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//SMIFMOFModel/Facets/Facet">
+        <eAnnotations source="A role is a facet type that defines a specific purpose or behavior of a class of things.  E.g. teacher, policeman, or employer.&#xA;[FIBO] Role. Note that partyInRole or thingInRole are implied by classification of a thing.&#xA;&#xA;"
+            references="#//SMIFMOFModel/Facets/Role"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Facet" eSuperTypes="#//SMIFMOFModel/Types/Type">
+        <eAnnotations source="A facet is a &quot;mix in&quot; type that defines an aspect of something but does not define the identity or &quot;fundamental&quot; (A.K.A. &quot;Rigid&quot;) type of that thing, but some potentially transient role, phase or other way to classify it. Something must have at least one type that is not a facet to define that things identity.&#xA;Facets do not define independent identity of the referent but technology implementations may create independent objects to represent a facet.&#xA;An instance of a facet must also have a type that is not a facet to provide the identity of the instance.&#xA;The type(s) a facet may categorize may be constrained by a Facet Generalization Constraint. E.g. Policeman is a role of a person.&#xA;&#xA;[Guarino1994] Non-Substantial sortal&#xA;[Guizzard] Non-Rigid Universal: A universal G is non-rigid iff for a w ∈ W There is an x such that x ∈ extw(G), and there is a w∈ W such that x ∉extw(G)&#xA;&#xA;[SOWA1999] Prehension (Relative"
+            references="#//SMIFMOFModel/Facets/Facet"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Category" eSuperTypes="#//SMIFMOFModel/Facets/Facet">
+        <eAnnotations source="A category is a classification or division of people, events or things regarded as having particular shared characteristics. Categorization is typically contextual, potentially transient and may or may not be formally defined.&#xA;As with all facets, categories are non-rigid. Something classified by a category must also be classified by an entity type."
+            references="#//SMIFMOFModel/Facets/Category"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="Records" nsURI="http://www.omg.org/spec/SMIF/Records">
+      <eAnnotations source="A record of the condition of an entity at a point in time - this includes facts, speech acts and DBMS records. Records are a kind of information.&#xA;Records are typically used in data representations, not conceptual models."
+          references="#//SMIFMOFModel/Records"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Record" eSuperTypes="#//SMIFMOFModel/Situations/ActualSituation #//SMIFMOFModel/Properties/PropertyOwner">
+        <eAnnotations source="A record of the condition of an entity at a point in time - this includes facts, speech acts and DBMS records. &#xA;Records are typically used in data representations, not conceptual models. Records specialize associations as owners of properties.&#xA;&#xA;[IDEAS] A Representation that describes a Thing&#xA;"
+            references="#//SMIFMOFModel/Records/Record"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="about" ordered="false"
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/IdentifiableEntity" eOpposite="#//SMIFMOFModel/TopLevel/IdentifiableEntity/hasRecord">
+          <eAnnotations source="The thing described by a record." references="#//SMIFMOFModel/Records/Record/about"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RecordType" eSuperTypes="#//SMIFMOFModel/Situations/SituationType #//SMIFMOFModel/Properties/PropertyOwnerType">
+        <eAnnotations source="Type of the record of the condition of an entity at a point in time - this includes facts, speech acts and DBMS records. &#xA;A record type may involve variant and invariant types as variables. Those that are enumerated in a &quot;uniqueness constraint&quot; are invariant (independent variables) uniquely identify the situation which is the subject of the fact type where as the other variables may change over time (dependent variables).&#xA;Record types may be grounded in atomic relations by using invariant conditions.&#xA;Record types represent typical &quot;data structures&quot;."
+            references="#//SMIFMOFModel/Records/RecordType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="aboutType" ordered="false"
+            eType="#//SMIFMOFModel/Types/Type" eOpposite="#//SMIFMOFModel/Types/Type/recordingTypes">
+          <eAnnotations source="Thing for which a record exists" references="#//SMIFMOFModel/Records/RecordType/aboutType"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>
