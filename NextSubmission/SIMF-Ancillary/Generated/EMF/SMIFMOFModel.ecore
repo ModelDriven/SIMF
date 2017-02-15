@@ -4,7 +4,7 @@
   <eAnnotations source="Author:Cory Casanave.&#xA;Created:3/7/12 4:40 PM.&#xA;Title:Semantic Modeling for Information Federation Meta Model.&#xA;Comment:.&#xA;"
       references="#/"/>
   <eSubpackages name="SMIFMOFModel" nsURI="http://www.omg.org/spec/SIMF/20160501/SIMF-MOF-model/SMIFMOFModel">
-    <eSubpackages name="Types" nsURI="http://www.omg.org/spec/SMIF/Types">
+    <eSubpackages name="Types" nsURI="http://www.omg.org/spec/SMIF/Types" nsPrefix="TYPE">
       <eAnnotations source="Types provide for ways to categorize anything based on what it is, the roles it plays or the phases it may be in.&#xA;Something may be categorized by any number of types (multiple classification assumption)."
           references="#//SMIFMOFModel/Types"/>
       <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//SMIFMOFModel/LexicalScope/LexicalScope #//SMIFMOFModel/TopLevel/Context">
@@ -92,7 +92,8 @@
             references="#//SMIFMOFModel/Types/EntityType"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Situations" nsURI="http://www.omg.org/spec/SMIF/Situations">
+    <eSubpackages name="Situations" nsURI="http://www.omg.org/spec/SMIF/Situations"
+        nsPrefix="SIT">
       <eAnnotations source="A situation is a particular configuration of things and their relations including spatial, temporal, and logical connections between those things valid over a period of time. Situations form the basis of all complex, time dependent entities."
           references="#//SMIFMOFModel/Situations"/>
       <eClassifiers xsi:type="ecore:EClass" name="SituationType" eSuperTypes="#//SMIFMOFModel/Types/EntityType">
@@ -113,7 +114,7 @@
             references="#//SMIFMOFModel/Situations/ActualSituation"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Values" nsURI="http://www.omg.org/spec/SMIF/Values">
+    <eSubpackages name="Values" nsURI="http://www.omg.org/spec/SMIF/Values" nsPrefix="VALUE">
       <eAnnotations source="&lt;html>&#xA;  &lt;head>&#xA;&#x9;&#x9;&lt;style>&#xA;&#x9;&#x9;&#x9;p {padding:0px; margin:0px;}&#xA;&#x9;&#x9;&lt;/style>&#xA;&#x9;&lt;/head>&#xA;  &lt;body>&#xA;    &lt;p>&#xA;The values package defines the concepts of values and quantities expressed in units.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;&amp;#160;&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;Values may be differentiated from entities in that values have no independent lifetime or &amp;quot;identity&amp;quot; other than the value its self. E.g. the number 5 &amp;quot;just is&amp;quot; and can't be changed. Properties and relations referencing values can, of course, change but the values are constant.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;The failure to properly express units in data models often results in errors, inefficiencies and risk. Translation and federations between models, schema and data sources that is not cognizant of the units used would be even more error prone and risky. For example, what does &amp;ldquo;Speed limit 50&amp;rdquo; mean? For these reasons the SMIF language provides specific support for specifying quantity kinds and unit types in conceptual, logical and physical models. The SMIF mapping rules may then perform the appropriate unit conversions.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;The foundation of information specification in SMIF at all levels is the type system. Types specified for all properties and relations involving values must match the types of the related values. The concepts of units and values as defined in &amp;quot;VIM&amp;quot; [JCGM 200-2008] is used as the basis for defining the types used in SMIF to guarantee type safety of quantities across different representations. Since many existing models and schema do not include well defined units some effort may be required to find and then specify the implicit units based on documentation, SME interviews or inspection of data or source code. It is recommended that the units used by external models and schema be determined prior to attempting federation and integration of information based on those models or schema.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;&lt;b>&lt;u>VIM [JCGM 200-2008] concepts of quantities and units&lt;/u>&lt;/b>&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;VIM&amp;#160;defines&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;ul>&#xA;      &lt;li>&#xA;quantity: property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference [ed. to a unit]&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;kind of quantity (kind): aspect common to mutually comparable quantities&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;measurement unit (unit): real scalar quantity, defined and adopted by convention, with which any other quantity of the same kind can be compared to express the ratio of the two quantities as a number&#xA;&#xA;      &lt;/li>&#xA;    &lt;/ul>&#xA;    &lt;p>&#xA;&lt;b>&lt;u>SMIF concepts of quantities and units&lt;/u>&lt;/b>&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;SMIF uses the VIM concepts to define &amp;quot;quantity values&amp;quot; and types to capture the quantity kind and unit. Types are defined for each Unit. The goals for this type based approach are:&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;ul>&#xA;      &lt;li>&#xA;That it is clearly grounded in semantics as defined in VIM&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That a type may be used to specify the range of a property or relation involving unit based values.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That a quantity value (e.g. 5 grams) be representable as a simple number with a type.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That there is a clear type hierarchy starting with a representationally independent type in a conceptual model (e.g. mass) that can be further specialized to a specific unit in a logical model (e.g. grams) and further specialized to be represented by a physical data type (e.g. &amp;ldquo;double&amp;rdquo;).&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That external models and schema may have unit specifications asserted without changing the schema.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That a quantity of an entity be able to be referenced without a specific quantity value being known (e.g. John&amp;rsquo;s weight).&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;That systems of units such as [ISO-80000] or [OMG QUDV] (A part of SysML) be able to be directly referenced as the definition of a unit.&#xA;&#xA;      &lt;/li>&#xA;    &lt;/ul>&#xA;    &lt;p>&#xA;SMIF defines three types to realize the above goals: Quantity Kind, Unit Type, Base Unit Type. SMIF also defines Quantity Values, which are instances of unit types.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;In VIM a quantity has a magnitude that is expressed as a number and a reference. The SMIF quantity value is the numeric value of such a quantity where the reference is specified by the &amp;ldquo;unit reference&amp;rdquo; property of the quantity value&amp;rsquo;s type. The quantity value&amp;rsquo;s type is a &amp;ldquo;Unit Type&amp;rdquo;. The Unit type has attributes for converting a unit to a base unit, a symbol and a unit reference. Based on VIM the unit reference may be &amp;ldquo;a measurement unit, a measurement procedure, a reference material, or a combination of such&amp;rdquo; and is specified with a description that contains reference information. In summary, the reference of a SMIF quantity value is determined indirectly through its unit type. A quantity value has exactly one unit type and exactly one Quantity Kind. A quantity value expressed in any unit of the same quantity kind may be converted to any other unit of the same quantity kind.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;This type-based sapproach allows specification of a property at the conceptual (quantity kind) logical (unit type) or physical (unit type with a numeric type) levels. Such specifications use the same type-based approach used for other aspects of the models. Given this information a SMIF implementation may correctly and reliably convert between compatible types regardless of representation. Please see the specification of the value types, attributes and relationships for more detail.&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;&amp;#160;&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;p>&#xA;&lt;b>&lt;u>Example:&lt;/u>&lt;/b>&#xA;&#xA;    &lt;/p>&#xA;&#xA;    &lt;ul>&#xA;      &lt;li>&#xA;A specification for a road segment has a property &amp;ldquo;Speed limit&amp;rdquo;.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;The type of this property in a reference conceptual model is &amp;ldquo;Speed:Quantity Kind&amp;rdquo;.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;A unit &amp;ldquo;Kilometer per Hour:Unit Type&amp;rdquo; is defined as a subtype of &amp;ldquo;Speed:Quantity Kind&amp;rdquo; with a &amp;ldquo;unit reference&amp;rdquo; of &amp;ldquo;[ISO-80000.4] Kilometer per Hour&amp;rdquo;. Note that quantity kinds and unit types would normally be defined in reference models that correspond to a &amp;ldquo;system of units&amp;rdquo;.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;Miles per hour is also defined as a subtype of Speed.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;A physical schema defines &amp;ldquo;Speed-KPH: Integer&amp;rdquo;.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;A SMIF mapping rule maps &amp;ldquo;Speed limit&amp;rdquo; to &amp;ldquo;Speed-KPH&amp;rdquo; and asserts a type of &amp;ldquo;Kilometer per Hour&amp;rdquo; on the &amp;ldquo;Speed-KPH&amp;rdquo; end.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;A data file defines a road &amp;ldquo;Route One&amp;rdquo; with a speed limit of 100:KPH-Int.&#xA;&#xA;      &lt;/li>&#xA;      &lt;li>&#xA;When converted to a U.S. application this speed limit of route one can be viewed as 62:MPH-Int.&#xA;&#xA;      &lt;/li>&#xA;    &lt;/ul>&#xA;&lt;/body>&#xA;&lt;/html>"
           references="#//SMIFMOFModel/Values"/>
       <eClassifiers xsi:type="ecore:EClass" name="QuantityKind" eSuperTypes="#//SMIFMOFModel/Values/ValueType">
@@ -177,11 +178,11 @@
         <eAnnotations source="A value that may have sub-elements (owned properties) defined as &quot;structure property type&quot;."
             references="#//SMIFMOFModel/Values/StructuredValue"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="Boolean">
+      <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceTypeName="EBoolean">
         <eAnnotations source="A value that may be true or false.&#xA;&#xA;[FIBO] boolean&#xA;[ISO11404] Description: boolean is the mathematical datatype associated with two-valued logic.&#xA;[OWL] xsd:boolean"
             references="#//SMIFMOFModel/Values/Boolean"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="String">
+      <eClassifiers xsi:type="ecore:EDataType" name="String" instanceTypeName="EString">
         <eAnnotations source="Text is a &lt;Value> represented using symbols which have a meaning to stakeholders but otherwise have no formal semantic implication. Properties involving values may have a semantic implication.&#xA;&#xA;[FIBO] Text&#xA;[NIEM] TextType&#xA;[OWL] xsd:string"
             references="#//SMIFMOFModel/Values/String"/>
       </eClassifiers>
@@ -201,11 +202,11 @@
         <eAnnotations source="The value of a measure - e.g. 5 MM. Measurement values may be scalar or non-scalar. Scalar measurements will be numeric."
             references="#//SMIFMOFModel/Values/MeasurementValue"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="Integer">
+      <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceTypeName="EInt">
         <eAnnotations source="A number with no fraction.&#xA;&#xA;[IDEAS] Integer: A RationalNumber that can be written without a fractional or decimal component. &#xA;&#xA;[FIBO] integer&#xA;&#xA;[ISO11404] Integer: he mathematical datatype comprising the exact integral values.&#xA;&#xA;[OWL] xsd:integer"
             references="#//SMIFMOFModel/Values/Integer"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="Real">
+      <eClassifiers xsi:type="ecore:EDataType" name="Real" instanceTypeName="EDouble">
         <eAnnotations source="Any number that may have a fraction.&#xA;&#xA;[IDEAS] RealNumber: A Type that is a Dedekind cut of the set of rational numbers.&#xA;&#xA;[ISO11404] real is a family of datatypes which are computational approximations to the mathematical datatype comprising the “real numbers”. Specifically, each real datatype designates a collection of mathematical real values&#xA;&#xA;[OWL] xsd:real&#xA;"
             references="#//SMIFMOFModel/Values/Real"/>
       </eClassifiers>
@@ -231,7 +232,8 @@
         </eStructuralFeatures>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Identifiers" nsURI="http://www.omg.org/spec/SMIF/Identifiers">
+    <eSubpackages name="Identifiers" nsURI="http://www.omg.org/spec/SMIF/Identifiers"
+        nsPrefix="IDENT">
       <eAnnotations source="Terms and identifiers provide for signs for (ways to identify) anything."
           references="#//SMIFMOFModel/Identifiers"/>
       <eClassifiers xsi:type="ecore:EClass" name="UniqueIdentifier" abstract="true"
@@ -300,7 +302,8 @@
             references="#//SMIFMOFModel/Identifiers/TechnicalIdentifier"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Expressions" nsURI="http://www.omg.org/spec/SMIF/Expressions">
+    <eSubpackages name="Expressions" nsURI="http://www.omg.org/spec/SMIF/Expressions"
+        nsPrefix="EXPR">
       <eAnnotations source="Expressions define computations across SMIF models." references="#//SMIFMOFModel/Expressions"/>
       <eClassifiers xsi:type="ecore:EClass" name="FunctionType" eSuperTypes="#//SMIFMOFModel/Properties/PropertyOwnerType #//SMIFMOFModel/Expressions/ExpressionContext">
         <eAnnotations source="A declaration of a function which performs a calculation on arguments (properties) to produce a result (function result).  I.e. the definition of plus(a:Number, b:Number).&#xA;&#xA;Functions are intended to be side-effect free and context free (they only depend on their arguments and don't change anything) but assertions to specify that certain functions are pure may be required,&#xA;Note: FUNCTION ARGUMENTS ARE PROPERTIES of the function.&#xA;&#xA;[FUML] Operation where ownedParameter corresponds with &lt;has property> and type corresponds with &lt;resulting type>."
@@ -417,7 +420,8 @@
         </eStructuralFeatures>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Relationships" nsURI="http://www.omg.org/spec/SMIF/Relationships">
+    <eSubpackages name="Relationships" nsURI="http://www.omg.org/spec/SMIF/Relationships"
+        nsPrefix="REL">
       <eAnnotations source="Relationships are primitive but identifiable conditions that relate other entities through properties of the relationships. Relationships have their semantics described by a relationship type. The ends of relationships are defined by &quot;structured property type&quot;, a relationship may have any number of &quot;ends&quot;.&#xA;Relationships are first-class &quot;actual&quot; and &quot;temporal&quot; things that exist in their own right. These are known as &quot;external relations&quot; in much of the theoretical literature."
           references="#//SMIFMOFModel/Relationships"/>
       <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="#//SMIFMOFModel/Situations/ActualSituation #//SMIFMOFModel/Properties/PropertyOwner">
@@ -429,7 +433,8 @@
             references="#//SMIFMOFModel/Relationships/RelationshipType"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Constraints" nsURI="http://www.omg.org/spec/SMIF/Constraints">
+    <eSubpackages name="Constraints" nsURI="http://www.omg.org/spec/SMIF/Constraints"
+        nsPrefix="CONST">
       <eAnnotations source="Rules define constraints or behaviors that are asserted in specified context."
           references="#//SMIFMOFModel/Constraints"/>
       <eClassifiers xsi:type="ecore:EClass" name="Rule" abstract="true" eSuperTypes="#//SMIFMOFModel/TopLevel/Proposition">
@@ -587,7 +592,7 @@
         </eStructuralFeatures>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="TopLevel" nsURI="http://www.omg.org/spec/SMIF/Top">
+    <eSubpackages name="TopLevel" nsURI="http://www.omg.org/spec/SMIF/Top" nsPrefix="TOP">
       <eAnnotations source="The top level objects provide the foundation for all objects in a SMIF model"
           references="#//SMIFMOFModel/TopLevel"/>
       <eClassifiers xsi:type="ecore:EClass" name="IdentifiableEntity" eSuperTypes="#//SMIFMOFModel/TopLevel/Thing">
@@ -646,6 +651,11 @@
       <eClassifiers xsi:type="ecore:EClass" name="Thing" abstract="true">
         <eAnnotations source="Any thing or value that does or may exist in any possible world. Thing is the supertype of all types and may therefore participate in unbounded relations.&#xA;Instances of Thing are referred to as &quot;a thing&quot; in this model.&#xA;&#xA;[IDEAS] Thing&#xA;[OWL] Thing&#xA;[ISO 1087] object: anything perceivable or conceivable&#xA;[FIBO] Thing&#xA;[Guizzardi] Thing&#xA;[FUML] Element&#xA;[SOWA1999] &quot;T&quot;&#xA;[OWL] rdfs:Resource&#xA;"
             references="#//SMIFMOFModel/TopLevel/Thing"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="definedIn" ordered="false"
+            lowerBound="1" eType="#//SMIFMOFModel/LexicalScope/LexicalScope" eOpposite="#//SMIFMOFModel/LexicalScope/LexicalScope/defines">
+          <eAnnotations source="Lexical scope defining model elements.&#xA;[UML]owner"
+              references="#//SMIFMOFModel/TopLevel/Thing/definedIn"/>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="inContextOf" ordered="false"
             lowerBound="1" upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Context"
             eOpposite="#//SMIFMOFModel/TopLevel/Context/contextualizes">
@@ -731,7 +741,7 @@
             references="#//SMIFMOFModel/TopLevel/TemporalEntity"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Patterns" nsURI="http://www.omg.org/spec/SMIF/Patterns">
+    <eSubpackages name="Patterns" nsURI="http://www.omg.org/spec/SMIF/Patterns" nsPrefix="PATRN">
       <eAnnotations source="Patterns are templates for structures or compositions of things that may then be expressed as instances of the pattern."
           references="#//SMIFMOFModel/Patterns"/>
       <eClassifiers xsi:type="ecore:EClass" name="Pattern" eSuperTypes="#//SMIFMOFModel/Situations/SituationType #//SMIFMOFModel/Situations/Situation #//SMIFMOFModel/LexicalScope/LexicalScope #//SMIFMOFModel/Properties/PropertyOwner">
@@ -893,7 +903,7 @@
         </eStructuralFeatures>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Mapping" nsURI="http://www.omg.org/spec/SMIF/Mapping">
+    <eSubpackages name="Mapping" nsURI="http://www.omg.org/spec/SMIF/Mapping" nsPrefix="MAP">
       <eAnnotations source="Mapping rules define how data represents concepts or how different data representations are related."
           references="#//SMIFMOFModel/Mapping"/>
       <eClassifiers xsi:type="ecore:EClass" name="MatchRule" eSuperTypes="#//SMIFMOFModel/Constraints/Rule">
@@ -1017,7 +1027,8 @@
         </eLiterals>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="LexicalScope" nsURI="http://www.omg.org/spec/SMIF/Lexical">
+    <eSubpackages name="LexicalScope" nsURI="http://www.omg.org/spec/SMIF/Lexical"
+        nsPrefix="LEX">
       <eAnnotations source="Lexical scope defines the structure of models and the ownership of model elements."
           references="#//SMIFMOFModel/LexicalScope"/>
       <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//SMIFMOFModel/LexicalScope/Package">
@@ -1028,7 +1039,8 @@
         <eAnnotations source="Lexical scope represents model content (the lexical structure of the model) that then models an area of concern. A lexical scope may define model elements representing anything.&#xA;[CL] Text: A text is a set, list, or bag of phrases. A piece of text shall optionally be identified by a name.&#xA;[OWL] Potential scope of a RDF graph defined by &lt;defines>"
             references="#//SMIFMOFModel/LexicalScope/LexicalScope"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="defines" ordered="false"
-            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Thing" containment="true">
+            upperBound="-1" eType="#//SMIFMOFModel/TopLevel/Thing" containment="true"
+            eOpposite="#//SMIFMOFModel/TopLevel/Thing/definedIn">
           <eAnnotations source="A model element defined within a lexical scope.&#xA;Definition within a scope does not  assert everything within a scope but the lexical scope may be independently asserted, thus asserting what it defines.&#xA;[FUML] ownedElement, ownedMember&#xA;"
               references="#//SMIFMOFModel/LexicalScope/LexicalScope/defines"/>
         </eStructuralFeatures>
@@ -1100,7 +1112,8 @@
       <eAnnotations source="The kernel subsets the SMIF classes. The diagrams in this package illustrate the concrete classes that are used to define the SMIF language.&#xA;Note that shaded classes are not instantiated in the kernel and may be &quot;flattened&quot;. Specifications for each class and association are defined in the corresponding package for that concept.&#xA;"
           references="#//SMIFMOFModel/Kernel"/>
     </eSubpackages>
-    <eSubpackages name="Associations" nsURI="http://www.omg.org/spec/SMIF/Associations">
+    <eSubpackages name="Associations" nsURI="http://www.omg.org/spec/SMIF/Associations"
+        nsPrefix="ASSOC">
       <eAnnotations source="An association asserts a formal condition involving related things, the association ends. An association may be asserted within a context as true or false within that context. Each association has a number of bindings of which are immutable for that association.&#xA;&#xA;Associations are differentiated from relationships in that associations are fully dependent on the things they relate. These are known as &quot;formal&quot;, &quot;thin&quot;, &quot;internal&quot; or &quot;intrinsic&quot; relations in much of the literature.&#xA;"
           references="#//SMIFMOFModel/Associations"/>
       <eClassifiers xsi:type="ecore:EClass" name="AssociationType" eSuperTypes="#//SMIFMOFModel/Properties/PropertyOwnerType">
@@ -1112,7 +1125,7 @@
             references="#//SMIFMOFModel/Associations/Association"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Metadata" nsURI="http://www.omg.org/spec/SMIF/Metadata">
+    <eSubpackages name="Metadata" nsURI="http://www.omg.org/spec/SMIF/Metadata" nsPrefix="META">
       <eAnnotations source="Metadata defines data about model elements (their source, definition or trust), which can be differentiated from model elements about the subject domain."
           references="#//SMIFMOFModel/Metadata"/>
       <eClassifiers xsi:type="ecore:EClass" name="Statement" eSuperTypes="#//SMIFMOFModel/Metadata/Metadata">
@@ -1187,7 +1200,8 @@
         </eStructuralFeatures>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Properties" nsURI="http://www.omg.org/spec/SMIF/Properties">
+    <eSubpackages name="Properties" nsURI="http://www.omg.org/spec/SMIF/Properties"
+        nsPrefix="PROP">
       <eAnnotations source="Properties define the most granular connections between entities or values. Properties may be used as the ends of relationships, to represent individual characteristics or as elements of a data structure."
           references="#//SMIFMOFModel/Properties"/>
       <eClassifiers xsi:type="ecore:EClass" name="PropertyBinding" abstract="true"
@@ -1268,7 +1282,7 @@
             references="#//SMIFMOFModel/Properties/PropertyOwner"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Facets" nsURI="http://www.omg.org/spec/SMIF/Facets">
+    <eSubpackages name="Facets" nsURI="http://www.omg.org/spec/SMIF/Facets" nsPrefix="FACET">
       <eAnnotations source="The facet package defines facets, roles and phases. Types that &quot;mix in&quot; to other types in a specific context or timeframe."
           references="#//SMIFMOFModel/Facets"/>
       <eClassifiers xsi:type="ecore:EClass" name="FacetOfEntity" eSuperTypes="#//SMIFMOFModel/Relationships/Relationship">
@@ -1292,7 +1306,7 @@
             references="#//SMIFMOFModel/Facets/Category"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="Records" nsURI="http://www.omg.org/spec/SMIF/Records">
+    <eSubpackages name="Records" nsURI="http://www.omg.org/spec/SMIF/Records" nsPrefix="RECORD">
       <eAnnotations source="A record of the condition of an entity at a point in time - this includes facts, speech acts and DBMS records. Records are a kind of information.&#xA;Records are typically used in data representations, not conceptual models."
           references="#//SMIFMOFModel/Records"/>
       <eClassifiers xsi:type="ecore:EClass" name="Record" eSuperTypes="#//SMIFMOFModel/Situations/ActualSituation #//SMIFMOFModel/Properties/PropertyOwner">
