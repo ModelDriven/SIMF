@@ -178,11 +178,11 @@
         <eAnnotations source="A value that may have sub-elements (owned properties) defined as &quot;structure property type&quot;."
             references="#//SMIFMOFModel/Values/StructuredValue"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceTypeName="EBoolean">
+      <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceClassName="java.lang.Boolean">
         <eAnnotations source="A value that may be true or false.&#xA;&#xA;[FIBO] boolean&#xA;[ISO11404] Description: boolean is the mathematical datatype associated with two-valued logic.&#xA;[OWL] xsd:boolean"
             references="#//SMIFMOFModel/Values/Boolean"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="String" instanceTypeName="EString">
+      <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String">
         <eAnnotations source="Text is a &lt;Value> represented using symbols which have a meaning to stakeholders but otherwise have no formal semantic implication. Properties involving values may have a semantic implication.&#xA;&#xA;[FIBO] Text&#xA;[NIEM] TextType&#xA;[OWL] xsd:string"
             references="#//SMIFMOFModel/Values/String"/>
       </eClassifiers>
@@ -202,15 +202,15 @@
         <eAnnotations source="The value of a measure - e.g. 5 MM. Measurement values may be scalar or non-scalar. Scalar measurements will be numeric."
             references="#//SMIFMOFModel/Values/MeasurementValue"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceTypeName="EInt">
+      <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceClassName="java.lang.Integer">
         <eAnnotations source="A number with no fraction.&#xA;&#xA;[IDEAS] Integer: A RationalNumber that can be written without a fractional or decimal component. &#xA;&#xA;[FIBO] integer&#xA;&#xA;[ISO11404] Integer: he mathematical datatype comprising the exact integral values.&#xA;&#xA;[OWL] xsd:integer"
             references="#//SMIFMOFModel/Values/Integer"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="Real" instanceTypeName="EDouble">
+      <eClassifiers xsi:type="ecore:EDataType" name="Real" instanceClassName="java.lang.Double">
         <eAnnotations source="Any number that may have a fraction.&#xA;&#xA;[IDEAS] RealNumber: A Type that is a Dedekind cut of the set of rational numbers.&#xA;&#xA;[ISO11404] real is a family of datatypes which are computational approximations to the mathematical datatype comprising the “real numbers”. Specifically, each real datatype designates a collection of mathematical real values&#xA;&#xA;[OWL] xsd:real&#xA;"
             references="#//SMIFMOFModel/Values/Real"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EDataType" name="Number">
+      <eClassifiers xsi:type="ecore:EDataType" name="Number" instanceClassName="java.lang.Number">
         <eAnnotations source="An arithmetical value representing a particular quantity and used in counting and making calculations and for showing order in a series or for identification.&#xA;&#xA;[IDEAS] A Type that is a number - i.e. a RealNumber or an Integer&#xA;&#xA;[FIBO] number&#xA;[NIEM] NumericType"
             references="#//SMIFMOFModel/Values/Number"/>
       </eClassifiers>
