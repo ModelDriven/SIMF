@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MagicDrawProfile="http://www.omg.org/spec/UML/20131001/MagicDrawProfile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/UML/20131001/MagicDrawProfile UML_Standard_Profile.MagicDraw_Profile.profile.uml#_5Qn80gTdEeefgInFzNUucA">
+  <uml:Profile xmi:id="_17_0_5_1_7b3022e_1396472296683_836894_3505" name="SMIF Pattern Profile" visibility="public" URI="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile" metamodelReference="_17_0_5_1_7b3022e_1396472296684_908081_3506">
+    <eAnnotations xmi:id="_5QnZJATdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_5QnZJQTdEeefgInFzNUucA" name="SMIFPatternProfile" nsURI="http://www.omg.org/spec/SIMF/20160501/SIMF-rules-profile" nsPrefix="SMIFPatternProfile">
+        <eAnnotations xmi:id="_5QnZJgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_5QnZJwTdEeefgInFzNUucA" key="originalName" value="SMIF Pattern Profile"/>
+        </eAnnotations>
+        <eAnnotations xmi:id="_5QnZKATdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/4.0.0/UML">
+          <references xmi:type="uml:Profile" href="SIMFProfile.SMIF_Concept_Modeling_Profile.profile.uml#_18_0_1_8bf027c_1408661861698_946768_5587"/>
+        </eAnnotations>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZKQTdEeefgInFzNUucA" name="RuleModel" eSuperTypes="_5QnZMQTdEeefgInFzNUucA">
+          <eAnnotations xmi:id="_5QnZKgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_0_2_3ba019e_1421972955751_558794_7719">
+            <details xmi:id="_5QnZKwTdEeefgInFzNUucA" key="originalName" value="Rule Model"/>
+          </eAnnotations>
+          <eAnnotations xmi:id="_5QnZLATdEeefgInFzNUucA" source="duplicates">
+            <contents xmi:type="ecore:EReference" xmi:id="_5QnZLQTdEeefgInFzNUucA" name="base_Package" ordered="false" lowerBound="1">
+              <eAnnotations xmi:id="_5QnZLgTdEeefgInFzNUucA" source="redefines" references="_5QnZNATdEeefgInFzNUucA"/>
+              <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Package"/>
+            </contents>
+          </eAnnotations>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZMQTdEeefgInFzNUucA" name="SMIFConceptModelingProfile_Model" eSuperTypes="_5QnZOwTdEeefgInFzNUucA">
+          <eAnnotations xmi:id="_5QnZMgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_5QnZMwTdEeefgInFzNUucA" key="originalName" value="SMIF Concept Modeling Profile_Model"/>
+            <references xmi:type="uml:Stereotype" href="SIMFProfile.SMIF_Concept_Modeling_Profile.profile.uml#_18_0_2_8bf027c_1422543641601_11667_4282"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZNATdEeefgInFzNUucA" name="base_Package" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Package"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_5QnZNgTdEeefgInFzNUucA" name="namespaceprefix" ordered="false" lowerBound="1">
+            <eAnnotations xmi:id="_5QnZNwTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_5QnZOATdEeefgInFzNUucA" key="originalName" value="namespace prefix"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZOwTdEeefgInFzNUucA" name="SMIFConceptModelingProfile_Resource">
+          <eAnnotations xmi:id="_5QnZPATdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_5QnZPQTdEeefgInFzNUucA" key="originalName" value="SMIF Concept Modeling Profile_Resource"/>
+            <references xmi:type="uml:Stereotype" href="SIMFProfile.SMIF_Concept_Modeling_Profile.profile.uml#_18_0_1_8bf027c_1408661908824_320374_5622"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_5QnZPgTdEeefgInFzNUucA" name="id" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZQATdEeefgInFzNUucA" name="base_NamedElement" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//NamedElement"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZQgTdEeefgInFzNUucA" name="Facade">
+          <eAnnotations xmi:id="_5QnZQwTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_1_3ba019e_1429802003479_393526_5924"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZRATdEeefgInFzNUucA" name="base_Classifier" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Classifier"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZRgTdEeefgInFzNUucA" name="Select" eSuperTypes="_5QnZUATdEeefgInFzNUucA">
+          <eAnnotations xmi:id="_5QnZRwTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_1_3ba019e_1429805060443_439082_6120"/>
+          <eAnnotations xmi:id="_5QnZSATdEeefgInFzNUucA" source="duplicates">
+            <contents xmi:type="ecore:EReference" xmi:id="_5QnZSQTdEeefgInFzNUucA" name="base_Property" ordered="false" lowerBound="1">
+              <eAnnotations xmi:id="_5QnZSgTdEeefgInFzNUucA" source="redefines" references="_5QnZVwTdEeefgInFzNUucA"/>
+              <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
+            </contents>
+            <contents xmi:type="ecore:EReference" xmi:id="_5QnZTATdEeefgInFzNUucA" name="base_Connector" ordered="false" lowerBound="1">
+              <eAnnotations xmi:id="_5QnZTQTdEeefgInFzNUucA" source="redefines" references="_5QnZVQTdEeefgInFzNUucA"/>
+              <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Connector"/>
+            </contents>
+          </eAnnotations>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZUATdEeefgInFzNUucA" name="PatternVariable">
+          <eAnnotations xmi:id="_5QnZUQTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_1_3ba019e_1429802403178_78376_5995">
+            <details xmi:id="_5QnZUgTdEeefgInFzNUucA" key="originalName" value="Pattern Variable"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZUwTdEeefgInFzNUucA" name="condition" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ValueSpecification"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZVQTdEeefgInFzNUucA" name="base_Connector" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Connector"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZVwTdEeefgInFzNUucA" name="base_Property" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_5QnZWQTdEeefgInFzNUucA" name="qualification" ordered="false" lowerBound="1" eType="_5QnZYQTdEeefgInFzNUucA"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_5QnZWwTdEeefgInFzNUucA" name="explicit" ordered="false">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZXQTdEeefgInFzNUucA" name="computation" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ValueSpecification"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZXwTdEeefgInFzNUucA" name="value" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//InstanceSpecification"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_5QnZYQTdEeefgInFzNUucA" name="VariableQualification">
+          <eAnnotations xmi:id="_5QnZYgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_4_62501eb_1478991089853_69592_5100">
+            <details xmi:id="_5QnZYwTdEeefgInFzNUucA" key="originalName" value="Variable Qualification"/>
+          </eAnnotations>
+          <eLiterals xmi:id="_5QnZZATdEeefgInFzNUucA" name="Select"/>
+          <eLiterals xmi:id="_5QnZZQTdEeefgInFzNUucA" name="Optional" value="1"/>
+          <eLiterals xmi:id="_5QnZZgTdEeefgInFzNUucA" name="Assert" value="2"/>
+          <eLiterals xmi:id="_5QnZZwTdEeefgInFzNUucA" name="Negate" value="3"/>
+          <eLiterals xmi:id="_5QnZaATdEeefgInFzNUucA" name="Exactly One" value="4"/>
+          <eLiterals xmi:id="_5QnZaQTdEeefgInFzNUucA" name="There Exists" value="5"/>
+          <eLiterals xmi:id="_5QnZagTdEeefgInFzNUucA" name="All" value="6"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZawTdEeefgInFzNUucA" name="MappingRule" eSuperTypes="_5QnZdQTdEeefgInFzNUucA">
+          <eAnnotations xmi:id="_5QnZbATdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_1_3ba019e_1429912332378_451201_6056">
+            <details xmi:id="_5QnZbQTdEeefgInFzNUucA" key="originalName" value="Mapping Rule"/>
+          </eAnnotations>
+          <eAnnotations xmi:id="_5QnZbgTdEeefgInFzNUucA" source="duplicates">
+            <contents xmi:type="ecore:EReference" xmi:id="_5QnZbwTdEeefgInFzNUucA" name="base_StructuredClassifier" ordered="false" lowerBound="1">
+              <eAnnotations xmi:id="_5QnZcATdEeefgInFzNUucA" source="redefines" references="_5QnZgwTdEeefgInFzNUucA _5QnZeQTdEeefgInFzNUucA"/>
+              <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//StructuredClassifier"/>
+            </contents>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_5QnZcgTdEeefgInFzNUucA" name="strength" ordered="false" lowerBound="1" eType="_5QnZhQTdEeefgInFzNUucA"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZdQTdEeefgInFzNUucA" name="PatternRule" eSuperTypes="_5QnZgQTdEeefgInFzNUucA">
+          <eAnnotations xmi:id="_5QnZdgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_5_1_7b3022e_1396901284851_33562_15649">
+            <details xmi:id="_5QnZdwTdEeefgInFzNUucA" key="originalName" value="Pattern Rule"/>
+          </eAnnotations>
+          <eAnnotations xmi:id="_5QnZeATdEeefgInFzNUucA" source="duplicates">
+            <contents xmi:type="ecore:EReference" xmi:id="_5QnZeQTdEeefgInFzNUucA" name="base_StructuredClassifier" ordered="false" lowerBound="1">
+              <eAnnotations xmi:id="_5QnZegTdEeefgInFzNUucA" source="redefines" references="_5QnZgwTdEeefgInFzNUucA"/>
+              <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//StructuredClassifier"/>
+            </contents>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZfATdEeefgInFzNUucA" name="holdswithin" ordered="false" lowerBound="1">
+            <eAnnotations xmi:id="_5QnZfQTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_5QnZfgTdEeefgInFzNUucA" key="originalName" value="holds within"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Namespace"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZgQTdEeefgInFzNUucA" name="Pattern">
+          <eAnnotations xmi:id="_5QnZggTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_4_62501eb_1479055829902_532528_5098"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZgwTdEeefgInFzNUucA" name="base_StructuredClassifier" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//StructuredClassifier"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_5QnZhQTdEeefgInFzNUucA" name="AssertionStrength">
+          <eAnnotations xmi:id="_5QnZhgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_4_62501eb_1480349470455_939794_5228">
+            <details xmi:id="_5QnZhwTdEeefgInFzNUucA" key="originalName" value="Assertion Strength"/>
+          </eAnnotations>
+          <eLiterals xmi:id="_5QnZiATdEeefgInFzNUucA" name="Global"/>
+          <eLiterals xmi:id="_5QnZiQTdEeefgInFzNUucA" name="Local" value="1"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZigTdEeefgInFzNUucA" name="Subsets">
+          <eAnnotations xmi:id="_5QnZiwTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_1_3ba019e_1444162977738_2181_4296"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZjATdEeefgInFzNUucA" name="base_ConnectorEnd" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ConnectorEnd"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZjgTdEeefgInFzNUucA" name="Match">
+          <eAnnotations xmi:id="_5QnZjwTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_1_3ba019e_1444933575323_62010_4405"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZkATdEeefgInFzNUucA" name="base_Connector" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Connector"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_5QnZkgTdEeefgInFzNUucA" name="coerce" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZlATdEeefgInFzNUucA" name="Represents">
+          <eAnnotations xmi:id="_5QnZlQTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_5_1_7b3022e_1396472323930_159560_3538"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZlgTdEeefgInFzNUucA" name="condition" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ValueSpecification"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZmATdEeefgInFzNUucA" name="base_Generalization" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Generalization"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZmgTdEeefgInFzNUucA" name="base_Dependency" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Dependency"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_5QnZnATdEeefgInFzNUucA" name="mapall" ordered="false" lowerBound="1">
+            <eAnnotations xmi:id="_5QnZnQTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_5QnZngTdEeefgInFzNUucA" key="originalName" value="map-all"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZoATdEeefgInFzNUucA" name="Subsumes">
+          <eAnnotations xmi:id="_5QnZoQTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_2_62501eb_1463585721984_884948_4489"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZogTdEeefgInFzNUucA" name="base_Dependency" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Dependency"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_5QnZpATdEeefgInFzNUucA" name="Patternkind">
+          <eAnnotations xmi:id="_5QnZpQTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_4_62501eb_1475868719806_273291_7567">
+            <details xmi:id="_5QnZpgTdEeefgInFzNUucA" key="originalName" value="Pattern kind"/>
+          </eAnnotations>
+          <eLiterals xmi:id="_5QnZpwTdEeefgInFzNUucA" name="Concrete"/>
+          <eLiterals xmi:id="_5QnZqATdEeefgInFzNUucA" name="Reference" value="1"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZqQTdEeefgInFzNUucA" name="Focus">
+          <eAnnotations xmi:id="_5QnZqgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_4_62501eb_1475869091130_49795_7599"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZqwTdEeefgInFzNUucA" name="base_Property" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_5QnZrQTdEeefgInFzNUucA" name="mappingpattern" ordered="false" lowerBound="1" eType="_5QnZpATdEeefgInFzNUucA">
+            <eAnnotations xmi:id="_5QnZrgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_5QnZrwTdEeefgInFzNUucA" key="originalName" value="mapping pattern"/>
+            </eAnnotations>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZsQTdEeefgInFzNUucA" name="MatchEnd">
+          <eAnnotations xmi:id="_5QnZsgTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_4_62501eb_1480113361322_318853_6133">
+            <details xmi:id="_5QnZswTdEeefgInFzNUucA" key="originalName" value="Match End"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZtATdEeefgInFzNUucA" name="base_ConnectorEnd" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ConnectorEnd"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZtgTdEeefgInFzNUucA" name="condition" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ValueSpecification"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZuATdEeefgInFzNUucA" name="propertypath" unique="false" lowerBound="1" upperBound="-1">
+            <eAnnotations xmi:id="_5QnZuQTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_5QnZugTdEeefgInFzNUucA" key="originalName" value="property path"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZvATdEeefgInFzNUucA" name="assertedtype" ordered="false" lowerBound="1">
+            <eAnnotations xmi:id="_5QnZvQTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_5QnZvgTdEeefgInFzNUucA" key="originalName" value="asserted type"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Classifier"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZwATdEeefgInFzNUucA" name="computation" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ValueSpecification"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_5QnZwgTdEeefgInFzNUucA" name="Excludes">
+          <eAnnotations xmi:id="_5QnZwwTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_4_62501eb_1480700309459_647607_6152"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_5QnZxATdEeefgInFzNUucA" name="base_ConnectorEnd" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ConnectorEnd"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+    <ownedComment xmi:id="_18_0_2_3ba019e_1424205699372_605128_9336" annotatedElement="_17_0_5_1_7b3022e_1396472296683_836894_3505" body="The SMIF rules profile defines the way to model rules and mapping within and between data sources via a conceptual model."/>
+    <packageImport xmi:id="_17_0_5_1_7b3022e_1396472296684_908081_3506">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_0primitiveTypesSMIF_Pattern_Profile">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_0javaPrimitiveTypesSMIF_Pattern_Profile">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_3ba019e_1421972955751_558794_7719" name="Rule Model" visibility="public">
+      <ownedComment xmi:id="_18_1_3ba019e_1446076760355_416172_6386" annotatedElement="_18_0_2_3ba019e_1421972955751_558794_7719" body="A &lt;&lt;Rule Model>> defines a package as containing rule specifications and asserts those rules to be true."/>
+      <generalization xmi:id="_18_2_62501eb_1463079789238_462034_4710">
+        <general xmi:type="uml:Stereotype" href="SIMFProfile.SMIF_Concept_Modeling_Profile.profile.uml#_18_0_2_8bf027c_1422543641601_11667_4282"/>
+      </generalization>
+      <ownedAttribute xmi:id="_18_0_2_3ba019e_1421972971700_655661_7745" name="base_Package" visibility="private" association="_18_0_2_3ba019e_1421972971700_826984_7744">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_2_3ba019e_1421972971700_826984_7744" name="" visibility="public" memberEnd="_18_0_2_3ba019e_1421972971700_655661_7745 _18_0_2_3ba019e_1421972971700_857322_7746" navigableOwnedEnd="_18_0_2_3ba019e_1421972971700_857322_7746">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_2_3ba019e_1421972971700_857322_7746" name="extension_Physical" visibility="private" type="_18_0_2_3ba019e_1421972955751_558794_7719" aggregation="composite" association="_18_0_2_3ba019e_1421972971700_826984_7744">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_2_3ba019e_1421972971700_516947_7747" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_2_3ba019e_1421972971700_147385_7748" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429802003479_393526_5924" name="Facade" visibility="public">
+      <ownedComment xmi:id="_18_1_3ba019e_1429811382472_13363_6705" annotatedElement="_18_1_3ba019e_1429802003479_393526_5924" body="&lt;&lt;Facade>> defines a classifier as being a view of (facade of) one or more other classifiers. Facades usually define additional properties that match some external view of a conceptual model element. &#xA;A facade will represent the classifier for which it is a facade. A Facade will use one of two methods to relate the facade properties to the conceptual Model:&#xA;* &lt;&lt;Rule>> using the facade.&#xA;* Applying the &lt;&lt;computation>> stereotype and Subclassing &quot;Representation Computation&quot;&#xA;"/>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1429804401206_638459_5982" name="base_Classifier" visibility="private" association="_18_1_3ba019e_1429804401206_622249_5981">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429804401206_622249_5981" name="" visibility="public" memberEnd="_18_1_3ba019e_1429804401206_638459_5982 _18_1_3ba019e_1429804401206_995277_5983" navigableOwnedEnd="_18_1_3ba019e_1429804401206_995277_5983">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429804401206_995277_5983" name="extension_Facade" visibility="private" type="_18_1_3ba019e_1429802003479_393526_5924" aggregation="composite" association="_18_1_3ba019e_1429804401206_622249_5981">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429804401206_849874_5984" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1429804401207_278541_5985" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429805060443_439082_6120" name="Select" visibility="public">
+      <ownedComment xmi:id="_18_1_3ba019e_1429811803857_452277_6718" annotatedElement="_18_1_3ba019e_1429805060443_439082_6120" body="&lt;&lt;Select>> specifies an element in a structure that must match a data source for the pattern to qualify to hold. &lt;&lt;Select>> is similar to an SQL where clause.&#xA;&lt;&lt;Select> is a shortcut for &lt;&lt;Pattern Variable>> strength=Select"/>
+      <generalization xmi:id="_18_1_3ba019e_1429805353252_875420_6172" general="_18_1_3ba019e_1429802403178_78376_5995"/>
+      <ownedAttribute xmi:id="_18_4_62501eb_1480114479231_806963_6198" name="base_Property" visibility="private" association="_18_4_62501eb_1480114479231_884598_6197">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_4_62501eb_1480114479232_584546_6203" name="base_Connector" visibility="private" association="_18_4_62501eb_1480114479232_202436_6202">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Connector"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429912332378_451201_6056" name="Mapping Rule" visibility="public">
+      <ownedComment xmi:id="_18_1_3ba019e_1430773645769_414370_5947" annotatedElement="_18_1_3ba019e_1429912332378_451201_6056" body="&lt;&lt;Mapping Rule>> defines a pattern structure described by a structured classifier that shows how both &quot;sides&quot; of a representation (conceptual and logical) are related. Each &quot;side&quot; must match, including any traversals through  structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. &#xA;The pattern is described using structured classifier properties and connectors.&#xA;The mapping engine ensures that the patterns match, bidirectionally."/>
+      <generalization xmi:id="_18_1_3ba019e_1446048567177_235994_6297" general="_17_0_5_1_7b3022e_1396901284851_33562_15649"/>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1446048562137_257905_6291" name="base_StructuredClassifier" visibility="private" association="_18_1_3ba019e_1446048562137_669514_6290">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_4_62501eb_1480349559676_754403_5262" name="strength" visibility="public" type="_18_4_62501eb_1480349470455_939794_5228"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1444162977738_2181_4296" name="Subsets" visibility="public">
+      <ownedComment xmi:id="_18_1_3ba019e_1444405680407_281469_4288" annotatedElement="_18_1_3ba019e_1444162977738_2181_4296" body="In a pattern or mapping rule, &lt;Subsets> defines a pattern variable that represents a subset of another variable. The subset may be constrained by a more specific type, expressions, values or required cardinalities.&#xA;Subsets stereotypes the end of a connector that is the superset."/>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1445279782465_146656_27283" name="base_ConnectorEnd" visibility="private" association="_18_1_3ba019e_1445279782465_956985_27282">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ConnectorEnd"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1444933575323_62010_4405" name="Match" visibility="public">
+      <ownedComment xmi:id="_18_1_3ba019e_1445956065079_365944_34707" annotatedElement="_18_1_3ba019e_1444933575323_62010_4405" body="&lt;&lt;Match>> defines an equality rule between two properties in a &lt;&lt;Rule>> - they must represent the same information, perhaps using different representations.&#xA;Matches should be drawn &lt;from> the representation &lt;to> the more conceptual. &#xA;&lt;&lt;Match>> may be used between models, as is common for a &lt;&lt;Mapping Rule>> or within one model to equate different representations for the same thing (e.g., property paths)."/>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1444933595738_283936_4433" name="base_Connector" visibility="private" association="_18_1_3ba019e_1444933595738_898448_4432">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Connector"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_2_62501eb_1463250442091_27829_4522" name="coerce" visibility="public">
+        <ownedComment xmi:id="_18_2_62501eb_1463250486418_296851_4525" annotatedElement="_18_2_62501eb_1463250442091_27829_4522" body="Where &lt;coerce> has a value of TRUE  a map rule will be evaluated even if the &lt;from> is not type compatible with the &lt;to> type.&#xA;Where &lt;coerce> is FALSE or unstated a map rule will be evaluated only if the &lt;from> is type compatible with the &lt;to> type.&#xA;Type compatible shall be defined as one of: Being the same type, &lt;from> being a subtype of &lt;to> (as defined by a type generalization rule), &lt;from> being a representation of &lt;to> (as defined by a representation rule).&#xA;Representation rules applied to a supertype apply to a subtype."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1444933595738_898448_4432" name="" visibility="public" memberEnd="_18_1_3ba019e_1444933595738_283936_4433 _18_1_3ba019e_1444933595738_4591_4434" navigableOwnedEnd="_18_1_3ba019e_1444933595738_4591_4434">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1444933595738_4591_4434" name="extension_Map" visibility="private" type="_18_1_3ba019e_1444933575323_62010_4405" aggregation="composite" association="_18_1_3ba019e_1444933595738_898448_4432">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1444933595738_110845_4435" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1444933595738_152106_4436" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1445279782465_956985_27282" name="" visibility="public" memberEnd="_18_1_3ba019e_1445279782465_146656_27283 _18_1_3ba019e_1445279782469_784960_27284" navigableOwnedEnd="_18_1_3ba019e_1445279782469_784960_27284">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1445279782469_784960_27284" name="extension_Subset of" visibility="private" type="_18_1_3ba019e_1444162977738_2181_4296" aggregation="composite" association="_18_1_3ba019e_1445279782465_956985_27282">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1445279782470_464062_27285" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1445279782470_419447_27286" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1446048562137_669514_6290" name="" visibility="public" memberEnd="_18_1_3ba019e_1446048562137_257905_6291 _18_1_3ba019e_1446048562137_714557_6292" navigableOwnedEnd="_18_1_3ba019e_1446048562137_714557_6292">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1446048562137_714557_6292" name="extension_Representation Rule" visibility="private" type="_18_1_3ba019e_1429912332378_451201_6056" aggregation="composite" association="_18_1_3ba019e_1446048562137_669514_6290">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1446048562137_120554_6293" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1446048562137_276735_6294" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429802403178_78376_5995" name="Pattern Variable" visibility="public">
+      <ownedComment xmi:id="_18_1_3ba019e_1429811478049_236941_6706" annotatedElement="_18_1_3ba019e_1429802403178_78376_5995" body="&lt;&lt;Pattern Variable>> further defines a connector or property within a pattern based on the tag values.&#xA;Note that the UML default value may be used to set the initial value of a pattern element."/>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1429802658522_568924_6001" name="condition" visibility="public">
+        <ownedComment xmi:id="_18_1_3ba019e_1429811547704_968208_6707" annotatedElement="_18_1_3ba019e_1429802658522_568924_6001" body="&lt;condition> states a condition that must be true within the scope of the pattern. This can be used for pattern matching, setting values or restriction of paths."/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1429804243512_238939_5937" name="base_Connector" visibility="private" association="_18_1_3ba019e_1429804243511_780317_5936">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Connector"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1429804439466_479136_6027" name="base_Property" visibility="private" association="_18_1_3ba019e_1429804439466_542191_6026">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_2_62501eb_1463151303729_360002_4527" name="qualification" visibility="public" type="_18_4_62501eb_1478991089853_69592_5100">
+        <ownedComment xmi:id="_18_2_62501eb_1463178850992_919589_4516" annotatedElement="_18_2_62501eb_1463151303729_360002_4527" body="&lt;quantification> defines the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern. Specifics are defined in each variable qualification enumeration literal."/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_2_62501eb_1463153141332_12928_4534" name="explicit" visibility="public">
+        <ownedComment xmi:id="_18_2_62501eb_1463153269734_64506_4538" annotatedElement="_18_2_62501eb_1463153141332_12928_4534" body="If &lt;explicit> is true, the pattern element must be explicitly asserted as the indicted type, not derived or inferred from a supertype or super property."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1463153185307_504996_4536" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_2_62501eb_1463153185308_364469_4537" name="" visibility="public" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_2_62501eb_1463178769055_428343_4510" name="computation" visibility="public">
+        <ownedComment xmi:id="_18_2_62501eb_1463178963249_948414_4518" annotatedElement="_18_2_62501eb_1463178769055_428343_4510" body="&lt;computation> computes a value for the pattern element based on the expression.&#xA;Where computation is used inverse mapping is not specified - any inverse mapping is implementation specific."/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_4_62501eb_1476114891284_150712_6252" name="value" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1480119026500_558400_5109" annotatedElement="_18_4_62501eb_1476114891284_150712_6252" body="Instance specification of a fixed value for a pattern variable."/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#InstanceSpecification"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429804243511_780317_5936" name="" visibility="public" memberEnd="_18_1_3ba019e_1429804243512_238939_5937 _18_1_3ba019e_1429804243512_665616_5938" navigableOwnedEnd="_18_1_3ba019e_1429804243512_665616_5938">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429804243512_665616_5938" name="extension_Filter" visibility="private" type="_18_1_3ba019e_1429802403178_78376_5995" aggregation="composite" association="_18_1_3ba019e_1429804243511_780317_5936">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429804243512_286286_5939" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1429804243513_24701_5940" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429804439466_542191_6026" name="" visibility="public" memberEnd="_18_1_3ba019e_1429804439466_479136_6027 _18_1_3ba019e_1429804439467_288734_6028" navigableOwnedEnd="_18_1_3ba019e_1429804439467_288734_6028">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429804439467_288734_6028" name="extension_Filter" visibility="private" type="_18_1_3ba019e_1429802403178_78376_5995" aggregation="composite" association="_18_1_3ba019e_1429804439466_542191_6026">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429804439467_759743_6029" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1429804439467_774097_6030" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1447077515186_446046_4304" name="" visibility="public" memberEnd="_18_1_3ba019e_1447077515187_543964_4305 _18_1_3ba019e_1447077515188_509912_4306" navigableOwnedEnd="_18_1_3ba019e_1447077515188_509912_4306">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1447077515188_509912_4306" name="extension_Rule" visibility="private" type="_17_0_5_1_7b3022e_1396901284851_33562_15649" aggregation="composite" association="_18_1_3ba019e_1447077515186_446046_4304">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1447077515188_153468_4307" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1447077515189_299214_4308" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1396472323930_159560_3538" name="Represents" visibility="public">
+      <ownedComment xmi:id="_17_0_5_1_3ba019e_1408827202332_21689_8334" annotatedElement="_17_0_5_1_7b3022e_1396472323930_159560_3538" body="&lt;&lt;Represents>> is an assertion that the source concrete type provides a more concrete way to represent the target reference type. Represents may be used within conceptual models or from a physical model to a conceptual model.&#xA;•&#x9;A representation that is a dependency or realization makes no assumption that the types are substitutable.&#xA;•&#x9;A representation that is a generalization is substitutable for what it represents.&#xA;"/>
+      <ownedAttribute xmi:id="_17_0_5_1_3ba019e_1408467691770_916405_7117" name="condition" visibility="public">
+        <ownedComment xmi:id="_18_0_2_3ba019e_1423854380196_879600_8355" annotatedElement="_17_0_5_1_3ba019e_1408467691770_916405_7117" body="&lt;condition> is an expression that must be true for the source to represent the target."/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1429804585858_561227_6105" name="base_Generalization" visibility="private" association="_18_1_3ba019e_1429804585858_999875_6104">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Generalization"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1429917090355_908311_6109" name="base_Dependency" visibility="private" association="_18_1_3ba019e_1429917090354_787999_6108">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_2_62501eb_1463105209714_569467_4500" name="map-all" visibility="public">
+        <ownedComment xmi:id="_18_2_62501eb_1463105277857_684991_4503" annotatedElement="_18_2_62501eb_1463105209714_569467_4500" body="&lt;map-all> implies a direct mapping between instances of the types in both directions.&#xA;&lt;map all> is equivalent to a mapping with a rule mapping properties of each type but is lower precedence than other mappings - if types have a more specific map it will apply first."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429804585858_999875_6104" name="" visibility="public" memberEnd="_18_1_3ba019e_1429804585858_561227_6105 _18_1_3ba019e_1429804585858_930994_6106" navigableOwnedEnd="_18_1_3ba019e_1429804585858_930994_6106">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429804585858_930994_6106" name="extension_Represents" visibility="private" type="_17_0_5_1_7b3022e_1396472323930_159560_3538" aggregation="composite" association="_18_1_3ba019e_1429804585858_999875_6104">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429804585859_864896_6107" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1429804585859_532076_6108" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_1_3ba019e_1429917090354_787999_6108" name="" visibility="public" memberEnd="_18_1_3ba019e_1429917090355_908311_6109 _18_1_3ba019e_1429917090355_756648_6110" navigableOwnedEnd="_18_1_3ba019e_1429917090355_756648_6110">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_1_3ba019e_1429917090355_756648_6110" name="extension_Represents" visibility="private" type="_17_0_5_1_7b3022e_1396472323930_159560_3538" aggregation="composite" association="_18_1_3ba019e_1429917090354_787999_6108">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_1_3ba019e_1429917090355_584185_6111" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_1_3ba019e_1429917090355_831350_6112" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1396901284851_33562_15649" name="Pattern Rule" visibility="public">
+      <ownedComment xmi:id="_18_1_3ba019e_1446053408371_417343_6316" annotatedElement="_17_0_5_1_7b3022e_1396901284851_33562_15649" body="&lt;&lt;Pattern Rule>> defines a pattern that must hold true for the context of the rule.&#xA;The pattern is described using a pattern defined as a structured classifier with properties and connectors.&#xA;A pattern rule is a pattern structure described by a structured classifier that shows how elements are related. Each mapped element must match, including any traversals through  structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. The mapping engine ensures that the patterns match, bidirectionally."/>
+      <generalization xmi:id="_18_4_62501eb_1479055900447_420958_5147" general="_18_4_62501eb_1479055829902_532528_5098"/>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1447077515187_543964_4305" name="base_StructuredClassifier" visibility="private" association="_18_1_3ba019e_1447077515186_446046_4304">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_2_62501eb_1463079572820_408130_4683" name="holds within" visibility="public">
+        <ownedComment xmi:id="_18_2_62501eb_1463079699851_455306_4685" annotatedElement="_18_2_62501eb_1463079572820_408130_4683" body="&lt;holds within> is the context in which a rule is asserted (required to be true). Anything contextualized by the context is subject to the rule.&#xA;If not stated the rule is asserted by its owning scope."/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Namespace"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_2_62501eb_1463585721984_884948_4489" name="Subsumes" visibility="public">
+      <ownedComment xmi:id="_18_2_62501eb_1463585846941_741675_4537" annotatedElement="_18_2_62501eb_1463585721984_884948_4489" body="&lt;&lt;Subsumes>> is a dependency between rules. When a rule subsumes another the subsumed rule will not apply (fire). if the &lt;subsumed by> rules applies (fires).&#xA;Where rules are also patterns, a rule may specialize another which will subsume the specialized rule as well as include the generalized rule parts as parts of the specialized rule."/>
+      <ownedAttribute xmi:id="_18_2_62501eb_1463585771426_684727_4517" name="base_Dependency" visibility="private" association="_18_2_62501eb_1463585771426_113196_4516">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_2_62501eb_1463585771426_113196_4516" name="" visibility="public" memberEnd="_18_2_62501eb_1463585771426_684727_4517 _18_2_62501eb_1463585771427_714707_4518" navigableOwnedEnd="_18_2_62501eb_1463585771427_714707_4518">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_2_62501eb_1463585771427_714707_4518" name="extension_Subsumes" visibility="private" type="_18_2_62501eb_1463585721984_884948_4489" aggregation="composite" association="_18_2_62501eb_1463585771426_113196_4516">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1463585771427_211531_4519" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_2_62501eb_1463585771427_757156_4520" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_18_4_62501eb_1475868719806_273291_7567" name="Pattern kind" visibility="public">
+      <ownedLiteral xmi:id="_18_4_62501eb_1475868809349_979756_7592" name="Concrete" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1475868866497_578760_7596" annotatedElement="_18_4_62501eb_1475868809349_979756_7592" body="Element is the &quot;head&quot; of the more concrete element to map within a mapping rule."/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_18_4_62501eb_1475868817582_24546_7594" name="Reference" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1475868900954_702098_7597" annotatedElement="_18_4_62501eb_1475868817582_24546_7594" body="Element is the &quot;head&quot; of the more reference element (more abstract) to map within a mapping rule."/>
+      </ownedLiteral>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_4_62501eb_1475869091130_49795_7599" name="Focus" visibility="public">
+      <ownedComment xmi:id="_18_4_62501eb_1475869272682_723978_7659" annotatedElement="_18_4_62501eb_1475869091130_49795_7599" body="&lt;&lt;Focus>> defines the &quot;head&quot; of a pattern, the element primary element to which all others are related.&#xA;"/>
+      <ownedAttribute xmi:id="_18_4_62501eb_1475869111861_688322_7635" name="base_Property" visibility="private" association="_18_4_62501eb_1475869111861_719423_7634">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_4_62501eb_1475868748109_298337_7590" name="mapping pattern" visibility="public" type="_18_4_62501eb_1475868719806_273291_7567">
+        <ownedComment xmi:id="_18_4_62501eb_1475869036139_462092_7598" annotatedElement="_18_4_62501eb_1475868748109_298337_7590" body="mapping pattern defines the focus as the head of the concrete or reference pattern.&#xA;Where patterns are at the same level of abstraction the choice of concrete or reference is arbitrary."/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_4_62501eb_1475869111861_719423_7634" name="" visibility="public" memberEnd="_18_4_62501eb_1475869111861_688322_7635 _18_4_62501eb_1475869111862_521114_7636" navigableOwnedEnd="_18_4_62501eb_1475869111862_521114_7636">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_4_62501eb_1475869111862_521114_7636" name="extension_Focus" visibility="private" type="_18_4_62501eb_1475869091130_49795_7599" aggregation="composite" association="_18_4_62501eb_1475869111861_719423_7634">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_4_62501eb_1475869111862_667968_7637" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1475869111862_416719_7638" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_18_4_62501eb_1478991089853_69592_5100" name="Variable Qualification" visibility="public">
+      <ownedComment xmi:id="_18_4_62501eb_1478991089855_763390_5109" annotatedElement="_18_4_62501eb_1478991089853_69592_5100" body="Variable qualification values define the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern."/>
+      <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_255277_5101" name="Select" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1478991089855_64176_5110" annotatedElement="_18_4_62501eb_1478991089854_255277_5101" body="Select is used in query and mapping patterns, all elements of the classified type that match the pattern are selected as instances of the pattern.&#xA;Select may be considered a qualified &quot;All&quot;. Select does not assert the existence of something, it determines the existence of a pattern match such that other assertions may be made.&#xA;Where a pattern is asserted, &quot;Select&quot; variables shall be asserted.&#xA;Relationships between properties with &lt;quantifier>=Select must hold between the selected properties for the pattern to be asserted.&#xA;&#xA;"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_997122_5102" name="Optional" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1478991089855_333689_5111" annotatedElement="_18_4_62501eb_1478991089854_997122_5102" body="Optional is used in query and mapping patterns, the property shall be populated as a consequence of the pattern matching.&#xA;Where a pattern is asserted, &quot;Optional&quot; variables shall not be asserted.&#xA;Optional is the default if no qualification is stated."/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_115789_5104" name="Assert" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1478991089855_215985_5113" annotatedElement="_18_4_62501eb_1478991089854_115789_5104" body="The property does not impact the selection of the pattern, it is an asserted consequence of the pattern."/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_637330_5105" name="Negate" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1478991089855_458681_5114" annotatedElement="_18_4_62501eb_1478991089854_637330_5105" body="The property does not impact the selection of the pattern, it is negated consequence of the pattern - it may not exist."/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_444218_5106" name="Exactly One" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1478991089856_35845_5115" annotatedElement="_18_4_62501eb_1478991089854_444218_5106" body="The existential quantifier limited to exactly one of a potentially larger set of the properties type."/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_673530_5107" name="There Exists" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1478991089856_180107_5116" annotatedElement="_18_4_62501eb_1478991089854_673530_5107" body="The existential quantifier - at least one of the properties type.  "/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_934114_5108" name="All" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1478991089856_530859_5117" annotatedElement="_18_4_62501eb_1478991089854_934114_5108" body="The universal quantifier - the quantified property is a stand-in for all elements of  the existent of the quantified type"/>
+      </ownedLiteral>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_4_62501eb_1479055829902_532528_5098" name="Pattern" visibility="public">
+      <ownedComment xmi:id="_18_4_62501eb_1479056159985_111770_5148" annotatedElement="_18_4_62501eb_1479055829902_532528_5098" body="&lt;&lt;Pattern>> defines a configuration of other elements that must hold true within the context of the rule.&#xA;The pattern is described as a structured classifier with properties and connectors representing pattern variables and assertions. The behavior of the pattern is determined by how it is used, in query, as an assertion or in a mapping, as well as by the features of a pattern variable.&#xA;"/>
+      <ownedAttribute xmi:id="_18_4_62501eb_1479055856076_230562_5126" name="base_StructuredClassifier" visibility="private" association="_18_4_62501eb_1479055856076_652892_5125">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_4_62501eb_1479055856076_652892_5125" name="" visibility="public" memberEnd="_18_4_62501eb_1479055856076_230562_5126 _18_4_62501eb_1479055856076_279942_5127" navigableOwnedEnd="_18_4_62501eb_1479055856076_279942_5127">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_4_62501eb_1479055856076_279942_5127" name="extension_Pattern" visibility="private" type="_18_4_62501eb_1479055829902_532528_5098" aggregation="composite" association="_18_4_62501eb_1479055856076_652892_5125">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_4_62501eb_1479055856076_642467_5128" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1479055856076_705720_5129" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_4_62501eb_1480113361322_318853_6133" name="Match End" visibility="public">
+      <ownedComment xmi:id="_18_4_62501eb_1480113871057_597825_6185" annotatedElement="_18_4_62501eb_1480113361322_318853_6133" body="An augmentation of the end of a &lt;&lt;Match>> connector defining one end of a mapping from one thing to another that may be qualified with a condition.&#xA;The set of elements to be mapped is the union of the sets of all mapped types and mapped variables that conform to the condition.&#xA;Match rules are constrained to apply to only conforming types or types that represent the mapped ends (as specified by a representation rule). &#xA;Representation rules applied to a supertype apply to a subtype unless a more specific representation rule is specified for the corresponding types."/>
+      <ownedAttribute xmi:id="_18_4_62501eb_1480113485496_860643_6162" name="base_ConnectorEnd" visibility="private" association="_18_4_62501eb_1480113485496_122692_6161">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ConnectorEnd"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1444933646099_651267_4452" name="condition" visibility="public">
+        <ownedComment xmi:id="_18_1_3ba019e_1444933646100_796486_4453" annotatedElement="_18_1_3ba019e_1444933646099_651267_4452" body="&lt;condition> is an expression that must be true for the map rule to hold."/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_4_62501eb_1480113530062_46405_6166" name="property path" visibility="public" isOrdered="true" isUnique="false">
+        <ownedComment xmi:id="_18_4_62501eb_1480114110991_672039_6187" annotatedElement="_18_4_62501eb_1480113530062_46405_6166" body="A series of properties that identifies elements in the context of a pattern. The ordering of properties is from a property of the context block, through a property of each&#xA;intermediate classifier that types the preceding property, ending in a property with a type that owns or inherits the fully nested property. The fully nested property is not included in the propertyPath list, but is given by the element to which the MatchEnd is applied. The same property might appear more than once because a classifier can own a property with the same or specialized block as a type.&#xA;[SysML] Equivalent to [SysML] propertyPath"/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+        <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1480113540536_832192_6168" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1480113540536_883629_6169" name="" visibility="public" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_1_3ba019e_1446408334362_255479_28355" name="asserted type" visibility="public">
+        <ownedComment xmi:id="_18_2_62501eb_1463759883600_408696_4520" annotatedElement="_18_1_3ba019e_1446408334362_255479_28355" body="asserted type is a restriction on a type of a property or relation that a match end represents. "/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_4_62501eb_1480114259233_576239_6193" name="computation" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1480114259233_827540_6194" annotatedElement="_18_4_62501eb_1480114259233_576239_6193" body="&lt;computation> computes a value for the match end based on the expression.&#xA;Where computation is used inverse mapping is not specified - any inverse mapping is implementation specific."/>
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_4_62501eb_1480113485496_122692_6161" name="" visibility="public" memberEnd="_18_4_62501eb_1480113485496_860643_6162 _18_4_62501eb_1480113485496_902422_6163" navigableOwnedEnd="_18_4_62501eb_1480113485496_902422_6163">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_4_62501eb_1480113485496_902422_6163" name="extension_Match End" visibility="private" type="_18_4_62501eb_1480113361322_318853_6133" aggregation="composite" association="_18_4_62501eb_1480113485496_122692_6161">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_4_62501eb_1480113485496_226960_6164" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1480113485497_357733_6165" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_4_62501eb_1480114479231_884598_6197" name="" visibility="public" memberEnd="_18_4_62501eb_1480114479231_806963_6198 _18_4_62501eb_1480114479231_875206_6199" navigableOwnedEnd="_18_4_62501eb_1480114479231_875206_6199">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_4_62501eb_1480114479231_875206_6199" name="extension_Select" visibility="private" type="_18_1_3ba019e_1429805060443_439082_6120" aggregation="composite" association="_18_4_62501eb_1480114479231_884598_6197">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_4_62501eb_1480114479231_833663_6200" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1480114479231_234573_6201" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_4_62501eb_1480114479232_202436_6202" name="" visibility="public" memberEnd="_18_4_62501eb_1480114479232_584546_6203 _18_4_62501eb_1480114479232_845223_6204" navigableOwnedEnd="_18_4_62501eb_1480114479232_845223_6204">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_4_62501eb_1480114479232_845223_6204" name="extension_Select" visibility="private" type="_18_1_3ba019e_1429805060443_439082_6120" aggregation="composite" association="_18_4_62501eb_1480114479232_202436_6202">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_4_62501eb_1480114479232_809784_6205" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1480114479232_263219_6206" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_18_4_62501eb_1480349470455_939794_5228" name="Assertion Strength" visibility="public">
+      <ownedComment xmi:id="_18_4_62501eb_1480349470456_952370_5232" annotatedElement="_18_4_62501eb_1480349470455_939794_5228" body="Rule strength defines what will cause a rule to be considered for being asserted (firing). "/>
+      <ownedLiteral xmi:id="_18_4_62501eb_1480349470456_634111_5229" name="Global" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1480349470456_110284_5233" annotatedElement="_18_4_62501eb_1480349470456_634111_5229" body="The rule will be in effect globally."/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_18_4_62501eb_1480349470456_351583_5231" name="Local" visibility="public">
+        <ownedComment xmi:id="_18_4_62501eb_1480349470456_410224_5235" annotatedElement="_18_4_62501eb_1480349470456_351583_5231" body="The rule will only be in effect if required to fulfill another rule."/>
+      </ownedLiteral>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_4_62501eb_1480700309459_647607_6152" name="Excludes" visibility="public">
+      <ownedComment xmi:id="_18_4_62501eb_1480700439315_574575_6199" annotatedElement="_18_4_62501eb_1480700309459_647607_6152" body="In a pattern or mapping rule, &lt;Excludes> defines a pattern variable that excludes the elements of another variable. &#xA;&lt;&lt;Excludes>> stereotypes the end of a connector that is the set to be subtracted from the other end of the connector."/>
+      <ownedAttribute xmi:id="_18_4_62501eb_1480700350057_411925_6180" name="base_ConnectorEnd" visibility="private" association="_18_4_62501eb_1480700350057_351728_6179">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ConnectorEnd"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_4_62501eb_1480700350057_351728_6179" name="" visibility="public" memberEnd="_18_4_62501eb_1480700350057_411925_6180 _18_4_62501eb_1480700350057_926757_6181" navigableOwnedEnd="_18_4_62501eb_1480700350057_926757_6181">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_4_62501eb_1480700350057_926757_6181" name="extension_Exclude" visibility="private" type="_18_4_62501eb_1480700309459_647607_6152" aggregation="composite" association="_18_4_62501eb_1480700350057_351728_6179">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_4_62501eb_1480700350058_419816_6182" name="" visibility="public"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1480700350058_788137_6183" name="" visibility="public" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_be00301_1073394351331_445580_2profileApplicationSMIF_Pattern_Profile">
+      <eAnnotations xmi:id="_5Q7e0gTdEeefgInFzNUucA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_5Qn80gTdEeefgInFzNUucA"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_be00301_1073394351331_445580_2"/>
+    </profileApplication>
+  </uml:Profile>
+  <MagicDrawProfile:HyperlinkOwner xmi:id="_5Q8F4ATdEeefgInFzNUucA" base_Element="_17_0_5_1_7b3022e_1396472296683_836894_3505"/>
+</xmi:XMI>

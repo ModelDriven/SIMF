@@ -1,0 +1,52 @@
+!SESSION 2017-02-17 11:55:53.183 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-02-17 11:56:04.536
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cory-'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.amalgam.discovery.ui 4 0 2017-02-17 12:52:46.254
+!MESSAGE Problems occurred while performing installation: Operation details
+!STACK 0
+java.lang.RuntimeException: Operation details
+	at org.eclipse.amalgam.discovery.ui.common.internal.PrepareInstallProfileJob.resolve(PrepareInstallProfileJob.java:143)
+	at org.eclipse.amalgam.discovery.ui.common.internal.PrepareInstallProfileJob.run(PrepareInstallProfileJob.java:104)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.amalgam.discovery.ui 4 0 2017-02-17 12:54:01.231
+!MESSAGE Problems occurred while performing installation: Operation details
+!STACK 0
+java.lang.RuntimeException: Operation details
+	at org.eclipse.amalgam.discovery.ui.common.internal.PrepareInstallProfileJob.resolve(PrepareInstallProfileJob.java:143)
+	at org.eclipse.amalgam.discovery.ui.common.internal.PrepareInstallProfileJob.run(PrepareInstallProfileJob.java:104)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.amalgam.discovery.ui 4 0 2017-02-17 12:54:08.273
+!MESSAGE Problems occurred while performing installation: Operation details
+!STACK 0
+java.lang.RuntimeException: Operation details
+	at org.eclipse.amalgam.discovery.ui.common.internal.PrepareInstallProfileJob.resolve(PrepareInstallProfileJob.java:143)
+	at org.eclipse.amalgam.discovery.ui.common.internal.PrepareInstallProfileJob.run(PrepareInstallProfileJob.java:104)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2017-03-09 10:53:54.773 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-09 10:54:24.813
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cory-'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
