@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TYPE="http://www.omg.org/smif/Smif/Types" xmlns:smif.facets="http://www.omg.org/smif/Smif/Facets" xmlns:smif.identifiers="http://www.omg.org/smif/Smif/Identifiers" xmlns:smif.values="http://www.omg.org/smif/Smif/Values" xsi:schemaLocation="http://www.omg.org/smif/Smif/Types smif.ecore#//types http://www.omg.org/smif/Smif/Facets smif.ecore#//facets http://www.omg.org/smif/Smif/Identifiers smif.ecore#//identifiers http://www.omg.org/smif/Smif/Values smif.ecore#//values">
+  <TYPE:EntityType identifiedBy="/1"/>
+  <smif.identifiers:Name identifies="/0" value="Thing1"/>
+  <TYPE:EntityType identifiedBy="/3"/>
+  <smif.identifiers:Name identifies="/2" value="Thing2"/>
+  <smif.facets:Role identifiedBy="/5"/>
+  <smif.identifiers:Name identifies="/4" value="RoleOfThing2"/>
+  <TYPE:EntityType identifiedBy="/7"/>
+  <smif.identifiers:Name identifies="/6" value="Relationship One"/>
+  <smif.facets:Role identifiedBy="/9"/>
+  <smif.identifiers:Name identifies="/8" value="RoleOfThing1"/>
+  <TYPE:EntityType identifiedBy="/11"/>
+  <smif.identifiers:Name identifies="/10" value="Named thing"/>
+  <smif.values:ValueType identifiedBy="/13"/>
+  <smif.identifiers:Name identifies="/12" value="SomeValue"/>
+</xmi:XMI>

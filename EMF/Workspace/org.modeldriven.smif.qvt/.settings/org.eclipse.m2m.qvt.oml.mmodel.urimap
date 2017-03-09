@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uriMap:MappingContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uriMap="http:///www.eclipse.org/m2m/qvt/oml/MModelUriMap/1.0.0">
+  <mapping sourceURI="http://www.omg.org/spec/SMIF/20170501" targetURI="platform:/resource/org.modeldriven.smif.qvt/model/smif.ecore"/>
+</uriMap:MappingContainer>

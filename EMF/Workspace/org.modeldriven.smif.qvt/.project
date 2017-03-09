@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>smif</name>
+	<name>org.modeldriven.smif.qvt</name>
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>org.eclipse.jdt.core.javabuilder</name>
+			<name>org.eclipse.pde.ManifestBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.eclipse.pde.ManifestBuilder</name>
+			<name>org.eclipse.m2m.qvt.oml.project.QVTOBuilder</name>
 			<arguments>
+				<dictionary>
+					<key>src_container</key>
+					<value>transforms</value>
+				</dictionary>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
@@ -22,7 +26,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2m.qvt.oml.project.QVTONature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
 	</natures>
 </projectDescription>

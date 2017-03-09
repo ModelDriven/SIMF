@@ -235,7 +235,9 @@
         </eClassifiers>
       </contents>
     </eAnnotations>
-    <ownedComment xmi:id="_18_0_2_3ba019e_1424205699372_605128_9336" annotatedElement="_17_0_5_1_7b3022e_1396472296683_836894_3505" body="The SMIF rules profile defines the way to model rules and mapping within and between data sources via a conceptual model."/>
+    <ownedComment xmi:id="_18_0_2_3ba019e_1424205699372_605128_9336" annotatedElement="_17_0_5_1_7b3022e_1396472296683_836894_3505">
+      <body>The SMIF rules profile defines the way to model rules and mapping within and between data sources via a conceptual model.</body>
+    </ownedComment>
     <packageImport xmi:id="_17_0_5_1_7b3022e_1396472296684_908081_3506">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
     </packageImport>
@@ -246,7 +248,9 @@
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
     </packageImport>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_2_3ba019e_1421972955751_558794_7719" name="Rule Model" visibility="public">
-      <ownedComment xmi:id="_18_1_3ba019e_1446076760355_416172_6386" annotatedElement="_18_0_2_3ba019e_1421972955751_558794_7719" body="A &lt;&lt;Rule Model>> defines a package as containing rule specifications and asserts those rules to be true."/>
+      <ownedComment xmi:id="_18_1_3ba019e_1446076760355_416172_6386" annotatedElement="_18_0_2_3ba019e_1421972955751_558794_7719">
+        <body>A &lt;&lt;Rule Model>> defines a package as containing rule specifications and asserts those rules to be true.</body>
+      </ownedComment>
       <generalization xmi:id="_18_2_62501eb_1463079789238_462034_4710">
         <general xmi:type="uml:Stereotype" href="SIMFProfile.SMIF_Concept_Modeling_Profile.profile.uml#_18_0_2_8bf027c_1422543641601_11667_4282"/>
       </generalization>
@@ -261,7 +265,13 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429802003479_393526_5924" name="Facade" visibility="public">
-      <ownedComment xmi:id="_18_1_3ba019e_1429811382472_13363_6705" annotatedElement="_18_1_3ba019e_1429802003479_393526_5924" body="&lt;&lt;Facade>> defines a classifier as being a view of (facade of) one or more other classifiers. Facades usually define additional properties that match some external view of a conceptual model element. &#xA;A facade will represent the classifier for which it is a facade. A Facade will use one of two methods to relate the facade properties to the conceptual Model:&#xA;* &lt;&lt;Rule>> using the facade.&#xA;* Applying the &lt;&lt;computation>> stereotype and Subclassing &quot;Representation Computation&quot;&#xA;"/>
+      <ownedComment xmi:id="_18_1_3ba019e_1429811382472_13363_6705" annotatedElement="_18_1_3ba019e_1429802003479_393526_5924">
+        <body>&lt;&lt;Facade>> defines a classifier as being a view of (facade of) one or more other classifiers. Facades usually define additional properties that match some external view of a conceptual model element. 
+A facade will represent the classifier for which it is a facade. A Facade will use one of two methods to relate the facade properties to the conceptual Model:
+* &lt;&lt;Rule>> using the facade.
+* Applying the &lt;&lt;computation>> stereotype and Subclassing &quot;Representation Computation&quot;
+</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_1_3ba019e_1429804401206_638459_5982" name="base_Classifier" visibility="private" association="_18_1_3ba019e_1429804401206_622249_5981">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
       </ownedAttribute>
@@ -273,7 +283,10 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429805060443_439082_6120" name="Select" visibility="public">
-      <ownedComment xmi:id="_18_1_3ba019e_1429811803857_452277_6718" annotatedElement="_18_1_3ba019e_1429805060443_439082_6120" body="&lt;&lt;Select>> specifies an element in a structure that must match a data source for the pattern to qualify to hold. &lt;&lt;Select>> is similar to an SQL where clause.&#xA;&lt;&lt;Select> is a shortcut for &lt;&lt;Pattern Variable>> strength=Select"/>
+      <ownedComment xmi:id="_18_1_3ba019e_1429811803857_452277_6718" annotatedElement="_18_1_3ba019e_1429805060443_439082_6120">
+        <body>&lt;&lt;Select>> specifies an element in a structure that must match a data source for the pattern to qualify to hold. &lt;&lt;Select>> is similar to an SQL where clause.
+&lt;&lt;Select> is a shortcut for &lt;&lt;Pattern Variable>> strength=Select</body>
+      </ownedComment>
       <generalization xmi:id="_18_1_3ba019e_1429805353252_875420_6172" general="_18_1_3ba019e_1429802403178_78376_5995"/>
       <ownedAttribute xmi:id="_18_4_62501eb_1480114479231_806963_6198" name="base_Property" visibility="private" association="_18_4_62501eb_1480114479231_884598_6197">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
@@ -283,7 +296,11 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429912332378_451201_6056" name="Mapping Rule" visibility="public">
-      <ownedComment xmi:id="_18_1_3ba019e_1430773645769_414370_5947" annotatedElement="_18_1_3ba019e_1429912332378_451201_6056" body="&lt;&lt;Mapping Rule>> defines a pattern structure described by a structured classifier that shows how both &quot;sides&quot; of a representation (conceptual and logical) are related. Each &quot;side&quot; must match, including any traversals through  structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. &#xA;The pattern is described using structured classifier properties and connectors.&#xA;The mapping engine ensures that the patterns match, bidirectionally."/>
+      <ownedComment xmi:id="_18_1_3ba019e_1430773645769_414370_5947" annotatedElement="_18_1_3ba019e_1429912332378_451201_6056">
+        <body>&lt;&lt;Mapping Rule>> defines a pattern structure described by a structured classifier that shows how both &quot;sides&quot; of a representation (conceptual and logical) are related. Each &quot;side&quot; must match, including any traversals through  structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. 
+The pattern is described using structured classifier properties and connectors.
+The mapping engine ensures that the patterns match, bidirectionally.</body>
+      </ownedComment>
       <generalization xmi:id="_18_1_3ba019e_1446048567177_235994_6297" general="_17_0_5_1_7b3022e_1396901284851_33562_15649"/>
       <ownedAttribute xmi:id="_18_1_3ba019e_1446048562137_257905_6291" name="base_StructuredClassifier" visibility="private" association="_18_1_3ba019e_1446048562137_669514_6290">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
@@ -291,18 +308,30 @@
       <ownedAttribute xmi:id="_18_4_62501eb_1480349559676_754403_5262" name="strength" visibility="public" type="_18_4_62501eb_1480349470455_939794_5228"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1444162977738_2181_4296" name="Subsets" visibility="public">
-      <ownedComment xmi:id="_18_1_3ba019e_1444405680407_281469_4288" annotatedElement="_18_1_3ba019e_1444162977738_2181_4296" body="In a pattern or mapping rule, &lt;Subsets> defines a pattern variable that represents a subset of another variable. The subset may be constrained by a more specific type, expressions, values or required cardinalities.&#xA;Subsets stereotypes the end of a connector that is the superset."/>
+      <ownedComment xmi:id="_18_1_3ba019e_1444405680407_281469_4288" annotatedElement="_18_1_3ba019e_1444162977738_2181_4296">
+        <body>In a pattern or mapping rule, &lt;Subsets> defines a pattern variable that represents a subset of another variable. The subset may be constrained by a more specific type, expressions, values or required cardinalities.
+Subsets stereotypes the end of a connector that is the superset.</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_1_3ba019e_1445279782465_146656_27283" name="base_ConnectorEnd" visibility="private" association="_18_1_3ba019e_1445279782465_956985_27282">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ConnectorEnd"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1444933575323_62010_4405" name="Match" visibility="public">
-      <ownedComment xmi:id="_18_1_3ba019e_1445956065079_365944_34707" annotatedElement="_18_1_3ba019e_1444933575323_62010_4405" body="&lt;&lt;Match>> defines an equality rule between two properties in a &lt;&lt;Rule>> - they must represent the same information, perhaps using different representations.&#xA;Matches should be drawn &lt;from> the representation &lt;to> the more conceptual. &#xA;&lt;&lt;Match>> may be used between models, as is common for a &lt;&lt;Mapping Rule>> or within one model to equate different representations for the same thing (e.g., property paths)."/>
+      <ownedComment xmi:id="_18_1_3ba019e_1445956065079_365944_34707" annotatedElement="_18_1_3ba019e_1444933575323_62010_4405">
+        <body>&lt;&lt;Match>> defines an equality rule between two properties in a &lt;&lt;Rule>> - they must represent the same information, perhaps using different representations.
+Matches should be drawn &lt;from> the representation &lt;to> the more conceptual. 
+&lt;&lt;Match>> may be used between models, as is common for a &lt;&lt;Mapping Rule>> or within one model to equate different representations for the same thing (e.g., property paths).</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_1_3ba019e_1444933595738_283936_4433" name="base_Connector" visibility="private" association="_18_1_3ba019e_1444933595738_898448_4432">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Connector"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_2_62501eb_1463250442091_27829_4522" name="coerce" visibility="public">
-        <ownedComment xmi:id="_18_2_62501eb_1463250486418_296851_4525" annotatedElement="_18_2_62501eb_1463250442091_27829_4522" body="Where &lt;coerce> has a value of TRUE  a map rule will be evaluated even if the &lt;from> is not type compatible with the &lt;to> type.&#xA;Where &lt;coerce> is FALSE or unstated a map rule will be evaluated only if the &lt;from> is type compatible with the &lt;to> type.&#xA;Type compatible shall be defined as one of: Being the same type, &lt;from> being a subtype of &lt;to> (as defined by a type generalization rule), &lt;from> being a representation of &lt;to> (as defined by a representation rule).&#xA;Representation rules applied to a supertype apply to a subtype."/>
+        <ownedComment xmi:id="_18_2_62501eb_1463250486418_296851_4525" annotatedElement="_18_2_62501eb_1463250442091_27829_4522">
+          <body>Where &lt;coerce> has a value of TRUE  a map rule will be evaluated even if the &lt;from> is not type compatible with the &lt;to> type.
+Where &lt;coerce> is FALSE or unstated a map rule will be evaluated only if the &lt;from> is type compatible with the &lt;to> type.
+Type compatible shall be defined as one of: Being the same type, &lt;from> being a subtype of &lt;to> (as defined by a type generalization rule), &lt;from> being a representation of &lt;to> (as defined by a representation rule).
+Representation rules applied to a supertype apply to a subtype.</body>
+        </ownedComment>
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
     </packagedElement>
@@ -325,9 +354,14 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_1_3ba019e_1429802403178_78376_5995" name="Pattern Variable" visibility="public">
-      <ownedComment xmi:id="_18_1_3ba019e_1429811478049_236941_6706" annotatedElement="_18_1_3ba019e_1429802403178_78376_5995" body="&lt;&lt;Pattern Variable>> further defines a connector or property within a pattern based on the tag values.&#xA;Note that the UML default value may be used to set the initial value of a pattern element."/>
+      <ownedComment xmi:id="_18_1_3ba019e_1429811478049_236941_6706" annotatedElement="_18_1_3ba019e_1429802403178_78376_5995">
+        <body>&lt;&lt;Pattern Variable>> further defines a connector or property within a pattern based on the tag values.
+Note that the UML default value may be used to set the initial value of a pattern element.</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_1_3ba019e_1429802658522_568924_6001" name="condition" visibility="public">
-        <ownedComment xmi:id="_18_1_3ba019e_1429811547704_968208_6707" annotatedElement="_18_1_3ba019e_1429802658522_568924_6001" body="&lt;condition> states a condition that must be true within the scope of the pattern. This can be used for pattern matching, setting values or restriction of paths."/>
+        <ownedComment xmi:id="_18_1_3ba019e_1429811547704_968208_6707" annotatedElement="_18_1_3ba019e_1429802658522_568924_6001">
+          <body>&lt;condition> states a condition that must be true within the scope of the pattern. This can be used for pattern matching, setting values or restriction of paths.</body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_1_3ba019e_1429804243512_238939_5937" name="base_Connector" visibility="private" association="_18_1_3ba019e_1429804243511_780317_5936">
@@ -337,20 +371,29 @@
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_2_62501eb_1463151303729_360002_4527" name="qualification" visibility="public" type="_18_4_62501eb_1478991089853_69592_5100">
-        <ownedComment xmi:id="_18_2_62501eb_1463178850992_919589_4516" annotatedElement="_18_2_62501eb_1463151303729_360002_4527" body="&lt;quantification> defines the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern. Specifics are defined in each variable qualification enumeration literal."/>
+        <ownedComment xmi:id="_18_2_62501eb_1463178850992_919589_4516" annotatedElement="_18_2_62501eb_1463151303729_360002_4527">
+          <body>&lt;quantification> defines the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern. Specifics are defined in each variable qualification enumeration literal.</body>
+        </ownedComment>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_2_62501eb_1463153141332_12928_4534" name="explicit" visibility="public">
-        <ownedComment xmi:id="_18_2_62501eb_1463153269734_64506_4538" annotatedElement="_18_2_62501eb_1463153141332_12928_4534" body="If &lt;explicit> is true, the pattern element must be explicitly asserted as the indicted type, not derived or inferred from a supertype or super property."/>
+        <ownedComment xmi:id="_18_2_62501eb_1463153269734_64506_4538" annotatedElement="_18_2_62501eb_1463153141332_12928_4534">
+          <body>If &lt;explicit> is true, the pattern element must be explicitly asserted as the indicted type, not derived or inferred from a supertype or super property.</body>
+        </ownedComment>
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_2_62501eb_1463153185307_504996_4536" name="" visibility="public"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_2_62501eb_1463153185308_364469_4537" name="" visibility="public" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_2_62501eb_1463178769055_428343_4510" name="computation" visibility="public">
-        <ownedComment xmi:id="_18_2_62501eb_1463178963249_948414_4518" annotatedElement="_18_2_62501eb_1463178769055_428343_4510" body="&lt;computation> computes a value for the pattern element based on the expression.&#xA;Where computation is used inverse mapping is not specified - any inverse mapping is implementation specific."/>
+        <ownedComment xmi:id="_18_2_62501eb_1463178963249_948414_4518" annotatedElement="_18_2_62501eb_1463178769055_428343_4510">
+          <body>&lt;computation> computes a value for the pattern element based on the expression.
+Where computation is used inverse mapping is not specified - any inverse mapping is implementation specific.</body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_4_62501eb_1476114891284_150712_6252" name="value" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1480119026500_558400_5109" annotatedElement="_18_4_62501eb_1476114891284_150712_6252" body="Instance specification of a fixed value for a pattern variable."/>
+        <ownedComment xmi:id="_18_4_62501eb_1480119026500_558400_5109" annotatedElement="_18_4_62501eb_1476114891284_150712_6252">
+          <body>Instance specification of a fixed value for a pattern variable.</body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#InstanceSpecification"/>
       </ownedAttribute>
     </packagedElement>
@@ -373,9 +416,16 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1396472323930_159560_3538" name="Represents" visibility="public">
-      <ownedComment xmi:id="_17_0_5_1_3ba019e_1408827202332_21689_8334" annotatedElement="_17_0_5_1_7b3022e_1396472323930_159560_3538" body="&lt;&lt;Represents>> is an assertion that the source concrete type provides a more concrete way to represent the target reference type. Represents may be used within conceptual models or from a physical model to a conceptual model.&#xA;•&#x9;A representation that is a dependency or realization makes no assumption that the types are substitutable.&#xA;•&#x9;A representation that is a generalization is substitutable for what it represents.&#xA;"/>
+      <ownedComment xmi:id="_17_0_5_1_3ba019e_1408827202332_21689_8334" annotatedElement="_17_0_5_1_7b3022e_1396472323930_159560_3538">
+        <body>&lt;&lt;Represents>> is an assertion that the source concrete type provides a more concrete way to represent the target reference type. Represents may be used within conceptual models or from a physical model to a conceptual model.
+•	A representation that is a dependency or realization makes no assumption that the types are substitutable.
+•	A representation that is a generalization is substitutable for what it represents.
+</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_17_0_5_1_3ba019e_1408467691770_916405_7117" name="condition" visibility="public">
-        <ownedComment xmi:id="_18_0_2_3ba019e_1423854380196_879600_8355" annotatedElement="_17_0_5_1_3ba019e_1408467691770_916405_7117" body="&lt;condition> is an expression that must be true for the source to represent the target."/>
+        <ownedComment xmi:id="_18_0_2_3ba019e_1423854380196_879600_8355" annotatedElement="_17_0_5_1_3ba019e_1408467691770_916405_7117">
+          <body>&lt;condition> is an expression that must be true for the source to represent the target.</body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_1_3ba019e_1429804585858_561227_6105" name="base_Generalization" visibility="private" association="_18_1_3ba019e_1429804585858_999875_6104">
@@ -385,7 +435,10 @@
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_2_62501eb_1463105209714_569467_4500" name="map-all" visibility="public">
-        <ownedComment xmi:id="_18_2_62501eb_1463105277857_684991_4503" annotatedElement="_18_2_62501eb_1463105209714_569467_4500" body="&lt;map-all> implies a direct mapping between instances of the types in both directions.&#xA;&lt;map all> is equivalent to a mapping with a rule mapping properties of each type but is lower precedence than other mappings - if types have a more specific map it will apply first."/>
+        <ownedComment xmi:id="_18_2_62501eb_1463105277857_684991_4503" annotatedElement="_18_2_62501eb_1463105209714_569467_4500">
+          <body>&lt;map-all> implies a direct mapping between instances of the types in both directions.
+&lt;map all> is equivalent to a mapping with a rule mapping properties of each type but is lower precedence than other mappings - if types have a more specific map it will apply first.</body>
+        </ownedComment>
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
     </packagedElement>
@@ -402,18 +455,28 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_17_0_5_1_7b3022e_1396901284851_33562_15649" name="Pattern Rule" visibility="public">
-      <ownedComment xmi:id="_18_1_3ba019e_1446053408371_417343_6316" annotatedElement="_17_0_5_1_7b3022e_1396901284851_33562_15649" body="&lt;&lt;Pattern Rule>> defines a pattern that must hold true for the context of the rule.&#xA;The pattern is described using a pattern defined as a structured classifier with properties and connectors.&#xA;A pattern rule is a pattern structure described by a structured classifier that shows how elements are related. Each mapped element must match, including any traversals through  structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. The mapping engine ensures that the patterns match, bidirectionally."/>
+      <ownedComment xmi:id="_18_1_3ba019e_1446053408371_417343_6316" annotatedElement="_17_0_5_1_7b3022e_1396901284851_33562_15649">
+        <body>&lt;&lt;Pattern Rule>> defines a pattern that must hold true for the context of the rule.
+The pattern is described using a pattern defined as a structured classifier with properties and connectors.
+A pattern rule is a pattern structure described by a structured classifier that shows how elements are related. Each mapped element must match, including any traversals through  structures defined with properties and connectors. Such traversals are links which may also have filters to more precisely define the pattern. The mapping engine ensures that the patterns match, bidirectionally.</body>
+      </ownedComment>
       <generalization xmi:id="_18_4_62501eb_1479055900447_420958_5147" general="_18_4_62501eb_1479055829902_532528_5098"/>
       <ownedAttribute xmi:id="_18_1_3ba019e_1447077515187_543964_4305" name="base_StructuredClassifier" visibility="private" association="_18_1_3ba019e_1447077515186_446046_4304">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_2_62501eb_1463079572820_408130_4683" name="holds within" visibility="public">
-        <ownedComment xmi:id="_18_2_62501eb_1463079699851_455306_4685" annotatedElement="_18_2_62501eb_1463079572820_408130_4683" body="&lt;holds within> is the context in which a rule is asserted (required to be true). Anything contextualized by the context is subject to the rule.&#xA;If not stated the rule is asserted by its owning scope."/>
+        <ownedComment xmi:id="_18_2_62501eb_1463079699851_455306_4685" annotatedElement="_18_2_62501eb_1463079572820_408130_4683">
+          <body>&lt;holds within> is the context in which a rule is asserted (required to be true). Anything contextualized by the context is subject to the rule.
+If not stated the rule is asserted by its owning scope.</body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Namespace"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_2_62501eb_1463585721984_884948_4489" name="Subsumes" visibility="public">
-      <ownedComment xmi:id="_18_2_62501eb_1463585846941_741675_4537" annotatedElement="_18_2_62501eb_1463585721984_884948_4489" body="&lt;&lt;Subsumes>> is a dependency between rules. When a rule subsumes another the subsumed rule will not apply (fire). if the &lt;subsumed by> rules applies (fires).&#xA;Where rules are also patterns, a rule may specialize another which will subsume the specialized rule as well as include the generalized rule parts as parts of the specialized rule."/>
+      <ownedComment xmi:id="_18_2_62501eb_1463585846941_741675_4537" annotatedElement="_18_2_62501eb_1463585721984_884948_4489">
+        <body>&lt;&lt;Subsumes>> is a dependency between rules. When a rule subsumes another the subsumed rule will not apply (fire). if the &lt;subsumed by> rules applies (fires).
+Where rules are also patterns, a rule may specialize another which will subsume the specialized rule as well as include the generalized rule parts as parts of the specialized rule.</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_2_62501eb_1463585771426_684727_4517" name="base_Dependency" visibility="private" association="_18_2_62501eb_1463585771426_113196_4516">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
       </ownedAttribute>
@@ -426,19 +489,29 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_18_4_62501eb_1475868719806_273291_7567" name="Pattern kind" visibility="public">
       <ownedLiteral xmi:id="_18_4_62501eb_1475868809349_979756_7592" name="Concrete" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1475868866497_578760_7596" annotatedElement="_18_4_62501eb_1475868809349_979756_7592" body="Element is the &quot;head&quot; of the more concrete element to map within a mapping rule."/>
+        <ownedComment xmi:id="_18_4_62501eb_1475868866497_578760_7596" annotatedElement="_18_4_62501eb_1475868809349_979756_7592">
+          <body>Element is the &quot;head&quot; of the more concrete element to map within a mapping rule.</body>
+        </ownedComment>
       </ownedLiteral>
       <ownedLiteral xmi:id="_18_4_62501eb_1475868817582_24546_7594" name="Reference" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1475868900954_702098_7597" annotatedElement="_18_4_62501eb_1475868817582_24546_7594" body="Element is the &quot;head&quot; of the more reference element (more abstract) to map within a mapping rule."/>
+        <ownedComment xmi:id="_18_4_62501eb_1475868900954_702098_7597" annotatedElement="_18_4_62501eb_1475868817582_24546_7594">
+          <body>Element is the &quot;head&quot; of the more reference element (more abstract) to map within a mapping rule.</body>
+        </ownedComment>
       </ownedLiteral>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_4_62501eb_1475869091130_49795_7599" name="Focus" visibility="public">
-      <ownedComment xmi:id="_18_4_62501eb_1475869272682_723978_7659" annotatedElement="_18_4_62501eb_1475869091130_49795_7599" body="&lt;&lt;Focus>> defines the &quot;head&quot; of a pattern, the element primary element to which all others are related.&#xA;"/>
+      <ownedComment xmi:id="_18_4_62501eb_1475869272682_723978_7659" annotatedElement="_18_4_62501eb_1475869091130_49795_7599">
+        <body>&lt;&lt;Focus>> defines the &quot;head&quot; of a pattern, the element primary element to which all others are related.
+</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_4_62501eb_1475869111861_688322_7635" name="base_Property" visibility="private" association="_18_4_62501eb_1475869111861_719423_7634">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_4_62501eb_1475868748109_298337_7590" name="mapping pattern" visibility="public" type="_18_4_62501eb_1475868719806_273291_7567">
-        <ownedComment xmi:id="_18_4_62501eb_1475869036139_462092_7598" annotatedElement="_18_4_62501eb_1475868748109_298337_7590" body="mapping pattern defines the focus as the head of the concrete or reference pattern.&#xA;Where patterns are at the same level of abstraction the choice of concrete or reference is arbitrary."/>
+        <ownedComment xmi:id="_18_4_62501eb_1475869036139_462092_7598" annotatedElement="_18_4_62501eb_1475868748109_298337_7590">
+          <body>mapping pattern defines the focus as the head of the concrete or reference pattern.
+Where patterns are at the same level of abstraction the choice of concrete or reference is arbitrary.</body>
+        </ownedComment>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Extension" xmi:id="_18_4_62501eb_1475869111861_719423_7634" name="" visibility="public" memberEnd="_18_4_62501eb_1475869111861_688322_7635 _18_4_62501eb_1475869111862_521114_7636" navigableOwnedEnd="_18_4_62501eb_1475869111862_521114_7636">
@@ -448,31 +521,58 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_18_4_62501eb_1478991089853_69592_5100" name="Variable Qualification" visibility="public">
-      <ownedComment xmi:id="_18_4_62501eb_1478991089855_763390_5109" annotatedElement="_18_4_62501eb_1478991089853_69592_5100" body="Variable qualification values define the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern."/>
+      <ownedComment xmi:id="_18_4_62501eb_1478991089855_763390_5109" annotatedElement="_18_4_62501eb_1478991089853_69592_5100">
+        <body>Variable qualification values define the behavior of an element with respect to a pattern - how it impacts the selection, evaluation or assertion of the pattern.</body>
+      </ownedComment>
       <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_255277_5101" name="Select" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1478991089855_64176_5110" annotatedElement="_18_4_62501eb_1478991089854_255277_5101" body="Select is used in query and mapping patterns, all elements of the classified type that match the pattern are selected as instances of the pattern.&#xA;Select may be considered a qualified &quot;All&quot;. Select does not assert the existence of something, it determines the existence of a pattern match such that other assertions may be made.&#xA;Where a pattern is asserted, &quot;Select&quot; variables shall be asserted.&#xA;Relationships between properties with &lt;quantifier>=Select must hold between the selected properties for the pattern to be asserted.&#xA;&#xA;"/>
+        <ownedComment xmi:id="_18_4_62501eb_1478991089855_64176_5110" annotatedElement="_18_4_62501eb_1478991089854_255277_5101">
+          <body>Select is used in query and mapping patterns, all elements of the classified type that match the pattern are selected as instances of the pattern.
+Select may be considered a qualified &quot;All&quot;. Select does not assert the existence of something, it determines the existence of a pattern match such that other assertions may be made.
+Where a pattern is asserted, &quot;Select&quot; variables shall be asserted.
+Relationships between properties with &lt;quantifier>=Select must hold between the selected properties for the pattern to be asserted.
+
+</body>
+        </ownedComment>
       </ownedLiteral>
       <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_997122_5102" name="Optional" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1478991089855_333689_5111" annotatedElement="_18_4_62501eb_1478991089854_997122_5102" body="Optional is used in query and mapping patterns, the property shall be populated as a consequence of the pattern matching.&#xA;Where a pattern is asserted, &quot;Optional&quot; variables shall not be asserted.&#xA;Optional is the default if no qualification is stated."/>
+        <ownedComment xmi:id="_18_4_62501eb_1478991089855_333689_5111" annotatedElement="_18_4_62501eb_1478991089854_997122_5102">
+          <body>Optional is used in query and mapping patterns, the property shall be populated as a consequence of the pattern matching.
+Where a pattern is asserted, &quot;Optional&quot; variables shall not be asserted.
+Optional is the default if no qualification is stated.</body>
+        </ownedComment>
       </ownedLiteral>
       <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_115789_5104" name="Assert" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1478991089855_215985_5113" annotatedElement="_18_4_62501eb_1478991089854_115789_5104" body="The property does not impact the selection of the pattern, it is an asserted consequence of the pattern."/>
+        <ownedComment xmi:id="_18_4_62501eb_1478991089855_215985_5113" annotatedElement="_18_4_62501eb_1478991089854_115789_5104">
+          <body>The property does not impact the selection of the pattern, it is an asserted consequence of the pattern.</body>
+        </ownedComment>
       </ownedLiteral>
       <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_637330_5105" name="Negate" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1478991089855_458681_5114" annotatedElement="_18_4_62501eb_1478991089854_637330_5105" body="The property does not impact the selection of the pattern, it is negated consequence of the pattern - it may not exist."/>
+        <ownedComment xmi:id="_18_4_62501eb_1478991089855_458681_5114" annotatedElement="_18_4_62501eb_1478991089854_637330_5105">
+          <body>The property does not impact the selection of the pattern, it is negated consequence of the pattern - it may not exist.</body>
+        </ownedComment>
       </ownedLiteral>
       <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_444218_5106" name="Exactly One" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1478991089856_35845_5115" annotatedElement="_18_4_62501eb_1478991089854_444218_5106" body="The existential quantifier limited to exactly one of a potentially larger set of the properties type."/>
+        <ownedComment xmi:id="_18_4_62501eb_1478991089856_35845_5115" annotatedElement="_18_4_62501eb_1478991089854_444218_5106">
+          <body>The existential quantifier limited to exactly one of a potentially larger set of the properties type.</body>
+        </ownedComment>
       </ownedLiteral>
       <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_673530_5107" name="There Exists" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1478991089856_180107_5116" annotatedElement="_18_4_62501eb_1478991089854_673530_5107" body="The existential quantifier - at least one of the properties type.  "/>
+        <ownedComment xmi:id="_18_4_62501eb_1478991089856_180107_5116" annotatedElement="_18_4_62501eb_1478991089854_673530_5107">
+          <body>The existential quantifier - at least one of the properties type.  </body>
+        </ownedComment>
       </ownedLiteral>
       <ownedLiteral xmi:id="_18_4_62501eb_1478991089854_934114_5108" name="All" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1478991089856_530859_5117" annotatedElement="_18_4_62501eb_1478991089854_934114_5108" body="The universal quantifier - the quantified property is a stand-in for all elements of  the existent of the quantified type"/>
+        <ownedComment xmi:id="_18_4_62501eb_1478991089856_530859_5117" annotatedElement="_18_4_62501eb_1478991089854_934114_5108">
+          <body>The universal quantifier - the quantified property is a stand-in for all elements of  the existent of the quantified type</body>
+        </ownedComment>
       </ownedLiteral>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_4_62501eb_1479055829902_532528_5098" name="Pattern" visibility="public">
-      <ownedComment xmi:id="_18_4_62501eb_1479056159985_111770_5148" annotatedElement="_18_4_62501eb_1479055829902_532528_5098" body="&lt;&lt;Pattern>> defines a configuration of other elements that must hold true within the context of the rule.&#xA;The pattern is described as a structured classifier with properties and connectors representing pattern variables and assertions. The behavior of the pattern is determined by how it is used, in query, as an assertion or in a mapping, as well as by the features of a pattern variable.&#xA;"/>
+      <ownedComment xmi:id="_18_4_62501eb_1479056159985_111770_5148" annotatedElement="_18_4_62501eb_1479055829902_532528_5098">
+        <body>&lt;&lt;Pattern>> defines a configuration of other elements that must hold true within the context of the rule.
+The pattern is described as a structured classifier with properties and connectors representing pattern variables and assertions. The behavior of the pattern is determined by how it is used, in query, as an assertion or in a mapping, as well as by the features of a pattern variable.
+</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_4_62501eb_1479055856076_230562_5126" name="base_StructuredClassifier" visibility="private" association="_18_4_62501eb_1479055856076_652892_5125">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
       </ownedAttribute>
@@ -484,26 +584,42 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_4_62501eb_1480113361322_318853_6133" name="Match End" visibility="public">
-      <ownedComment xmi:id="_18_4_62501eb_1480113871057_597825_6185" annotatedElement="_18_4_62501eb_1480113361322_318853_6133" body="An augmentation of the end of a &lt;&lt;Match>> connector defining one end of a mapping from one thing to another that may be qualified with a condition.&#xA;The set of elements to be mapped is the union of the sets of all mapped types and mapped variables that conform to the condition.&#xA;Match rules are constrained to apply to only conforming types or types that represent the mapped ends (as specified by a representation rule). &#xA;Representation rules applied to a supertype apply to a subtype unless a more specific representation rule is specified for the corresponding types."/>
+      <ownedComment xmi:id="_18_4_62501eb_1480113871057_597825_6185" annotatedElement="_18_4_62501eb_1480113361322_318853_6133">
+        <body>An augmentation of the end of a &lt;&lt;Match>> connector defining one end of a mapping from one thing to another that may be qualified with a condition.
+The set of elements to be mapped is the union of the sets of all mapped types and mapped variables that conform to the condition.
+Match rules are constrained to apply to only conforming types or types that represent the mapped ends (as specified by a representation rule). 
+Representation rules applied to a supertype apply to a subtype unless a more specific representation rule is specified for the corresponding types.</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_4_62501eb_1480113485496_860643_6162" name="base_ConnectorEnd" visibility="private" association="_18_4_62501eb_1480113485496_122692_6161">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ConnectorEnd"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_1_3ba019e_1444933646099_651267_4452" name="condition" visibility="public">
-        <ownedComment xmi:id="_18_1_3ba019e_1444933646100_796486_4453" annotatedElement="_18_1_3ba019e_1444933646099_651267_4452" body="&lt;condition> is an expression that must be true for the map rule to hold."/>
+        <ownedComment xmi:id="_18_1_3ba019e_1444933646100_796486_4453" annotatedElement="_18_1_3ba019e_1444933646099_651267_4452">
+          <body>&lt;condition> is an expression that must be true for the map rule to hold.</body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_4_62501eb_1480113530062_46405_6166" name="property path" visibility="public" isOrdered="true" isUnique="false">
-        <ownedComment xmi:id="_18_4_62501eb_1480114110991_672039_6187" annotatedElement="_18_4_62501eb_1480113530062_46405_6166" body="A series of properties that identifies elements in the context of a pattern. The ordering of properties is from a property of the context block, through a property of each&#xA;intermediate classifier that types the preceding property, ending in a property with a type that owns or inherits the fully nested property. The fully nested property is not included in the propertyPath list, but is given by the element to which the MatchEnd is applied. The same property might appear more than once because a classifier can own a property with the same or specialized block as a type.&#xA;[SysML] Equivalent to [SysML] propertyPath"/>
+        <ownedComment xmi:id="_18_4_62501eb_1480114110991_672039_6187" annotatedElement="_18_4_62501eb_1480113530062_46405_6166">
+          <body>A series of properties that identifies elements in the context of a pattern. The ordering of properties is from a property of the context block, through a property of each
+intermediate classifier that types the preceding property, ending in a property with a type that owns or inherits the fully nested property. The fully nested property is not included in the propertyPath list, but is given by the element to which the MatchEnd is applied. The same property might appear more than once because a classifier can own a property with the same or specialized block as a type.
+[SysML] Equivalent to [SysML] propertyPath</body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
         <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1480113540536_832192_6168" name="" visibility="public"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_4_62501eb_1480113540536_883629_6169" name="" visibility="public" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_1_3ba019e_1446408334362_255479_28355" name="asserted type" visibility="public">
-        <ownedComment xmi:id="_18_2_62501eb_1463759883600_408696_4520" annotatedElement="_18_1_3ba019e_1446408334362_255479_28355" body="asserted type is a restriction on a type of a property or relation that a match end represents. "/>
+        <ownedComment xmi:id="_18_2_62501eb_1463759883600_408696_4520" annotatedElement="_18_1_3ba019e_1446408334362_255479_28355">
+          <body>asserted type is a restriction on a type of a property or relation that a match end represents. </body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_18_4_62501eb_1480114259233_576239_6193" name="computation" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1480114259233_827540_6194" annotatedElement="_18_4_62501eb_1480114259233_576239_6193" body="&lt;computation> computes a value for the match end based on the expression.&#xA;Where computation is used inverse mapping is not specified - any inverse mapping is implementation specific."/>
+        <ownedComment xmi:id="_18_4_62501eb_1480114259233_827540_6194" annotatedElement="_18_4_62501eb_1480114259233_576239_6193">
+          <body>&lt;computation> computes a value for the match end based on the expression.
+Where computation is used inverse mapping is not specified - any inverse mapping is implementation specific.</body>
+        </ownedComment>
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
       </ownedAttribute>
     </packagedElement>
@@ -526,16 +642,25 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_18_4_62501eb_1480349470455_939794_5228" name="Assertion Strength" visibility="public">
-      <ownedComment xmi:id="_18_4_62501eb_1480349470456_952370_5232" annotatedElement="_18_4_62501eb_1480349470455_939794_5228" body="Rule strength defines what will cause a rule to be considered for being asserted (firing). "/>
+      <ownedComment xmi:id="_18_4_62501eb_1480349470456_952370_5232" annotatedElement="_18_4_62501eb_1480349470455_939794_5228">
+        <body>Rule strength defines what will cause a rule to be considered for being asserted (firing). </body>
+      </ownedComment>
       <ownedLiteral xmi:id="_18_4_62501eb_1480349470456_634111_5229" name="Global" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1480349470456_110284_5233" annotatedElement="_18_4_62501eb_1480349470456_634111_5229" body="The rule will be in effect globally."/>
+        <ownedComment xmi:id="_18_4_62501eb_1480349470456_110284_5233" annotatedElement="_18_4_62501eb_1480349470456_634111_5229">
+          <body>The rule will be in effect globally.</body>
+        </ownedComment>
       </ownedLiteral>
       <ownedLiteral xmi:id="_18_4_62501eb_1480349470456_351583_5231" name="Local" visibility="public">
-        <ownedComment xmi:id="_18_4_62501eb_1480349470456_410224_5235" annotatedElement="_18_4_62501eb_1480349470456_351583_5231" body="The rule will only be in effect if required to fulfill another rule."/>
+        <ownedComment xmi:id="_18_4_62501eb_1480349470456_410224_5235" annotatedElement="_18_4_62501eb_1480349470456_351583_5231">
+          <body>The rule will only be in effect if required to fulfill another rule.</body>
+        </ownedComment>
       </ownedLiteral>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_4_62501eb_1480700309459_647607_6152" name="Excludes" visibility="public">
-      <ownedComment xmi:id="_18_4_62501eb_1480700439315_574575_6199" annotatedElement="_18_4_62501eb_1480700309459_647607_6152" body="In a pattern or mapping rule, &lt;Excludes> defines a pattern variable that excludes the elements of another variable. &#xA;&lt;&lt;Excludes>> stereotypes the end of a connector that is the set to be subtracted from the other end of the connector."/>
+      <ownedComment xmi:id="_18_4_62501eb_1480700439315_574575_6199" annotatedElement="_18_4_62501eb_1480700309459_647607_6152">
+        <body>In a pattern or mapping rule, &lt;Excludes> defines a pattern variable that excludes the elements of another variable. 
+&lt;&lt;Excludes>> stereotypes the end of a connector that is the set to be subtracted from the other end of the connector.</body>
+      </ownedComment>
       <ownedAttribute xmi:id="_18_4_62501eb_1480700350057_411925_6180" name="base_ConnectorEnd" visibility="private" association="_18_4_62501eb_1480700350057_351728_6179">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ConnectorEnd"/>
       </ownedAttribute>

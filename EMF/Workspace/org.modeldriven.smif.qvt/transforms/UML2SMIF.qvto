@@ -1,0 +1,39 @@
+modeltype UML uses "http://www.eclipse.org/uml2/5.0.0/UML";
+modeltype SMIF uses "http://www.omg.org/spec/SMIF/20170501";
+
+transformation UML2SMIF(in uml : UML, out smif : SMIF);
+
+main() {
+	var objects = uml.objects();
+	objects[Classifier]->map toSMIFType();
+}
+
+mapping Classifier::toSMIFType() : smif::types::Type
+	disjuncts
+		Class::toType,
+		DataType::toType;
+
+abstract mapping Classifier::toType() : smif::types::Type {
+	identifiedBy := object smif::identifiers::Name {
+		value := self.name;
+	};
+}
+
+mapping Class::toType() : smif::types::Type 
+	inherits Classifier::toType {
+init {
+	if self.isStereotypeApplied(self.getApplicableStereotypes()![name = "Role"]) then {
+		result := object smif::facets::Role { };
+	} else {
+		result := object smif::types::EntityType { };
+	}endif;
+}
+	// ...
+}
+
+mapping DataType::toType() : smif::types::Type 
+	inherits Classifier::toType {
+init {
+	result := object smif::values::ValueType { }
+}		
+}
