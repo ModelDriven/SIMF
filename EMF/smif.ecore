@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="smif" nsURI="http://www.omg.org/smif/Smif" nsPrefix="smif">
+  <eAnnotations source="http://www.xocl.org/OCL">
+    <details key="rootConstraint" value="trg.name = 'Repository'"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.xocl.org/UUID">
+    <details key="useUUIDs" value="true"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="basePackage" value="org.omg"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.xocl.org/EDITORCONFIG">
+    <details key="hideAdvancedProperties" value="null"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lexicalScope" upperBound="-1"
+        eType="#//lexicalscope/LexicalScope" unsettable="true" containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="types" nsURI="http://www.omg.org/smif/Smif/Types" nsPrefix="TYPE">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//lexicalscope/LexicalScope #//toplevel/Context">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="categorizes" upperBound="-1"
+          eType="#//toplevel/Thing" eOpposite="#//toplevel/Thing/hasType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasProperty" upperBound="-1"
+          eType="#//properties/PropertyType" eOpposite="#//properties/PropertyType/propertyOf"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assertsPattern" upperBound="-1"
+          eType="#//patterns/PatternOfType" eOpposite="#//patterns/PatternOfType/subjectType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasCovering" upperBound="-1"
+          eType="#//constraints/CoveringConstraint" eOpposite="#//constraints/CoveringConstraint/isCoveredBy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasSpecialization" upperBound="-1"
+          eType="#//constraints/GeneralizationConstraint" eOpposite="#//constraints/GeneralizationConstraint/hasGeneral"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasMultiplicity" upperBound="-1"
+          eType="#//constraints/MultiplicityConstraint" eOpposite="#//constraints/MultiplicityConstraint/multiplicityOf"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="propertiesOfType" upperBound="-1"
+          eType="#//constraints/PropertyTypeConstraint" eOpposite="#//constraints/PropertyTypeConstraint/isOfType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="recordingTypes" upperBound="-1"
+          eType="#//records/RecordType" eOpposite="#//records/RecordType/aboutType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasGeneralization" upperBound="-1"
+          eType="#//constraints/GeneralizationConstraint" eOpposite="#//constraints/GeneralizationConstraint/hasSpecific"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="returnedBy" upperBound="-1"
+          eType="#//expressions/ExpressionContext" eOpposite="#//expressions/ExpressionContext/resultingType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="respectOf" upperBound="-1"
+          eType="#//constraints/MultiplicityConstraint" eOpposite="#//constraints/MultiplicityConstraint/withRespectTo"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assertedBy" upperBound="-1"
+          eType="#//mapping/MatchEnd" eOpposite="#//mapping/MatchEnd/assertedType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conceptRule" lowerBound="1"
+          eType="#//mapping/RepresentationRule" eOpposite="#//mapping/RepresentationRule/representedType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="representsRule" lowerBound="1"
+          eType="#//mapping/RepresentationRule" eOpposite="#//mapping/RepresentationRule/representedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IntersectionType" eSuperTypes="#//types/Type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UnionType" eSuperTypes="#//types/Type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityType" eSuperTypes="#//types/Type"/>
+  </eSubpackages>
+  <eSubpackages name="situations" nsURI="http://www.omg.org/smif/Smif/Situations"
+      nsPrefix="smif.situations">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="SituationType" eSuperTypes="#//types/EntityType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Situation" abstract="true" eSuperTypes="#//toplevel/Proposition #//toplevel/TemporalEntity #//toplevel/Context #//lexicalscope/LexicalScope">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="matchedBy" upperBound="-1"
+          eType="#//patterns/PatternMatch" eOpposite="#//patterns/PatternMatch/matches"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ActualSituation" eSuperTypes="#//toplevel/ActualEntity #//situations/Situation"/>
+  </eSubpackages>
+  <eSubpackages name="values" nsURI="http://www.omg.org/smif/Smif/Values" nsPrefix="smif.values">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="QuantityKind" eSuperTypes="#//values/ValueType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UnitType" eSuperTypes="#//values/ValueType">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ratio" lowerBound="1"
+          eType="#//values/Real"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" lowerBound="1"
+          eType="#//values/Real"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="unitReference" eType="#//metadata/Definition"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="definedWithinSystem"
+          eType="#//values/SystemOfUnits" eOpposite="#//values/SystemOfUnits/unitOfSystem"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BaseUnitType" eSuperTypes="#//values/UnitType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ValueType" eSuperTypes="#//types/Type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//toplevel/Thing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemOfUnits" eSuperTypes="#//toplevel/Context">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="unitOfSystem" upperBound="-1"
+          eType="#//values/UnitType" eOpposite="#//values/UnitType/definedWithinSystem"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StructuredValueType" eSuperTypes="#//values/ValueType #//properties/PropertyOwnerType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="StructuredValue" eSuperTypes="#//values/Value #//properties/PropertyOwner"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceClassName="boolean"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="DataValue" instanceClassName="java.lang.String"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="PrimitiveValue" instanceClassName="java.lang.String"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Numeric" instanceClassName="java.lang.String"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="MeasurementValue" instanceClassName="java.lang.String"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceClassName="int"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Real" instanceClassName="double"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Number" instanceClassName="java.lang.String"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UnitValue" abstract="true" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasValue" lowerBound="1"
+          eType="#//values/MeasurementValue"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ScalarQuantity" abstract="true" eSuperTypes="#//values/UnitValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="_unnamed_ScalarQuantity"
+          lowerBound="1" eType="#//values/Number"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="identifiers" nsURI="http://www.omg.org/smif/Smif/Identifiers"
+      nsPrefix="smif.identifiers">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="UniqueIdentifier" abstract="true"
+        eSuperTypes="#//identifiers/Identifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="uniqueWithin" lowerBound="1"
+          eType="#//identifiers/Namespace" eOpposite="#//identifiers/Namespace/scopesIdentifier"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IRIIdentifier" eSuperTypes="#//identifiers/TechnicalIdentifier"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Term" eSuperTypes="#//identifiers/Name #//identifiers/UniqueTextIdentifier"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UniqueTextIdentifier" eSuperTypes="#//identifiers/UniqueIdentifier #//identifiers/TextIdentifier"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Identifier" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="identifies" lowerBound="1"
+          eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/identifiedBy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="preferredFor" eType="#//toplevel/IdentifiableEntity"
+          eOpposite="#//toplevel/IdentifiableEntity/hasPreferred"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Namespace" eSuperTypes="#//toplevel/Context">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scopesIdentifier" upperBound="-1"
+          eType="#//identifiers/UniqueIdentifier" eOpposite="#//identifiers/UniqueIdentifier/uniqueWithin"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TextIdentifier" eSuperTypes="#//identifiers/Identifier">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Name" eSuperTypes="#//identifiers/TextIdentifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="names" lowerBound="1"
+          upperBound="-1" eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/hasName"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TechnicalIdentifier" eSuperTypes="#//identifiers/UniqueTextIdentifier"/>
+  </eSubpackages>
+  <eSubpackages name="expressions" nsURI="http://www.omg.org/smif/Smif/Expressions"
+      nsPrefix="smif.expressions">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="FunctionType" eSuperTypes="#//properties/PropertyOwnerType #//expressions/ExpressionContext">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="implementedBy" eType="#//expressions/ExpressionNode"
+          eOpposite="#//expressions/ExpressionNode/implements"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="isUsedBy" upperBound="-1"
+          eType="#//expressions/FunctionCall" eOpposite="#//expressions/FunctionCall/calls"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ConstantReference" eSuperTypes="#//expressions/ExpressionNode">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasValue" lowerBound="1"
+          eType="#//toplevel/Thing" eOpposite="#//toplevel/Thing/referencedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ExpressionNode" abstract="true" eSuperTypes="#//expressions/ExpressionContext">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionTextLanguage"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatedBy" upperBound="-1"
+          eType="#//expressions/Evaluation" eOpposite="#//expressions/Evaluation/evaluates"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//expressions/FunctionType"
+          eOpposite="#//expressions/FunctionType/implementedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//expressions/ExpressionNode #//properties/PropertyOwner">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="calls" lowerBound="1"
+          eType="#//expressions/FunctionType" eOpposite="#//expressions/FunctionType/isUsedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Traversal" eSuperTypes="#//expressions/ExpressionNode #//properties/PropertyOwner">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="traverseToRelation" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="inverse" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="traversesThrough" lowerBound="1"
+          upperBound="-1" eType="#//properties/PropertyType" eOpposite="#//properties/PropertyType/traversedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ObjectOperationType" eSuperTypes="#//expressions/FunctionType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+          eType="#//properties/PropertyType" eOpposite="#//properties/PropertyType/receivedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Equality" eSuperTypes="#//expressions/ExpressionNode">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasEqual" lowerBound="1"
+          upperBound="-1" eType="#//toplevel/Thing" eOpposite="#//toplevel/Thing/hasEquality"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Evaluation" eSuperTypes="#//expressions/ExpressionContext">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="evaluates" lowerBound="1"
+          eType="#//expressions/ExpressionNode" eOpposite="#//expressions/ExpressionNode/evaluatedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ExpressionContext" abstract="true"
+        eSuperTypes="#//toplevel/IdentifiableEntity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatesIn" eType="#//toplevel/Context"
+          eOpposite="#//toplevel/Context/contextualizesExpress"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resultingType" lowerBound="1"
+          upperBound="-1" eType="#//types/Type" eOpposite="#//types/Type/returnedBy"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="relationships" nsURI="http://www.omg.org/smif/Smif/Relationships"
+      nsPrefix="smif.relationships">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="#//situations/ActualSituation #//properties/PropertyOwner"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RelationshipType" eSuperTypes="#//situations/SituationType #//properties/PropertyOwnerType"/>
+  </eSubpackages>
+  <eSubpackages name="constraints" nsURI="http://www.omg.org/smif/Smif/Constraints"
+      nsPrefix="smif.constraints">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Rule" abstract="true" eSuperTypes="#//toplevel/Proposition">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="constrains" upperBound="-1"
+          eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/constrainedBy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subsumes" upperBound="-1"
+          eType="#//constraints/Rule" eOpposite="#//constraints/Rule/subsumedBy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subsumedBy" upperBound="-1"
+          eType="#//constraints/Rule" eOpposite="#//constraints/Rule/subsumes"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityConstraint" eSuperTypes="#//constraints/TypeConstraint">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mininumNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="atOnce" lowerBound="1"
+          eType="#//values/Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSufficent" lowerBound="1"
+          eType="#//values/Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="withRespectTo" upperBound="-1"
+          eType="#//types/Type" eOpposite="#//types/Type/respectOf"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicityOf" lowerBound="1"
+          eType="#//types/Type" eOpposite="#//types/Type/hasMultiplicity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UniquenessConstraint" eSuperTypes="#//constraints/TypeConstraint">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPrimaryIdentity" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasUnique" lowerBound="1"
+          upperBound="-1" eType="#//properties/PropertyType" eOpposite="#//properties/PropertyType/hasUniquenessConstraint"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ConditionalRule" eSuperTypes="#//constraints/Rule #//constraints/Conditional"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TypeConstraint" abstract="true" eSuperTypes="#//constraints/Rule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Equivalent" eSuperTypes="#//constraints/Rule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Disjoint" eSuperTypes="#//constraints/Rule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Enumerated" eSuperTypes="#//constraints/Rule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="GeneralizationConstraint" eSuperTypes="#//constraints/TypeConstraint">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="redefines" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasGeneral" lowerBound="1"
+          eType="#//types/Type" eOpposite="#//types/Type/hasSpecialization"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasSpecific" lowerBound="1"
+          eType="#//types/Type" eOpposite="#//types/Type/hasGeneralization"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyConstraint" abstract="true"
+        eSuperTypes="#//constraints/Rule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyTransitivityConstraint" eSuperTypes="#//constraints/PropertyConstraint"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyTypeConstraint" eSuperTypes="#//constraints/PropertyConstraint">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="prerequisiteType" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="isOfType" lowerBound="1"
+          eType="#//types/Type" eOpposite="#//types/Type/propertiesOfType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CoveringConstraint" eSuperTypes="#//constraints/TypeConstraint">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="isCoveredBy" upperBound="-1"
+          eType="#//types/Type" eOpposite="#//types/Type/hasCovering"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FacetClassificationConstraint" eSuperTypes="#//constraints/GeneralizationConstraint"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Conditional" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//expressions/ExpressionNode"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="toplevel" nsURI="http://www.omg.org/smif/Smif/Toplevel" nsPrefix="smif.toplevel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="IdentifiableEntity" eSuperTypes="#//toplevel/Thing">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="wasStatedIn" upperBound="-1"
+          eType="#//metadata/Statement" eOpposite="#//metadata/Statement/resultedIn"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasPreferred" eType="#//identifiers/Identifier"
+          eOpposite="#//identifiers/Identifier/preferredFor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="definedBy" upperBound="-1"
+          eType="#//metadata/Definition" eOpposite="#//metadata/Definition/definesEntity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="identifiedBy" upperBound="-1"
+          eType="#//identifiers/Identifier" eOpposite="#//identifiers/Identifier/identifies"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasMetadata" upperBound="-1"
+          eType="#//metadata/Metadata" eOpposite="#//metadata/Metadata/metadataAbout"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasName" upperBound="-1"
+          eType="#//identifiers/Name" eOpposite="#//identifiers/Name/names"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasRecord" upperBound="-1"
+          eType="#//records/Record" eOpposite="#//records/Record/about"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="constrainedBy" upperBound="-1"
+          eType="#//constraints/Rule" eOpposite="#//constraints/Rule/constrains"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasAuthoritativeSource"
+          upperBound="-1" eType="#//metadata/InformationSource" eOpposite="#//metadata/InformationSource/madeStatement"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasBinding" upperBound="-1"
+          eType="#//properties/PropertyBinding" eOpposite="#//properties/PropertyBinding/boundTo"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Thing" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="definedIn" lowerBound="1"
+          eType="#//lexicalscope/LexicalScope"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inContextOf" lowerBound="1"
+          upperBound="-1" eType="#//toplevel/Context" eOpposite="#//toplevel/Context/contextualizes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasType" lowerBound="1"
+          upperBound="-1" eType="#//types/Type" eOpposite="#//types/Type/categorizes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="statedBy" eType="#//lexicalscope/LexicalScope"
+          eOpposite="#//lexicalscope/LexicalScope/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedBy" upperBound="-1"
+          eType="#//expressions/ConstantReference" eOpposite="#//expressions/ConstantReference/hasValue"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasEquality" upperBound="-1"
+          eType="#//expressions/Equality" eOpposite="#//expressions/Equality/hasEqual"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="boundIn" upperBound="-1"
+          eType="#//properties/PropertyBinding" eOpposite="#//properties/PropertyBinding/binds"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true" eSuperTypes="#//toplevel/IdentifiableEntity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="asserts" upperBound="-1"
+          eType="#//toplevel/Proposition" eOpposite="#//toplevel/Proposition/holdsWithin"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="contextualizes" upperBound="-1"
+          eType="#//toplevel/Thing" eOpposite="#//toplevel/Thing/inContextOf"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="negates" upperBound="-1"
+          eType="#//toplevel/Proposition" eOpposite="#//toplevel/Proposition/negatedWithin"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="contextualizesExpress"
+          upperBound="-1" eType="#//expressions/ExpressionContext" eOpposite="#//expressions/ExpressionContext/evaluatesIn"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedByLR" upperBound="-1"
+          eType="#//lexicalscope/LexicalReference" eOpposite="#//lexicalscope/LexicalReference/referencedScope"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Proposition" abstract="true" eSuperTypes="#//toplevel/IdentifiableEntity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="holdsWithin" upperBound="-1"
+          eType="#//toplevel/Context" eOpposite="#//toplevel/Context/asserts"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="negatedWithin" upperBound="-1"
+          eType="#//toplevel/Context" eOpposite="#//toplevel/Context/negates"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="qualifiedWithin" eType="#//patterns/PropositionVariable"
+          eOpposite="#//patterns/PropositionVariable/qualifies"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ActualEntity" eSuperTypes="#//toplevel/TemporalEntity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TemporalEntity" abstract="true" eSuperTypes="#//toplevel/IdentifiableEntity"/>
+  </eSubpackages>
+  <eSubpackages name="patterns" nsURI="http://www.omg.org/smif/Smif/Patterns" nsPrefix="smif.patterns">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern" eSuperTypes="#//situations/SituationType #//situations/Situation #//lexicalscope/LexicalScope #//properties/PropertyOwner">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ownsVariable" upperBound="-1"
+          eType="#//patterns/PatternVariable" eOpposite="#//patterns/PatternVariable/hasOwningPattern"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="satisfiedBy" upperBound="-1"
+          eType="#//patterns/PatternMatch" eOpposite="#//patterns/PatternMatch/satisfies"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PatternVariable" eSuperTypes="#//properties/OwnedPropertyType #//constraints/Conditional">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualification" lowerBound="1"
+          eType="#//patterns/VariableQualification"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="explicit" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasOwningPattern" lowerBound="1"
+          eType="#//patterns/Pattern" eOpposite="#//patterns/Pattern/ownsVariable"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasSubset" upperBound="-1"
+          eType="#//patterns/PatternVariable" eOpposite="#//patterns/PatternVariable/subsets"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mapsTo" upperBound="-1"
+          eType="#//mapping/MatchEnd" eOpposite="#//mapping/MatchEnd/mapsVariable"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subsets" upperBound="-1"
+          eType="#//patterns/PatternVariable" eOpposite="#//patterns/PatternVariable/hasSubset"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="excludedBy" upperBound="-1"
+          eType="#//patterns/PatternVariable" eOpposite="#//patterns/PatternVariable/excludes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="excludes" upperBound="-1"
+          eType="#//patterns/PatternVariable" eOpposite="#//patterns/PatternVariable/excludedBy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referenceMapping" eType="#//mapping/Mapping"
+          eOpposite="#//mapping/Mapping/referenceFocus"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="concreteMapping" eType="#//mapping/Mapping"
+          eOpposite="#//mapping/Mapping/concreteFocus"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PropositionVariable" eSuperTypes="#//patterns/PatternVariable">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="qualifies" lowerBound="1"
+          eType="#//toplevel/Proposition" eOpposite="#//toplevel/Proposition/qualifiedWithin"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="VariableQualification">
+      <eLiterals name="Select" literal="Select"/>
+      <eLiterals name="Optional" value="1" literal="Optional"/>
+      <eLiterals name="Assert" value="2" literal="Assert"/>
+      <eLiterals name="Negate" value="3" literal="Negate"/>
+      <eLiterals name="ExactlyOne" value="4" literal="ExactlyOne"/>
+      <eLiterals name="ThereExists" value="5" literal="ThereExists"/>
+      <eLiterals name="All" value="6" literal="All"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ExpressionVariable" eSuperTypes="#//patterns/PatternVariable #//patterns/Computed"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PartVariable" eSuperTypes="#//patterns/TypePatternVariable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBoundaryPart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FocusVariable" eSuperTypes="#//patterns/TypePatternVariable"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TypePatternVariable" abstract="true"
+        eSuperTypes="#//patterns/PatternVariable"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PatternOfType" eSuperTypes="#//patterns/Pattern">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subjectType" lowerBound="1"
+          eType="#//types/Type" eOpposite="#//types/Type/assertsPattern"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PatternMatch" eSuperTypes="#//situations/ActualSituation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="_unnamed_PatternMatch"
+          upperBound="-1" eType="#//patterns/VariableBinding" eOpposite="#//patterns/VariableBinding/_unnamed_VariableBinding"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="satisfies" lowerBound="1"
+          eType="#//patterns/Pattern" eOpposite="#//patterns/Pattern/satisfiedBy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="matches" lowerBound="1"
+          eType="#//situations/Situation" eOpposite="#//situations/Situation/matchedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VariableBinding" eSuperTypes="#//properties/OwnedPropertyBinding">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="_unnamed_VariableBinding"
+          lowerBound="1" eType="#//patterns/PatternMatch" eOpposite="#//patterns/PatternMatch/_unnamed_PatternMatch"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Computed" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="computation" eType="#//expressions/ExpressionNode"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="mapping" nsURI="http://www.omg.org/smif/Smif/Mapping" nsPrefix="smif.mapping">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="MatchRule" eSuperTypes="#//constraints/Rule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="coerce" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="concreteEnd" lowerBound="1"
+          eType="#//mapping/MatchEnd" containment="true" eOpposite="#//mapping/MatchEnd/matchFrom"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referenceEnd" lowerBound="1"
+          eType="#//mapping/MatchEnd" containment="true" eOpposite="#//mapping/MatchEnd/matchTo"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mapRuleOf" lowerBound="1"
+          eType="#//mapping/Mapping" eOpposite="#//mapping/Mapping/hasMapRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MatchEnd" eSuperTypes="#//constraints/Conditional #//patterns/Computed">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assertedType" upperBound="-1"
+          eType="#//types/Type" eOpposite="#//types/Type/assertedBy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mapsVariable" lowerBound="1"
+          eType="#//patterns/PatternVariable" eOpposite="#//patterns/PatternVariable/mapsTo"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="matchFrom" eType="#//mapping/MatchRule"
+          eOpposite="#//mapping/MatchRule/concreteEnd"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="matchTo" eType="#//mapping/MatchRule"
+          eOpposite="#//mapping/MatchRule/referenceEnd"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Mapping" eSuperTypes="#//patterns/Pattern #//constraints/Rule">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="concreteFocus" lowerBound="1"
+          eType="#//patterns/PatternVariable" containment="true" eOpposite="#//patterns/PatternVariable/concreteMapping"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasMapRule" upperBound="-1"
+          eType="#//mapping/MatchRule" containment="true" eOpposite="#//mapping/MatchRule/mapRuleOf"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referenceFocus" lowerBound="1"
+          eType="#//patterns/PatternVariable" containment="true" eOpposite="#//patterns/PatternVariable/referenceMapping"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="strength" lowerBound="1"
+          eType="#//mapping/AssertionStrength"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Facade" eSuperTypes="#//records/RecordType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ComputedFacade" abstract="true" eSuperTypes="#//mapping/Facade">
+      <eOperations name="push" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.xocl.org/OCL">
+          <details key="body" value="null"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="pull" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.xocl.org/OCL">
+          <details key="body" value="null"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RepresentationRule" eSuperTypes="#//constraints/ConditionalRule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mapAll" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="representedBy" lowerBound="1"
+          eType="#//types/Type" eOpposite="#//types/Type/representsRule"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="representedType" lowerBound="1"
+          upperBound="-1" eType="#//types/Type" eOpposite="#//types/Type/conceptRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="AssertionStrength">
+      <eLiterals name="Global" literal="Global"/>
+      <eLiterals name="Local" value="1" literal="Local"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="lexicalscope" nsURI="http://www.omg.org/smif/Smif/Lexicalscope"
+      nsPrefix="smif.lexicalscope">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//lexicalscope/Package"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LexicalScope" eSuperTypes="#//identifiers/Namespace">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defines" upperBound="-1"
+          eType="#//toplevel/Thing" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="references" upperBound="-1"
+          eType="#//lexicalscope/LexicalReference" containment="true" eOpposite="#//lexicalscope/LexicalReference/extendsScope"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
+          eType="#//toplevel/Thing" containment="true" eOpposite="#//toplevel/Thing/statedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LexicalReference" eSuperTypes="#//toplevel/Context">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedScope" lowerBound="1"
+          eType="#//toplevel/Context" eOpposite="#//toplevel/Context/referencedByLR"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="extendsScope" lowerBound="1"
+          eType="#//lexicalscope/LexicalScope" eOpposite="#//lexicalscope/LexicalScope/references"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Include" eSuperTypes="#//lexicalscope/LexicalReference"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//lexicalscope/LexicalScope">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasPrefix" eType="#//lexicalscope/Prefix"
+          eOpposite="#//lexicalscope/Prefix/prefixOf"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MOFPackage" eSuperTypes="#//lexicalscope/Package"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LogicalPackage" eSuperTypes="#//lexicalscope/Package"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PhysicalPackage" eSuperTypes="#//lexicalscope/Package"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MappingPackage" eSuperTypes="#//lexicalscope/Package"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Prefix" eSuperTypes="#//identifiers/UniqueTextIdentifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="prefixOf" lowerBound="1"
+          eType="#//lexicalscope/Package" eOpposite="#//lexicalscope/Package/hasPrefix"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="kernel" nsURI="http://www.omg.org/smif/Smif/Kernel" nsPrefix="smif.kernel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+  </eSubpackages>
+  <eSubpackages name="associations" nsURI="http://www.omg.org/smif/Smif/Associations"
+      nsPrefix="smif.associations">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="AssociationType" eSuperTypes="#//properties/PropertyOwnerType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//properties/PropertyOwner #//toplevel/Proposition"/>
+  </eSubpackages>
+  <eSubpackages name="metadata" nsURI="http://www.omg.org/smif/Smif/Metadata" nsPrefix="smif.metadata">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Statement" eSuperTypes="#//metadata/Metadata">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="statementDateAndTime"
+          lowerBound="1" eType="#//values/ValueType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="version" lowerBound="1"
+          eType="#//values/ValueType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transactionId" lowerBound="1"
+          eType="#//values/ValueType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resultedIn" lowerBound="1"
+          eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/wasStatedIn"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InformationSource" eSuperTypes="#//toplevel/ActualEntity #//metadata/Metadata">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="madeStatement" lowerBound="1"
+          upperBound="-1" eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/hasAuthoritativeSource"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Metadata" eSuperTypes="#//records/Record">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metadataAbout" upperBound="-1"
+          eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/hasMetadata"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Definition" eSuperTypes="#//metadata/Metadata">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="textDefinition" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="externalReference" lowerBound="1"
+          eType="#//identifiers/IRIIdentifier"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="externalTerm" lowerBound="1"
+          eType="#//identifiers/Term"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="summaryDescription" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="definesEntity" lowerBound="1"
+          eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/definedBy"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="properties" nsURI="http://www.omg.org/smif/Smif/Properties"
+      nsPrefix="smif.properties">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyBinding" abstract="true" eSuperTypes="#//toplevel/Thing">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="binds" lowerBound="1"
+          eType="#//toplevel/Thing" eOpposite="#//toplevel/Thing/boundIn"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="boundBy" lowerBound="1"
+          eType="#//properties/PropertyType" eOpposite="#//properties/PropertyType/hasBindingProperty"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="boundTo" lowerBound="1"
+          eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/hasBinding"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyType" abstract="true" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="propertyOf" eType="#//types/Type"
+          eOpposite="#//types/Type/hasProperty"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="traversedBy" upperBound="-1"
+          eType="#//expressions/Traversal" eOpposite="#//expressions/Traversal/traversesThrough"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="receivedBy" upperBound="-1"
+          eType="#//expressions/ObjectOperationType" eOpposite="#//expressions/ObjectOperationType/receiver"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasUniquenessConstraint"
+          upperBound="-1" eType="#//constraints/UniquenessConstraint" eOpposite="#//constraints/UniquenessConstraint/hasUnique"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hasBindingProperty" upperBound="-1"
+          eType="#//properties/PropertyBinding" eOpposite="#//properties/PropertyBinding/boundBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CharacteristicType" eSuperTypes="#//properties/PropertyType #//situations/SituationType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CharacteristicBinding" eSuperTypes="#//properties/PropertyBinding #//situations/ActualSituation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AnnotationProperty" eSuperTypes="#//properties/CharacteristicType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OwnedPropertyType" eSuperTypes="#//properties/PropertyType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyOwnerType" abstract="true"
+        eSuperTypes="#//types/Type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OwnedPropertyBinding" eSuperTypes="#//properties/PropertyBinding"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyOwner" abstract="true" eSuperTypes="#//toplevel/Thing"/>
+  </eSubpackages>
+  <eSubpackages name="facets" nsURI="http://www.omg.org/smif/Smif/Facets" nsPrefix="smif.facets">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="FacetOfEntity" eSuperTypes="#//relationships/Relationship"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Phase" eSuperTypes="#//facets/Facet #//situations/SituationType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//facets/Facet"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Facet" eSuperTypes="#//types/Type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Category" eSuperTypes="#//facets/Facet"/>
+  </eSubpackages>
+  <eSubpackages name="records" nsURI="http://www.omg.org/smif/Smif/Records" nsPrefix="smif.records">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="basePackage" value="org.omg.smif"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Record" eSuperTypes="#//situations/ActualSituation #//properties/PropertyOwner">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="about" upperBound="-1"
+          eType="#//toplevel/IdentifiableEntity" eOpposite="#//toplevel/IdentifiableEntity/hasRecord"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RecordType" eSuperTypes="#//situations/SituationType #//properties/PropertyOwnerType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="aboutType" eType="#//types/Type"
+          eOpposite="#//types/Type/recordingTypes"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>
