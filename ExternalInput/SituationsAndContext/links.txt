@@ -1,0 +1,15 @@
+http://jfsowa.com/ikl/contexts/contexts.pdf
+https://web.stanford.edu/~kdevlin/Papers/HHL_SituationTheory.pdf
+https://en.wikipedia.org/wiki/Situation_semantics
+http://profkeithdevlin.com/
+
+Definition:  A situation is a real or imagined region of space-time that bounds the range of perception, action, interaction, and communication of one or more agents
+--issue, involves agents
+
+Sowa: They were never able to give a precise defintion of a situation.
+
+? Barwise and Perry (1983):  “A region of space-time.” “Thus we assume that the spatiotemporal relations are    extensional and that there is a fixed fact about the matter about which relations hold of which locations.” 
+? Keith Devlin (1991):  Situations “include, but are not equal        to any of, simply-connected regions of space-time, highly         disconnected space-time regions, contexts of utterance...,        collections of background conditions for a constraint, and        so on.
+
+Issues: Tied to space/time
+
