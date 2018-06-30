@@ -1,0 +1,144 @@
+/************************************************************************************
+ Ergo (Flora-2) Semantics for Semantic Modeling for Information Federation (SMIF)
+
+ Copyright (c) 2018 Model Driven Solutions, Inc. All rights reserved worldwide. 
+ 
+ As of 5/19/2018
+ Status: Preliminary for review
+************************************************************************************/
+
+/*	Introduction to SMIF semantics in ERGO
+This document defines SMIF (Semantic Modeling for Information Federation) semantics in terms of ERGO semantics. SMIF and ERGO terms are defined in their respective documents.
+
+ERGO is a language grounded in formal logic. Documentation of ERGO semantics and syntax may be found here: http://coherentknowledge.com/ergo-documentation/
+Ergo was originally known as "Flora-2" and is compatible with Flora-2.
+
+A model is essentially a set of related propositions about a real or conceived world. SIMF models are sets of such propositions that may be derived from multiple sources, including UML using the SMIF profile, OWL or from data sources such as SQL and XML.
+
+Atomic propositions such as SMIF associations, characteristics and relationships represent all or part of an atomic "assertion" or "fact". Each such atomic proposition is represented by an immutable ERGO "frame" (as in "Frame logic"). Each such frame has an identity, a type and a set of arguments for the association "ends". Most atomic propositions are associations. Frames representing associations are produced by automation from any SMIF model. This SIMF Semantics file combined with a generated SMIF model defines the semantics of that model and performs inference or model validation based on processing options.
+
+Example of an association frame:
+	KB#Fact1000:IP#Authorship[ Authorship#authored->Plays#Hamlet, Authorship#authoredBy->Authors#Shakespeare ].
+	
+Translation: Fact 1000 in KB is an IP (intellectual property) Authorship association. Hamlet (defined in plays) was authored by Shakespeare (defined in Authors). As a binary association it can also be read in reverse: Shakespeare authored Hamlet. These two readings are the same fact, expressed from different perspectives. The arguments of an association may be nouns or verbs but are, by convention, verbs for binary associations and nouns for all others.
+
+Alone, these frames have no meaning. This document provides an interpretation of these proposition frames in terms of ERGO semantics.
+
+Note that by association we mean an actual fact about things being associated - an "association instance", this is different from an "association type" (type of an association instance). SMIF "Association Type" corresponds to the term "Association" used in some languages like UML. In SMIF, terms are used for their "ground fact" or "M Zero" meaning. SMIF Association corresponds to UML "Link".  Where metatypes are intended, "Type" is used as a suffix (E.g. "Association Type"). This is different from UML where terms like "Association" usually refer to metatypes and there are unrelated terms for their instances, such as "link" or "Individual". Association (instances) are used to define concepts at every "meta level" in SMIF. 
+Types provide meaning for their instances. In SMIF an instance may have any number of types.
+*/
+
+// Allow set semantics
+//?- setsemantics{class_expressions=on}.
+// Include all SMIF namespace prefixes.
+#include "Ergo/SMIF/GLOBAL_SMIFConceptualModel_depends_on.ergo"
+// Include the generated SMIF model
+#include "Ergo/SMIF/SMIFConceptualModel_package.ergo"
+
+/** Unqualified extent of type  (is-a)
+For pragmatic reasons an asserted rigid (not a faceted) type of a thing is mapped directly to the ERGO representation not using a frame:
+	<thing> : <type>.
+
+Example:
+	Authors#StephenKing : People#Person .
+
+In ERGO the above means that the entity represented by the term "Authors#StephenKing" is a "Person" as defined in the "People" namespace.
+**/
+
+/* Handling of context
+SMIF allows propositions to be contextual, that is their interpretation is governed by one or more context elements such as time, location or trust. When a proposition is inContext it is interpreted as ERGO semantics. When it is not in context, it is ignored. A Context may be true. false or undefined. A proposition is considered inContext (inContext(proposition)) if it is defined by a lexical scope that is inContext and if none of the context that assert it are false and none of the context that negate it are true. inContext(proposition) is then used as a guard on inference rules. It is defined in this manner to allow unstated context to have no impact.
+Context semantics may be disabled by defining ignoreContext(LexicalScope) for a lexical scope, such as a model or package.
+Note that context requires higher order logic and may not be expressible in some logics, such logics (e.g. Description Logic) may be compatible with ignoreContext(?model) for all ?models.
+Note also that any association type or relationship type may be defined as a subtype of assertion or negation such that it has contextual meaning, each such association may be considered to define a kind of context or "contextual dimension".
+
+Propositions including associations, characteristics and relationships that are defined and not qualified by a context are an assertion, also known as a "fact".
+*/
+
+// Transitive in lexical scope 
+ignoreContext(?scope), inContext(?scope) :- ?LexicalScope[Definition#defines->?scope], ignoreContext(?LexicalScope).
+inferenceSemantics(?scope) :- ?LexicalScope[Definition#defines->?scope], inferenceSemantics(?LexicalScope).
+
+// A proposition is defined if it is deified in a scope that is in context.
+defined(?proposition) :- ?LexicalScope[Definition#defines->?proposition], inContext(?LexicalScope).
+
+// A proposition is asserted false if it asserted by a context that is false
+assertedFalse(?proposition) :- (?_:TopLevel#Assertion[Assertion#asserts->?proposition, Assertion#holdsWithin->?context], \naf  inContext(?context)).
+
+// A proposition is negated if a context that is inContext negates it
+negated(?proposition) :- (?_:TopLevel#Negation[Negation#negates->?proposition, Negation#negatedWithin->?context], inContext(?context)).
+
+// A proposition is in context if it ignores context or it is defined and not asserted false or negated.
+inContext(?proposition) :- ignoreContext(?proposition) \or (defined(?proposition)  \and (\naf assertedFalse(?proposition)) \and (\naf negated(?proposition)) )  .
+
+// Root level things (that are not defined in something else) are defined & in context unless negated
+inContext(?proposition), defined(?proposition) :- \naf (?_[Definition#defines->?proposition], negated(?proposition)).
+
+// A proposition is a statement of fact if it is inContext and not qualified by a context - not asserted or negated in any context.
+fact(?proposition), ?proposition : TopLevel#Fact  :- (?proposition:TopLevel#Proposition) \and inContext(?proposition) \and (\naf (?_:TopLevel#Assertion[Assertion#holdsWithin -> ?_, Assertion#asserts->?proposition])) \and (\naf (?_:TopLevel#Negation[Negation#negatedWithin -> ?_, Negation#negates->?proposition])).
+
+/**
+SMIF Semantics allows models to be contextual and/or utilize inference. The following select these options for the SMIF model.
+**/
+inferenceSemantics(SMIF#SMIFConceptualModel). // Types in the SMIF model may be inferred.
+ignoreContext(SMIF#SMIFConceptualModel). // Everything in the SMIF model is defined as TRUE.
+
+/** Extent of Type (instance of)
+	The defined "rigid" type of a thing is generated as ?instance : ?type. All other types of a thing are defined using Types#ExtentOfType frames. Each such frame that is in context implies the type categorizes the instance.
+**/
+?instance : ?type :- ?proposition:Types#ExtentOfType[ ExtentOfType#hasType -> ?type, ExtentOfType#categorizes->?instance], inContext(?proposition).
+
+
+
+/** Generalization (subtype/supertype)
+Example Association:
+    Tree#Tree_hasSupertype_BiologicalEntity:Types#Generalization[
+      Generalization#hasSubtype -> TestModel#Tree,
+      Generalization#hasSupertype -> TestModel#BiologicalEntity].
+	  
+Implied ERGO Semantics:
+	TestModel#Tree :: TestModel#BiologicalEntity.
+	
+**/
+?subtype :: ?supertype :- ?proposition:Types#Generalization[ Generalization#hasSubtype -> ?subtype, Generalization#hasSupertype -> ?supertype ], inContext(?proposition).
+
+/**
+	--should be derived from restriction property
+	All instances of entity type are subtypes of entity, also must break cycles in subtypes.
+**/
+?anything::TopLevel#Entity :- ?anything:Types#EntityType, \naf ?anything=TopLevel#Entity, \naf ?anything=TopLevel#Thing.
+/**
+	All instances of value type are subtypes of value
+**/
+?anything::Values#Value :- ?anything:Values#ValueType.
+
+// All instances of AssociationType are subtypes of association
+?anything::Associations#Association :- ?anything:Associations#AssociationType.
+
+/** Range semantics
+Example:
+        // Property Range 'hasLeaf#_PropertyRange_Gen1'.
+        hasLeaf#_PropertyRange_Gen1:Properties#PropertyRange[
+          PropertyRange#hasRange -> Trees#Leaf,
+          PropertyRange#rangeOf -> LeafOnTree#hasLeaf].
+		  
+If inferenceSemantics(?type), Implies semantics:
+	?thing:Trees:Leaf :- ?_[ LeafOnTree#hasLeaf->?thing ].
+Otherwise a type conflict issue is implied.
+**/
+// A type is implied if it is bound to a property with a range restriction
+impliedType(?thing, ?type, ?property) :- ?_:Properties#PropertyRange[ PropertyRange#hasRange -> ?type, PropertyRange#rangeOf -> ?property], ?_[?property->?thing],  (\naf ?property=Definition#defines),( \naf ?thing:?type).
+
+// A type is implied if it is the subject of a property with a domain restriction
+//impliedType(?thing, ?type, ?property) :- ?_:Properties#PropertyDomain[ PropertyDomain#hasDomain -> ?type, PropertyDomain#hasProperty -> ?property], //?_[?property->?thing],  ( \naf ?thing:?type).
+
+// If the type is implied and can be inferred, infer the type
+?thing : ?type, inferred(?thing, ?type, ?property) :- impliedType( ?thing, ?type, ?property ), inferenceSemantics(?type). 
+// If the type can't be inferred, the model is in conflict
+TypeConflictIssue(?thing, ?type, ?property) :- impliedType( ?thing, ?type, ?property ), (\naf inferenceSemantics(?type)). 
+
+
+/** Intersection
+** still needs to be figured out
+?intersect:?subtype :- ?subtype:Types#Intersection, ?proposition:Types#Generalization[ Generalization#hasSubtype -> ?subtype^^Types#Intersection], inContext(?proposition), forall(?supertype)^(?proposition[ Generalization#hasSubtype -> ?subtype, Generalization#hasSupertype -> ?supertype ])^(?intersect:?supertype).
+
+**/
